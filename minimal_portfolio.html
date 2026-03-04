@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Minimalist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Caveat:wght@400;600&display=swap');
+    </style>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #fafafa;
+            background-image: radial-gradient(circle at 20% 20%, rgba(0,0,0,0.03), transparent 40%);
+            color: #1a1a1a;
+        }
+
+        :root {
+            --ease-fast: cubic-bezier(0.62, 0.61, 0.02, 1);
+            --content-max-width: 35rem;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.02"/></svg>');
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .text-tiny {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+
+        .page {
+            transition: opacity 400ms ease-out, filter 400ms ease-out;
+        }
+
+        .page p:not(.text-center) {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .page-enter { opacity: 0; filter: blur(4px); }
+        .page-enter-active { opacity: 1; filter: blur(0); }
+        .page-exit { opacity: 1; filter: blur(0); }
+        .page-exit-active { opacity: 0; filter: blur(4px); }
+
+        .link-underline { position: relative; display: inline-block; }
+        .link-underline::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 250ms ease, left 250ms ease;
+        }
+        .link-underline:hover::after { width: 100%; left: 0; }
+
+        .portrait-hover img { transition: transform 400ms ease, filter 400ms ease; }
+        .portrait-hover:hover img { transform: scale(1.02); filter: grayscale(0%) contrast(105%); }
+
+        .book-note { opacity: 0; max-height: 0; overflow: hidden; transition: opacity 300ms ease, max-height 300ms ease; }
+        .book-item:hover .book-note { opacity: 1; max-height: 200px; margin-top: 0.5rem; }
+
+        .signature-wrap {
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .signature-text {
+            display: inline-block;
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: #4b5563;
+            clip-path: inset(0 100% 0 0);
+            opacity: 0;
+            filter: blur(2px);
+            will-change: clip-path, opacity, filter;
+        }
+
+        .signature-wrap::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 56%;
+            width: 0.38rem;
+            height: 0.38rem;
+            border-radius: 999px;
+            background: #1f2937;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .signature-wrap.in-view .signature-text {
+            animation: signature-write 1550ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+        }
+
+        .signature-wrap.in-view::after {
+            animation: signature-tip 1550ms linear forwards;
+        }
+
+        @keyframes signature-write {
+            0% { clip-path: inset(0 100% 0 0); opacity: 0; filter: blur(2px); }
+            12% { opacity: 1; }
+            100% { clip-path: inset(0 0 0 0); opacity: 1; filter: blur(0); }
+        }
+
+        @keyframes signature-tip {
+            0% { left: 0%; opacity: 0; }
+            8% { opacity: 0.85; }
+            90% { opacity: 0.75; }
+            100% { left: 100%; opacity: 0; }
+        }
+
+        .signature-social-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding-top: 0.15rem;
+        }
+
+        .nav-fade {
+            background: linear-gradient(#e8eaeb 8%, rgba(232, 234, 235, 0) 100%);
+            -webkit-mask-image: linear-gradient(#e8eaeb 0%, rgba(232, 234, 235, 0.75) 45%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(#e8eaeb 0%, rgba(232, 234, 235, 0.75) 45%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        .top-nav-shell {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            padding-top: 4.5rem;
+            width: min(calc(100% - 3rem), var(--content-max-width));
+            display: flex;
+            justify-content: center;
+            transition: padding 300ms var(--ease-fast);
+        }
+
+        body.nav-compact .top-nav-shell {
+            padding-top: 1rem;
+        }
+
+        .top-nav {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 0.3rem;
+            border-radius: 14px;
+            border: 1px solid rgba(17, 24, 39, 0.14);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.38));
+            backdrop-filter: blur(12px) saturate(150%);
+            -webkit-backdrop-filter: blur(12px) saturate(150%);
+            box-shadow: none;
+            opacity: 0;
+            transform: translateY(-10px) scale(0.97);
+            transition: gap 300ms var(--ease-fast), transform 700ms var(--ease-fast), opacity 700ms var(--ease-fast);
+        }
+
+        body.nav-ready .top-nav {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        body.nav-compact .top-nav {
+            gap: 0.35rem;
+        }
+
+        .nav-link {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            border: 0;
+            background: transparent;
+            border-radius: 0.5rem;
+            padding: 0.45rem 0.7rem;
+            color: #6b7280;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: color 450ms var(--ease-fast), transform 450ms var(--ease-fast), opacity 450ms var(--ease-fast);
+        }
+
+        body.nav-ready .nav-link {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: calc(100ms + var(--item-index, 0) * 70ms);
+        }
+
+        .nav-link:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+        }
+
+        .nav-link:hover {
+            color: #111827;
+        }
+
+        .nav-link-label {
+            color: inherit;
+        }
+
+        .nav-link.active,
+        .nav-link.active .nav-link-label {
+            color: #111827;
+        }
+
+        .nav-link.active .nav-link-label::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .content-shell {
+            width: min(100%, var(--content-max-width));
+            margin-inline: auto;
+        }
+
+        @media (max-width: 640px) {
+            .top-nav-shell {
+                width: min(calc(100% - 1rem), var(--content-max-width));
+            }
+
+            .top-nav {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 0.15rem;
+            }
+
+            .nav-link {
+                justify-content: center;
+                padding: 0.45rem 0.2rem;
+            }
+
+            body.nav-compact .top-nav {
+                gap: 0.15rem;
+            }
+
+            .nav-link-label {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body class="selection:bg-gray-200">
+
+<header>
+    <div class="fixed top-0 w-screen h-[15vh] nav-fade pointer-events-none z-10"></div>
+
+    <div class="top-nav-shell">
+        <nav id="primaryNav" class="top-nav text-tiny" aria-label="Primary">
+            <button type="button" class="nav-link active" data-page="home" style="--item-index:0;" aria-current="page" onclick="showHome(event)"><span class="nav-link-label link-underline">home</span></button>
+            <button type="button" class="nav-link" data-page="work" style="--item-index:1;" onclick="showWork(event)"><span class="nav-link-label link-underline">work</span></button>
+            <button type="button" class="nav-link" data-page="writing" style="--item-index:2;" onclick="showWriting(event)"><span class="nav-link-label link-underline">writing</span></button>
+            <button type="button" class="nav-link" data-page="reading" style="--item-index:3;" onclick="showReading(event)"><span class="nav-link-label link-underline">reading</span></button>
+        </nav>
+    </div>
+</header>
+
+<main class="min-h-screen flex flex-col items-center pt-48 pb-24 px-6">
+
+    <!-- Home -->
+    <div id="homePage" class="page content-shell space-y-16">
+        <section class="space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+                <div class="md:col-span-1 flex justify-center md:justify-start">
+                    <div class="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden bg-gray-200 portrait-hover">
+                        <img src="aatif.png" class="w-full h-full object-cover grayscale contrast-110">
+                    </div>
+                </div>
+                <div class="md:col-span-4">
+                    <h1 style="font-family: 'Fraunces', serif; font-size: 1.5rem; line-height: 1.6;">
+                        I’m Aatif. I design and build internet things — often for the teams and companies I work with, sometimes for myself.
+                    </h1>
+                </div>
+            </div>
+
+            <div class="text-tiny text-gray-600 space-y-6 max-w-2xl">
+                <p>
+                    Currently leading design at Zensar. My path has taken me through roles at LTI, GeoSpoc (an OLA company), and iAuro, focusing on the intersection of craft and utility.
+                </p>
+                <p>
+                    I’m based in Pune with my wife and our son. Lately, I’ve been figuring out the balance between shipping projects and raising a five-year-old, learning just as much from the tiny human as I do from design.
+                </p>
+                <p class="pt-6 text-center">
+                    <span id="craftSignature" class="signature-wrap">
+                        <span class="signature-text">Craft over noise.</span>
+                    </span>
+                </p>
+                <div class="signature-social-row text-tiny text-gray-500">
+                    <a href="#" class="link-underline hover:text-black">LinkedIn</a>
+                    <a href="#" class="link-underline hover:text-black">Instagram</a>
+                    <a href="#" class="link-underline hover:text-black">Email</a>
+                    <a href="#" class="link-underline hover:text-black">Resume</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Reading -->
+    <div id="readingPage" class="page content-shell space-y-10 hidden">
+        <section class="space-y-4">
+            <h2 class="text-sm tracking-wide text-gray-500 uppercase">Reading</h2>
+            <p class="text-tiny text-gray-500">Books that shaped how I think.</p>
+
+            <div class="space-y-8">
+
+                <div class="book-item">
+                    <div class="flex justify-between items-baseline">
+                        <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">Thinking in Systems</h3>
+                        <span class="text-xs text-gray-400">2024</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Donella H. Meadows</p>
+                    <div class="book-note text-tiny text-gray-600">
+                        Systems thinking changed how I approach product complexity — less features, more leverage points.
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="flex justify-between items-baseline">
+                        <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">Good Strategy / Bad Strategy</h3>
+                        <span class="text-xs text-gray-400">2023</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Richard Rumelt</p>
+                    <div class="book-note text-tiny text-gray-600">
+                        Strategy is diagnosis and focus — not ambition. This reframed how I think about roadmaps.
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="flex justify-between items-baseline">
+                        <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">The Design of Everyday Things</h3>
+                        <span class="text-xs text-gray-400">2022</span>
+                    </div>
+                    <p class="text-sm text-gray-400">Don Norman</p>
+                    <div class="book-note text-tiny text-gray-600">
+                        A reminder that clarity beats cleverness — always.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8">
+                <a href="#" onclick="showHome(event)" class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Work remains unchanged -->
+    <div id="workPage" class="page content-shell hidden">
+        <section class="space-y-6">
+            <h2 class="text-sm tracking-wide text-gray-500 uppercase">Selected Work</h2>
+            <p class="text-tiny text-gray-500 max-w-xl">
+                A progression of product, systems, and platform work — focused on clarity, leverage, and long-term thinking.
+            </p>
+
+            <div class="relative space-y-8 pt-4">
+                <!-- vertical line -->
+                <div class="absolute left-[12%] top-0 bottom-0 w-px bg-gray-200"></div>
+
+                <!-- Project 1 -->
+                <div class="grid grid-cols-12 gap-3 items-start">
+                    <div class="col-span-3 text-sm text-gray-400">2024</div>
+                    <div class="col-span-9 flex gap-4 items-start">
+                        <img src="https://images.unsplash.com/photo-1519183071298-a2962eadc5d7?auto=format&fit=crop&w=600&q=80" class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                        <div>
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Dashboards Are Boring.</h3>
+                            <p class="text-tiny text-gray-600 mt-1">Reimagining enterprise analytics into living, decision-making tools.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="grid grid-cols-12 gap-3 items-start">
+                    <div class="col-span-3 text-sm text-gray-400">2023</div>
+                    <div class="col-span-9 flex gap-4 items-start">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80" class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                        <div>
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Design Systems Should Ship.</h3>
+                            <p class="text-tiny text-gray-600 mt-1">Operationalizing components, governance, and velocity across teams.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="grid grid-cols-12 gap-3 items-start">
+                    <div class="col-span-3 text-sm text-gray-400">2022</div>
+                    <div class="col-span-9 flex gap-4 items-start">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                        <div>
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Interfaces Should Listen.</h3>
+                            <p class="text-tiny text-gray-600 mt-1">Designing audio and motion systems that improve perception and feedback.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="grid grid-cols-12 gap-3 items-start">
+                    <div class="col-span-3 text-sm text-gray-400">2021</div>
+                    <div class="col-span-9 flex gap-4 items-start">
+                        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=600&q=80" class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                        <div>
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Strategy Is a Design Tool.</h3>
+                            <p class="text-tiny text-gray-600 mt-1">Aligning product direction with long-term platform thinking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="grid grid-cols-12 gap-3 items-start">
+                    <div class="col-span-3 text-sm text-gray-400">2020</div>
+                    <div class="col-span-9 flex gap-4 items-start">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                        <div>
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Legacy Isn’t an Excuse.</h3>
+                            <p class="text-tiny text-gray-600 mt-1">Transforming outdated workflows into cohesive digital experiences.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-10">
+                <a href="#" onclick="showHome(event)" class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Writing -->
+    <div id="writingPage" class="page content-shell space-y-10 hidden">
+        <section class="space-y-4">
+            <h2 class="text-sm tracking-wide text-gray-500 uppercase">Writing</h2>
+            <p class="text-tiny text-gray-500">Long-form essays and short notes on product, leadership, and craft.</p>
+
+            <div class="space-y-10">
+
+                <div class="book-item">
+                    <div class="flex justify-between items-baseline">
+                        <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">The Discipline of Taste</h3>
+                        <span class="text-xs text-gray-400">2024</span>
+                    </div>
+                    <div class="book-note text-tiny text-gray-600">
+                        A reflection on how taste is built — not inherited — through repetition, critique, and shipping imperfect work.
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="flex justify-between items-baseline">
+                        <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Leading Without Noise</h3>
+                        <span class="text-xs text-gray-400">2023</span>
+                    </div>
+                    <div class="book-note text-tiny text-gray-600">
+                        On removing friction inside teams, designing clarity into decisions, and why calm leadership scales better than charisma.
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="flex justify-between items-baseline">
+                        <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Iteration Is a Form of Respect</h3>
+                        <span class="text-xs text-gray-400">2022</span>
+                    </div>
+                    <div class="book-note text-tiny text-gray-600">
+                        Why refining ideas — instead of defending them — leads to better products and healthier creative cultures.
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <div class="flex justify-between items-baseline">
+                        <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Designing for Consequence</h3>
+                        <span class="text-xs text-gray-400">2021</span>
+                    </div>
+                    <div class="book-note text-tiny text-gray-600">
+                        A look at how small interface decisions compound into long-term behavioral impact.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8">
+                <a href="#" onclick="showHome(event)" class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+            </div>
+        </section>
+    </div>
+
+</main>
+
+<footer class="pb-12 text-center">
+    <div class="content-shell space-y-4">
+        <span class="text-[10px] text-gray-300 uppercase tracking-widest">© 2026 • Built with precision</span>
+    </div>
+</footer>
+
+<script>
+const homePage = document.getElementById('homePage');
+const workPage = document.getElementById('workPage');
+const readingPage = document.getElementById('readingPage');
+const writingPage = document.getElementById('writingPage');
+const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+const craftSignature = document.getElementById('craftSignature');
+const pageByKey = {
+    home: homePage,
+    work: workPage,
+    writing: writingPage,
+    reading: readingPage
+};
+
+function getCurrentPage() {
+    if (!homePage.classList.contains('hidden')) return homePage;
+    if (!workPage.classList.contains('hidden')) return workPage;
+    if (!readingPage.classList.contains('hidden')) return readingPage;
+    if (!writingPage.classList.contains('hidden')) return writingPage;
+    return homePage;
+}
+
+function getCurrentPageKey() {
+    if (!homePage.classList.contains('hidden')) return 'home';
+    if (!workPage.classList.contains('hidden')) return 'work';
+    if (!readingPage.classList.contains('hidden')) return 'reading';
+    if (!writingPage.classList.contains('hidden')) return 'writing';
+    return 'home';
+}
+
+function transition(from, to) {
+    if (from === to) return;
+
+    from.classList.add('page-exit','page-exit-active');
+
+    setTimeout(()=>{
+        from.classList.add('hidden');
+        from.classList.remove('page-exit','page-exit-active');
+
+        to.classList.remove('hidden');
+        to.classList.add('page-enter');
+
+        requestAnimationFrame(()=> to.classList.add('page-enter-active'));
+
+        setTimeout(()=> to.classList.remove('page-enter','page-enter-active'),400);
+        compactNavOnScroll();
+    },400);
+
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function setActiveNav(pageKey) {
+    navLinks.forEach((link) => {
+        const isActive = link.dataset.page === pageKey;
+        link.classList.toggle('active', isActive);
+        if (isActive) {
+            link.setAttribute('aria-current', 'page');
+        } else {
+            link.removeAttribute('aria-current');
+        }
+    });
+}
+
+function navigate(pageKey) {
+    const nextPage = pageByKey[pageKey];
+    if (!nextPage) return;
+    setActiveNav(pageKey);
+    transition(getCurrentPage(), nextPage);
+}
+
+function compactNavOnScroll() {
+    const currentPage = getCurrentPageKey();
+    const shouldCompact = currentPage !== 'home' && window.scrollY > 24;
+    document.body.classList.toggle('nav-compact', shouldCompact);
+}
+
+function showWork(e){
+    e.preventDefault();
+    navigate('work');
+}
+
+function showReading(e){
+    e.preventDefault();
+    navigate('reading');
+}
+
+function showWriting(e){
+    e.preventDefault();
+    navigate('writing');
+}
+
+function showHome(e){
+    e.preventDefault();
+    navigate('home');
+}
+
+if (craftSignature) {
+    const signatureObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('in-view');
+                requestAnimationFrame(() => entry.target.classList.add('in-view'));
+            } else {
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, { threshold: 0.25, rootMargin: "0px 0px -10% 0px" });
+
+    signatureObserver.observe(craftSignature);
+}
+
+window.addEventListener('scroll', compactNavOnScroll, { passive: true });
+
+setActiveNav(getCurrentPageKey());
+compactNavOnScroll();
+requestAnimationFrame(() => {
+    document.body.classList.add('nav-ready');
+});
+</script>
+
+</body>
+</html>
