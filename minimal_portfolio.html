@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Minimalist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Ms+Madi&display=swap');
+    </style>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #fafafa;
+            background-image: radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.03), transparent 40%);
+            color: #1a1a1a;
+        }
+
+        :root {
+            --ease-fast: cubic-bezier(0.62, 0.61, 0.02, 1);
+            --content-max-width: 35rem;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.02"/></svg>');
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .text-tiny {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+
+        .page {
+            transition: opacity 400ms ease-out, filter 400ms ease-out;
+        }
+
+        .page p:not(.text-center) {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .page-enter {
+            opacity: 0;
+            filter: blur(4px);
+        }
+
+        .page-enter-active {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .page-exit {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .page-exit-active {
+            opacity: 0;
+            filter: blur(4px);
+        }
+
+        .link-underline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .link-underline::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 250ms ease, left 250ms ease;
+        }
+
+        .link-underline:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .portrait-hover img {
+            transition: transform 400ms ease, filter 400ms ease;
+        }
+
+        .portrait-hover:hover img {
+            transform: scale(1.02);
+            filter: grayscale(0%) contrast(105%);
+        }
+
+        .book-note {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 300ms ease, max-height 300ms ease;
+        }
+
+        .book-item:hover .book-note {
+            opacity: 1;
+            max-height: 200px;
+            margin-top: 0.5rem;
+        }
+
+        .work-case-link {
+            display: grid;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 220ms ease;
+        }
+
+        .work-case-link:hover {
+            transform: translateY(-1px);
+        }
+
+        .case-study-kpis {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        .case-toggle {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.65rem;
+            padding: 0.25rem;
+            background: rgba(255, 255, 255, 0.72);
+            overflow: hidden;
+        }
+
+        .case-toggle::before {
+            content: "";
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            width: calc((100% - 0.5rem) / 2);
+            height: calc(100% - 0.5rem);
+            background: #111827;
+            border-radius: 0.45rem;
+            transition: transform 320ms var(--ease-fast);
+            will-change: transform;
+        }
+
+        .case-toggle[data-view="full"]::before {
+            transform: translateX(100%);
+        }
+
+        .case-toggle-btn {
+            position: relative;
+            z-index: 1;
+            border: 0;
+            background: transparent;
+            color: #6b7280;
+            font-size: 0.74rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.65rem;
+            border-radius: 0.45rem;
+            transition: color 180ms ease;
+        }
+
+        .case-toggle-btn[aria-pressed="true"] {
+            color: #f9fafb;
+        }
+
+        .case-panel {
+            transition: opacity 320ms ease-out, filter 320ms ease-out, transform 320ms var(--ease-fast);
+        }
+
+        .case-panel-enter {
+            opacity: 0;
+            filter: blur(4px);
+            transform: translateY(6px);
+        }
+
+        .case-panel-enter-active {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        .case-panel-exit {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        .case-panel-exit-active {
+            opacity: 0;
+            filter: blur(4px);
+            transform: translateY(-4px);
+            pointer-events: none;
+        }
+
+        @media (max-width: 640px) {
+            .case-study-kpis {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .intro-headline {
+            font-family: 'Fraunces', serif;
+            font-size: 1.18rem;
+            line-height: 1.34;
+            text-align: left;
+            max-width: none;
+            margin: 0;
+        }
+
+        .intro-hero {
+            display: grid;
+            grid-template-columns: 4.2rem minmax(0, 1fr);
+            gap: 0.95rem;
+            align-items: start;
+        }
+
+        .intro-image-cell {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .intro-avatar {
+            width: 4.2rem;
+            height: 7.1rem;
+            border-radius: 9999px;
+            overflow: hidden;
+            background: #e5e7eb;
+        }
+
+        .intro-headline-cell {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        @media (min-width: 768px) {
+            .intro-hero {
+                grid-template-columns: 6.1rem minmax(0, 1fr);
+                gap: 1.5rem;
+            }
+
+            .intro-avatar {
+                width: 6.1rem;
+                height: 10.2rem;
+            }
+
+            .intro-headline {
+                font-size: 1.80rem;
+                line-height: 1.40;
+                max-width: 28ch;
+            }
+        }
+
+        .signature-wrap {
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .signature-text {
+            display: inline-block;
+            font-family: 'Ms Madi', cursive;
+            font-size: 1.21rem;
+            color: #f54900;
+            clip-path: inset(0 100% 0 0);
+            opacity: 0;
+            filter: blur(2px);
+            will-change: clip-path, opacity, filter;
+        }
+
+        .signature-wrap::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 56%;
+            width: 0.38rem;
+            height: 0.38rem;
+            border-radius: 999px;
+            background: #1f2937;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .signature-wrap.in-view .signature-text {
+            animation: signature-write 1550ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+        }
+
+        .signature-wrap.in-view::after {
+            animation: signature-tip 1550ms linear forwards;
+        }
+
+        @keyframes signature-write {
+            0% {
+                clip-path: inset(0 100% 0 0);
+                opacity: 0;
+                filter: blur(2px);
+            }
+
+            12% {
+                opacity: 1;
+            }
+
+            100% {
+                clip-path: inset(0 0 0 0);
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+
+        @keyframes signature-tip {
+            0% {
+                left: 0%;
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 0.85;
+            }
+
+            90% {
+                opacity: 0.75;
+            }
+
+            100% {
+                left: 100%;
+                opacity: 0;
+            }
+        }
+
+        .signature-social-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding-top: 0.15rem;
+        }
+
+        .nav-fade {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.32) 40%, rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(16px) saturate(135%);
+            -webkit-backdrop-filter: blur(16px) saturate(135%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.72) 45%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.72) 45%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0;
+            transition: opacity 320ms var(--ease-fast);
+        }
+
+        body.nav-glass .nav-fade {
+            opacity: 1;
+        }
+
+        .top-nav-shell {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            padding-top: 4.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            transition: padding 300ms var(--ease-fast);
+        }
+
+        body.nav-compact .top-nav-shell {
+            padding-top: 0;
+        }
+
+        .top-nav {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 0.3rem;
+            border-radius: 0;
+            border: 1px solid transparent;
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            box-shadow: none;
+            opacity: 0;
+            transform: translateY(-10px) scale(0.97);
+            transition: gap 300ms var(--ease-fast), transform 700ms var(--ease-fast), opacity 700ms var(--ease-fast), background-color 320ms var(--ease-fast), border-color 320ms var(--ease-fast), backdrop-filter 320ms var(--ease-fast), -webkit-backdrop-filter 320ms var(--ease-fast);
+        }
+
+        body.nav-ready .top-nav {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        body.nav-glass .top-nav {
+            border-color: transparent;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.22) 100%);
+            backdrop-filter: blur(8px) saturate(125%);
+            -webkit-backdrop-filter: blur(8px) saturate(125%);
+        }
+
+        body.nav-compact .top-nav {
+            gap: 0.35rem;
+        }
+
+        .nav-link {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            border: 0;
+            background: transparent;
+            border-radius: 0.5rem;
+            padding: 0.45rem 0.7rem;
+            color: #6b7280;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: color 450ms var(--ease-fast), transform 450ms var(--ease-fast), opacity 450ms var(--ease-fast);
+        }
+
+        body.nav-ready .nav-link {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: calc(100ms + var(--item-index, 0) * 70ms);
+        }
+
+        .nav-link:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+        }
+
+        .nav-link:hover {
+            color: #111827;
+        }
+
+        .nav-link-label {
+            color: inherit;
+        }
+
+        .nav-link.active,
+        .nav-link.active .nav-link-label {
+            color: #111827;
+        }
+
+        .nav-link.active .nav-link-label::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .content-shell {
+            width: min(100%, var(--content-max-width));
+            margin-inline: auto;
+        }
+
+        @media (max-width: 640px) {
+            .top-nav {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 0.15rem;
+            }
+
+            .nav-link {
+                justify-content: center;
+                padding: 0.45rem 0.2rem;
+            }
+
+            body.nav-compact .top-nav {
+                gap: 0.15rem;
+            }
+
+            .nav-link-label {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="selection:bg-gray-200">
+
+    <header>
+        <div class="fixed top-0 w-screen h-[15vh] nav-fade pointer-events-none z-10"></div>
+
+        <div class="top-nav-shell">
+            <nav id="primaryNav" class="top-nav text-tiny" aria-label="Primary">
+                <button type="button" class="nav-link active" data-page="home" style="--item-index:0;"
+                    aria-current="page" onclick="showHome(event)"><span
+                        class="nav-link-label link-underline">home</span></button>
+                <button type="button" class="nav-link" data-page="work" style="--item-index:1;"
+                    onclick="showWork(event)"><span class="nav-link-label link-underline">work</span></button>
+                <button type="button" class="nav-link" data-page="writing" style="--item-index:2;"
+                    onclick="showWriting(event)"><span class="nav-link-label link-underline">writing</span></button>
+                <button type="button" class="nav-link" data-page="reading" style="--item-index:3;"
+                    onclick="showReading(event)"><span class="nav-link-label link-underline">reading</span></button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="min-h-screen flex flex-col items-center pt-48 pb-24 px-6">
+
+        <!-- Home -->
+        <div id="homePage" class="page content-shell space-y-16">
+            <section class="space-y-12">
+                <div class="intro-hero">
+                    <div class="intro-image-cell">
+                        <div class="intro-avatar portrait-hover">
+                            <img src="aatif.png" alt="Aatif portrait"
+                                class="w-full h-full object-cover grayscale contrast-110">
+                        </div>
+                    </div>
+                    <div class="intro-headline-cell">
+                        <h1 class="intro-headline">
+                            I’m Aatif. I design and build thoughtful internet products.
+                            <br>For teams, companies, and ideas that deserve to exist.
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="text-tiny text-gray-600 space-y-6 max-w-2xl">
+                    <p>
+                        Currently leading design at Zensar. My path has taken me through roles at LTI, GeoSpoc (an OLA
+                        company), and iAuro, focusing on the intersection of craft and utility.
+                    </p>
+                    <p>
+                        I’m based in Pune with my wife and our son. Lately, I’ve been figuring out the balance between
+                        shipping projects and raising a five-year-old, learning just as much from the tiny human as I do
+                        from design.
+                    </p>
+                    <p class="pt-6 text-center">
+                        <span id="craftSignature" class="signature-wrap">
+                            <span class="signature-text">Craft over noise.</span>
+                        </span>
+                    </p>
+                    <div class="signature-social-row text-tiny text-gray-500">
+                        <a href="#" class="link-underline hover:text-black">linkedin</a>
+                        <a href="#" class="link-underline hover:text-black">instagram</a>
+                        <a href="#" class="link-underline hover:text-black">email</a>
+                        <a href="#" class="link-underline hover:text-black">resume</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Reading -->
+        <div id="readingPage" class="page content-shell space-y-10 hidden">
+            <section class="space-y-4">
+                <h2 class="text-sm tracking-wide text-gray-500 uppercase">Reading</h2>
+                <p class="text-tiny text-gray-500">Books that shaped how I think.</p>
+
+                <div class="space-y-8">
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">Thinking in Systems</h3>
+                            <span class="text-xs text-gray-400">2024</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Donella H. Meadows</p>
+                        <div class="book-note text-tiny text-gray-600">
+                            Systems thinking changed how I approach product complexity — less features, more leverage
+                            points.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">Good Strategy / Bad Strategy
+                            </h3>
+                            <span class="text-xs text-gray-400">2023</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Richard Rumelt</p>
+                        <div class="book-note text-tiny text-gray-600">
+                            Strategy is diagnosis and focus — not ambition. This reframed how I think about roadmaps.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">The Design of Everyday Things
+                            </h3>
+                            <span class="text-xs text-gray-400">2022</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Don Norman</p>
+                        <div class="book-note text-tiny text-gray-600">
+                            A reminder that clarity beats cleverness — always.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pt-8">
+                    <a href="#" onclick="showHome(event)"
+                        class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Work remains unchanged -->
+        <div id="workPage" class="page content-shell hidden">
+            <section class="space-y-6">
+                <h2 class="text-sm tracking-wide text-gray-500 uppercase">Selected Work</h2>
+                <p class="text-tiny text-gray-500 max-w-xl">
+                    A progression of product, systems, and platform work — focused on clarity, leverage, and long-term
+                    thinking.
+                </p>
+
+                <div class="relative space-y-8 pt-4">
+                    <!-- vertical line -->
+                    <div class="absolute left-[12%] top-0 bottom-0 w-px bg-gray-200"></div>
+
+                    <!-- Project 1 -->
+                    <a href="#" onclick="showCaseStudy(event)" class="work-case-link grid grid-cols-12 gap-3 items-start"
+                        aria-label="Open Dashboards Are Boring case study">
+                        <div class="col-span-3 text-sm text-gray-400">2024</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 class="link-underline"
+                                    style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Dashboards
+                                    Are Boring.</h3>
+                                <p class="text-tiny text-gray-600 mt-1">Reimagining enterprise analytics into living,
+                                    decision-making tools.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <div class="grid grid-cols-12 gap-3 items-start">
+                        <div class="col-span-3 text-sm text-gray-400">2023</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Design
+                                    Systems Should Ship.</h3>
+                                <p class="text-tiny text-gray-600 mt-1">Operationalizing components, governance, and
+                                    velocity across teams.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="grid grid-cols-12 gap-3 items-start">
+                        <div class="col-span-3 text-sm text-gray-400">2022</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Interfaces
+                                    Should Listen.</h3>
+                                <p class="text-tiny text-gray-600 mt-1">Designing audio and motion systems that improve
+                                    perception and feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="grid grid-cols-12 gap-3 items-start">
+                        <div class="col-span-3 text-sm text-gray-400">2021</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Strategy Is
+                                    a Design Tool.</h3>
+                                <p class="text-tiny text-gray-600 mt-1">Aligning product direction with long-term
+                                    platform thinking.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="grid grid-cols-12 gap-3 items-start">
+                        <div class="col-span-3 text-sm text-gray-400">2020</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Legacy Isn’t
+                                    an Excuse.</h3>
+                                <p class="text-tiny text-gray-600 mt-1">Transforming outdated workflows into cohesive
+                                    digital experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pt-10">
+                    <a href="#" onclick="showHome(event)"
+                        class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+                </div>
+            </section>
+        </div>
+
+        <div id="caseStudyPage" class="page content-shell space-y-10 hidden">
+            <section class="space-y-4">
+                <p class="text-xs uppercase tracking-[0.16em] text-gray-500">Case Study</p>
+                <h2 style="font-family:'Fraunces',serif;font-size:2rem;line-height:1.15;">Dashboards Are Boring.</h2>
+                <p class="text-tiny text-gray-500">Enterprise analytics platform redesign · 2024</p>
+            </section>
+
+            <section class="space-y-6">
+                <div class="case-toggle" data-view="quick" role="tablist" aria-label="Case study detail level">
+                    <button id="quickScanBtn" class="case-toggle-btn" aria-pressed="true" onclick="setCaseStudyView('quick')"
+                        type="button">Quick Scan</button>
+                    <button id="fullStoryBtn" class="case-toggle-btn" aria-pressed="false"
+                        onclick="setCaseStudyView('full')" type="button">Full Story</button>
+                </div>
+            </section>
+
+            <div id="caseStudyQuick" class="case-panel space-y-6">
+                <section class="space-y-2">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Situation</h3>
+                    <p class="text-tiny text-gray-700">A multi-squad enterprise platform had gradually drifted from the
+                        organisation’s design system, creating inconsistent UI patterns and increasing delivery friction.
+                    </p>
+                </section>
+
+                <section class="space-y-2">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Tension</h3>
+                    <p class="text-tiny text-gray-700">Teams were improvising UI variants because the design system
+                        lacked patterns for complex workflows. Over time, the system became a reference rather than a
+                        contract.</p>
+                </section>
+
+                <section class="space-y-2">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Intervention</h3>
+                    <p class="text-tiny text-gray-700">I audited the product interface, extended missing system
+                        patterns, and introduced design-system compliance into the Definition of Ready for engineering
+                        stories.</p>
+                </section>
+
+                <section class="space-y-2">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Outcome</h3>
+                    <p class="text-tiny text-gray-700">The platform regained visual and interaction consistency while
+                        the design system evolved into an operational standard used across squads.</p>
+                </section>
+            </div>
+
+            <div id="caseStudyFull" class="case-panel space-y-10 hidden">
+                <section class="space-y-4">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.7rem;line-height:1.2;">Turning a Design System From Reference to Contract</h3>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">1. Situation</h3>
+                    <p class="text-tiny text-gray-700">PDM is a multi-year internal enterprise platform used for managing compliance and commit workflows. Over time, as multiple product squads shipped features independently, the interface began drifting away from the organisation’s established design system.</p>
+                    <p class="text-tiny text-gray-700">What initially appeared as small tactical deviations had accumulated into systemic inconsistency across the product. Components had diverged, styling overrides had multiplied, and teams had begun creating variations outside the system to meet immediate delivery needs.</p>
+                    <p class="text-tiny text-gray-700">This wasn’t just a visual issue. In a platform used for compliance workflows, inconsistent patterns increased cognitive load and raised the risk of user error. At the same time, engineering teams were encountering increasing friction during development as UI inconsistencies created rework and slowed delivery.</p>
+                    <p class="text-tiny text-gray-700">I was brought in as Lead UX/UI Designer to help realign the product with the design system while maintaining delivery across multiple active squads.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">2. Tension</h3>
+                    <p class="text-tiny text-gray-700">The deeper challenge quickly became clear: the problem wasn’t simply interface inconsistency.</p>
+                    <p class="text-tiny text-gray-700">The organisation already had a mature design system with established tokens and component libraries. Yet the product had evolved outside those guardrails. New UI variants were being created ad-hoc, stories entered development without clear component references, and engineers frequently relied on CSS overrides to meet sprint deadlines.</p>
+                    <p class="text-tiny text-gray-700">Over time, the design system had quietly shifted from a shared contract into a loose reference library.</p>
+                    <p class="text-tiny text-gray-700">To understand the scale of the drift, I conducted a structured audit of the product interface. Across more than seventy screens, the audit revealed a growing pattern of divergence and uncovered several missing patterns required for CPDM’s complex workflows.</p>
+                    <p class="text-tiny text-gray-700">The issue was not that teams were ignoring the system - the system simply wasn’t equipped to support the product’s evolving needs.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">3. Insight</h3>
+                    <p class="text-tiny text-gray-700">The audit reframed the problem.</p>
+                    <p class="text-tiny text-gray-700">Rather than enforcing strict compliance with the existing system, the opportunity was to restore alignment between the product and the system that was meant to support it.</p>
+                    <p class="text-tiny text-gray-700">Three principles shaped the direction of the work:</p>
+                    <ul class="text-tiny text-gray-700 list-disc pl-5 space-y-1">
+                        <li>Design system first - reuse or extend existing components before creating bespoke patterns</li>
+                        <li>Token discipline - ensure all spacing, colour, typography, and interaction states mapped to system tokens</li>
+                        <li>Shared delivery contracts - align design and engineering around clear component usage during grooming and development</li>
+                    </ul>
+                    <p class="text-tiny text-gray-700">The goal was not only to improve the UI but to reintroduce design system governance into the delivery pipeline itself.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">4. Decision</h3>
+                    <p class="text-tiny text-gray-700">The turning point came with a structural shift in how stories entered development.</p>
+                    <p class="text-tiny text-gray-700">Working with product managers, engineering leads, and the design system guild, we introduced design system compliance directly into the Definition of Ready (DoR) for product stories.</p>
+                    <p class="text-tiny text-gray-700">Every story entering development now required explicit references to approved components and tokens. This ensured that design decisions were clarified before implementation rather than interpreted during development.</p>
+                    <p class="text-tiny text-gray-700">At the same time, the design system itself was extended to support CPDM’s more complex workflows. Several new component patterns were introduced and aligned with existing system principles, including interaction models for multi-stage progress tracking and dense data workflows.</p>
+                    <p class="text-tiny text-gray-700">This approach reframed the design system from a passive reference into an active part of the delivery process.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">5. Execution</h3>
+                    <p class="text-tiny text-gray-700">The redesign and system alignment were delivered incrementally across multiple releases while product squads continued shipping features.</p>
+                    <p class="text-tiny text-gray-700">Rather than rebuilding the interface wholesale, the focus was on stabilising the most critical workflows and ensuring that new work followed system principles.</p>
+                    <p class="text-tiny text-gray-700">Key improvements included:</p>
+                    <ul class="text-tiny text-gray-700 list-disc pl-5 space-y-1">
+                        <li>Consistent form and validation patterns that improved error clarity and recovery</li>
+                        <li>Data-dense table interactions that enabled inline editing and reduced reliance on modal workflows</li>
+                        <li>Unified navigation and filtering patterns that improved wayfinding across complex compliance tasks</li>
+                    </ul>
+                    <p class="text-tiny text-gray-700">To support cross-team alignment, we established recurring collaboration rituals between design, engineering, and the design system guild. These included early design-development pairing during implementation and structured reviews for new patterns entering the system.</p>
+                    <p class="text-tiny text-gray-700">By aligning both the interface and the delivery practices around the design system, teams were able to move forward without reintroducing fragmentation.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">6. Outcome</h3>
+                    <p class="text-tiny text-gray-700">The immediate result was a more coherent interface across several high-traffic workflows within the CPDM platform.</p>
+                    <p class="text-tiny text-gray-700">More importantly, the work improved the reliability of the delivery pipeline itself.</p>
+                    <p class="text-tiny text-gray-700">Product stories moved through grooming and development with fewer ambiguities, front-end rework decreased as teams adopted token-based components, and the reliance on CSS overrides was significantly reduced.</p>
+                    <p class="text-tiny text-gray-700">The components introduced for CPDM were later adopted by other internal products, extending the reach of the design system beyond its original scope.</p>
+                    <p class="text-tiny text-gray-700">What had previously functioned as a reference library began operating as a shared operational standard across product squads.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Reflection</h3>
+                    <p class="text-tiny text-gray-700">In hindsight, I would have introduced lightweight telemetry earlier to better quantify usability improvements in the platform’s core workflows.</p>
+                    <p class="text-tiny text-gray-700">I would also formalise a design-system onboarding playbook for new teams, including token usage guidance and example implementation patterns.</p>
+                    <p class="text-tiny text-gray-700">The most important outcome of the work was not simply a cleaner interface. It was the restoration of a shared contract between design and engineering - one that allowed multiple squads to move faster without sacrificing system coherence.</p>
+                </section>
+            </div>
+
+            <section class="pt-2">
+                <a href="#" onclick="showWork(event)"
+                    class="link-underline text-tiny text-gray-500 hover:text-black">← Back to Work</a>
+            </section>
+        </div>
+
+        <!-- Writing -->
+        <div id="writingPage" class="page content-shell space-y-10 hidden">
+            <section class="space-y-4">
+                <h2 class="text-sm tracking-wide text-gray-500 uppercase">Writing</h2>
+                <p class="text-tiny text-gray-500">Long-form essays and short notes on product, leadership, and craft.
+                </p>
+
+                <div class="space-y-10">
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">The Discipline of Taste</h3>
+                            <span class="text-xs text-gray-400">2024</span>
+                        </div>
+                        <div class="book-note text-tiny text-gray-600">
+                            A reflection on how taste is built — not inherited — through repetition, critique, and
+                            shipping imperfect work.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Leading Without Noise</h3>
+                            <span class="text-xs text-gray-400">2023</span>
+                        </div>
+                        <div class="book-note text-tiny text-gray-600">
+                            On removing friction inside teams, designing clarity into decisions, and why calm leadership
+                            scales better than charisma.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Iteration Is a Form of Respect
+                            </h3>
+                            <span class="text-xs text-gray-400">2022</span>
+                        </div>
+                        <div class="book-note text-tiny text-gray-600">
+                            Why refining ideas — instead of defending them — leads to better products and healthier
+                            creative cultures.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Designing for Consequence</h3>
+                            <span class="text-xs text-gray-400">2021</span>
+                        </div>
+                        <div class="book-note text-tiny text-gray-600">
+                            A look at how small interface decisions compound into long-term behavioral impact.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pt-8">
+                    <a href="#" onclick="showHome(event)"
+                        class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="pb-12 text-center">
+        <div class="content-shell space-y-4">
+            <span class="text-[10px] text-gray-300 uppercase tracking-widest">© 2026 • Built with precision</span>
+        </div>
+    </footer>
+
+    <script>
+        const homePage = document.getElementById('homePage');
+        const workPage = document.getElementById('workPage');
+        const caseStudyPage = document.getElementById('caseStudyPage');
+        const readingPage = document.getElementById('readingPage');
+        const writingPage = document.getElementById('writingPage');
+        const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+        const craftSignature = document.getElementById('craftSignature');
+        const introAvatar = document.querySelector('.intro-avatar');
+        const introHeadline = document.querySelector('.intro-headline');
+        const caseStudyQuick = document.getElementById('caseStudyQuick');
+        const caseStudyFull = document.getElementById('caseStudyFull');
+        const quickScanBtn = document.getElementById('quickScanBtn');
+        const fullStoryBtn = document.getElementById('fullStoryBtn');
+        const caseToggle = document.querySelector('.case-toggle');
+        let isCaseViewAnimating = false;
+        let caseStudyView = 'quick';
+        const pageByKey = {
+            home: homePage,
+            work: workPage,
+            caseStudy: caseStudyPage,
+            writing: writingPage,
+            reading: readingPage
+        };
+
+        function fitIntroHeadlineToAvatar() {
+            if (!introAvatar || !introHeadline) return;
+            if (introAvatar.offsetParent === null || introHeadline.offsetParent === null) return;
+
+            const targetHeight = introAvatar.getBoundingClientRect().height;
+            if (!targetHeight || targetHeight < 24) return;
+
+            let low = 10;
+            let high = 72;
+            let best = low;
+
+            for (let i = 0; i < 16; i += 1) {
+                const mid = (low + high) / 2;
+                introHeadline.style.fontSize = `${mid}px`;
+                const h = introHeadline.getBoundingClientRect().height;
+                if (h <= targetHeight) {
+                    best = mid;
+                    low = mid;
+                } else {
+                    high = mid;
+                }
+            }
+
+            introHeadline.style.fontSize = `${best.toFixed(2)}px`;
+        }
+
+        function getCurrentPage() {
+            if (!homePage.classList.contains('hidden')) return homePage;
+            if (!workPage.classList.contains('hidden')) return workPage;
+            if (!caseStudyPage.classList.contains('hidden')) return caseStudyPage;
+            if (!readingPage.classList.contains('hidden')) return readingPage;
+            if (!writingPage.classList.contains('hidden')) return writingPage;
+            return homePage;
+        }
+
+        function getCurrentPageKey() {
+            if (!homePage.classList.contains('hidden')) return 'home';
+            if (!workPage.classList.contains('hidden')) return 'work';
+            if (!caseStudyPage.classList.contains('hidden')) return 'work';
+            if (!readingPage.classList.contains('hidden')) return 'reading';
+            if (!writingPage.classList.contains('hidden')) return 'writing';
+            return 'home';
+        }
+
+        let isAnimating = false;
+        function transition(from, to) {
+            if (from === to || isAnimating) return;
+            isAnimating = true;
+
+            from.classList.add('page-exit', 'page-exit-active');
+
+            setTimeout(() => {
+                from.classList.add('hidden');
+                from.classList.remove('page-exit', 'page-exit-active');
+
+                to.classList.remove('hidden');
+                to.classList.add('page-enter');
+
+                requestAnimationFrame(() => to.classList.add('page-enter-active'));
+
+                setTimeout(() => {
+                    to.classList.remove('page-enter', 'page-enter-active');
+                    isAnimating = false;
+                    fitIntroHeadlineToAvatar();
+                }, 400);
+                compactNavOnScroll();
+            }, 400);
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function setActiveNav(pageKey) {
+            navLinks.forEach((link) => {
+                const isActive = link.dataset.page === pageKey;
+                link.classList.toggle('active', isActive);
+                if (isActive) {
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        function navigate(pageKey) {
+            if (isAnimating) return;
+            const nextPage = pageByKey[pageKey];
+            if (!nextPage) return;
+            setActiveNav(pageKey);
+            transition(getCurrentPage(), nextPage);
+        }
+
+        function compactNavOnScroll() {
+            const y = window.scrollY;
+            const shouldCompact = y > 24;
+            const shouldGlass = y > 8;
+            document.body.classList.toggle('nav-compact', shouldCompact);
+            document.body.classList.toggle('nav-glass', shouldGlass);
+        }
+
+        function showWork(e) {
+            e.preventDefault();
+            navigate('work');
+        }
+
+        function showReading(e) {
+            e.preventDefault();
+            navigate('reading');
+        }
+
+        function showWriting(e) {
+            e.preventDefault();
+            navigate('writing');
+        }
+
+        function showHome(e) {
+            e.preventDefault();
+            navigate('home');
+        }
+
+        function showCaseStudy(e) {
+            e.preventDefault();
+            navigate('caseStudy');
+            setCaseStudyView('quick', true);
+        }
+
+        function setCaseStudyView(view, immediate = false) {
+            if (!caseStudyQuick || !caseStudyFull || !quickScanBtn || !fullStoryBtn) return;
+            if (view !== 'quick' && view !== 'full') return;
+            if (isCaseViewAnimating && !immediate) return;
+            if (view === caseStudyView && !immediate) return;
+
+            const showQuick = view === 'quick';
+            quickScanBtn.setAttribute('aria-pressed', String(showQuick));
+            fullStoryBtn.setAttribute('aria-pressed', String(!showQuick));
+            if (caseToggle) caseToggle.dataset.view = view;
+
+            const nextPanel = showQuick ? caseStudyQuick : caseStudyFull;
+            const currentPanel = showQuick ? caseStudyFull : caseStudyQuick;
+
+            if (immediate) {
+                caseStudyQuick.classList.toggle('hidden', !showQuick);
+                caseStudyFull.classList.toggle('hidden', showQuick);
+                caseStudyQuick.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
+                caseStudyFull.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
+                caseStudyView = view;
+                return;
+            }
+
+            isCaseViewAnimating = true;
+
+            nextPanel.classList.remove('hidden');
+            nextPanel.classList.add('case-panel-enter');
+            currentPanel.classList.add('case-panel-exit');
+
+            requestAnimationFrame(() => {
+                nextPanel.classList.add('case-panel-enter-active');
+                currentPanel.classList.add('case-panel-exit-active');
+            });
+
+            setTimeout(() => {
+                currentPanel.classList.add('hidden');
+                currentPanel.classList.remove('case-panel-exit', 'case-panel-exit-active');
+                nextPanel.classList.remove('case-panel-enter', 'case-panel-enter-active');
+                caseStudyView = view;
+                isCaseViewAnimating = false;
+            }, 320);
+        }
+
+        if (craftSignature) {
+            const signatureObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('in-view');
+                        // Force a browser reflow to reliably restart the CSS animation
+                        void entry.target.offsetWidth;
+                        entry.target.classList.add('in-view');
+                    } else {
+                        entry.target.classList.remove('in-view');
+                    }
+                });
+            }, { threshold: 0.25, rootMargin: "0px 0px -10% 0px" });
+
+            signatureObserver.observe(craftSignature);
+        }
+
+        window.addEventListener('scroll', compactNavOnScroll, { passive: true });
+        window.addEventListener('resize', () => fitIntroHeadlineToAvatar());
+        window.addEventListener('orientationchange', () => fitIntroHeadlineToAvatar());
+
+        setActiveNav(getCurrentPageKey());
+        compactNavOnScroll();
+        fitIntroHeadlineToAvatar();
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(() => fitIntroHeadlineToAvatar());
+        }
+        requestAnimationFrame(() => {
+            document.body.classList.add('nav-ready');
+        });
+    </script>
+
+</body>
+
+</html>
