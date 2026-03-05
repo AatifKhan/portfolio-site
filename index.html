@@ -113,6 +113,105 @@
             margin-top: 0.5rem;
         }
 
+        .work-case-link {
+            display: grid;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 220ms ease;
+        }
+
+        .work-case-link:hover {
+            transform: translateY(-1px);
+        }
+
+        .case-study-kpis {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        .case-toggle {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.65rem;
+            padding: 0.25rem;
+            background: rgba(255, 255, 255, 0.72);
+            overflow: hidden;
+        }
+
+        .case-toggle::before {
+            content: "";
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            width: calc((100% - 0.5rem) / 2);
+            height: calc(100% - 0.5rem);
+            background: #111827;
+            border-radius: 0.45rem;
+            transition: transform 320ms var(--ease-fast);
+            will-change: transform;
+        }
+
+        .case-toggle[data-view="full"]::before {
+            transform: translateX(100%);
+        }
+
+        .case-toggle-btn {
+            position: relative;
+            z-index: 1;
+            border: 0;
+            background: transparent;
+            color: #6b7280;
+            font-size: 0.74rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.65rem;
+            border-radius: 0.45rem;
+            transition: color 180ms ease;
+        }
+
+        .case-toggle-btn[aria-pressed="true"] {
+            color: #f9fafb;
+        }
+
+        .case-panel {
+            transition: opacity 320ms ease-out, filter 320ms ease-out, transform 320ms var(--ease-fast);
+        }
+
+        .case-panel-enter {
+            opacity: 0;
+            filter: blur(4px);
+            transform: translateY(6px);
+        }
+
+        .case-panel-enter-active {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        .case-panel-exit {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        .case-panel-exit-active {
+            opacity: 0;
+            filter: blur(4px);
+            transform: translateY(-4px);
+            pointer-events: none;
+        }
+
+        @media (max-width: 640px) {
+            .case-study-kpis {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .intro-headline {
             font-family: 'Fraunces', serif;
             font-size: 1.18rem;
@@ -519,19 +618,21 @@
                     <div class="absolute left-[12%] top-0 bottom-0 w-px bg-gray-200"></div>
 
                     <!-- Project 1 -->
-                    <div class="grid grid-cols-12 gap-3 items-start">
+                    <a href="#" onclick="showCaseStudy(event)" class="work-case-link grid grid-cols-12 gap-3 items-start"
+                        aria-label="Open Dashboards Are Boring case study">
                         <div class="col-span-3 text-sm text-gray-400">2024</div>
                         <div class="col-span-9 flex gap-4 items-start">
                             <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
                                 class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
                             <div>
-                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Dashboards
+                                <h3 class="link-underline"
+                                    style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Dashboards
                                     Are Boring.</h3>
                                 <p class="text-tiny text-gray-600 mt-1">Reimagining enterprise analytics into living,
                                     decision-making tools.</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Project 2 -->
                     <div class="grid grid-cols-12 gap-3 items-start">
@@ -599,6 +700,132 @@
                     <a href="#" onclick="showHome(event)"
                         class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
                 </div>
+            </section>
+        </div>
+
+        <div id="caseStudyPage" class="page content-shell space-y-10 hidden">
+            <section class="space-y-4">
+                <p class="text-xs uppercase tracking-[0.16em] text-gray-500">Case Study</p>
+                <h2 style="font-family:'Fraunces',serif;font-size:2rem;line-height:1.15;">Dashboards Are Boring.</h2>
+                <p class="text-tiny text-gray-500">Enterprise analytics platform redesign · 2024</p>
+            </section>
+
+            <section class="space-y-6">
+                <div class="case-toggle" data-view="quick" role="tablist" aria-label="Case study detail level">
+                    <button id="quickScanBtn" class="case-toggle-btn" aria-pressed="true" onclick="setCaseStudyView('quick')"
+                        type="button">Quick Scan</button>
+                    <button id="fullStoryBtn" class="case-toggle-btn" aria-pressed="false"
+                        onclick="setCaseStudyView('full')" type="button">Full Story</button>
+                </div>
+            </section>
+
+            <div id="caseStudyQuick" class="case-panel space-y-6">
+                <section class="space-y-2">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Situation</h3>
+                    <p class="text-tiny text-gray-700">A multi-squad enterprise platform had gradually drifted from the
+                        organisation’s design system, creating inconsistent UI patterns and increasing delivery friction.
+                    </p>
+                </section>
+
+                <section class="space-y-2">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Tension</h3>
+                    <p class="text-tiny text-gray-700">Teams were improvising UI variants because the design system
+                        lacked patterns for complex workflows. Over time, the system became a reference rather than a
+                        contract.</p>
+                </section>
+
+                <section class="space-y-2">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Intervention</h3>
+                    <p class="text-tiny text-gray-700">I audited the product interface, extended missing system
+                        patterns, and introduced design-system compliance into the Definition of Ready for engineering
+                        stories.</p>
+                </section>
+
+                <section class="space-y-2">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Outcome</h3>
+                    <p class="text-tiny text-gray-700">The platform regained visual and interaction consistency while
+                        the design system evolved into an operational standard used across squads.</p>
+                </section>
+            </div>
+
+            <div id="caseStudyFull" class="case-panel space-y-10 hidden">
+                <section class="space-y-4">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.7rem;line-height:1.2;">Turning a Design System From Reference to Contract</h3>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">1. Situation</h3>
+                    <p class="text-tiny text-gray-700">PDM is a multi-year internal enterprise platform used for managing compliance and commit workflows. Over time, as multiple product squads shipped features independently, the interface began drifting away from the organisation’s established design system.</p>
+                    <p class="text-tiny text-gray-700">What initially appeared as small tactical deviations had accumulated into systemic inconsistency across the product. Components had diverged, styling overrides had multiplied, and teams had begun creating variations outside the system to meet immediate delivery needs.</p>
+                    <p class="text-tiny text-gray-700">This wasn’t just a visual issue. In a platform used for compliance workflows, inconsistent patterns increased cognitive load and raised the risk of user error. At the same time, engineering teams were encountering increasing friction during development as UI inconsistencies created rework and slowed delivery.</p>
+                    <p class="text-tiny text-gray-700">I was brought in as Lead UX/UI Designer to help realign the product with the design system while maintaining delivery across multiple active squads.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">2. Tension</h3>
+                    <p class="text-tiny text-gray-700">The deeper challenge quickly became clear: the problem wasn’t simply interface inconsistency.</p>
+                    <p class="text-tiny text-gray-700">The organisation already had a mature design system with established tokens and component libraries. Yet the product had evolved outside those guardrails. New UI variants were being created ad-hoc, stories entered development without clear component references, and engineers frequently relied on CSS overrides to meet sprint deadlines.</p>
+                    <p class="text-tiny text-gray-700">Over time, the design system had quietly shifted from a shared contract into a loose reference library.</p>
+                    <p class="text-tiny text-gray-700">To understand the scale of the drift, I conducted a structured audit of the product interface. Across more than seventy screens, the audit revealed a growing pattern of divergence and uncovered several missing patterns required for CPDM’s complex workflows.</p>
+                    <p class="text-tiny text-gray-700">The issue was not that teams were ignoring the system - the system simply wasn’t equipped to support the product’s evolving needs.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">3. Insight</h3>
+                    <p class="text-tiny text-gray-700">The audit reframed the problem.</p>
+                    <p class="text-tiny text-gray-700">Rather than enforcing strict compliance with the existing system, the opportunity was to restore alignment between the product and the system that was meant to support it.</p>
+                    <p class="text-tiny text-gray-700">Three principles shaped the direction of the work:</p>
+                    <ul class="text-tiny text-gray-700 list-disc pl-5 space-y-1">
+                        <li>Design system first - reuse or extend existing components before creating bespoke patterns</li>
+                        <li>Token discipline - ensure all spacing, colour, typography, and interaction states mapped to system tokens</li>
+                        <li>Shared delivery contracts - align design and engineering around clear component usage during grooming and development</li>
+                    </ul>
+                    <p class="text-tiny text-gray-700">The goal was not only to improve the UI but to reintroduce design system governance into the delivery pipeline itself.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">4. Decision</h3>
+                    <p class="text-tiny text-gray-700">The turning point came with a structural shift in how stories entered development.</p>
+                    <p class="text-tiny text-gray-700">Working with product managers, engineering leads, and the design system guild, we introduced design system compliance directly into the Definition of Ready (DoR) for product stories.</p>
+                    <p class="text-tiny text-gray-700">Every story entering development now required explicit references to approved components and tokens. This ensured that design decisions were clarified before implementation rather than interpreted during development.</p>
+                    <p class="text-tiny text-gray-700">At the same time, the design system itself was extended to support CPDM’s more complex workflows. Several new component patterns were introduced and aligned with existing system principles, including interaction models for multi-stage progress tracking and dense data workflows.</p>
+                    <p class="text-tiny text-gray-700">This approach reframed the design system from a passive reference into an active part of the delivery process.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">5. Execution</h3>
+                    <p class="text-tiny text-gray-700">The redesign and system alignment were delivered incrementally across multiple releases while product squads continued shipping features.</p>
+                    <p class="text-tiny text-gray-700">Rather than rebuilding the interface wholesale, the focus was on stabilising the most critical workflows and ensuring that new work followed system principles.</p>
+                    <p class="text-tiny text-gray-700">Key improvements included:</p>
+                    <ul class="text-tiny text-gray-700 list-disc pl-5 space-y-1">
+                        <li>Consistent form and validation patterns that improved error clarity and recovery</li>
+                        <li>Data-dense table interactions that enabled inline editing and reduced reliance on modal workflows</li>
+                        <li>Unified navigation and filtering patterns that improved wayfinding across complex compliance tasks</li>
+                    </ul>
+                    <p class="text-tiny text-gray-700">To support cross-team alignment, we established recurring collaboration rituals between design, engineering, and the design system guild. These included early design-development pairing during implementation and structured reviews for new patterns entering the system.</p>
+                    <p class="text-tiny text-gray-700">By aligning both the interface and the delivery practices around the design system, teams were able to move forward without reintroducing fragmentation.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">6. Outcome</h3>
+                    <p class="text-tiny text-gray-700">The immediate result was a more coherent interface across several high-traffic workflows within the CPDM platform.</p>
+                    <p class="text-tiny text-gray-700">More importantly, the work improved the reliability of the delivery pipeline itself.</p>
+                    <p class="text-tiny text-gray-700">Product stories moved through grooming and development with fewer ambiguities, front-end rework decreased as teams adopted token-based components, and the reliance on CSS overrides was significantly reduced.</p>
+                    <p class="text-tiny text-gray-700">The components introduced for CPDM were later adopted by other internal products, extending the reach of the design system beyond its original scope.</p>
+                    <p class="text-tiny text-gray-700">What had previously functioned as a reference library began operating as a shared operational standard across product squads.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Reflection</h3>
+                    <p class="text-tiny text-gray-700">In hindsight, I would have introduced lightweight telemetry earlier to better quantify usability improvements in the platform’s core workflows.</p>
+                    <p class="text-tiny text-gray-700">I would also formalise a design-system onboarding playbook for new teams, including token usage guidance and example implementation patterns.</p>
+                    <p class="text-tiny text-gray-700">The most important outcome of the work was not simply a cleaner interface. It was the restoration of a shared contract between design and engineering - one that allowed multiple squads to move faster without sacrificing system coherence.</p>
+                </section>
+            </div>
+
+            <section class="pt-2">
+                <a href="#" onclick="showWork(event)"
+                    class="link-underline text-tiny text-gray-500 hover:text-black">← Back to Work</a>
             </section>
         </div>
 
@@ -675,15 +902,24 @@
     <script>
         const homePage = document.getElementById('homePage');
         const workPage = document.getElementById('workPage');
+        const caseStudyPage = document.getElementById('caseStudyPage');
         const readingPage = document.getElementById('readingPage');
         const writingPage = document.getElementById('writingPage');
         const navLinks = Array.from(document.querySelectorAll('.nav-link'));
         const craftSignature = document.getElementById('craftSignature');
         const introAvatar = document.querySelector('.intro-avatar');
         const introHeadline = document.querySelector('.intro-headline');
+        const caseStudyQuick = document.getElementById('caseStudyQuick');
+        const caseStudyFull = document.getElementById('caseStudyFull');
+        const quickScanBtn = document.getElementById('quickScanBtn');
+        const fullStoryBtn = document.getElementById('fullStoryBtn');
+        const caseToggle = document.querySelector('.case-toggle');
+        let isCaseViewAnimating = false;
+        let caseStudyView = 'quick';
         const pageByKey = {
             home: homePage,
             work: workPage,
+            caseStudy: caseStudyPage,
             writing: writingPage,
             reading: readingPage
         };
@@ -717,6 +953,7 @@
         function getCurrentPage() {
             if (!homePage.classList.contains('hidden')) return homePage;
             if (!workPage.classList.contains('hidden')) return workPage;
+            if (!caseStudyPage.classList.contains('hidden')) return caseStudyPage;
             if (!readingPage.classList.contains('hidden')) return readingPage;
             if (!writingPage.classList.contains('hidden')) return writingPage;
             return homePage;
@@ -725,6 +962,7 @@
         function getCurrentPageKey() {
             if (!homePage.classList.contains('hidden')) return 'home';
             if (!workPage.classList.contains('hidden')) return 'work';
+            if (!caseStudyPage.classList.contains('hidden')) return 'work';
             if (!readingPage.classList.contains('hidden')) return 'reading';
             if (!writingPage.classList.contains('hidden')) return 'writing';
             return 'home';
@@ -803,6 +1041,55 @@
         function showHome(e) {
             e.preventDefault();
             navigate('home');
+        }
+
+        function showCaseStudy(e) {
+            e.preventDefault();
+            navigate('caseStudy');
+            setCaseStudyView('quick', true);
+        }
+
+        function setCaseStudyView(view, immediate = false) {
+            if (!caseStudyQuick || !caseStudyFull || !quickScanBtn || !fullStoryBtn) return;
+            if (view !== 'quick' && view !== 'full') return;
+            if (isCaseViewAnimating && !immediate) return;
+            if (view === caseStudyView && !immediate) return;
+
+            const showQuick = view === 'quick';
+            quickScanBtn.setAttribute('aria-pressed', String(showQuick));
+            fullStoryBtn.setAttribute('aria-pressed', String(!showQuick));
+            if (caseToggle) caseToggle.dataset.view = view;
+
+            const nextPanel = showQuick ? caseStudyQuick : caseStudyFull;
+            const currentPanel = showQuick ? caseStudyFull : caseStudyQuick;
+
+            if (immediate) {
+                caseStudyQuick.classList.toggle('hidden', !showQuick);
+                caseStudyFull.classList.toggle('hidden', showQuick);
+                caseStudyQuick.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
+                caseStudyFull.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
+                caseStudyView = view;
+                return;
+            }
+
+            isCaseViewAnimating = true;
+
+            nextPanel.classList.remove('hidden');
+            nextPanel.classList.add('case-panel-enter');
+            currentPanel.classList.add('case-panel-exit');
+
+            requestAnimationFrame(() => {
+                nextPanel.classList.add('case-panel-enter-active');
+                currentPanel.classList.add('case-panel-exit-active');
+            });
+
+            setTimeout(() => {
+                currentPanel.classList.add('hidden');
+                currentPanel.classList.remove('case-panel-exit', 'case-panel-exit-active');
+                nextPanel.classList.remove('case-panel-enter', 'case-panel-enter-active');
+                caseStudyView = view;
+                isCaseViewAnimating = false;
+            }, 320);
         }
 
         if (craftSignature) {
