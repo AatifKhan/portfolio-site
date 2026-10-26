@@ -1,0 +1,31 @@
+{
+  "checkpoint": "residential-tower-01",
+  "approval": "approved",
+  "instances": 5,
+  "floors": 8,
+  "balconies": 16,
+  "windows": 90,
+  "uniqueGeometryBatches": 4,
+  "authoredSurfaceTriangles": 6686,
+  "checks": [
+    "identical shared geometry and material references",
+    "finite surface and stroke attributes",
+    "no textures",
+    "ground contact",
+    "non-intersecting tower placements",
+    "independent anchors",
+    "unknown assets and variants rejected",
+    "compiled/authored triangle parity",
+    "idempotent shared-resource disposal",
+    "inventory parity",
+    "actual camera orbit and zoom limits",
+    "rapid action reset",
+    "all three view modes",
+    "pointer cancellation",
+    "touch opt-in",
+    "on-demand idle",
+    "hidden-page pause",
+    "reduced-motion immediate controls",
+    "still fallback"
+  ]
+}

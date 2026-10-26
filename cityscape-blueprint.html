@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reference reconstruction · GeoMarketeer</title>
+  <link rel="stylesheet" href="styles/cityscape-blueprint.css?v=golden3">
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three/three.module.js","three/addons/":"./assets/vendor/three/addons/"}}</script>
+</head>
+<body>
+  <header><a href="cityscape-review.html?revision=review2-c">Back to existing city</a><span>GeoMarketeer / reconstruction study 01</span></header>
+  <main>
+    <p class="eyebrow">REFERENCE FIRST · MASSING CHECKPOINT</p>
+    <h1>The same city.<br>Before the details.</h1>
+    <p class="intro">A traced building inventory and a separate Blender grey model. Compare the placement of roads, roofs and open grounds before approving any architectural finish.</p>
+    <div class="toolbar" role="group" aria-label="Comparison view">
+      <button data-mode="blueprint" aria-pressed="true">Annotated reference</button>
+      <button data-mode="overlay" aria-pressed="false">Alignment overlay</button>
+      <button data-mode="model" aria-pressed="false">Grey model · 3D</button>
+      <button data-mode="reference" aria-pressed="false">Reference only</button>
+      <button data-mode="detail" aria-pressed="false">Review 1 section · 3D</button>
+    </div>
+    <section class="stage" aria-label="Reference and reconstruction comparison">
+      <img id="reference" src="assets/portfolio/geomarketeer/pune-approved-reference.png" alt="Approved Pune miniature: curved main road, central synagogue, mall on the right and dense residential blocks.">
+      <img id="still" src="assets/portfolio/geomarketeer/reference-blockout/grey-perspective.png" alt="Neutral grey building and road massing reconstructed from traced reference envelopes." hidden>
+      <canvas id="model" aria-label="Grey Blender city model. Use the rotation buttons below to inspect alternate angles." hidden></canvas>
+      <canvas id="annotations" width="1672" height="941" aria-label="Numbered roof outlines and traced road boundaries. The complete inventory is listed below."></canvas>
+    </section>
+    <div class="settings">
+      <label>Area <select id="zone"><option value="all">All neighbourhoods</option></select></label>
+      <label id="opacityControl" hidden>Reference visibility <input id="opacity" type="range" min="0" max="100" value="50"><output id="opacityValue">50%</output></label>
+      <label id="cameraControl" hidden>Camera <select id="camera"><option value="perspective">Perspective fit · proposal</option><option value="orthographic">Orthographic · original contract</option></select></label>
+      <div id="focusControls" class="focus-controls" hidden role="group" aria-label="Detailed area"><span>Focus</span><button data-focus="overview" aria-pressed="true">Junction</button><button data-focus="landmark" aria-pressed="false">Synagogue</button><button data-focus="cafe" aria-pressed="false">Café</button><button data-focus="street" aria-pressed="false">Street</button></div>
+      <label id="compareControl" hidden>Approved reference reveal <input id="compare" type="range" min="0" max="100" value="0"><output id="compareValue">0%</output></label>
+      <div id="rotation" hidden><button id="left">−14°</button><button id="reset">Main angle</button><button id="right">+14°</button><output id="angle">0°</output></div>
+      <label id="labelsControl"><input id="labels" type="checkbox" checked> Building IDs</label>
+    </div>
+    <p id="status" role="status">Loading reference inventory…</p>
+    <div class="notes">
+      <section><h2>What is traced</h2><p id="counts"></p><p>Blue outlines identify observed roof envelopes. Dashed amber outlines indicate lower-confidence shapes. Cyan lines follow the road boundaries. Choose an area to reduce label clutter.</p></section>
+      <section><h2>What is inferred</h2><p>Building heights, hidden faces and obscured boundaries are estimates. These are modelling coordinates—not surveyed Pune geography. Stepped and curved roofs still need individual reconstruction.</p></section>
+      <section><h2>A camera decision to review</h2><p id="fit"></p><p>The reference has a cut front-right corner and inconsistent cues. Its five-point island outline is traced separately. Neither fit recovers a unique original camera. The existing city’s orthographic camera remains unchanged.</p></section>
+    </div>
+    <section class="landmark-comparison"><h2>Review 1: representative city section</h2><p>The approved reference and the current authored section use the same crop. Colour appears only where detail is finished: the synagogue, both café candidates, the surrounding residential and commercial buildings, street trees, crossings, pedestrians and balanced opposing traffic.</p><div class="comparison-pair"><figure><img src="assets/portfolio/geomarketeer/landmark-section/reference-review1.png" alt="Approved reference crop containing the synagogue, cafe, roads and nearby residences."><figcaption>Approved reference · identical crop</figcaption></figure><figure><img src="assets/portfolio/geomarketeer/landmark-section/review1-section.png?v=golden3" alt="Current Blender reconstruction showing the authored landmark, cafes, residences and street activity among grey massing outside the review crop."><figcaption>Current reconstruction · complete Review 1 crop</figcaption></figure></div><h2>Landmark detail</h2><div class="comparison-pair"><figure><img src="assets/portfolio/geomarketeer/landmark-section/reference-detail.png" alt="Approved reference crop of the synagogue and its garden."><figcaption>Approved reference</figcaption></figure><figure><img src="assets/portfolio/geomarketeer/landmark-section/detail.png?v=golden3" alt="Current Blender reconstruction of the synagogue, tower, porch and walled garden."><figcaption>Current reconstruction</figcaption></figure></div><a href="assets/portfolio/geomarketeer/landmark-section/landmark-source.blend">Editable Review 1 Blender source</a></section>
+    <section class="inventory"><h2>Building-by-building inventory</h2><p id="selection">Select a building ID below to highlight its traced roof. This is the first visible-roof pass; hidden structures are not claimed as complete.</p><div class="table-scroll"><table><thead><tr><th>ID</th><th>Reference feature</th><th>Roof form</th><th>Storeys*</th><th>Trace confidence</th></tr></thead><tbody id="rows"></tbody></table></div><p class="small">*Inferred for massing only. Review 1 details L01–L03, M05, S13 and S14; remaining buildings deliberately stay grey.</p></section>
+    <footer><a href="assets/portfolio/geomarketeer/reference-blockout/reference-blockout.blend">Editable Blender study</a><a href="assets/portfolio/geomarketeer/reference-blockout/inventory.json">Trace inventory</a><a href="assets/portfolio/geomarketeer/reference-blockout/reference-blockout.glb">3D model</a></footer>
+  </main>
+  <script type="module" src="scripts/cityscape-blueprint.js?v=golden3"></script>
+</body></html>

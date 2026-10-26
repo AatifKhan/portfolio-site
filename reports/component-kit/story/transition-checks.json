@@ -1,0 +1,22 @@
+[
+  {
+    "beat": "assumption",
+    "motion": "moving",
+    "orbit": "-5.63"
+  },
+  {
+    "beat": "doubt",
+    "motion": "moving",
+    "orbit": "-1.74"
+  },
+  {
+    "beat": "context",
+    "motion": "moving",
+    "orbit": "5.17"
+  },
+  {
+    "beat": "response",
+    "motion": "idle",
+    "orbit": "0.00"
+  }
+]

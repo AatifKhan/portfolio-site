@@ -1,0 +1,97 @@
+{
+  "checkpoint": "cars-05",
+  "revision": 1,
+  "artisticApproval": "approved",
+  "browser": "Codex in-app browser",
+  "desktop": {
+    "canvasHeight": 740,
+    "columns": "675px 675px",
+    "height": 1100,
+    "scrollWidth": 1440,
+    "state": {
+      "angle": "side",
+      "drawCalls": "20",
+      "mode": "angles",
+      "orbit": "0.00",
+      "state": "ready",
+      "triangles": "44688",
+      "zoom": "1.00"
+    },
+    "width": 1440
+  },
+  "phone": {
+    "canvasHeight": 1400,
+    "columns": "356px",
+    "height": 844,
+    "minimumButtonHeight": 44,
+    "scrollWidth": 390,
+    "width": 390,
+    "activeElement": "carViewport",
+    "viewportTop": 229.5,
+    "physicalDeviceTested": false
+  },
+  "touch": {
+    "pressed": "true",
+    "touchAction": "none"
+  },
+  "fallback": {
+    "activeButtons": [
+      "Try 3D again"
+    ],
+    "complete": true,
+    "height": 480,
+    "src": "assets/portfolio/geomarketeer/component-kit/hatchback-rear-still.jpg?v=1",
+    "state": "fallback",
+    "width": 668
+  },
+  "retry": {
+    "angle": "rear",
+    "drawCalls": "5",
+    "mode": "single",
+    "orbit": "0.00",
+    "state": "ready",
+    "triangles": "11172",
+    "zoom": "1.00"
+  },
+  "warningsAndErrors": [],
+  "observedChecks": [
+    "front/rear three-quarter, front and side views use the same car",
+    "all four presets inspected at both exact \u00b115 degree orbit limits",
+    "body, hood and glazing contours refined during review",
+    "three identical copies with different headings and clear separation",
+    "master and four-angle comparison render at the matching reference style",
+    "maximum zoom reaches 300 percent and reset restores framing",
+    "scene-size preview remains readable",
+    "phone layout has no horizontal overflow; buttons are at least 44px tall",
+    "board selection focuses and reveals the selected model on phones",
+    "touch mode toggles touch-action between pan-y and none",
+    "angle-specific fallback image loads and only retry remains active",
+    "retry restores the same selected angle in 3D",
+    "no captured browser errors or warnings"
+  ],
+  "captures": [
+    "angles-board.jpg",
+    "three-copies.jpg",
+    "desktop-review.jpg",
+    "zoom-300.jpg",
+    "scene-scale.jpg",
+    "reference-left.jpg",
+    "reference-right.jpg",
+    "rear-left.jpg",
+    "rear-right.jpg",
+    "front-left.jpg",
+    "front-right.jpg",
+    "side-left.jpg",
+    "side-right.jpg",
+    "mobile-angles.jpg",
+    "mobile-master.jpg",
+    "mobile-copies.jpg",
+    "mobile-fallback.jpg"
+  ],
+  "limits": [
+    "The hatchback awaits visual approval and remains unplaced.",
+    "Hidden rear details are inferred from the shared illustration style.",
+    "Physical-device touch and low-end GPU performance have not been measured."
+  ],
+  "approvalEvidence": "User: The car looks good. Let\u2019s move on to scooters and bicycles."
+}

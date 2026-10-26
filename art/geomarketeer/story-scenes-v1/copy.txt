@@ -1,0 +1,21 @@
+01 — A promising corner. An important decision.
+Sid wanted to open a café.
+This busy street caught his attention.
+
+02 — Footfall was visible. Customer fit was harder to judge.
+Who spends time here? What do they spend?
+Which cafés already serve them?
+
+03 — Useful data existed. Getting to an answer was difficult.
+Businesses were researching manually.
+Existing tools assumed GIS expertise.
+Research: 6 businesses · 6 weeks
+
+04 — Start with the place. Reveal what matters.
+I kept the map central, with relevant layers,
+focused queries and reports supporting the investigation.
+
+05 — GeoMarketeer. A clearer way to investigate a location.
+Explore an area. Ask focused questions.
+Take the findings into your next decision.
+My role: UX Research & Interaction Design

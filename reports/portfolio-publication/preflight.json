@@ -1,0 +1,14 @@
+{
+  "syntax_passed": [
+    "art/geomarketeer/case-study/sync.mjs",
+    "index.html inline script 3",
+    "minimal_portfolio.html inline script 2",
+    "scripts/city-illustration.js",
+    "scripts/geomarketeer-story-data.js",
+    "scripts/geomarketeer-story.js",
+    "scripts/menu-motion.js"
+  ],
+  "publication_flags": [],
+  "file_count": 41,
+  "bytes": 12470054
+}

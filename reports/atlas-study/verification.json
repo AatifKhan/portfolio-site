@@ -1,0 +1,29 @@
+{
+  "places": [
+    "cafe",
+    "home",
+    "homes",
+    "office",
+    "shop"
+  ],
+  "svgPrimitiveCount": 1347,
+  "uniqueDefinitionIds": 25,
+  "internalReferences": 72,
+  "rasterElements": 0,
+  "checks": [
+    "finite vector coordinates",
+    "five named buildings",
+    "no raster/canvas elements",
+    "unique SVG definitions",
+    "resolved SVG references",
+    "Enter/Space activation",
+    "focus and inactive-view isolation",
+    "last-request-wins transitions",
+    "Escape return",
+    "zoom/tilt limits",
+    "independent view cameras",
+    "keyboard pan and reset",
+    "reduced motion on load and preference change"
+  ],
+  "result": "passed"
+}

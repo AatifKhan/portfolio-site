@@ -1,0 +1,13 @@
+{
+  "revision": 1,
+  "hashes": {
+    "capsule-standard": "76e8459ba3549a82538f98ed7277b9f735c411ae12b946cfce49251892d80d0e",
+    "capsule-small": "ebfa1f6b9ea37c75fa2adcf41535b646ab2e7946e1d1a445dd1ad9867361d310",
+    "conifer-standard": "af3b479b4ccdc2c990ab8874041260abe5b762c8b0fdbee4704c04bac1702024",
+    "conifer-small": "d774bcfe0ca4e46520836f0f42e927103926e6c3953e9d724e34db6fc974e7ca",
+    "pot-standard": "509352266b9a512e8035dfb37aab9d17810fc6118b1905e99587798131ddcb77",
+    "pot-small": "de3361899322af45fe84c974f4270ad78fd79d07cf009b36dcd31cf8e322c4ea",
+    "planter-standard": "eff53088707738dd2951a9ff95d0b60ccc182f4eb6abf3ea86441ef68815d562",
+    "planter-short": "ad465c69697b2550a0ae4568718da6a8e88920974f22892c6ec08f6d4f8adf6e"
+  }
+}

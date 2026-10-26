@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "entries": [
+    {
+      "file": "index.html",
+      "canonicalMatch": true,
+      "chapters": 7,
+      "comparisons": 2,
+      "remainingVisualPlaceholders": 7,
+      "originalImagesPreserved": 7,
+      "allPriorAnchorsPreserved": true,
+      "unrelatedMarkupPreserved": true,
+      "storyHash": "9b2a2ac4b0a82a78200b2c92388979f1ab41c325a991b83fa1ef0a1290ac4193"
+    },
+    {
+      "file": "minimal_portfolio.html",
+      "canonicalMatch": true,
+      "chapters": 7,
+      "comparisons": 2,
+      "remainingVisualPlaceholders": 7,
+      "originalImagesPreserved": 7,
+      "allPriorAnchorsPreserved": true,
+      "unrelatedMarkupPreserved": true,
+      "storyHash": "9b2a2ac4b0a82a78200b2c92388979f1ab41c325a991b83fa1ef0a1290ac4193"
+    }
+  ],
+  "scope": "Narrative revision and scoped comparison styling; no new artwork."
+}

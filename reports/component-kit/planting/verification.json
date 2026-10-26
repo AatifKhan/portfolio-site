@@ -1,0 +1,177 @@
+{
+  "checkpoint": "planting-08",
+  "revision": 1,
+  "status": "approved",
+  "masters": 4,
+  "variants": [
+    {
+      "id": "capsule-standard",
+      "assetId": "capsule-tree",
+      "variantId": "standard",
+      "batches": 4,
+      "triangles": 7424,
+      "bounds": {
+        "min": [
+          -0.46000000834465027,
+          -3.7252903539730653e-10,
+          -0.37720000743865967
+        ],
+        "max": [
+          0.46000000834465027,
+          2.6500000953674316,
+          0.37720000743865967
+        ]
+      }
+    },
+    {
+      "id": "capsule-small",
+      "assetId": "capsule-tree",
+      "variantId": "small",
+      "batches": 4,
+      "triangles": 7424,
+      "bounds": {
+        "min": [
+          -0.38999998569488525,
+          -1.4305114426349519e-8,
+          -0.3197999894618988
+        ],
+        "max": [
+          0.38999998569488525,
+          2.25,
+          0.3197999894618988
+        ]
+      }
+    },
+    {
+      "id": "conifer-standard",
+      "assetId": "conifer",
+      "variantId": "standard",
+      "batches": 3,
+      "triangles": 4832,
+      "bounds": {
+        "min": [
+          -0.5699999928474426,
+          -3.7252903539730653e-10,
+          -0.5699999928474426
+        ],
+        "max": [
+          0.5699999928474426,
+          2.3499999046325684,
+          0.5699999928474426
+        ]
+      }
+    },
+    {
+      "id": "conifer-small",
+      "assetId": "conifer",
+      "variantId": "small",
+      "batches": 3,
+      "triangles": 4832,
+      "bounds": {
+        "min": [
+          -0.4699999988079071,
+          -3.7252903539730653e-10,
+          -0.4699999988079071
+        ],
+        "max": [
+          0.4699999988079071,
+          1.9500000476837158,
+          0.4699999988079071
+        ]
+      }
+    },
+    {
+      "id": "pot-standard",
+      "assetId": "pot",
+      "variantId": "standard",
+      "batches": 6,
+      "triangles": 4716,
+      "bounds": {
+        "min": [
+          -0.2800000011920929,
+          0,
+          -0.2800000011920929
+        ],
+        "max": [
+          0.2800000011920929,
+          0.6455000042915344,
+          0.2800000011920929
+        ]
+      }
+    },
+    {
+      "id": "pot-small",
+      "assetId": "pot",
+      "variantId": "small",
+      "batches": 6,
+      "triangles": 4716,
+      "bounds": {
+        "min": [
+          -0.2150000035762787,
+          0,
+          -0.2150000035762787
+        ],
+        "max": [
+          0.2150000035762787,
+          0.5102499723434448,
+          0.2150000035762787
+        ]
+      }
+    },
+    {
+      "id": "planter-standard",
+      "assetId": "low-planter",
+      "variantId": "standard",
+      "batches": 6,
+      "triangles": 14068,
+      "bounds": {
+        "min": [
+          -0.824999988079071,
+          0,
+          -0.2549999952316284
+        ],
+        "max": [
+          0.824999988079071,
+          0.5842499732971191,
+          0.2549999952316284
+        ]
+      }
+    },
+    {
+      "id": "planter-short",
+      "assetId": "low-planter",
+      "variantId": "short",
+      "batches": 6,
+      "triangles": 9392,
+      "bounds": {
+        "min": [
+          -0.5400000214576721,
+          0,
+          -0.2549999952316284
+        ],
+        "max": [
+          0.5400000214576721,
+          0.5842499732971191,
+          0.2549999952316284
+        ]
+      }
+    }
+  ],
+  "sourceObjects": 22,
+  "neighborhoodPlantingInstances": 0,
+  "approvedFamiliesUnchanged": true,
+  "checks": [
+    "Finite geometry, correct bounds, grounded bases and outward organic winding",
+    "Trunks connect to crowns; exactly three overlapping conifer tiers",
+    "Capsule highlights follow actual surface within 0.014 units",
+    "Container foliage intersects soil and clears inner walls below rim",
+    "Copy instances share geometry and materials; independent bounds and anchors",
+    "Geometry and material disposal occurs once",
+    "All approved geometry fingerprints unchanged, including people revision 2",
+    "Real viewer fixture: all variants, three-copy previews, reference/side/rear and ±15° limits",
+    "Common camera scale within tree and container comparison groups; two-column phone board",
+    "Keyboard zoom 100–300%, reset, on-demand rendering, hidden-page pause, reduced motion and touch opt-in",
+    "Variant-specific still fallback resets to its saved reference angle",
+    "Stable source IDs with valid variant references; all planting remains unplaced"
+  ]
+}

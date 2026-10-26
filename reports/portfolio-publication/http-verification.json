@@ -1,0 +1,202 @@
+{
+  "site": "https://aatifkhan.github.io/portfolio-site/",
+  "commit": "28630dea39bebc08aaff6c5f58b12ca8af716a35",
+  "deployment": "https://github.com/AatifKhan/portfolio-site/actions/runs/40365883552",
+  "files": [
+    {
+      "path": "aatif.png",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "art/geomarketeer/case-study/draft.html",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "art/geomarketeer/case-study/sync.mjs",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "art/geomarketeer/story-opening/copy.txt",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "art/geomarketeer/story-opening/exports.json",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "art/geomarketeer/story-opening/index.html",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/city/sf-study-base.svg",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/city/sf-study-frame.svg",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/city/sf-study-scene.svg",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/city/sf-study-texture.svg",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/case-study/competition.webp",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/case-study/final-workspace.webp",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/case-study/location-data.webp",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/case-study/manual-research.webp",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/case-study/pricing-context.webp",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/case-study/wireframes.webp",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/story-opening/frame-01.png",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/story-opening/frame-02.png",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/story-opening/frame-03.png",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/story-opening/frame-04.png",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/story-opening/frame-05.png",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/geomarketeer/story-opening/master.png",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/live-source/work-2017.avif",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/live-source/work-2020.avif",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/live-source/work-2021.avif",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/live-source/work-2022.avif",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/live-source/work-2023.avif",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/live-source/work-2024.jpg",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "assets/portfolio/research-field.png",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "minimal_portfolio.html",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "scripts/city-illustration.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "scripts/geomarketeer-story-data.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "scripts/geomarketeer-story.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "scripts/menu-motion.js",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "styles/city-illustration.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "styles/geomarketeer-case-study.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "styles/geomarketeer-story.css",
+      "status": 200,
+      "matches_local": true
+    },
+    {
+      "path": "styles/menu-motion.css",
+      "status": 200,
+      "matches_local": true
+    }
+  ]
+}

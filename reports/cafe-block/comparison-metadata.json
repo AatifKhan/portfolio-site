@@ -1,0 +1,25 @@
+{
+  "source": "assets/portfolio/geomarketeer/cafe-corner/cafe-corner-detailed.png",
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "sourceCrop": [
+    415,
+    440,
+    550,
+    470
+  ],
+  "browserCapture": "cafe-detail.jpg",
+  "captureSize": [
+    1440,
+    1000
+  ],
+  "browserCrop": [
+    410,
+    102,
+    700,
+    720
+  ],
+  "normalization": "Both crops contained in 620 × 620 panels without changing colors. Native screenshot is JPEG. This compares art direction in the approved single-block scope, not pixel identity or the entire neighborhood."
+}

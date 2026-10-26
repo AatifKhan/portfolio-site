@@ -1,0 +1,92 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import vm from 'node:vm';
+import * as THREE from '../../../assets/vendor/three/three.module.js';
+import {createAssetLibrary} from '../../../scripts/geomarketeer-kit/library.js';
+import {STREET_REVISION,STREET_MASTERS,FENCE,buildStreet} from '../../../scripts/geomarketeer-kit/street.js';
+import {createFenceReview} from '../../../scripts/geomarketeer-kit/street-review.js';
+import {STREET_SOURCE_OBJECTS,STREET_REFERENCE_NOTES} from '../../../scripts/geomarketeer-kit/street-inventory.js';
+import {PLANTING_VARIANTS} from '../../../scripts/geomarketeer-kit/planting.js';
+import {CAFE_VARIANTS} from '../../../scripts/geomarketeer-kit/cafe.js';
+import {OFFICE_VARIANTS} from '../../../scripts/geomarketeer-kit/office.js';
+import {SMALL_VARIANTS} from '../../../scripts/geomarketeer-kit/small-building.js';
+import {PERSON_POSES} from '../../../scripts/geomarketeer-kit/people.js';
+import {CAMERA,KitDrawing} from '../../../scripts/geomarketeer-kit/style.js';
+import {REFERENCE,FAMILIES} from '../../../scripts/geomarketeer-kit/inventory.js';
+const hashGeometry=group=>{const h=createHash('sha256');group.traverse(o=>{if(o.geometry)for(const a of Object.values(o.geometry.attributes)){const d=a.isInterleavedBufferAttribute?a.data.array:a.array;h.update(Buffer.from(d.buffer,d.byteOffset,d.byteLength));}});return h.digest('hex');};
+const lib=createAssetLibrary(),summary=[],geometries=new Set(),materials=new Set();
+const meshes=group=>{const result=[];group.traverse(o=>{if(o.isMesh&&!o.isLineSegments2&&o.material!==lib.materials.silhouette)result.push(o);});return result;};
+const ray=(objects,origin,direction,far=10)=>new THREE.Raycaster(new THREE.Vector3(...origin),new THREE.Vector3(...direction),0,far).intersectObjects(objects,false);
+const down=(objects,x,z,y=3)=>ray(objects,[x,y,z],[0,-1,0])[0]?.point.y;
+for(const spec of STREET_MASTERS){
+    const a=lib.createAsset(spec),b=lib.createAsset({...spec,instanceId:'copy'}),raw=buildStreet(lib.materials,spec.assetId),physical=meshes(raw.group);
+    assert.equal(a.group.userData.approval,'approved');assert.equal(a.group.userData.placementStatus,'unplaced');assert.deepEqual(a.group.scale.toArray(),[1,1,1]);
+    const ours=[],theirs=[];a.group.traverse(o=>{if(o.geometry)ours.push(o);});b.group.traverse(o=>{if(o.geometry)theirs.push(o);});let triangles=0;
+    for(const[i,o]of ours.entries()){assert.equal(o.geometry,theirs[i].geometry);assert.equal(o.material,theirs[i].material);geometries.add(o.geometry);materials.add(o.material);for(const attribute of Object.values(o.geometry.attributes))for(let n=0;n<attribute.count;n++)for(let c=0;c<attribute.itemSize;c++)assert(Number.isFinite(attribute[['getX','getY','getZ','getW'][c]](n)));if(!o.isLineSegments2)triangles+=o.geometry.getAttribute('position').count/3;}
+    const bounds=new THREE.Box3().setFromObject(a.group);assert(bounds.min.distanceTo(a.bounds.min)<1e-5);assert(bounds.max.distanceTo(a.bounds.max)<1e-5);assert(Math.abs(bounds.max.y-spec.height)<1e-6);
+    assert(Math.abs(bounds.min.y-(spec.id==='fence-panel'?FENCE.bottom-.0275:0))<1e-6,'All ground props touch grade; fence panel retains bottom clearance');
+    if(spec.id==='bench'){
+        for(const z of[-.2,-.1,0,.1,.2])assert(Math.abs(down(physical,0,z)-a.anchors.seat.y)<1e-6,'All five real slats meet the seat anchor');
+        for(const z of[-.15,-.05,.05,.15])assert((down(physical,0,z)||0)<.35,'Real open slat gaps');
+        const frame=meshes(raw.group.getObjectByName('bench/frame'));
+        for(const x of[-.56,.56]){for(const z of[-.2,-.1,0,.1,.2])assert(down(frame,x,z)>.405,'Seat rests on both cross supports');for(const z of[-.2124,.2124])assert(ray(frame,[x,-.01,z],[0,1,0],.03).length,'Four real grounded feet');}
+        for(const x of[-.56,.56])assert(ray(frame,[x,.265,-.25],[0,0,1],.5).length,'Side braces support the central stretcher');
+    }
+    if(spec.id==='bin'){
+        assert(Math.abs(down(physical,0,0)-.731)<1e-6,'Center opening is unobstructed to the recessed insert');assert(Math.abs(down(physical,.18,0)-.84)<1e-6,'Solid lid surrounds the opening');assert(down(physical,0,0)<down(physical,.18,0)-.1,'Opening depth is real');
+    }
+    if(spec.id==='lamp'){
+        const glass=physical.filter(o=>o.material===lib.materials.glazing);assert.equal(glass.length,1);assert.equal(glass[0].geometry.getAttribute('position').count,24);assert(lib.materials.glazing.transparent&&lib.materials.glazing.opacity<.3&&!lib.materials.glazing.depthWrite);
+        const pole=new THREE.Box3().setFromObject(raw.group.getObjectByName('lamp/pole')),head=new THREE.Box3().setFromObject(raw.group.getObjectByName('lamp/lantern-frame'));assert(pole.max.y>head.min.y,'Pole contacts the lantern frame');assert(a.anchors.light.y>head.min.y&&a.anchors.light.y<head.max.y);
+    }
+    if(spec.id==='fence-panel'){
+        for(let i=0;i<FENCE.pickets;i++){const x=-.75+i*.125;assert(ray(physical,[x,.8,.2],[0,0,-1],.4).length,'Every picket is solid');if(i<FENCE.pickets-1)assert.equal(ray(physical,[x+.0625,.8,.2],[0,0,-1],.4).length,0,'Spaces between pickets remain open');}
+        for(const side of['left','right'])for(const level of['Lower','Upper']){const v=a.anchors[side+level];assert(ray(physical,[v.x+(side==='left'?-.01:.01),v.y,0],[side==='left'?1:-1,0,0],.02).length,'Rail ends meet anchors');}
+    }
+    for(const mesh of physical)if(mesh.material===lib.materials.organicFill){const pos=mesh.geometry.getAttribute('position');let volume=0;for(let i=0;i<pos.count;i+=3){const x=new THREE.Vector3().fromBufferAttribute(pos,i),y=new THREE.Vector3().fromBufferAttribute(pos,i+1),z=new THREE.Vector3().fromBufferAttribute(pos,i+2);volume+=x.dot(y.cross(z))/6;}assert(volume>0,'Organic surfaces face outward');}
+    b.bounds.max.y+=10;b.anchors.ground.x+=10;assert.notEqual(b.bounds.max.y,a.bounds.max.y);assert.notEqual(b.anchors.ground.x,a.anchors.ground.x);const own=new Set();raw.group.traverse(o=>{if(o.geometry)own.add(o.geometry);});for(const g of own)g.dispose();
+    summary.push({id:spec.id,batches:ours.length,triangles,bounds:{min:bounds.min.toArray(),max:bounds.max.toArray()},inferred:!!spec.inferred});
+}
+const assembly=createFenceReview(lib);assert.equal(assembly.parts.length,7);assert.equal(assembly.parts.filter(a=>a.group.userData.assetId==='fence-panel').length,3);
+for(let i=0;i<assembly.parts.length-1;i++){const a=assembly.parts[i],b=assembly.parts[i+1];for(const level of['Lower','Upper']){const pa=a.group.localToWorld(a.anchors['right'+level].clone()),pb=b.group.localToWorld(b.anchors['left'+level].clone());assert(pa.distanceTo(pb)<1e-9,'Both rail anchors meet the next component');}}
+assert.throws(()=>lib.createAsset({assetId:'lamp',variantId:'unknown'}),/not available/);
+for(const[assetId,specs,file]of[['cafe',CAFE_VARIANTS,'approved-cafe-geometry.json'],['office',OFFICE_VARIANTS,'approved-office-geometry.json'],['small-building',SMALL_VARIANTS,'approved-small-building-geometry.json'],['hatchback',[{id:'standard'}],'approved-car-geometry.json'],['person',PERSON_POSES,'approved-people-geometry.json']]){const snapshot=JSON.parse(await readFile(new URL(file,import.meta.url),'utf8'));for(const spec of specs)assert.equal(hashGeometry(lib.createAsset({assetId,variantId:spec.id}).group),snapshot.hashes[spec.id]);}
+const planting=JSON.parse(await readFile(new URL('approved-planting-geometry.json',import.meta.url),'utf8'));for(const spec of PLANTING_VARIANTS)assert.equal(hashGeometry(lib.createAsset(spec).group),planting.hashes[spec.id]);
+const wheels=JSON.parse(await readFile(new URL('approved-two-wheeler-geometry.json',import.meta.url),'utf8'));for(const assetId of['scooter','bicycle'])assert.equal(hashGeometry(lib.createAsset({assetId}).group),wheels.hashes[assetId]);
+assert.equal(hashGeometry(lib.createAsset({assetId:'residential-tower'}).group),(await readFile(new URL('approved-tower-geometry.sha256',import.meta.url),'utf8')).trim());
+const inventory=JSON.parse(await readFile(new URL('./inventory.json',import.meta.url),'utf8'));assert.deepEqual(inventory.street.masters,STREET_MASTERS);assert.deepEqual(inventory.street.sourceObjects,STREET_SOURCE_OBJECTS);assert.equal(inventory.approvals.find(s=>s.family==='planting').revision,1);assert(FAMILIES.filter(f=>f.status==='approved').length>=11);
+assert.equal(new Set(STREET_SOURCE_OBJECTS.map(o=>o.id)).size,STREET_SOURCE_OBJECTS.length);for(const o of STREET_SOURCE_OBJECTS){assert(STREET_MASTERS.some(s=>s.assetId===o.assetId&&s.variantId===o.variantId));assert.equal(o.placementStatus,'unplaced');assert(!('position' in o));const[x,y,w,h]=o.sourceBounds;assert(x>=0&&y>=0&&x+w<=REFERENCE.width&&y+h<=REFERENCE.height);}
+assert(STREET_REFERENCE_NOTES.inferredMasters.includes('bin'));assert(!STREET_SOURCE_OBJECTS.some(s=>s.assetId==='bin'),'No invented source bin');assert(inventory.instances.every(o=>o.assetId==='residential-tower'));
+let dg=0,dm=0;for(const g of geometries)g.addEventListener('dispose',()=>dg++);for(const m of materials)m.addEventListener('dispose',()=>dm++);lib.dispose();lib.dispose();assert.equal(dg,geometries.size);assert.equal(dm,materials.size);
+
+const viewer=await readFile(new URL('../../../scripts/geomarketeer-kit/street-viewer.js',import.meta.url),'utf8');
+function fixture({reduced=false,narrow=false,medium=false,query=''}={}){
+    let now=0,id=0,frames=new Map(),renders=[],rendererDisposed=false,rectangles=[];
+    function element(tag='div'){return{tagName:typeof tag==='string'?tag.toUpperCase():'DIV',dataset:{},style:{},hidden:false,disabled:false,textContent:'',value:'',clientWidth:632,clientHeight:480,children:[],listeners:{},classList:{add(){},remove(){},toggle(){}},focus(){this.focused=true;},scrollIntoView(){this.scrolled=true;},setAttribute(k,v){this[k]=v;},append(...v){this.children.push(...v);},prepend(...v){this.children.unshift(...v);},addEventListener(type,fn){this.listeners[type]=fn;},dispatch(type,event={}){this.listeners[type]?.(event);},setPointerCapture(){},hasPointerCapture(){return false;},releasePointerCapture(){}};}
+    const elements=new Map(),get=id=>{if(!elements.has(id)){const value=element();if(id==='streetViewport')value.clientHeight=narrow?1400:740;elements.set(id,value);}return elements.get(id);};
+    const actions=['left','right','in','out','reset','reload'].map(action=>Object.assign(element('button'),{dataset:{action}}));
+    const modes=['single','variants','copies','assembly','scale'].map(mode=>Object.assign(element('button'),{dataset:{mode}}));
+    const focuses=['whole','detail'].map(focus=>Object.assign(element('button'),{dataset:{focus}}));
+    const media={...element(),matches:reduced};
+    const document={...element(),hidden:false,body:element(),getElementById:get,createElement:element,createTextNode:s=>({textContent:s}),querySelector:s=>get(s),querySelectorAll:s=>s==='[data-action]'?actions:s==='[data-mode]'?modes:s==='button[data-focus]'?focuses:s==='#masterPicks button'?get('masterPicks').children:s==='button[data-angle]'?['reference','front','side','rear'].map(angle=>Object.assign(element('button'),{dataset:{angle}})):s==='#variantPicks button'?get('variantPicks').children:[...actions,...modes,...focuses,...get('masterPicks').children,...get('variantPicks').children]};
+    const window=element();
+    class Renderer{constructor(){this.domElement=element('canvas');this.info={render:{calls:0,triangles:0},reset(){this.render.calls=0;}};}setPixelRatio(){}setSize(){}setScissorTest(){}setViewport(x,y,w,h){assert(w>0&&h>0);rectangles.push({x,y,w,h});}setScissor(){}clear(){}render(scene,camera){assert(Number.isFinite(camera.left));renders.push({id:scene.children[0].name,camera:camera.clone(),count:scene.children.filter(o=>o.userData.family==='street').length});if(camera.zoom===1&&get('streetStudy').dataset.focus!=='detail'){const bounds=new THREE.Box3();scene.traverseVisible(o=>{if(o.geometry){o.geometry.computeBoundingBox();bounds.union(o.geometry.boundingBox.clone().applyMatrix4(o.matrixWorld));}});for(const x of[bounds.min.x,bounds.max.x])for(const y of[bounds.min.y,bounds.max.y])for(const z of[bounds.min.z,bounds.max.z]){const p=new THREE.Vector3(x,y,z).project(camera);assert(Math.abs(p.x)<=1.001&&Math.abs(p.y)<=1.001,'Model fits at supported camera angles');}}this.info.render.calls++;}dispose(){rendererDisposed=true;}}
+    vm.runInNewContext(viewer.replace(/^import .*;\n/gm,''),{THREE:{...THREE,WebGLRenderer:Renderer},createAssetLibrary,STREET_REVISION,STREET_MASTERS,createFenceReview,CAMERA,KitDrawing,REFERENCE,document,window,matchMedia:q=>q.includes('reduced')?media:{...element(),matches:q.includes('650px')?narrow:q.includes('1100px')?medium||narrow:false},URLSearchParams,URL,location:{search:query,href:'http://localhost/review'+query,replace(){}},devicePixelRatio:1,performance:{now:()=>now},requestAnimationFrame:fn=>{frames.set(++id,fn);return id;},cancelAnimationFrame:id=>frames.delete(id),ResizeObserver:class{observe(){}disconnect(){}},console});
+    const step=(count=120)=>{for(let i=0;i<count;i++){now+=16.667;const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn(now));}};
+    const click=(data,fromBoard=false)=>get('streetStudy').dispatch('click',{target:{closest:()=>({id:data.id,dataset:data,closest:()=>fromBoard})}});
+    const key=key=>get('streetViewport').dispatch('keydown',{key,preventDefault(){}});
+    return{get,step,click,key,document,window,media,actions,focuses,frames:()=>frames.size,renders:()=>renders,rectangles:()=>rectangles,disposed:()=>rendererDisposed};
+}
+
+
+const f=fixture();assert.equal(f.get('streetStudy').dataset.state,'ready');
+for(const spec of STREET_MASTERS){f.click({variant:spec.id});assert.equal(f.get('streetStudy').dataset.variant,spec.id);for(const angle of['reference','front','side','rear']){f.click({angle});for(let i=0;i<6;i++)f.key('ArrowLeft');f.step();assert.equal(f.get('streetStudy').dataset.orbit,'-15.00');for(let i=0;i<12;i++)f.key('ArrowRight');f.step();assert.equal(f.get('streetStudy').dataset.orbit,'15.00');f.key('0');f.step();}f.click({focus:'detail'});assert.equal(f.get('streetStudy').dataset.focus,'detail');const detailCenter=new THREE.Box3(...spec.detailBounds.map(p=>new THREE.Vector3(...p))).getCenter(new THREE.Vector3()).project(f.renders().at(-1).camera);assert(Math.abs(detailCenter.x)<1e-8&&Math.abs(detailCenter.y)<1e-8,'Detail camera centers the selected physical feature');f.click({focus:'whole'});f.click({mode:'copies'});assert(f.renders().at(-1).id.endsWith('/copies'));f.click({mode:'single'});}
+f.click({mode:'assembly'});assert.equal(f.renders().at(-1).id,'review-only/fence-assembly');for(const angle of['reference','front','side','rear']){f.click({angle});f.key('ArrowLeft');f.step();f.key('0');f.step();}f.click({mode:'variants'});assert.deepEqual(f.renders().slice(-6).map(r=>r.id),STREET_MASTERS.map(s=>`review-only/${s.id}`));const cameras=f.renders().slice(-6).map(r=>r.camera);assert(cameras.every(c=>c.top===cameras[0].top));
+f.click({variant:'bench'},true);assert(f.get('streetViewport').focused&&f.get('streetViewport').scrolled);for(let i=0;i<12;i++)f.key('+');f.step();assert.equal(f.get('streetStudy').dataset.zoom,'3.00');f.key('0');f.step();assert.equal(f.get('streetStudy').dataset.zoom,'1.00');f.click({mode:'scale'});f.step();assert.equal(f.frames(),0);
+const pointer={button:0,isPrimary:true,pointerId:1,pointerType:'touch',clientX:500,target:{closest:()=>null}};f.get('streetViewport').dispatch('pointerdown',pointer);f.get('streetViewport').dispatch('pointermove',{pointerId:1,clientX:800});f.step();assert.equal(f.get('streetStudy').dataset.orbit,'0.00');f.get('touchExplore').dispatch('click',{currentTarget:f.get('touchExplore')});f.get('streetViewport').dispatch('pointerdown',pointer);f.get('streetViewport').dispatch('pointermove',{pointerId:1,clientX:800});f.step(1);assert.equal(f.get('streetStudy').dataset.orbit,'-15.00');f.get('streetViewport').dispatch('pointercancel',{pointerId:1});f.key('0');f.step();
+f.click({action:'in'});f.document.hidden=true;f.document.dispatch('visibilitychange');assert.equal(f.frames(),0);f.document.hidden=false;f.document.dispatch('visibilitychange');f.step();f.window.dispatch('pagehide',{persisted:false});assert(f.disposed());
+const r=fixture({reduced:true,narrow:true,query:'?variant=bin&mode=variants'});assert.equal(r.get('streetStudy').dataset.variant,'bin');r.key('ArrowRight');r.step(1);assert.equal(r.get('streetStudy').dataset.orbit,'3.00');assert.equal(new Set(r.rectangles().slice(-6).map(v=>v.x)).size,2);r.click({mode:'assembly'});r.window.dispatch('pagehide',{persisted:false});
+for(const spec of STREET_MASTERS){const s=fixture({query:`?view=still&variant=${spec.id}&angle=rear`});assert.equal(s.get('streetStudy').dataset.state,'fallback');assert.equal(s.get('streetStudy').dataset.angle,'reference');assert(s.get('fallbackStill').src.endsWith(`street-${spec.id}-still.jpg?v=${STREET_REVISION}`));}
+const report={checkpoint:'street-09',revision:STREET_REVISION,status:'approved',masters:summary,sourceRecords:STREET_SOURCE_OBJECTS.length,neighborhoodStreetInstances:0,approvedFamiliesUnchanged:true,checks:['Finite geometry, actual bounds and outward organic winding','Grounded props; mounted panel retains bottom clearance','Five real bench slats with open gaps, connected supports and four grounded feet','Real recessed bin opening with solid lid surrounding the cavity','Four transparent lantern panes, diffuser and connected pole','Thirteen fence pickets with clear spaces; rail ends meet attachment anchors','Three repeated panels and four posts align at both upper and lower anchors','Copies share buffers and materials; independent bounds and anchors; one-time disposal','Every approved geometry fingerprint unchanged, including planting revision 1','Real viewer fixture covers all six components, copies and fence assembly','Reference/front/side/rear angles, ±15° limits, shared comparison scale and phone board','Detail close-ups, 100–300% keyboard zoom, reset, touch opt-in and cancellation, reduced motion, on-demand lifecycle','Component-specific fallback, valid source IDs and unplaced status; bin inference explicit']};
+await writeFile(new URL('../../../reports/component-kit/street/verification.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:'pass',masters:6,sourceRecords:STREET_SOURCE_OBJECTS.length,checks:report.checks},null,2));

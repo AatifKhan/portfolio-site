@@ -1,0 +1,105 @@
+{
+  "checkpoint": "small-buildings-04",
+  "revision": 1,
+  "artisticApproval": "approved",
+  "browser": "Codex in-app browser",
+  "desktop": {
+    "canvasHeight": 720,
+    "columns": "337.5px 337.5px 337.5px 337.5px",
+    "height": 1100,
+    "scrollWidth": 1440,
+    "state": {
+      "drawCalls": "42",
+      "focus": "whole",
+      "mode": "variants",
+      "orbit": "0.00",
+      "state": "ready",
+      "triangles": "14242",
+      "variant": "home-annex",
+      "zoom": "1.00"
+    },
+    "width": 1440
+  },
+  "tablet": {
+    "canvasHeight": 1080,
+    "columns": "283.328px 283.336px 283.336px",
+    "scrollWidth": 900,
+    "width": 900
+  },
+  "phoneLayout": {
+    "canvasHeight": 2720,
+    "columns": "356px",
+    "controlHeight": 44,
+    "scrollWidth": 390,
+    "width": 390,
+    "focused": "smallBuildingViewport",
+    "touchAction": "pan-y",
+    "touchVisible": 44,
+    "viewportTop": 229.5,
+    "physicalDeviceTested": false
+  },
+  "touch": {
+    "pressed": "true",
+    "touchAction": "none"
+  },
+  "fallback": {
+    "activeButtons": [
+      "Try 3D again"
+    ],
+    "loaded": true,
+    "naturalHeight": 480,
+    "naturalWidth": 675,
+    "src": "assets/portfolio/geomarketeer/component-kit/small-building-home-annex-still.jpg?v=1",
+    "state": "fallback"
+  },
+  "observedChecks": [
+    "all eight variants render beside the correct original reference crop",
+    "same-scale eight-variation board at desktop, tablet and phone breakpoints",
+    "all eight silhouettes captured at both exact \u00b115 degree orbit limits",
+    "close-up corner overlap found and corrected in the shared shell",
+    "doors/windows and roof detail views",
+    "annex seam and main windows clear its roof",
+    "300 percent zoom cap and reset",
+    "scene-size readability",
+    "phone layout has no horizontal overflow; controls at least 44px tall",
+    "board/detail selection focuses and reveals the model on phones",
+    "touch opt-in changes touch-action from pan-y to none",
+    "home-annex fallback loads the saved 675 by 480 image",
+    "only retry remains enabled in fallback; retry restores the selected 3D model",
+    "no captured browser warnings or errors"
+  ],
+  "captures": [
+    "variations-board.jpg",
+    "desktop-review.jpg",
+    "openings-detail.jpg",
+    "roof-detail.jpg",
+    "scene-scale.jpg",
+    "zoom-300.jpg",
+    "base-left.jpg",
+    "base-right.jpg",
+    "gatehouse-left.jpg",
+    "gatehouse-right.jpg",
+    "utility-hut-left.jpg",
+    "utility-hut-right.jpg",
+    "stacked-home-left.jpg",
+    "stacked-home-right.jpg",
+    "compact-store-left.jpg",
+    "compact-store-right.jpg",
+    "frontage-unit-left.jpg",
+    "frontage-unit-right.jpg",
+    "utility-block-left.jpg",
+    "utility-block-right.jpg",
+    "home-annex-left.jpg",
+    "home-annex-right.jpg",
+    "tablet-variations.jpg",
+    "mobile-variations.jpg",
+    "mobile-detail.jpg",
+    "mobile-fallback.jpg"
+  ],
+  "limits": [
+    "Small buildings are approved and remain unplaced.",
+    "Building-use labels and occluded access details are interpretations of an unlabeled image.",
+    "Physical-device touch and low-end GPU performance have not been measured."
+  ],
+  "approvalEvidence": "User: \u201cThe small buildings look good. Let\u2019s move on to the cars.\u201d"
+}

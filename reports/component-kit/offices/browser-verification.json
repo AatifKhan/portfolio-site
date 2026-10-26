@@ -1,0 +1,61 @@
+{
+  "checkpoint": "office-03",
+  "revision": 1,
+  "artisticApproval": "approved",
+  "browser": "Codex in-app browser",
+  "desktop": {
+    "width": 1440,
+    "height": 1000,
+    "individualDrawCalls": 7,
+    "comparisonDrawCalls": 21,
+    "comparisonRenderedTrianglesIncludingLines": 21836
+  },
+  "phoneLayout": {
+    "width": 390,
+    "height": 844,
+    "scrollWidth": 390,
+    "boardColumns": 1,
+    "boardCanvasHeight": 1260,
+    "detailViewportTop": 229.5,
+    "detailControlsMinimumHeight": 44,
+    "physicalDeviceTested": false
+  },
+  "observedChecks": [
+    "all three variants render with matching reference crops and labels",
+    "base uses paired side windows; wide office uses continuous bands",
+    "lower wing retains uninterrupted reference-facing bands and has an inferred side entrance",
+    "recessed glazed entrances and grounded canopy columns visible in close-up",
+    "all three silhouettes checked near both \u00b115 degree orbit limits",
+    "zoom caps at 300 percent; reset restores the whole office",
+    "entrance and fa\u00e7ade focus views",
+    "same-scale comparison and scene-scale preview",
+    "phone layout has no horizontal overflow",
+    "board and detail selection focus and reveal the model on phones",
+    "touch opt-in sets touch-action to none",
+    "wide-office fallback loads its 675 by 480 still and disables unavailable controls",
+    "Try 3D again restores the selected variant",
+    "no captured browser warnings or errors"
+  ],
+  "captures": [
+    "variations-board.jpg",
+    "desktop-review.jpg",
+    "entrance-detail.jpg",
+    "facade-detail.jpg",
+    "scene-scale.jpg",
+    "zoom-300.jpg",
+    "base-left.jpg",
+    "base-right.jpg",
+    "wide-left.jpg",
+    "wide-right.jpg",
+    "low-wing-left.jpg",
+    "low-wing-right.jpg",
+    "mobile-variations.jpg",
+    "mobile-detail.jpg"
+  ],
+  "limits": [
+    "Office components are approved and remain unplaced.",
+    "The rear wing\u2019s hidden faces and side entrance are inferred from the shared system.",
+    "Physical-device touch and low-end GPU performance have not been measured."
+  ],
+  "approvalEvidence": "User: \u201cThe offices look good. Let\u2019s move on to the small buildings.\u201d"
+}

@@ -1,0 +1,92 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "chapters": 7,
+      "comparisonColumns": "120px 424px",
+      "comparisonFont": "14px",
+      "entry": "/",
+      "overflow": false,
+      "width": 1280
+    },
+    {
+      "chapters": 7,
+      "comparisonColumns": "327px",
+      "comparisonFont": "14px",
+      "entry": "/",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "chapters": 7,
+      "comparisonColumns": "257px",
+      "comparisonFont": "14px",
+      "entry": "/",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "chapters": 7,
+      "comparisonColumns": "257px",
+      "comparisonFont": "14px",
+      "entry": "/minimal_portfolio.html",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "chapters": 7,
+      "comparisonColumns": "327px",
+      "comparisonFont": "14px",
+      "entry": "/minimal_portfolio.html",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "chapters": 7,
+      "comparisonColumns": "120px 424px",
+      "comparisonFont": "14px",
+      "entry": "/minimal_portfolio.html",
+      "overflow": false,
+      "width": 1280
+    }
+  ],
+  "keyboardReadingModes": {
+    "root": {
+      "quick": {
+        "full": false,
+        "pressed": "true",
+        "quick": true,
+        "sections": 5
+      },
+      "full": true
+    },
+    "minimal": {
+      "quick": true,
+      "full": true
+    }
+  },
+  "skip": {
+    "focus": "geoResearchTitle",
+    "researchTop": 96.5859375
+  },
+  "backToTop": {
+    "hash": "#caseStudyPage",
+    "top": 112
+  },
+  "preservedComparisonAnchor": {
+    "anchorTop": 87.8984375,
+    "full": true,
+    "hash": "#geoCaseDirection"
+  },
+  "navigationAnchor": {
+    "hash": "#geoCaseNavigation",
+    "top": 87.8125
+  },
+  "images": {
+    "loaded": 7
+  },
+  "errors": {
+    "root": [],
+    "minimal": []
+  }
+}

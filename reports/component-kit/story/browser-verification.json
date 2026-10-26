@@ -1,0 +1,322 @@
+{
+  "status": "pass",
+  "testedAt": "2026-10-26",
+  "desktopColumn": 560,
+  "phoneChecks": [
+    {
+      "beat": "idea",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 806.8671875,
+      "overflow": false,
+      "viewport": {
+        "height": 201,
+        "width": 358
+      },
+      "width": 390
+    },
+    {
+      "beat": "assumption",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 806.8671875,
+      "overflow": false,
+      "viewport": {
+        "height": 201,
+        "width": 358
+      },
+      "width": 390
+    },
+    {
+      "beat": "doubt",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 806.8671875,
+      "overflow": false,
+      "viewport": {
+        "height": 201,
+        "width": 358
+      },
+      "width": 390
+    },
+    {
+      "beat": "context",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 806.8671875,
+      "overflow": false,
+      "viewport": {
+        "height": 201,
+        "width": 358
+      },
+      "width": 390
+    },
+    {
+      "beat": "response",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 806.8671875,
+      "overflow": false,
+      "viewport": {
+        "height": 201,
+        "width": 358
+      },
+      "width": 390
+    },
+    {
+      "beat": "idea",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 767.4921875,
+      "overflow": false,
+      "viewport": {
+        "height": 162,
+        "width": 288
+      },
+      "width": 320
+    },
+    {
+      "beat": "assumption",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 767.4921875,
+      "overflow": false,
+      "viewport": {
+        "height": 162,
+        "width": 288
+      },
+      "width": 320
+    },
+    {
+      "beat": "doubt",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 767.4921875,
+      "overflow": false,
+      "viewport": {
+        "height": 162,
+        "width": 288
+      },
+      "width": 320
+    },
+    {
+      "beat": "context",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 767.4921875,
+      "overflow": false,
+      "viewport": {
+        "height": 162,
+        "width": 288
+      },
+      "width": 320
+    },
+    {
+      "beat": "response",
+      "buttons": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "navTop": 767.4921875,
+      "overflow": false,
+      "viewport": {
+        "height": 162,
+        "width": 288
+      },
+      "width": 320
+    }
+  ],
+  "transitionChecks": [
+    {
+      "beat": "assumption",
+      "motion": "moving",
+      "orbit": "-5.63"
+    },
+    {
+      "beat": "doubt",
+      "motion": "moving",
+      "orbit": "-1.74"
+    },
+    {
+      "beat": "context",
+      "motion": "moving",
+      "orbit": "5.17"
+    },
+    {
+      "beat": "response",
+      "motion": "idle",
+      "orbit": "0.00"
+    }
+  ],
+  "rapidCheck": {
+    "beat": "assumption",
+    "motion": "idle",
+    "orbit": "-3.00",
+    "serial": "1"
+  },
+  "exploreCheck": {
+    "canvases": 1,
+    "mode": "explore",
+    "orbit": "3.00",
+    "serial": "1",
+    "zoom": "1.25"
+  },
+  "compareCheck": true,
+  "resumeCheck": {
+    "active": "modeStory",
+    "beat": "assumption",
+    "canvases": 1,
+    "serial": "1"
+  },
+  "keyboardCheck": "doubt",
+  "skipCheck": {
+    "district": "overview",
+    "mode": "explore",
+    "zoom": "1.00"
+  },
+  "endingCheck": {
+    "district": "overview",
+    "mode": "explore",
+    "serial": "1"
+  },
+  "lossCheck": {
+    "beat": "doubt",
+    "complete": true,
+    "state": "fallback",
+    "width": 560
+  },
+  "recoveryCheck": {
+    "beat": "context",
+    "canvases": 1,
+    "serial": "2",
+    "state": "ready"
+  },
+  "initFailureCheck": {
+    "beat": "assumption",
+    "canvases": 0,
+    "image": 560,
+    "state": "fallback"
+  },
+  "initRecoveryCheck": {
+    "beat": "doubt",
+    "canvases": 1,
+    "state": "ready"
+  },
+  "stillChecks": [
+    {
+      "beat": "idea",
+      "canvases": 0,
+      "complete": true,
+      "state": "fallback",
+      "width": 560
+    },
+    {
+      "beat": "assumption",
+      "canvases": 0,
+      "complete": true,
+      "state": "fallback",
+      "width": 560
+    },
+    {
+      "beat": "doubt",
+      "canvases": 0,
+      "complete": true,
+      "state": "fallback",
+      "width": 560
+    },
+    {
+      "beat": "context",
+      "canvases": 0,
+      "complete": true,
+      "state": "fallback",
+      "width": 560
+    },
+    {
+      "beat": "response",
+      "canvases": 0,
+      "complete": true,
+      "state": "fallback",
+      "width": 560
+    }
+  ],
+  "readerCheck": {
+    "frames": [
+      {
+        "complete": true,
+        "id": "idea",
+        "imageWidth": 560,
+        "title": "Sid wanted a café of his own."
+      },
+      {
+        "complete": true,
+        "id": "assumption",
+        "imageWidth": 560,
+        "title": "The cafés next door were busy."
+      },
+      {
+        "complete": true,
+        "id": "doubt",
+        "imageWidth": 560,
+        "title": "But what was bringing people here?"
+      },
+      {
+        "complete": true,
+        "id": "context",
+        "imageWidth": 560,
+        "title": "He needed more than footfall."
+      },
+      {
+        "complete": true,
+        "id": "response",
+        "imageWidth": 560,
+        "title": "Same lane. A clearer picture."
+      }
+    ],
+    "overflow": false,
+    "scripts": 0
+  },
+  "console": {
+    "production": [],
+    "qa": []
+  },
+  "reducedMotion": "Verified against the production controller with matchMedia enabled and changed in flight; CSS disables emphasis transitions. OS preference was not changed.",
+  "captureNote": "Full-page mobile captures omit the browser scrollbar gutter; DOM checks confirm the configured 390px and 320px widths and no overflow."
+}

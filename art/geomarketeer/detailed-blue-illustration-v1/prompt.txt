@@ -1,0 +1,33 @@
+Use case: stylized-concept.
+Create ONE highly detailed finished GeoMarketeer neighborhood illustration, applying the user's selected BLUE OUTLINE ISOMETRIC STYLE to the previously LOCKED DENSE NEIGHBORHOOD LAYOUT.
+Target: high-resolution 3072 x 2048 landscape if supported, 3:2 aspect ratio; crisp fine detail at close inspection. Pure white background, all architecture comfortably in frame. No page design, no storyboard, no headings, callouts, map pins, dashed opening guide, statistics or labels floating around buildings.
+
+INPUT ROLES — IMPORTANT:
+IMAGE 1 is the SELECTED STYLE AUTHORITY: precise cobalt-blue outlines, white and pale periwinkle filled planes, clean isometric geometry, capsule/oval trees with tiny white highlight bars, layered conifers, scalloped shrubs, simple carefully drawn people and compact cars, white road paint on pale blue streets. Match this exact visual family, not just its blue palette. Do NOT copy its smaller five-building layout.
+IMAGE 2 is the LOCKED DENSE COMPOSITION AUTHORITY: preserve its exact overall camera and building arrangement, floor-count hierarchy, density and road network. Convert this map from a pencil sketch into the style of IMAGE 1. The handwritten annotation text in image 2 is not part of the final artwork and does not override the story clarification below.
+
+LOCKED GEOGRAPHY:
+- BACK LEFT: the same five tall residential towers of varied height grouped around a shared small garden with lawn, paths, a gate and boundary planting; retain balcony rhythms and slim roof-service volumes.
+- TOP RIGHT: the same medium-height office cluster, broad glass facades, defined ground-level entrances and shared arrival pavement, clearly shorter than the residential skyline.
+- MIDDLE RIGHT: the same UNDERGROUND METRO entrance beside the busy pedestrian area. Show stairs descending below ground, coherent glass canopy, handrails and balustrades, simple M transit sign. People emerge and continue along the sidewalk.
+- CENTER: preserve the separate low-rise local shop and small adjacent parking court as drawn. It is an ordinary neighborhood retail building, NOT Sid's proposed site.
+- BOTTOM FOREGROUND: preserve the connected cafe row, including the two-storey unit with blue awning between operating cafes. This front lane will be the story's opening close-up and must reward zooming.
+- Retain all connecting streets, crossings, smaller edge buildings, planted corners, street lights, road markings and coherent pedestrian connections. Do not rearrange the map or simplify to isolated landmark blocks.
+
+STORY / OCCUPANCY — MANDATORY:
+Sid's proposed cafe is the VACANT TWO-STOREY BLUE-AWNING UNIT WITHIN THE BOTTOM FOREGROUND CAFE ROW. Render that unit's glass facade and bare unfitted interior clearly; a tiny discreet 'TO LET' window notice is allowed. NO cafe tables, chairs, parasols or seated customers belong to that unit or stand directly across its frontage. A few people may WALK past. Its immediately neighboring operating cafes have the busy tables and customers. Keep this distinction unambiguous. Do not portray Sid's cafe as already operating.
+Keep the source's central parking, and a small shared parking pocket of two bays and a few scooters at the right end of the foreground cafe lane, connected to the side street with continuous pedestrian access. Parking should not consume the public pavement. No invented successful launch, recommended alternative property or relocation.
+
+DETAILED DRAWING:
+Foreground operating cafes: striped awnings with accurately spaced stripes, slender supporting rods, glass doors and window frames, visible counter and small espresso machine, cup stacks and display case, a few planters, carefully proportioned round tables, chairs with real seat/back geometry and grounded legs, seated people holding cups or talking. All are within the blue-white palette.
+Candidate unit: vacant interior, no barista, no coffee equipment, no dining furniture or customers. Its blue awning and clear empty frontage identify it without a huge highlight.
+Architecture: crisp parapets with only physically necessary edge thickness; intentional window proportions, simple frames, balcony railings and planters, small roof HVAC/water tanks/service details, gentle white/blue glazing reflection. Keep real roof planes and facade alignment consistent. No sprawling surface grids.
+Residential garden: readable curved paths, a few finely drawn slatted benches with correct backs and supporting legs, small shrub planters, shared entry gate; use crisp clean graphic details rather than realistic leaf noise.
+Trees MUST match IMAGE 1: dominant smooth pill/capsule and oval crowns in pale blue with one or two small white highlight glints, mixed with tiered three-layer blue conifers. Shrubs rounded scalloped cloud masses with restrained secondary contours. No realistic leafy green trees, painterly stippling, crystalline or fluffy textured blue foliage.
+People: refined small white-and-blue line figures with natural walking, standing and seated poses, subtle variation in clothing silhouettes, heads/hands proportionate; avoid crowd of repeated identical mannequins. Metro-side sidewalk visibly busier than quiet residential paths.
+Vehicles: compact blue/white hatchbacks, a small van, a few scooters and bicycles, coherent wheel perspective and glazing, placed plausibly in lanes or parking, not across crossings.
+Street furniture: slender lamps, bins, bollards, visible kerb ramps, a few drains and simple paving marks; do not tile every square inch with dark grids.
+
+LINE AND FILL QUALITY:
+Finished vector-like flat isometric illustration, not a wireframe, blueprint, pencil sketch, glossy 3D render, photo or watercolor. Architectural masses have solid white lit faces and softly contrasting flat pale-blue side fills. Streets a single pale periwinkle fill with white paint. Cobalt main contour on silhouettes; secondary architectural detail visibly finer and lighter. One intentional contour per feature, avoid tracing doubled/tripled lines on every edge. Detail should feel rich when zoomed in but not merge into thick dark bands when zoomed out. Sparse, very subtle blue ground shadow allowed; no dramatic lighting, grain or realistic 3D material shading. Cobalt, periwinkle, white ONLY; no green foliage, beige, orange, warm interiors or other palette accents.
+Deliver the whole dense neighborhood as one beautifully coherent image, faithful to selected style 1 and layout 2, with the foreground candidate unambiguously empty.

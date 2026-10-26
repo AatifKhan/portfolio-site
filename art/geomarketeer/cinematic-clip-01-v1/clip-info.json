@@ -1,0 +1,13 @@
+{
+  "title": "Would you open a café here?",
+  "type": "Controlled animation of an approved still image",
+  "source": "../cinematic-blue-refinement-v1/preview.png",
+  "file": "opening-loop.mp4",
+  "width": 1600,
+  "height": 900,
+  "fps": 24,
+  "seconds": 4,
+  "audio": false,
+  "animation": "Soft blue window reflections move through one periodic cycle. Camera, architecture and figures remain fixed.",
+  "generation": "Local FFmpeg compositing. No Sora API call was made."
+}

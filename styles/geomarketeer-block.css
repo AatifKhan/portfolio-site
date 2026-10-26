@@ -1,0 +1,30 @@
+.geo-block .geo-map-render-target,
+.geo-block .geo-map-labels { position: absolute; inset: 0; }
+.geo-block .geo-map-render-target canvas { display: block; width: 100%; height: 100%; outline: none; }
+.geo-block .geo-map-labels { pointer-events: none; }
+.geo-block .geo-map-place { pointer-events: auto; }
+.geo-block .geo-map-place[hidden],
+.geo-block .geo-map-loading[hidden] { display: none; }
+.geo-block .geo-map-interior[hidden] { display: none; }
+.geo-block .geo-map-interior { margin-top: 0.85rem; min-height: 38px; padding: 0.4rem 0.75rem; border: 1px solid #c8d4f3; border-radius: 4px; background: #f5f8ff; color: #466bd9; font-size: 0.75rem; cursor: pointer; }
+.geo-block .geo-map-interior[aria-pressed="true"] { background: #e7eeff; }
+.geo-block .geo-map-viewport { height: clamp(19rem, calc(100svh - 24rem), 43rem); }
+.geo-block .geo-map-loading { position: absolute; inset: 0; display: grid; align-content: center; margin: 0; background: #fff; color: #7182ae; font-size: 0.82rem; text-align: center !important; pointer-events: none; }
+.geo-block .geo-map-options { gap: 0.85rem; }
+.geo-block .geo-map-actions { gap: 0.3rem; }
+.geo-block .geo-map-actions button { padding-inline: 0.65rem; }
+.geo-block.is-expanded .geo-map-viewport { height: 100%; }
+.geo-block .geo-map-place span { background: #ffffff; }
+.geo-block[data-labels="false"] .geo-map-place:not(:hover):not(.is-hovered):not(:focus-visible) span { opacity: 0; }
+.geo-block[data-labels="false"] .geo-map-place:not(:hover):not(.is-hovered):not(:focus-visible) { pointer-events: none; }
+.geo-block .geo-map-place.is-hovered span,
+.geo-block .geo-map-place[aria-pressed="true"] span,
+.geo-block .geo-map-place:focus-visible span { background: #466bd9; }
+@media (max-width: 700px) {
+    .geo-block .geo-map-viewport { height: clamp(18rem, 80vw, 25rem); }
+    .geo-block .geo-map-actions { justify-content: flex-start; gap: 0.4rem; }
+    .geo-block .geo-map-actions button { min-height: 42px; }
+    .geo-block .geo-map-options { justify-content: flex-start; }
+    .geo-block.is-expanded .geo-map-viewport { height: 100%; }
+    .geo-block.is-expanded .geo-map-inspector { max-height: 13rem; }
+}

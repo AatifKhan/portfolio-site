@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "overflow": false,
+      "placeholderWidth": 257,
+      "url": "http://127.0.0.1:4174/?project=geomarketeer#geoExistingToolsFigure",
+      "width": 320
+    },
+    {
+      "overflow": false,
+      "placeholderWidth": 327,
+      "url": "http://127.0.0.1:4174/minimal_portfolio.html?project=geomarketeer#geoExistingToolsFigure",
+      "width": 390
+    }
+  ],
+  "errors": {
+    "index": [],
+    "minimal": []
+  }
+}

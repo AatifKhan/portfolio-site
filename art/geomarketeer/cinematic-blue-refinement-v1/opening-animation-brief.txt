@@ -1,0 +1,19 @@
+GeoMarketeer — opening clip: image-to-video production brief
+
+REFERENCE
+preview.png in this directory. Use this exact approved image as the appearance and composition reference.
+
+DELIVERABLE
+One 4-second landscape video, silent, suitable for looping. Preserve the refined blue-and-ivory architectural miniature. Caption is separate HTML: “Would you open a café here?”
+
+MOTION PROMPT
+Animate this meticulously crafted miniature café street with clearly visible natural motion. Keep the camera locked in exactly this framing. The central figure gently shifts weight and turns their head to look through the vacant shop window, then eases back toward the initial pose. A seated guest at the neighbouring café lifts a cup slightly and returns it to the table. The blue fabric awnings move gently in a light breeze, and the fine model foliage sways. Background street activity stays restrained. Motion must be visible at normal playback size, not just a change in reflections or lighting. Preserve the miniature scale, blue-and-porcelain palette, calm daylight, sharp architecture and modest depth of field. Use smooth motion and settled start/end poses suitable for an unobtrusive loop. Silent; no embedded text.
+
+INVARIANTS
+The central shop remains vacant and unfitted, between two operating cafés in the same row. Keep all storefronts, awnings, windows, furniture, people and positions coherent. No shop opening, signing, business outcome, new site or demographic claims. Maintain the exact lighting direction and blue palette. Avoid morphing, invented objects, camera zooms, dissolves, drifting architecture, flicker, extra limbs or changing faces. Keep the scene readable on a small screen.
+
+ACCEPTANCE
+Inspect the actual exported video at normal playback speed and in the case-study column. Confirm clearly perceptible subject/environment motion; stable geometry; coherent people and furniture; continuity at the loop boundary; correct duration and silent playback. A still with a reflection overlay or camera-only pan is not an acceptable replacement.
+
+STATUS
+Prepared for a connected image-to-video generator. No video-generation job has been submitted. The previous local reflection-only motion study was rejected by the user and is not the approved opening clip.

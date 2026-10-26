@@ -1,0 +1,20 @@
+{
+  "name": "minimal-portfolio-city",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "city:build": "/Applications/Blender.app/Contents/MacOS/Blender --background --python art/geomarketeer/build_scene.py",
+    "city:optimize": "node art/geomarketeer/optimize.mjs",
+    "dev": "python3 -m http.server 4174 --bind 127.0.0.1"
+  },
+  "dependencies": {
+    "three": "0.160.1"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "4.2.1",
+    "@gltf-transform/extensions": "4.2.1",
+    "@gltf-transform/functions": "4.2.1",
+    "meshoptimizer": "0.22.0",
+    "sharp": "0.35.5"
+  }
+}

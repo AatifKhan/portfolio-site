@@ -1,0 +1,154 @@
+{
+  "revision": 1,
+  "status": "awaiting-story-review",
+  "viewport": {
+    "width": 560,
+    "height": 315
+  },
+  "duration": 850,
+  "frames": [
+    {
+      "id": "idea",
+      "label": "The idea",
+      "title": "Sid wanted a café of his own.",
+      "body": "This busy café lane looked like a promising place.",
+      "description": "A close view of a busy café lane. Sid’s vacant blue-awning unit sits between operating cafés.",
+      "camera": {
+        "center": [
+          21.303264017141686,
+          0,
+          19.246319210095592
+        ],
+        "span": 6.824058596601535,
+        "orbit": -6,
+        "zoom": 1
+      },
+      "shot": {
+        "id": "idea",
+        "orbit": -6,
+        "targets": [
+          "cafe-lane-02",
+          "cafe-lane-03"
+        ],
+        "padding": 1.12,
+        "emphasis": "none"
+      },
+      "still": "assets/portfolio/geomarketeer/component-kit/story-idea-still.jpg?v=1"
+    },
+    {
+      "id": "assumption",
+      "label": "The assumption",
+      "title": "The cafés next door were busy.",
+      "body": "Surely there was room for one more?",
+      "description": "A closer view of the same vacant unit, highlighted between its busy café neighbors.",
+      "camera": {
+        "center": [
+          21.30295479721492,
+          0,
+          19.574496886613694
+        ],
+        "span": 6.363761017999123,
+        "orbit": -3,
+        "zoom": 1
+      },
+      "shot": {
+        "id": "assumption",
+        "orbit": -3,
+        "targets": [
+          "cafe-lane-03"
+        ],
+        "context": [
+          "cafe-lane-02"
+        ],
+        "padding": 1.06,
+        "emphasis": "candidate"
+      },
+      "still": "assets/portfolio/geomarketeer/component-kit/story-assumption-still.jpg?v=1"
+    },
+    {
+      "id": "doubt",
+      "label": "The doubt",
+      "title": "But what was bringing people here?",
+      "body": "The metro explained some of the crowd. It didn’t tell Sid who would buy.",
+      "description": "The view widens from Sid’s café lane to the shared parking, crossing and nearby underground metro entrance.",
+      "camera": {
+        "center": [
+          25.876780122761396,
+          0,
+          3.308207540057353
+        ],
+        "span": 20.856475338236617,
+        "orbit": 6,
+        "zoom": 1
+      },
+      "shot": {
+        "id": "doubt",
+        "orbit": 6,
+        "targets": [
+          "cafe-lane-03",
+          "metro-entrance-01",
+          "crossing-metro",
+          "parking-car-southeast-01",
+          "parking-car-southeast-02"
+        ],
+        "padding": 1.12,
+        "emphasis": "connection"
+      },
+      "still": "assets/portfolio/geomarketeer/component-kit/story-doubt-still.jpg?v=1"
+    },
+    {
+      "id": "context",
+      "label": "The context",
+      "title": "He needed more than footfall.",
+      "body": "Who lives and works nearby? What do they spend? What do the existing cafés already offer?",
+      "description": "The full neighborhood reveals residential towers, offices, the metro and café lane. People, spending and competition are questions about this whole area.",
+      "camera": {
+        "center": [
+          12.778589124117978,
+          0,
+          -3.943813542609746
+        ],
+        "span": 39.15021076895267,
+        "orbit": 0,
+        "zoom": 1
+      },
+      "shot": {
+        "id": "context",
+        "orbit": 0,
+        "targets": [
+          "neighborhood"
+        ],
+        "padding": 1.12,
+        "emphasis": "questions"
+      },
+      "still": "assets/portfolio/geomarketeer/component-kit/story-context-still.jpg?v=1"
+    },
+    {
+      "id": "response",
+      "label": "The response",
+      "title": "Same lane. A clearer picture.",
+      "body": "GeoMarketeer helps businesses understand a neighborhood before choosing where to open.",
+      "description": "The same full neighborhood, with Sid’s original vacant unit gently emphasized. No different location or business outcome is shown.",
+      "camera": {
+        "center": [
+          12.778589124117978,
+          0,
+          -3.943813542609746
+        ],
+        "span": 39.15021076895267,
+        "orbit": 0,
+        "zoom": 1
+      },
+      "shot": {
+        "id": "response",
+        "orbit": 0,
+        "targets": [
+          "neighborhood"
+        ],
+        "padding": 1.12,
+        "emphasis": "candidate-and-questions"
+      },
+      "still": "assets/portfolio/geomarketeer/component-kit/story-response-still.jpg?v=1"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "checkpoint": "office-03",
+  "revision": 1,
+  "status": "approved",
+  "variants": [
+    {
+      "id": "base",
+      "floors": 4,
+      "footprint": [
+        3.6,
+        3.2
+      ],
+      "height": 4.48,
+      "bays": 75,
+      "surfaceTrianglesIncludingGlass": 3476,
+      "batches": 5
+    },
+    {
+      "id": "wide",
+      "floors": 4,
+      "footprint": [
+        4.3,
+        4.8
+      ],
+      "height": 4.78,
+      "bays": 130,
+      "surfaceTrianglesIncludingGlass": 5852,
+      "batches": 5
+    },
+    {
+      "id": "low-wing",
+      "floors": 3,
+      "footprint": [
+        2.8,
+        3.1
+      ],
+      "height": 3.38,
+      "bays": 57,
+      "surfaceTrianglesIncludingGlass": 2728,
+      "batches": 5
+    }
+  ],
+  "neighborhoodOfficeInstances": 0,
+  "approvedTowerAndCafesUnchanged": true,
+  "checks": [
+    "one byte-identical window bay across all variants",
+    "declared floor counts, elevations, footprints and roof configurations",
+    "no windows crossing the entry opening or façade edges",
+    "finite surface and stroke buffers; no textures",
+    "grounded building and canopy supports",
+    "transparent entry glazing survives compilation",
+    "authored/compiled triangle parity",
+    "shared geometry and materials per variant; independent anchors",
+    "shared-resource disposal once",
+    "inventory parity and no office placements",
+    "approved tower and all five café geometry fingerprints unchanged",
+    "reference crops and variant labels",
+    "entrance and façade detail framing",
+    "same-scale three-view board",
+    "desktop and phone board breakpoints",
+    "detail and board selection focus and scroll",
+    "orbit limits and zoom caps",
+    "variant changes and reset",
+    "scene-scale preview",
+    "touch opt-in and pointer cancellation",
+    "idle scheduling and hidden-page pause",
+    "reduced-motion immediate update",
+    "per-variant still fallback"
+  ]
+}

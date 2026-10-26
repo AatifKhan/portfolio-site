@@ -1,0 +1,66 @@
+{
+  "phoneWidth": 390,
+  "noHorizontalOverflow": true,
+  "touchEnabled": "true",
+  "fallbacks": [
+    {
+      "compareVisible": false,
+      "district": "overview",
+      "imageLoaded": true,
+      "state": "fallback"
+    },
+    {
+      "compareVisible": false,
+      "district": "housing",
+      "imageLoaded": true,
+      "state": "fallback"
+    },
+    {
+      "compareVisible": false,
+      "district": "offices",
+      "imageLoaded": true,
+      "state": "fallback"
+    },
+    {
+      "compareVisible": false,
+      "district": "central",
+      "imageLoaded": true,
+      "state": "fallback"
+    },
+    {
+      "compareVisible": false,
+      "district": "metro",
+      "imageLoaded": true,
+      "state": "fallback"
+    },
+    {
+      "compareVisible": false,
+      "district": "cafe-lane",
+      "imageLoaded": true,
+      "state": "fallback"
+    },
+    {
+      "compareVisible": false,
+      "district": "west",
+      "imageLoaded": true,
+      "state": "fallback"
+    },
+    {
+      "compareVisible": false,
+      "district": "perimeter",
+      "imageLoaded": true,
+      "state": "fallback"
+    }
+  ],
+  "recovered": "ready",
+  "logs": [],
+  "desktop": {
+    "drawCalls": "179",
+    "height": 1100,
+    "triangles": "2756984",
+    "width": 1440
+  },
+  "finalRevision": 1,
+  "instances": 326,
+  "pedestrianFitAdjustments": 23
+}

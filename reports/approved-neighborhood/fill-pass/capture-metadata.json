@@ -1,0 +1,37 @@
+{
+  "source": "assets/portfolio/geomarketeer/cafe-corner/cafe-corner-approved-v2.png",
+  "sourceWidth": 1448,
+  "sourceHeight": 1086,
+  "referenceBrowserCapture": "reference-browser.jpg",
+  "reason": "The browser capture shifts saturated blue slightly; source and implementation were also captured through the same browser pipeline for an unbiased palette comparison. Source asset is unchanged.",
+  "masterViewport": {
+    "width": 1500,
+    "height": 1286
+  },
+  "canvas": {
+    "x": 24,
+    "y": 96.09375,
+    "width": 1452,
+    "height": 1086
+  },
+  "artCrop": {
+    "x": 26,
+    "y": 96,
+    "width": 1448,
+    "height": 1086
+  },
+  "responsiveViewports": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "referenceCamera": {
+    "orbit": 0,
+    "zoom": 100
+  }
+}

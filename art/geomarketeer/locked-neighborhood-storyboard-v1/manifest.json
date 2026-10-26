@@ -1,0 +1,16 @@
+{
+  "approvedOn": "2026-10-25",
+  "status": "composition-locked; storyboard-draft",
+  "files": [
+    {
+      "name": "approved-composition.png",
+      "source": "/Users/aatif/.codex/generated_images/01a16e23-b756-7ed0-9787-1d75bb51e9b8/exec-d0e52e2d-72c5-4b22-813b-c5fe7a0ca22c.png",
+      "sha256": "33a228ebd798f0fb3a40c92f6116de1e669d17658b636e78d9715af3851d0c15"
+    },
+    {
+      "name": "storyboard.png",
+      "source": "/Users/aatif/.codex/generated_images/01a16e23-b756-7ed0-9787-1d75bb51e9b8/exec-b39f85c0-7b9b-44a6-ab89-52c259b42561.png",
+      "sha256": "30f36c69f32f66f8e201dafc3e247fc399459cb5736692b476513e80412b7cdd"
+    }
+  ]
+}

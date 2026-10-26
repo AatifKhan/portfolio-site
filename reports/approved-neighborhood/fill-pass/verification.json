@@ -1,0 +1,27 @@
+{
+  "buildings": 5,
+  "cars": 5,
+  "surfaces": 26,
+  "strokes": 43,
+  "triangles": 216303,
+  "textures": 0,
+  "minY": -0.07000000029802322,
+  "checks": [
+    "measured feature counts",
+    "70 verified window cells",
+    "bench orientation",
+    "55 measured landmark projections",
+    "secondary contour fading",
+    "finite geometry",
+    "no below-ground roof geometry",
+    "calibrated roof landmarks",
+    "visible building footprints",
+    "orbit limits",
+    "zoom limits",
+    "latest-action settling",
+    "true camera rotation",
+    "pointer cancellation",
+    "keyboard reset",
+    "immediate reduced motion"
+  ]
+}

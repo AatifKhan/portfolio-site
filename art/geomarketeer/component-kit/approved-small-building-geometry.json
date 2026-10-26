@@ -1,0 +1,13 @@
+{
+  "revision": 1,
+  "hashes": {
+    "base": "572f2b584fe409c6d5952939bf83d08a29902147c285bc428380d47c366cddbf",
+    "gatehouse": "f8b2326b3d980bd64459033ef5ac0dedcda8383fb5d0e67f5d43417c5679766e",
+    "utility-hut": "44fd1a4ad2aeff2214ee3254203ae03312cd02216540ca4b789ecec6fec4b4fc",
+    "stacked-home": "4ef9bf12aac528b9c32c8b7c74f5894a8a9d462cc13d4b1ada12c8b4078d3d18",
+    "compact-store": "54e2aee8fe0b6b9105575c3e3c731450686fc488afb0da97ed9d5a297b0a9695",
+    "frontage-unit": "8a4303e427ac08501bc1d3959d88b33f45cb5006dd9890d6475b1fb204b2cc0e",
+    "utility-block": "6334d673afa7de2b1be559d5d68a227b55b2df4cc39ec4df5d552691b5dbc430",
+    "home-annex": "2f4b951ceafcbfd40b1d7457a7ae9e7723361f046ea6f31c0d6b422d4691381d"
+  }
+}

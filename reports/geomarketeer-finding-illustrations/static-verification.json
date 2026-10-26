@@ -1,0 +1,63 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "entry": "index.html",
+      "copyPreserved": true,
+      "unrelatedMarkupPreserved": true,
+      "images": 4,
+      "dimensionsReserved": true,
+      "decorativeAlt": true,
+      "lazyLoaded": true
+    },
+    {
+      "entry": "minimal_portfolio.html",
+      "copyPreserved": true,
+      "unrelatedMarkupPreserved": true,
+      "images": 4,
+      "dimensionsReserved": true,
+      "decorativeAlt": true,
+      "lazyLoaded": true
+    },
+    {
+      "entry": "art/geomarketeer/case-study/draft.html",
+      "copyPreserved": true,
+      "unrelatedMarkupPreserved": true,
+      "images": 4,
+      "dimensionsReserved": true,
+      "decorativeAlt": true,
+      "lazyLoaded": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "manual-research",
+      "width": 960,
+      "height": 720,
+      "bytes": 94722,
+      "source": "exec-a3f2b563-89ed-4812-adbc-6a97d7ef8f0d.png"
+    },
+    {
+      "name": "competition",
+      "width": 960,
+      "height": 720,
+      "bytes": 68630,
+      "source": "exec-4f63a420-9993-491f-9ea3-331aa515fb50.png"
+    },
+    {
+      "name": "pricing-context",
+      "width": 960,
+      "height": 720,
+      "bytes": 64256,
+      "source": "exec-4493c47b-4599-46c2-91ee-2cee586f8253.png"
+    },
+    {
+      "name": "location-data",
+      "width": 960,
+      "height": 720,
+      "bytes": 56242,
+      "source": "exec-789a17aa-3471-44a0-ae73-908be570fe40.png"
+    }
+  ],
+  "totalWebBytes": 283850
+}

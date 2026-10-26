@@ -1,0 +1,18 @@
+Use case: precise-object-edit.
+Edit the supplied detailed blue isometric neighborhood illustration. The user finds the excessive trees and shrubs crowded. Make ONE focused revision: substantially REDUCE VEGETATION, keeping the approved neighborhood and chosen blue-outline style intact.
+
+Preserve EXACTLY the full isometric camera and framing, five tall residential towers back left, offices top right, metro stairs middle right, central shop with parking, bottom cafe row, all buildings, streets, road paint, cars, scooters, people, cafe details and architectural blue-white drawing style. Do not redesign the layout, add buildings, or change the site narrative. This is the same image with planting edited back.
+
+Remove approximately TWO THIRDS TO THREE QUARTERS of the current trees AND bush clusters. The reduction must be obvious at first glance. Aim for only about 12–15 trees across the ENTIRE map, not 12–15 in each district. Keep a few carefully spaced capsule/oval trees and tiered conifers in the source style, but no repetitive parade of capsules along every sidewalk.
+Distribution:
+- Residential garden: keep about four trees around its sides and a couple of low simple shrub beds; the shared lawn, paths and benches should now read as open clear shapes.
+- Far rear / left perimeter: a few trees to frame the residential massing, with large gaps.
+- Offices: one or two well-spaced trees at their outer edges, no dense hedge at every window or entrance.
+- Metro and central busy pedestrian plaza: remove almost all existing trees and planters. Keep at most ONE tree at its outermost edge; broad uninterrupted pavement and clear people flows, railings and stairwell.
+- Main junction, zebra crossings, central shop and parking: remove tree crowns and bushes that crowd corners, hide pavement or fill every spare slot. At most one small peripheral tree here. Maintain clear crossing visibility.
+- Foreground cafe lane: remove ALL tall capsule/conifer trees directly in front of and BETWEEN the cafe storefronts, so the full row and awnings are unobstructed. Keep only a few small pots beside entrances and at most one tree at far outer end. Don't replace trees with big planters.
+- Right lower outer edge: only one or two trees, not a mini forest around the small houses.
+
+REMOVE the surrounding repeated little shrub pots / flowering cloud clusters as well, rather than just making tall trees shorter. Shrubs should appear in a handful of deliberate locations, not line every kerb or building base. Use empty ground, white/pale-blue paving and simple open lawn where vegetation is removed. Do not fill freed space with extra benches, lamps, bollards, people, texture, cars or new decoration. Real breathing space is the goal.
+Keep the exact reference palette: fine cobalt contours, white and periwinkle filled planes, pale blue roads, white crossing stripes. Any retained trees keep capsule/oval glints or tiered conifer geometry. No realistic foliage, new colors, washed-out redraw, heavy black lines, render lighting or pencil texture.
+Preserve the existing rich architecture and cafe furnishings while letting them be seen clearly. Output one full-neighborhood illustration, no labels, comparison, title, border or callouts.

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GeoMarketeer — opening loop</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f8f9fc; color: #22374e; font-family: Georgia,serif; }
+    main { width: min(1100px,calc(100% - 48px)); margin: 64px auto; }
+    .eyebrow { margin: 0 0 20px; font: 11px/1.4 system-ui,sans-serif; letter-spacing: .15em; text-transform: uppercase; color: #63758b; }
+    video { display: block; width: 100%; aspect-ratio: 16/9; background: #e1e9f2; }
+    h1 { margin: 28px 0 12px; font-size: clamp(24px,3.5vw,38px); font-weight: normal; letter-spacing: -.025em; }
+    .controls { display: flex; gap: 24px; align-items: center; margin-top: 24px; font: 13px/1.5 system-ui,sans-serif; }
+    button,a { color: #385a88; }
+    button { font: inherit; padding: 8px 14px; border: 1px solid #c1cdde; background: transparent; cursor: pointer; }
+    button:focus-visible,a:focus-visible { outline: 2px solid #385a88; outline-offset: 4px; }
+    .note { margin-top: 20px; font: 12px/1.6 system-ui,sans-serif; color: #6a7787; }
+    @media(max-width:600px) { main { width: calc(100% - 32px); margin: 32px auto; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">01 / The opportunity</p>
+    <video id="clip" src="opening-loop.mp4" poster="poster.png" muted loop playsinline preload="auto" aria-label="A vacant blue-awning shop between two busy cafés. Soft reflections move across its window."></video>
+    <h1>Would you open a café here?</h1>
+    <div class="controls"><button id="play" type="button">Play loop</button><a href="opening-loop.mp4" download>Download MP4</a></div>
+    <p class="note">Four seconds · silent · 1600 × 900<br>Motion study: controlled window reflections over the approved still.</p>
+  </main>
+  <script>
+    const video = document.getElementById('clip');
+    const button = document.getElementById('play');
+    function sync() { button.textContent = video.paused ? 'Play loop' : 'Pause loop'; }
+    video.addEventListener('play',sync);
+    video.addEventListener('pause',sync);
+    button.addEventListener('click',() => video.paused ? video.play().catch(sync) : video.pause());
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) video.play().catch(sync);
+  </script>
+</body>
+</html>

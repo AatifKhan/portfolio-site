@@ -1,0 +1,119 @@
+{
+  "checkpoint": "people-07",
+  "revision": 2,
+  "artisticApproval": "approved",
+  "desktop": {
+    "height": 1100,
+    "overflow": false,
+    "state": {
+      "angle": "reference",
+      "drawCalls": "27",
+      "mode": "variants",
+      "orbit": "0.00",
+      "state": "ready",
+      "support": "true",
+      "triangles": "101808",
+      "variant": "standing",
+      "zoom": "1.00"
+    },
+    "width": 1440
+  },
+  "phone": {
+    "minButtonHeight": 44,
+    "scrollWidth": 390,
+    "state": {
+      "angle": "reference",
+      "drawCalls": "27",
+      "mode": "variants",
+      "orbit": "0.00",
+      "state": "ready",
+      "support": "true",
+      "triangles": "101808",
+      "variant": "standing",
+      "zoom": "1.00"
+    },
+    "width": 390
+  },
+  "fallbacks": [
+    {
+      "loaded": true,
+      "overflow": false,
+      "pose": "standing",
+      "state": "fallback"
+    },
+    {
+      "loaded": true,
+      "overflow": false,
+      "pose": "walking",
+      "state": "fallback"
+    },
+    {
+      "loaded": true,
+      "overflow": false,
+      "pose": "seated",
+      "state": "fallback"
+    },
+    {
+      "loaded": true,
+      "overflow": false,
+      "pose": "riding-scooter",
+      "state": "fallback"
+    },
+    {
+      "loaded": true,
+      "overflow": false,
+      "pose": "riding-bicycle",
+      "state": "fallback"
+    }
+  ],
+  "console": [],
+  "visualChecks": [
+    "All five fits inspected from reference, side and rear cameras",
+    "Both orbit limits inspected for every pose",
+    "Seated and riding details inspected at 300 percent",
+    "Body-only context toggle works and resets framing",
+    "Scene-scale readability checked",
+    "Phone has no horizontal overflow and visible buttons are at least 44 pixels tall",
+    "Selecting a phone board label reveals and focuses the pose",
+    "Touch exploration toggle works",
+    "All five fallback images loaded and retry retained the bicycle riding pose"
+  ],
+  "limitations": [
+    "Physical-device touch and low-end GPU performance were not measured",
+    "Bicycle riding fit is inferred from the shared body and approved bicycle",
+    "Partially occluded source guest bounds remain provisional",
+    "Artistic approval remains with the user; no people or support assemblies are placed in the neighborhood"
+  ],
+  "armCorrection": {
+    "poses": [
+      "standing",
+      "walking"
+    ],
+    "views": [
+      "reference",
+      "side",
+      "rear",
+      "reference \u00b115\u00b0"
+    ],
+    "phone": {
+      "revision": "Version 02",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "fallbacks": [
+      {
+        "loaded": true,
+        "pose": "standing",
+        "src": "assets/portfolio/geomarketeer/component-kit/person-standing-still.jpg?v=2"
+      },
+      {
+        "loaded": true,
+        "pose": "walking",
+        "src": "assets/portfolio/geomarketeer/component-kit/person-walking-still.jpg?v=2"
+      }
+    ],
+    "console": [],
+    "otherPoses": "Geometry hashes unchanged"
+  },
+  "approvalEvidence": "User: \u201cThe people look good now. Let\u2019s move on to trees and planting.\u201d"
+}

@@ -1,0 +1,16 @@
+{
+  "revision": 1,
+  "hashes": {
+    "road-straight": "c803a7338aee5ccc8c83b644702150e647ee66569b38c6b9de2137ca882f94ef",
+    "road-junction": "b66437f62ef2c98a1f4bd97496339528b89317e624be4fd09268a157886c5d7f",
+    "pavement-straight": "e045c3b7cb02a3a97f7811f2050555444695a0df647b01ed9ef3a022e1bc7f1f",
+    "pavement-plaza": "a64dbb9b54cf1eaf5d01b515bdcbeab9bf77d48dfd7203449c266519bd6d2161",
+    "pavement-ramp": "aa42c18b599567acb476fe5fe43fdb7e4135cf4ec10d436c1c37d08a181f7dce",
+    "kerb-standard": "acc6d06e9f90875a452300b54ce2b4f8cf731059a54bfd516f425cf752a05a31",
+    "crossing-standard": "782676376206b0f4d839efea77ea4595f18685bbcb4b977dd957636de8879155",
+    "lane-marking-standard": "f0a641620206172315bb94f42369e5ae9df7fc18b375201a0ab3ac1b92d37030",
+    "parking-bay-standard": "77824c6279e948f80edcf88e6bb03aa4d41af63e9263af6ccceeb963f85934af",
+    "courtyard-standard": "3222e2b6eb47354713ab60f96dcabc7706bea96a204f2877193af47bb0061269",
+    "pavement-metro": "b05ac879939a33df3925e4adf4da3c13d2ee4088004387e648d5ddea736e555d"
+  }
+}

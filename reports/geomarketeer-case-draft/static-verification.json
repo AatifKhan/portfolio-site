@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "pages": {
+    "index.html": {
+      "chapters": 8,
+      "visualPlaceholders": 7,
+      "evidenceNotes": 3,
+      "sourceImages": 2,
+      "existingStoryPreserved": true,
+      "unrelatedContentPreserved": true,
+      "duplicateIDs": false
+    },
+    "minimal_portfolio.html": {
+      "chapters": 8,
+      "visualPlaceholders": 7,
+      "evidenceNotes": 3,
+      "sourceImages": 2,
+      "existingStoryPreserved": true,
+      "unrelatedContentPreserved": true,
+      "duplicateIDs": false
+    }
+  }
+}

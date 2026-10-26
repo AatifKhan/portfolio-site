@@ -1,0 +1,23 @@
+{
+  "checkpoint": "neighborhood-12",
+  "status": "awaiting-composition-review",
+  "tests": "pass",
+  "instances": 326,
+  "people": 126,
+  "towers": 5,
+  "approvedGeometryFingerprints": 51,
+  "renderObjects": 150,
+  "sharedGeometryResources": 262,
+  "pedestrianFitAdjustments": 23,
+  "checks": [
+    "Unique stable IDs, source locations and declared variants",
+    "All approved component geometry unchanged; identical shared towers",
+    "Finite buffers and matrices; optimized instances match authored transforms",
+    "All architecture corners on pavement; cars, bays and crossings on road",
+    "Metro hole and grid are clear over stairs and lower landing",
+    "People clear of architecture; seated and riding anchors aligned",
+    "Fence rails meet shared posts",
+    "Resources and instancing buffers dispose exactly once",
+    "Exported manifest matches actual assembled scene"
+  ]
+}

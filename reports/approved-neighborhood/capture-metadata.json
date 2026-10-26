@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-25",
+  "source": {
+    "path": "assets/portfolio/geomarketeer/cafe-corner/cafe-corner-approved-v2.png",
+    "width": 1448,
+    "height": 1086,
+    "sha256": "a9bbe79c52aad98f838a2ae89dbd9c2522ac38a09e8befd789384215b3f7ad4d"
+  },
+  "master": {
+    "viewport": [
+      1500,
+      1286
+    ],
+    "clip": {
+      "x": 26,
+      "y": 96,
+      "width": 1448,
+      "height": 1086
+    },
+    "orbit": 0,
+    "zoom": 1
+  },
+  "orbitCaptures": {
+    "viewport": [
+      1500,
+      1286
+    ],
+    "clip": {
+      "x": 26,
+      "y": 96,
+      "width": 1448,
+      "height": 1086
+    },
+    "angles": [
+      -15,
+      15
+    ],
+    "zoom": 1
+  },
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "referencePanel": {
+      "x": 24,
+      "y": 96.09375,
+      "width": 685,
+      "height": 800
+    },
+    "livePanel": {
+      "x": 731,
+      "y": 96.09375,
+      "width": 685,
+      "height": 800
+    },
+    "pairedContentCrop": {
+      "y": 239,
+      "width": 685,
+      "height": 514
+    }
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "livePanel": {
+      "x": 10,
+      "y": 112.09375,
+      "width": 370,
+      "height": 280
+    }
+  },
+  "comparison": {
+    "sourceOnLeft": true,
+    "resize": "identical proportional scaling",
+    "recoloring": false,
+    "cafeCrop": {
+      "x": 555,
+      "y": 455,
+      "width": 350,
+      "height": 400
+    }
+  },
+  "captureFormat": "Browser screenshots are JPEG; comparison sheets are PNG. Native screenshot compression and color handling are retained."
+}

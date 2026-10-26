@@ -1,0 +1,46 @@
+{
+  "desktopViewport": [
+    1440,
+    1000
+  ],
+  "phoneViewport": [
+    390,
+    844
+  ],
+  "captures": {
+    "desktop-atlas.jpg": {
+      "width": 1440,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    "desktop-cafe.jpg": {
+      "width": 1440,
+      "height": 1000,
+      "format": "jpeg"
+    },
+    "mobile-atlas.jpg": {
+      "width": 375,
+      "height": 812,
+      "format": "jpeg"
+    },
+    "mobile-cafe.jpg": {
+      "width": 375,
+      "height": 812,
+      "format": "jpeg"
+    }
+  },
+  "reference": "assets/portfolio/geomarketeer/cafe-corner/cafe-corner-detailed.png",
+  "referenceCrop": [
+    415,
+    440,
+    550,
+    470
+  ],
+  "implementationCrop": [
+    465,
+    235,
+    560,
+    540
+  ],
+  "comparison": "Both crops contained in equal 620 × 620 panels; no color changes or stretching. Reference supplies café identity and illustration language; the approved study adds a top-down view and amber accents."
+}

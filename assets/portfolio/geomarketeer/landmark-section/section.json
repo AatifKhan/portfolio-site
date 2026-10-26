@@ -1,0 +1,18 @@
+{
+  "sourceCrop": [
+    700,
+    315,
+    340,
+    260
+  ],
+  "reviewCrop": [
+    620,
+    250,
+    780,
+    500
+  ],
+  "naveEaveHeight": 2.9082684291176264,
+  "towerHeight": 6.6273650290768416,
+  "triangles": 56100,
+  "scope": "Review 1 representative section. Height and hidden geometry inferred; visual match requires review."
+}

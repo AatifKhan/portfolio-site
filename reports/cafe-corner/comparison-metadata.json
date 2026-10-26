@@ -1,0 +1,27 @@
+{
+  "sourcePixels": [
+    1448,
+    1086
+  ],
+  "browserArtPixels": [
+    1016,
+    762
+  ],
+  "viewport": [
+    1440,
+    1000
+  ],
+  "desktopPixels": [
+    1440,
+    1000
+  ],
+  "captureFormat": "jpeg",
+  "chromaSubsampling": "4:2:0",
+  "normalization": "Source resized to 1016 x 762. The raw comparison preserves the PNG versus browser JPEG difference. An additional normalized comparison applies JPEG 4:2:0 quality 80 to the resized source, because browser captures are JPEG and attenuate fine saturated-blue lines. Source is on the left, browser capture on the right. The served WebP is lossless and its decoded pixels exactly equal the source PNG; no CSS opacity/filter is applied.",
+  "focusCrop": {
+    "left": 355,
+    "top": 312,
+    "width": 274,
+    "height": 297
+  }
+}

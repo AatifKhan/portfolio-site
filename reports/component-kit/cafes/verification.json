@@ -1,0 +1,75 @@
+{
+  "checkpoint": "cafe-02",
+  "revision": 2,
+  "status": "approved",
+  "variants": [
+    {
+      "id": "base",
+      "surfaceTrianglesIncludingGlass": 12022,
+      "batches": 5,
+      "storeys": 1,
+      "terraceTables": 2
+    },
+    {
+      "id": "upper-floor",
+      "surfaceTrianglesIncludingGlass": 12294,
+      "batches": 5,
+      "storeys": 2,
+      "terraceTables": 2
+    },
+    {
+      "id": "compact",
+      "surfaceTrianglesIncludingGlass": 8882,
+      "batches": 5,
+      "storeys": 2,
+      "terraceTables": 1
+    },
+    {
+      "id": "blue-awning",
+      "surfaceTrianglesIncludingGlass": 1700,
+      "batches": 5,
+      "storeys": 2,
+      "terraceTables": 0
+    },
+    {
+      "id": "corner",
+      "surfaceTrianglesIncludingGlass": 18418,
+      "batches": 5,
+      "storeys": 1,
+      "terraceTables": 3
+    }
+  ],
+  "checkedChairs": 20,
+  "neighborhoodCafeInstances": 0,
+  "towerGeometryUnchanged": true,
+  "checks": [
+    "actual backrest geometry faces away from tables, including rotated arrangements",
+    "chair and table feet meet their supporting floor",
+    "seat-to-table clearance and unobstructed entrance approach",
+    "seating assemblies do not overlap",
+    "one pastry plate per terrace set",
+    "shared cup emblem only on occupied cafés",
+    "seating and storefront detail presets; reset restores whole café",
+    "finite geometry and ground contact",
+    "same-footprint ground-floor shell hashes match",
+    "transparent glazing survives compilation",
+    "compiled/authored triangle parity",
+    "cached variants share geometry and materials",
+    "vacant unit has no fitout or terrace furniture",
+    "variant upper-floor rules",
+    "inventory has no café placements",
+    "approved tower geometry fingerprint unchanged",
+    "shared-resource disposal once",
+    "all variant selectors and reference crops",
+    "same-scale five-view board",
+    "responsive board breakpoint alignment",
+    "board selection reveals and focuses detail",
+    "orbit and zoom limits",
+    "variant switch resets camera",
+    "scene-scale preview",
+    "touch opt-in and cancellation",
+    "idle scheduling and hidden-page pause",
+    "reduced-motion immediate update",
+    "per-variant still fallback"
+  ]
+}

@@ -1,0 +1,6697 @@
+{
+  "checkpoint": "neighborhood-12",
+  "status": "awaiting-composition-review",
+  "assembledScene": {
+    "viewer": "geomarketeer-kit-neighborhood.html",
+    "manifest": "art/geomarketeer/component-kit/neighborhood-manifest.json",
+    "revision": 1
+  },
+  "reference": {
+    "image": "art/geomarketeer/detailed-blue-illustration-v2/illustration.png",
+    "width": 1536,
+    "height": 1024,
+    "pixelHash": "ed9810cea9ea1dfcd7141fda1dddcdc04e1705ea511122021c98379de7c55217",
+    "masterCrop": [
+      310,
+      150,
+      180,
+      294
+    ],
+    "housingCrop": [
+      162,
+      5,
+      675,
+      438
+    ],
+    "origin": [
+      400,
+      395
+    ],
+    "pixelsPerUnit": 30.9
+  },
+  "families": [
+    {
+      "id": "residential",
+      "name": "Residential towers",
+      "status": "approved",
+      "masters": [
+        "residential-tower"
+      ],
+      "parts": [
+        "shell",
+        "floor",
+        "window",
+        "balcony",
+        "entrance",
+        "parapet",
+        "rooftop enclosure"
+      ],
+      "variations": "Placement and orientation only; all five towers have identical dimensions."
+    },
+    {
+      "id": "cafes",
+      "name": "Cafés & storefronts",
+      "status": "approved",
+      "masters": [
+        "cafe-shell",
+        "storefront",
+        "awning"
+      ],
+      "parts": [
+        "glazing",
+        "door",
+        "roof",
+        "optional upper floor"
+      ],
+      "variations": "Declared width, upper-floor, awning and corner-glazing variants."
+    },
+    {
+      "id": "furniture",
+      "name": "Café furniture",
+      "status": "approved",
+      "masters": [
+        "table",
+        "chair",
+        "cup",
+        "menu-board",
+        "counter",
+        "display"
+      ],
+      "parts": [],
+      "variations": "Seating arrangements assembled from the same furniture."
+    },
+    {
+      "id": "offices",
+      "name": "Office buildings",
+      "status": "approved",
+      "masters": [
+        "office-shell",
+        "window-band",
+        "office-entry"
+      ],
+      "parts": [
+        "parapet",
+        "rooftop enclosure"
+      ],
+      "variations": "Declared width, height and entry variants."
+    },
+    {
+      "id": "small-buildings",
+      "name": "Small buildings",
+      "status": "approved",
+      "masters": [
+        "low-rise-shell",
+        "annex"
+      ],
+      "parts": [
+        "door",
+        "window",
+        "flat roof"
+      ],
+      "variations": "Gatehouse, utility, home and annex configurations."
+    },
+    {
+      "id": "cars",
+      "name": "Cars",
+      "status": "approved",
+      "masters": [
+        "hatchback"
+      ],
+      "parts": [
+        "body",
+        "cabin",
+        "glazing",
+        "wheels",
+        "lights",
+        "mirrors",
+        "bumpers"
+      ],
+      "variations": "One static hatchback; placement and heading only."
+    },
+    {
+      "id": "two-wheelers",
+      "name": "Two-wheelers",
+      "status": "approved",
+      "masters": [
+        "scooter",
+        "bicycle"
+      ],
+      "parts": [
+        "body",
+        "frame",
+        "wheels",
+        "seat",
+        "handlebars"
+      ],
+      "variations": "One parked scooter and one parked bicycle; placement and heading only. Riders use the separate person master."
+    },
+    {
+      "id": "people",
+      "name": "People",
+      "status": "approved",
+      "masters": [
+        "person"
+      ],
+      "parts": [
+        "head",
+        "torso",
+        "arms",
+        "legs",
+        "feet"
+      ],
+      "variations": "Standing, walking pose, seated and riding; static in this version."
+    },
+    {
+      "id": "planting",
+      "name": "Trees & planting",
+      "status": "approved",
+      "masters": [
+        "capsule-tree",
+        "conifer",
+        "pot",
+        "low-planter"
+      ],
+      "parts": [
+        "trunk",
+        "crown",
+        "highlight"
+      ],
+      "variations": "Small, fixed size variants; preserve sparse planting."
+    },
+    {
+      "id": "street",
+      "name": "Street furniture",
+      "status": "approved",
+      "masters": [
+        "lamp",
+        "bollard",
+        "bench",
+        "bin",
+        "fence-panel",
+        "gatepost"
+      ],
+      "parts": [],
+      "variations": "Identical repeated props; fences built from shared panels."
+    },
+    {
+      "id": "metro",
+      "name": "Metro entrance",
+      "status": "approved",
+      "masters": [
+        "metro-entrance"
+      ],
+      "parts": [
+        "stairwell",
+        "steps",
+        "landing",
+        "handrail",
+        "railing",
+        "canopy",
+        "M sign"
+      ],
+      "variations": "One landmark assembly."
+    },
+    {
+      "id": "ground",
+      "name": "Ground & courtyard",
+      "status": "approved",
+      "masters": [
+        "road",
+        "pavement",
+        "kerb",
+        "crossing",
+        "lane-marking",
+        "parking-bay",
+        "courtyard"
+      ],
+      "parts": [
+        "paving grid",
+        "lane markings"
+      ],
+      "variations": "Layout-specific surfaces with shared materials and marking modules."
+    }
+  ],
+  "districts": [
+    {
+      "id": "housing",
+      "label": "Housing society",
+      "bounds": [
+        168,
+        8,
+        660,
+        522
+      ]
+    },
+    {
+      "id": "offices",
+      "label": "Office district",
+      "bounds": [
+        895,
+        110,
+        420,
+        300
+      ]
+    },
+    {
+      "id": "central",
+      "label": "Central café & parking",
+      "bounds": [
+        663,
+        506,
+        497,
+        310
+      ]
+    },
+    {
+      "id": "metro",
+      "label": "Metro plaza",
+      "bounds": [
+        1151,
+        474,
+        274,
+        220
+      ]
+    },
+    {
+      "id": "cafe-lane",
+      "label": "Foreground café lane",
+      "bounds": [
+        179,
+        672,
+        676,
+        342
+      ]
+    },
+    {
+      "id": "perimeter",
+      "label": "Perimeter buildings",
+      "bounds": [
+        24,
+        507,
+        1459,
+        459
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "id": "housing-tower-01",
+      "label": "Foreground master",
+      "reference": [
+        400,
+        395
+      ],
+      "sourceBounds": [
+        320,
+        160,
+        159,
+        277
+      ],
+      "assetId": "residential-tower",
+      "variantId": "standard",
+      "districtId": "housing",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": 0,
+      "scale": 1,
+      "status": "approved"
+    },
+    {
+      "id": "housing-tower-02",
+      "label": "West tower",
+      "reference": [
+        267,
+        315
+      ],
+      "sourceBounds": [
+        173,
+        86,
+        176,
+        271
+      ],
+      "assetId": "residential-tower",
+      "variantId": "standard",
+      "districtId": "housing",
+      "position": [
+        -6.704928378241375,
+        0,
+        -0.6178602942406726
+      ],
+      "rotation": 0,
+      "scale": 1,
+      "status": "approved"
+    },
+    {
+      "id": "housing-tower-03",
+      "label": "Rear west tower",
+      "reference": [
+        423,
+        213
+      ],
+      "sourceBounds": [
+        346,
+        10,
+        143,
+        246
+      ],
+      "assetId": "residential-tower",
+      "variantId": "standard",
+      "districtId": "housing",
+      "position": [
+        -7.803346679113681,
+        0,
+        -8.855997550782975
+      ],
+      "rotation": 0,
+      "scale": 1,
+      "status": "approved"
+    },
+    {
+      "id": "housing-tower-04",
+      "label": "Rear east tower",
+      "reference": [
+        584,
+        267
+      ],
+      "sourceBounds": [
+        509,
+        30,
+        145,
+        279
+      ],
+      "assetId": "residential-tower",
+      "variantId": "standard",
+      "districtId": "housing",
+      "position": [
+        -1.6476274513084608,
+        0,
+        -10.068834424662814
+      ],
+      "rotation": 0,
+      "scale": 1,
+      "status": "approved"
+    },
+    {
+      "id": "housing-tower-05",
+      "label": "East tower",
+      "reference": [
+        752,
+        372
+      ],
+      "sourceBounds": [
+        672,
+        127,
+        154,
+        290
+      ],
+      "assetId": "residential-tower",
+      "variantId": "standard",
+      "districtId": "housing",
+      "position": [
+        7.002416668060957,
+        0,
+        -9.107718411399546
+      ],
+      "rotation": 0,
+      "scale": 1,
+      "status": "approved"
+    }
+  ],
+  "approvals": [
+    {
+      "family": "residential",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User: “The tower looks good. Let’s move on to the café component.”"
+    },
+    {
+      "family": "cafes",
+      "revision": 2,
+      "status": "approved",
+      "includes": [
+        "furniture"
+      ],
+      "evidence": "User: “The cafés look good now. Let’s move on to the office buildings.”"
+    },
+    {
+      "family": "offices",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User: “The offices look good. Let’s move on to the small buildings.”"
+    },
+    {
+      "family": "small-buildings",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User: “The small buildings look good. Let’s move on to the cars.”"
+    },
+    {
+      "family": "cars",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User: “The car looks good. Let’s move on to scooters and bicycles.”"
+    },
+    {
+      "family": "two-wheelers",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User: “The scooters and bicycles look good. Let’s move on to people.”"
+    },
+    {
+      "family": "people",
+      "revision": 2,
+      "status": "approved",
+      "evidence": "User: “The people look good now. Let’s move on to trees and planting.”"
+    },
+    {
+      "family": "planting",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User: “The trees and planting look good. Let’s move on to street furniture.”"
+    },
+    {
+      "family": "street",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User requested the next component: “Go ahead with the metro entrance mnow”."
+    },
+    {
+      "family": "metro",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User asked what follows metro and accepted the proposed ground/courtyard checkpoint: “Go ahead then.”"
+    },
+    {
+      "family": "ground",
+      "revision": 1,
+      "status": "approved",
+      "evidence": "User accepted the proposed neighborhood assembly after the ground checkpoint: “Go ahead”."
+    }
+  ],
+  "cafe": {
+    "base": {
+      "id": "cafe",
+      "revision": 2,
+      "groundHeight": 2.3,
+      "floorHeight": 0.12,
+      "upperHeight": 1.35,
+      "awningDepth": 0.48,
+      "awningDrop": 0.25,
+      "wallThickness": 0.1,
+      "frameWidth": 0.045
+    },
+    "variants": [
+      {
+        "id": "base",
+        "label": "Base café",
+        "number": "01",
+        "subtitle": "Single storey · striped awning",
+        "width": 4.2,
+        "depth": 3.1,
+        "upper": false,
+        "awning": "striped",
+        "corner": false,
+        "fitout": "cafe",
+        "roofService": false,
+        "tables": 2,
+        "referenceCrop": [
+          594,
+          772,
+          228,
+          242
+        ],
+        "sourceId": "cafe-lane-04",
+        "difference": "The shared starting point: a flat roof, three-bay storefront and striped awning."
+      },
+      {
+        "id": "upper-floor",
+        "label": "Upstairs café",
+        "number": "02",
+        "subtitle": "Same footprint · upper floor",
+        "width": 4.2,
+        "depth": 3.1,
+        "upper": true,
+        "awning": "striped",
+        "corner": false,
+        "fitout": "cafe",
+        "roofService": false,
+        "tables": 2,
+        "referenceCrop": [
+          177,
+          671,
+          156,
+          221
+        ],
+        "sourceId": "cafe-lane-01",
+        "difference": "The base café with one upper floor. Ground-floor proportions, entry and furniture stay the same."
+      },
+      {
+        "id": "compact",
+        "label": "Compact café",
+        "number": "03",
+        "subtitle": "Narrower frontage · upper floor",
+        "width": 3,
+        "depth": 2.8,
+        "upper": true,
+        "awning": "striped",
+        "corner": false,
+        "fitout": "cafe",
+        "roofService": true,
+        "tables": 1,
+        "referenceCrop": [
+          280,
+          724,
+          153,
+          218
+        ],
+        "sourceId": "cafe-lane-02",
+        "difference": "A narrower frontage and shallower footprint, using the same storefront, windows and awning modules."
+      },
+      {
+        "id": "blue-awning",
+        "label": "Blue-awning unit",
+        "number": "04",
+        "subtitle": "Solid blue awning · vacant",
+        "width": 4.2,
+        "depth": 3.1,
+        "upper": true,
+        "awning": "solid",
+        "corner": false,
+        "fitout": "vacant",
+        "roofService": false,
+        "tables": 0,
+        "referenceCrop": [
+          414,
+          729,
+          181,
+          229
+        ],
+        "sourceId": "cafe-lane-03",
+        "difference": "The same upstairs shell with a solid-blue awning and an empty interior, preserving Sid’s candidate unit."
+      },
+      {
+        "id": "corner",
+        "label": "Corner café",
+        "number": "05",
+        "subtitle": "Wider footprint · corner glazing",
+        "width": 5.1,
+        "depth": 4,
+        "upper": false,
+        "awning": "striped",
+        "corner": true,
+        "fitout": "cafe",
+        "roofService": true,
+        "tables": 3,
+        "referenceCrop": [
+          661,
+          509,
+          253,
+          246
+        ],
+        "sourceId": "central-cafe-01",
+        "difference": "A wider base with glazing around the corner, rooftop enclosure and an extra seating set."
+      }
+    ],
+    "placementStatus": "unplaced",
+    "sourceObjects": [
+      {
+        "id": "cafe-lane-04",
+        "assetId": "cafe",
+        "variantId": "base",
+        "sourceBounds": [
+          594,
+          772,
+          228,
+          242
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "cafe-lane-01",
+        "assetId": "cafe",
+        "variantId": "upper-floor",
+        "sourceBounds": [
+          177,
+          671,
+          156,
+          221
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "cafe-lane-02",
+        "assetId": "cafe",
+        "variantId": "compact",
+        "sourceBounds": [
+          280,
+          724,
+          153,
+          218
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "cafe-lane-03",
+        "assetId": "cafe",
+        "variantId": "blue-awning",
+        "sourceBounds": [
+          414,
+          729,
+          181,
+          229
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "central-cafe-01",
+        "assetId": "cafe",
+        "variantId": "corner",
+        "sourceBounds": [
+          661,
+          509,
+          253,
+          246
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ]
+  },
+  "office": {
+    "base": {
+      "id": "office",
+      "revision": 1,
+      "baseHeight": 0.08,
+      "windowPitch": 0.49,
+      "windowHeight": 0.59,
+      "windowSill": 0.3,
+      "wallThickness": 0.1,
+      "parapetHeight": 0.15,
+      "canopyDepth": 0.42
+    },
+    "variants": [
+      {
+        "id": "base",
+        "number": "01",
+        "label": "Base office",
+        "subtitle": "Four storeys · paired side windows",
+        "width": 3.6,
+        "depth": 3.2,
+        "floors": 4,
+        "groundHeight": 1.18,
+        "floorHeight": 1.1,
+        "sideWindows": "paired",
+        "entryFace": "front",
+        "entryWidth": 2.18,
+        "entryCenter": -0.22,
+        "roofService": "small",
+        "vent": false,
+        "referenceCrop": [
+          946,
+          106,
+          171,
+          228
+        ],
+        "sourceId": "office-central-01",
+        "referenceLabel": "Central office building",
+        "difference": "The shared base: ribbon windows on the street façade, paired windows on the sides, a glazed entrance and a small rooftop enclosure."
+      },
+      {
+        "id": "wide",
+        "number": "02",
+        "label": "Wide office",
+        "subtitle": "Broader footprint · continuous bands",
+        "width": 4.3,
+        "depth": 4.8,
+        "floors": 4,
+        "groundHeight": 1.24,
+        "floorHeight": 1.18,
+        "sideWindows": "band",
+        "entryFace": "front",
+        "entryWidth": 2.2,
+        "entryCenter": -0.55,
+        "roofService": "large",
+        "vent": true,
+        "referenceCrop": [
+          1106,
+          137,
+          211,
+          277
+        ],
+        "sourceId": "office-east-01",
+        "referenceLabel": "Eastern office building",
+        "difference": "A wider, deeper and slightly taller version with continuous window bands, an offset entrance, and a larger rooftop enclosure with a vent."
+      },
+      {
+        "id": "low-wing",
+        "number": "03",
+        "label": "Low office wing",
+        "subtitle": "Three storeys · compact footprint",
+        "width": 2.8,
+        "depth": 3.1,
+        "floors": 3,
+        "groundHeight": 1.18,
+        "floorHeight": 1.1,
+        "sideWindows": "band",
+        "entryFace": "right",
+        "entryWidth": 1.16,
+        "entryCenter": 0,
+        "roofService": "none",
+        "vent": false,
+        "referenceCrop": [
+          892,
+          114,
+          105,
+          180
+        ],
+        "sourceId": "office-west-wing-01",
+        "referenceLabel": "Partly hidden rear office wing",
+        "difference": "The lower rear wing uses the same window bays and parapet. Its visible street façade keeps uninterrupted bands. An entrance on the obscured side and the other hidden details are inferred from the shared system."
+      }
+    ],
+    "placementStatus": "unplaced",
+    "sourceObjects": [
+      {
+        "id": "office-central-01",
+        "assetId": "office",
+        "variantId": "base",
+        "districtId": "offices",
+        "sourceBounds": [
+          946,
+          106,
+          171,
+          228
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "office-east-01",
+        "assetId": "office",
+        "variantId": "wide",
+        "districtId": "offices",
+        "sourceBounds": [
+          1106,
+          137,
+          211,
+          277
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "office-west-wing-01",
+        "assetId": "office",
+        "variantId": "low-wing",
+        "districtId": "offices",
+        "sourceBounds": [
+          892,
+          114,
+          105,
+          180
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ]
+  },
+  "smallBuildings": {
+    "base": {
+      "id": "small-building",
+      "revision": 1,
+      "wallThickness": 0.08,
+      "plinthHeight": 0.06,
+      "windowBay": 0.29,
+      "windowHeight": 0.54,
+      "doorLeafWidth": 0.42,
+      "doorHeight": 1.1,
+      "parapetHeight": 0.11
+    },
+    "variants": [
+      {
+        "id": "base",
+        "number": "01",
+        "label": "Base small home",
+        "subtitle": "One storey · flat parapet roof",
+        "width": 2.5,
+        "depth": 2.5,
+        "height": 1.45,
+        "roof": "parapet",
+        "configuration": "home",
+        "roofBox": false,
+        "annex": false,
+        "referenceCrop": [
+          32,
+          637,
+          143,
+          142
+        ],
+        "referenceLabel": "Southwestern small home",
+        "difference": "The shared starting point: a low rectangular shell, framed windows, a single door and a flat parapet roof. The entrance sits in the area obscured by the reference tree."
+      },
+      {
+        "id": "gatehouse",
+        "number": "02",
+        "label": "Gatehouse",
+        "subtitle": "Service glazing · striped awning",
+        "width": 1.75,
+        "depth": 1.6,
+        "height": 1.3,
+        "roof": "parapet",
+        "configuration": "gatehouse",
+        "roofBox": false,
+        "annex": false,
+        "referenceCrop": [
+          440,
+          469,
+          87,
+          91
+        ],
+        "referenceLabel": "Booth beside the society gate",
+        "difference": "The same shell with a glazed service face, counter ledge and the café family’s shared striped awning. The unseen rear access uses the standard single door."
+      },
+      {
+        "id": "utility-hut",
+        "number": "03",
+        "label": "Utility hut",
+        "subtitle": "Minimal shell · plain flat roof",
+        "width": 1.45,
+        "depth": 1.4,
+        "height": 1,
+        "roof": "plain",
+        "configuration": "hut",
+        "roofBox": false,
+        "annex": false,
+        "referenceCrop": [
+          84,
+          285,
+          78,
+          78
+        ],
+        "referenceLabel": "Northwestern utility hut",
+        "difference": "The smallest shell: a plain roof and one visible paired window. A short rear access door is inferred using the shared door system."
+      },
+      {
+        "id": "stacked-home",
+        "number": "04",
+        "label": "Compact home",
+        "subtitle": "Stacked side windows · plain roof",
+        "width": 1.8,
+        "depth": 1.65,
+        "height": 1.6,
+        "roof": "plain",
+        "configuration": "stacked",
+        "roofBox": false,
+        "annex": false,
+        "referenceCrop": [
+          164,
+          314,
+          86,
+          96
+        ],
+        "referenceLabel": "Compact building west of the towers",
+        "difference": "A taller compact configuration with the reference’s two rows of small side windows and a double entrance. The drawing does not establish an internal floor plan."
+      },
+      {
+        "id": "compact-store",
+        "number": "05",
+        "label": "Compact store",
+        "subtitle": "Double service doors · parapet roof",
+        "width": 1.85,
+        "depth": 1.8,
+        "height": 1.25,
+        "roof": "parapet",
+        "configuration": "store",
+        "roofBox": false,
+        "annex": false,
+        "referenceCrop": [
+          259,
+          380,
+          91,
+          98
+        ],
+        "referenceLabel": "Service building inside the society",
+        "difference": "A compact storage or utility configuration with double service doors. The partly hidden side stays simple; dimensions and openings are declared rather than scaled per instance."
+      },
+      {
+        "id": "frontage-unit",
+        "number": "06",
+        "label": "Frontage unit",
+        "subtitle": "Glazed double entry · side window",
+        "width": 1.8,
+        "depth": 1.7,
+        "height": 1.3,
+        "roof": "parapet",
+        "configuration": "frontage",
+        "roofBox": false,
+        "annex": false,
+        "referenceCrop": [
+          304,
+          420,
+          94,
+          98
+        ],
+        "referenceLabel": "Small unit along the society frontage",
+        "difference": "The compact shell with a warm glazed double entrance and paired side window, matching the small frontage building. No café signage or furniture is added."
+      },
+      {
+        "id": "utility-block",
+        "number": "07",
+        "label": "Utility block",
+        "subtitle": "Wider shell · two glazed door sets",
+        "width": 3.65,
+        "depth": 3.9,
+        "height": 1.65,
+        "roof": "parapet",
+        "configuration": "block",
+        "roofBox": false,
+        "annex": false,
+        "referenceCrop": [
+          19,
+          502,
+          191,
+          150
+        ],
+        "referenceLabel": "Larger western low-rise building",
+        "difference": "A wider configuration of the same shell, with two separate glazed door sets and two side windows. Its utility use is an interpretation of the unlabeled reference."
+      },
+      {
+        "id": "home-annex",
+        "number": "08",
+        "label": "Home + annex",
+        "subtitle": "Rooftop box · attached utility shell",
+        "width": 3.7,
+        "depth": 3.4,
+        "height": 1.9,
+        "roof": "parapet",
+        "configuration": "roof-home",
+        "roofBox": true,
+        "annex": {
+          "width": 1.8,
+          "depth": 1.6,
+          "height": 1.05,
+          "offsetZ": 0.85
+        },
+        "referenceCrop": [
+          1259,
+          704,
+          188,
+          222
+        ],
+        "referenceLabel": "Eastern small home and annex",
+        "difference": "The larger home adds a rooftop enclosure and an attached, smaller version of the utility shell. The annex has its own source ID and a shared internal connection; hidden access details are inferred."
+      }
+    ],
+    "sourceObjects": [
+      {
+        "id": "perimeter-home-west-01",
+        "variantId": "base",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          38,
+          643,
+          132,
+          129
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-gatehouse-01",
+        "variantId": "gatehouse",
+        "districtId": "housing",
+        "sourceBounds": [
+          445,
+          474,
+          79,
+          80
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-utility-northwest-01",
+        "variantId": "utility-hut",
+        "districtId": "housing",
+        "sourceBounds": [
+          90,
+          291,
+          67,
+          68
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-compact-home-01",
+        "variantId": "stacked-home",
+        "districtId": "housing",
+        "sourceBounds": [
+          170,
+          319,
+          75,
+          85
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-compact-store-01",
+        "variantId": "compact-store",
+        "districtId": "housing",
+        "sourceBounds": [
+          266,
+          386,
+          80,
+          87
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-frontage-unit-01",
+        "variantId": "frontage-unit",
+        "districtId": "housing",
+        "sourceBounds": [
+          310,
+          426,
+          82,
+          83
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-utility-west-01",
+        "variantId": "utility-block",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          26,
+          508,
+          177,
+          139
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-home-east-01",
+        "variantId": "home-annex",
+        "partId": "main",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1266,
+          711,
+          168,
+          176
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-home-east-annex-01",
+        "variantId": "home-annex",
+        "partId": "annex",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1352,
+          830,
+          88,
+          92
+        ],
+        "assetId": "small-building",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ],
+    "placementStatus": "unplaced"
+  },
+  "car": {
+    "base": {
+      "id": "hatchback",
+      "variantId": "standard",
+      "revision": 1,
+      "length": 2.22,
+      "bodyWidth": 1.04,
+      "height": 1.075,
+      "wheelRadius": 0.205,
+      "wheelbase": 1.4,
+      "track": 1.02,
+      "wheelThickness": 0.12,
+      "archRadius": 0.25,
+      "groundClearance": 0.17,
+      "forwardAxis": "+X",
+      "referenceCrop": [
+        438,
+        630,
+        85,
+        68
+      ]
+    },
+    "variants": [
+      {
+        "id": "standard",
+        "masterId": "hatchback",
+        "revision": 1
+      }
+    ],
+    "sourceObjects": [
+      {
+        "id": "road-car-northwest-01",
+        "districtId": "housing",
+        "sourceBounds": [
+          79,
+          409,
+          62,
+          47
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-car-west-01",
+        "districtId": "housing",
+        "sourceBounds": [
+          236,
+          501,
+          69,
+          57
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-car-west-02",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          314,
+          600,
+          69,
+          59
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-car-foreground-01",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          442,
+          634,
+          77,
+          61
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-car-central-01",
+        "districtId": "central",
+        "sourceBounds": [
+          702,
+          466,
+          68,
+          54
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-car-office-01",
+        "districtId": "offices",
+        "sourceBounds": [
+          946,
+          351,
+          62,
+          57
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-car-east-01",
+        "districtId": "offices",
+        "sourceBounds": [
+          1294,
+          379,
+          70,
+          55
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-car-east-02",
+        "districtId": "offices",
+        "sourceBounds": [
+          1379,
+          341,
+          59,
+          49
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-car-central-01",
+        "districtId": "central",
+        "sourceBounds": [
+          958,
+          625,
+          77,
+          65
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-car-central-02",
+        "districtId": "central",
+        "sourceBounds": [
+          904,
+          668,
+          78,
+          64
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-car-foreground-02",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          696,
+          742,
+          80,
+          65
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-car-southeast-01",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1091,
+          834,
+          80,
+          72
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-car-southeast-02",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1042,
+          879,
+          81,
+          62
+        ],
+        "assetId": "hatchback",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ],
+    "placementStatus": "unplaced"
+  },
+  "twoWheelers": {
+    "revision": 1,
+    "masters": [
+      {
+        "id": "scooter",
+        "label": "Scooter",
+        "variantId": "standard",
+        "revision": 1,
+        "wheelRadius": 0.185,
+        "wheelbase": 0.97,
+        "axles": [
+          -0.47,
+          0.5
+        ],
+        "referenceCrop": [
+          990,
+          888,
+          50,
+          48
+        ],
+        "referenceLabel": "Parked scooter in the lower-right parking bays",
+        "description": "A compact step-through body, rounded leg shield, short saddle and small matching wheels. Mirrors, lamps and a center stand complete the parked master."
+      },
+      {
+        "id": "bicycle",
+        "label": "Bicycle",
+        "variantId": "standard",
+        "revision": 1,
+        "wheelRadius": 0.29,
+        "wheelbase": 1.04,
+        "axles": [
+          -0.52,
+          0.52
+        ],
+        "referenceCrop": [
+          1087,
+          646,
+          47,
+          61
+        ],
+        "referenceLabel": "Bicycle beside the central parking area",
+        "description": "An open diamond frame with two matching spoked wheels, fork, saddle, swept handlebars, pedals and a simple chain drive. A kickstand supports the parked master."
+      }
+    ],
+    "sourceObjects": [
+      {
+        "id": "road-scooter-northwest-01",
+        "assetId": "scooter",
+        "districtId": "housing",
+        "sourceBounds": [
+          162,
+          453,
+          42,
+          50
+        ],
+        "referenceConfiguration": "rider-visible",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-scooter-west-01",
+        "assetId": "scooter",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          341,
+          568,
+          38,
+          44
+        ],
+        "referenceConfiguration": "rider-visible",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-scooter-central-01",
+        "assetId": "scooter",
+        "districtId": "central",
+        "sourceBounds": [
+          515,
+          554,
+          40,
+          38
+        ],
+        "referenceConfiguration": "rider-visible",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "road-scooter-south-01",
+        "assetId": "scooter",
+        "districtId": "central",
+        "sourceBounds": [
+          887,
+          785,
+          47,
+          61
+        ],
+        "referenceConfiguration": "rider-visible",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-scooter-central-01",
+        "assetId": "scooter",
+        "districtId": "central",
+        "sourceBounds": [
+          944,
+          731,
+          28,
+          42
+        ],
+        "referenceConfiguration": "parked",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-scooter-central-02",
+        "assetId": "scooter",
+        "districtId": "central",
+        "sourceBounds": [
+          965,
+          725,
+          26,
+          41
+        ],
+        "referenceConfiguration": "parked",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-scooter-central-03",
+        "assetId": "scooter",
+        "districtId": "central",
+        "sourceBounds": [
+          982,
+          712,
+          44,
+          40
+        ],
+        "referenceConfiguration": "parked",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-scooter-central-04",
+        "assetId": "scooter",
+        "districtId": "central",
+        "sourceBounds": [
+          1028,
+          675,
+          44,
+          51
+        ],
+        "referenceConfiguration": "parked",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-scooter-southeast-01",
+        "assetId": "scooter",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          992,
+          889,
+          46,
+          45
+        ],
+        "referenceConfiguration": "parked",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-scooter-southeast-02",
+        "assetId": "scooter",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1022,
+          918,
+          37,
+          43
+        ],
+        "referenceConfiguration": "parked",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-bicycle-central-01",
+        "assetId": "bicycle",
+        "districtId": "central",
+        "sourceBounds": [
+          1064,
+          657,
+          39,
+          58
+        ],
+        "referenceConfiguration": "parked",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-bicycle-central-02",
+        "assetId": "bicycle",
+        "districtId": "central",
+        "sourceBounds": [
+          1087,
+          646,
+          47,
+          61
+        ],
+        "referenceConfiguration": "parked",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "parking-bicycle-southeast-01",
+        "assetId": "bicycle",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1165,
+          879,
+          47,
+          61
+        ],
+        "referenceConfiguration": "person-adjacent",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ],
+    "placementStatus": "unplaced",
+    "configuration": "parked",
+    "occupants": "Approved separate person poses"
+  },
+  "people": {
+    "base": {
+      "id": "person",
+      "revision": 2,
+      "upperLeg": 0.375,
+      "lowerLeg": 0.365,
+      "upperArm": 0.235,
+      "forearm": 0.225,
+      "hipHalfWidth": 0.105,
+      "shoulderHalfWidth": 0.125,
+      "torsoHeight": 0.42,
+      "headRadii": [
+        0.076,
+        0.108,
+        0.071
+      ],
+      "footLength": 0.18,
+      "footWidth": 0.075,
+      "ankleHeight": 0.055,
+      "forwardAxis": "+X"
+    },
+    "poses": [
+      {
+        "id": "standing",
+        "number": "01",
+        "label": "Standing",
+        "category": "standing",
+        "subtitle": "Relaxed, balanced stance",
+        "referenceCrop": [
+          960,
+          553,
+          24,
+          53
+        ],
+        "referenceLabel": "Standing figure beside the central parking",
+        "support": null,
+        "description": "The base person: rounded head, simple shirt, relaxed arms and two grounded feet."
+      },
+      {
+        "id": "walking",
+        "number": "02",
+        "label": "Walking",
+        "category": "walking",
+        "subtitle": "A static mid-stride pose",
+        "referenceCrop": [
+          935,
+          504,
+          21,
+          49
+        ],
+        "referenceLabel": "Walking figure on the central pavement",
+        "support": null,
+        "description": "The same proportions with a clear stride, opposite arm swing and a slight forward lean. This is a static pose."
+      },
+      {
+        "id": "seated",
+        "number": "03",
+        "label": "Seated",
+        "category": "seated",
+        "subtitle": "Fitted to the approved café chair",
+        "referenceCrop": [
+          214,
+          832,
+          29,
+          49
+        ],
+        "referenceLabel": "Seated café guest in the foreground row",
+        "support": "chair",
+        "description": "Hips meet the café seat, both feet meet the ground, and relaxed hands rest above the thighs. The chair is a separate approved component."
+      },
+      {
+        "id": "riding-scooter",
+        "number": "04",
+        "label": "Riding · scooter",
+        "category": "riding",
+        "subtitle": "Seat, grips & floorboard contact",
+        "referenceCrop": [
+          895,
+          790,
+          28,
+          43
+        ],
+        "referenceLabel": "Scooter rider on the southern road",
+        "support": "scooter",
+        "description": "A forward lean brings both hands to the grips. Hips rest on the saddle and feet sit on the floorboard. The scooter keeps its approved dimensions."
+      },
+      {
+        "id": "riding-bicycle",
+        "number": "05",
+        "label": "Riding · bicycle",
+        "category": "riding",
+        "subtitle": "Seat, grips & pedal contact",
+        "referenceCrop": [
+          1175,
+          878,
+          30,
+          43
+        ],
+        "referenceLabel": "Person beside the lower-right bicycle; riding fit inferred",
+        "support": "bicycle",
+        "description": "The same body leans farther forward to reach the bicycle’s grips. Feet meet the opposing pedals and hips meet the saddle. This fitted pose interprets the reference’s simplified people."
+      }
+    ],
+    "sourceObjects": [
+      {
+        "id": "person-housing-01",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          52,
+          340,
+          22,
+          30
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-02",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "housing",
+        "sourceBounds": [
+          97,
+          364,
+          22,
+          31
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-03",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "housing",
+        "sourceBounds": [
+          111,
+          373,
+          22,
+          30
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-04",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          175,
+          411,
+          22,
+          29
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-05",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          222,
+          433,
+          22,
+          29
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-06",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          240,
+          413,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-07",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "housing",
+        "sourceBounds": [
+          240,
+          448,
+          22,
+          29
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-08",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          276,
+          471,
+          22,
+          31
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-09",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "housing",
+        "sourceBounds": [
+          307,
+          485,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-10",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          350,
+          513,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-11",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          416,
+          514,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-12",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "housing",
+        "sourceBounds": [
+          405,
+          534,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-13",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          440,
+          540,
+          22,
+          30
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-14",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          521,
+          511,
+          22,
+          29
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-15",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          532,
+          480,
+          22,
+          30
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-16",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          548,
+          499,
+          22,
+          31
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-17",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          563,
+          477,
+          22,
+          31
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-18",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          644,
+          454,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-19",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          676,
+          443,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-20",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          742,
+          429,
+          22,
+          31
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-21",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          785,
+          411,
+          22,
+          32
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-22",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          487,
+          252,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-23",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          539,
+          301,
+          22,
+          32
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-housing-24",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "housing",
+        "sourceBounds": [
+          581,
+          385,
+          22,
+          32
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-01",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "offices",
+        "sourceBounds": [
+          864,
+          261,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-02",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          934,
+          278,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-03",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          964,
+          297,
+          22,
+          35
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-04",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          981,
+          288,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-05",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "offices",
+        "sourceBounds": [
+          990,
+          327,
+          22,
+          31
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-06",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          1040,
+          357,
+          22,
+          32
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-07",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "offices",
+        "sourceBounds": [
+          1078,
+          382,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-08",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          1106,
+          347,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-09",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          1131,
+          348,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-10",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          1142,
+          377,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-11",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "offices",
+        "sourceBounds": [
+          1123,
+          403,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-12",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          1151,
+          415,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-13",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          1196,
+          412,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-14",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "offices",
+        "sourceBounds": [
+          1280,
+          370,
+          22,
+          30
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-15",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "offices",
+        "sourceBounds": [
+          1319,
+          339,
+          22,
+          35
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-offices-16",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "offices",
+        "sourceBounds": [
+          1365,
+          325,
+          22,
+          31
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-01",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          884,
+          376,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-02",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "central",
+        "sourceBounds": [
+          909,
+          397,
+          22,
+          32
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-03",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          976,
+          425,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-04",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          973,
+          446,
+          22,
+          38
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-05",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          1024,
+          449,
+          22,
+          28
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-06",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          1025,
+          464,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-07",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "central",
+        "sourceBounds": [
+          1057,
+          462,
+          22,
+          32
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-08",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          865,
+          492,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-09",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          904,
+          489,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-10",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "central",
+        "sourceBounds": [
+          933,
+          509,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-11",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          958,
+          487,
+          22,
+          38
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-12",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          1063,
+          505,
+          22,
+          43
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-13",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          1082,
+          524,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-14",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          1096,
+          550,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-15",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          960,
+          558,
+          22,
+          43
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-16",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "central",
+        "sourceBounds": [
+          544,
+          588,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-17",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          584,
+          585,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-18",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          636,
+          643,
+          22,
+          39
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-19",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "central",
+        "sourceBounds": [
+          727,
+          681,
+          22,
+          35
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-20",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "central",
+        "sourceBounds": [
+          743,
+          704,
+          22,
+          36
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-21",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "central",
+        "sourceBounds": [
+          814,
+          689,
+          22,
+          48
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-22",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "central",
+        "sourceBounds": [
+          843,
+          668,
+          22,
+          38
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-23",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          676,
+          644,
+          26,
+          36
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-24",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          701,
+          658,
+          26,
+          34
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-25",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          742,
+          655,
+          26,
+          28
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-26",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          703,
+          640,
+          26,
+          30
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-27",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          799,
+          639,
+          26,
+          33
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-28",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          825,
+          631,
+          26,
+          30
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-29",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          853,
+          617,
+          26,
+          32
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-30",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          867,
+          619,
+          26,
+          27
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-31",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          881,
+          636,
+          26,
+          32
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-central-32",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "central",
+        "sourceBounds": [
+          894,
+          628,
+          26,
+          33
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-01",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1119,
+          578,
+          22,
+          38
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-02",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1140,
+          592,
+          22,
+          38
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-03",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1166,
+          613,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-04",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1204,
+          630,
+          22,
+          40
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-05",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1202,
+          551,
+          22,
+          35
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-06",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1219,
+          541,
+          22,
+          34
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-07",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1272,
+          541,
+          22,
+          36
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-08",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1244,
+          579,
+          22,
+          36
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-09",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1285,
+          595,
+          22,
+          40
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-10",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1308,
+          587,
+          22,
+          36
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-11",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1285,
+          649,
+          22,
+          40
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-12",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1299,
+          660,
+          22,
+          42
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-13",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1326,
+          638,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-14",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1352,
+          662,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-metro-15",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "metro",
+        "sourceBounds": [
+          1384,
+          624,
+          22,
+          41
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-01",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          247,
+          854,
+          22,
+          38
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-02",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          411,
+          905,
+          22,
+          41
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-03",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          448,
+          923,
+          22,
+          44
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-04",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          654,
+          951,
+          22,
+          44
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-05",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          164,
+          822,
+          26,
+          30
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-06",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          189,
+          836,
+          26,
+          33
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-07",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          219,
+          842,
+          26,
+          33
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-08",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          222,
+          814,
+          26,
+          29
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-09",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          288,
+          864,
+          26,
+          33
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-10",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          307,
+          877,
+          26,
+          33
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-11",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          324,
+          846,
+          26,
+          32
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-12",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          342,
+          888,
+          26,
+          32
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-13",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          371,
+          886,
+          26,
+          36
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-14",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          353,
+          871,
+          26,
+          29
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-15",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          618,
+          918,
+          26,
+          32
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-16",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          638,
+          921,
+          26,
+          31
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-17",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          650,
+          905,
+          26,
+          29
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-18",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          681,
+          943,
+          26,
+          33
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-19",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          703,
+          947,
+          26,
+          35
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-20",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          704,
+          917,
+          26,
+          28
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-21",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          783,
+          928,
+          26,
+          32
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-22",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          798,
+          933,
+          26,
+          33
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-cafe-lane-23",
+        "assetId": "person",
+        "variantId": "seated",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          820,
+          937,
+          26,
+          36
+        ],
+        "referenceConfiguration": "cafe-guest",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-01",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          157,
+          495,
+          22,
+          36
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-02",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          265,
+          607,
+          22,
+          38
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-03",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          302,
+          646,
+          22,
+          38
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-04",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          417,
+          688,
+          22,
+          41
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-05",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          39,
+          763,
+          22,
+          37
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-06",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          848,
+          851,
+          22,
+          41
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-07",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          913,
+          931,
+          22,
+          47
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-08",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1096,
+          937,
+          22,
+          44
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-09",
+        "assetId": "person",
+        "variantId": "walking",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1196,
+          820,
+          22,
+          43
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-10",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1281,
+          863,
+          22,
+          42
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-11",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1318,
+          897,
+          22,
+          42
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-perimeter-12",
+        "assetId": "person",
+        "variantId": "standing",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1183,
+          883,
+          22,
+          33
+        ],
+        "referenceConfiguration": "pedestrian",
+        "partiallyOccluded": false,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-rider-northwest",
+        "assetId": "person",
+        "variantId": "riding-scooter",
+        "districtId": "housing",
+        "sourceBounds": [
+          171,
+          456,
+          26,
+          36
+        ],
+        "referenceConfiguration": "scooter-rider",
+        "vehicleSourceId": "road-scooter-northwest-01",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-rider-west",
+        "assetId": "person",
+        "variantId": "riding-scooter",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          348,
+          568,
+          25,
+          34
+        ],
+        "referenceConfiguration": "scooter-rider",
+        "vehicleSourceId": "road-scooter-west-01",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-rider-central",
+        "assetId": "person",
+        "variantId": "riding-scooter",
+        "districtId": "central",
+        "sourceBounds": [
+          519,
+          553,
+          24,
+          34
+        ],
+        "referenceConfiguration": "scooter-rider",
+        "vehicleSourceId": "road-scooter-central-01",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "person-rider-south",
+        "assetId": "person",
+        "variantId": "riding-scooter",
+        "districtId": "central",
+        "sourceBounds": [
+          895,
+          790,
+          28,
+          43
+        ],
+        "referenceConfiguration": "scooter-rider",
+        "vehicleSourceId": "road-scooter-south-01",
+        "partiallyOccluded": true,
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ],
+    "placementStatus": "unplaced",
+    "sourceBoundsStatus": "Review boxes; partially occluded guest boundaries remain provisional until composition review",
+    "inferredPoseFits": [
+      "riding-bicycle"
+    ]
+  },
+  "planting": {
+    "revision": 1,
+    "masters": [
+      {
+        "id": "capsule-tree",
+        "label": "Capsule tree",
+        "parts": [
+          "trunk",
+          "foot",
+          "capsule crown",
+          "two surface highlights"
+        ]
+      },
+      {
+        "id": "conifer",
+        "label": "Conifer",
+        "parts": [
+          "trunk",
+          "foot",
+          "three overlapping crown tiers"
+        ]
+      },
+      {
+        "id": "pot",
+        "label": "Square pot",
+        "parts": [
+          "tapered tub",
+          "rim",
+          "soil",
+          "flowering mound"
+        ]
+      },
+      {
+        "id": "low-planter",
+        "label": "Low planter",
+        "parts": [
+          "tapered trough",
+          "rim",
+          "soil",
+          "repeated flowering mound"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "capsule-standard",
+        "assetId": "capsule-tree",
+        "variantId": "standard",
+        "label": "Capsule · standard",
+        "category": "Trees",
+        "height": 2.65,
+        "radius": 0.46,
+        "crownHeight": 1.95,
+        "depthRatio": 0.82,
+        "referenceCrop": [
+          473,
+          376,
+          39,
+          80
+        ],
+        "referenceLabel": "Housing entrance · capsule tree",
+        "description": "The reference’s tall capsule crown, a slim trunk and two white highlights. The highlights follow the crown surface as the view turns.",
+        "number": "01",
+        "subtitle": "2.65 units tall"
+      },
+      {
+        "id": "capsule-small",
+        "assetId": "capsule-tree",
+        "variantId": "small",
+        "label": "Capsule · small",
+        "category": "Trees",
+        "height": 2.25,
+        "radius": 0.39,
+        "crownHeight": 1.65,
+        "depthRatio": 0.82,
+        "referenceCrop": [
+          89,
+          217,
+          36,
+          80
+        ],
+        "referenceLabel": "West pavement · smaller capsule",
+        "description": "A fixed smaller version of the same capsule tree, with the same trunk, crown profile and paired highlights.",
+        "number": "02",
+        "subtitle": "2.25 units tall"
+      },
+      {
+        "id": "conifer-standard",
+        "assetId": "conifer",
+        "variantId": "standard",
+        "label": "Conifer · standard",
+        "category": "Trees",
+        "height": 2.35,
+        "radius": 0.57,
+        "referenceCrop": [
+          622,
+          320,
+          48,
+          83
+        ],
+        "referenceLabel": "Courtyard · three-tier conifer",
+        "description": "Three softly flared tiers overlap around one slender trunk. Rounded rims keep the simple blue contour readable from every side.",
+        "number": "03",
+        "subtitle": "2.35 units tall"
+      },
+      {
+        "id": "conifer-small",
+        "assetId": "conifer",
+        "variantId": "small",
+        "label": "Conifer · small",
+        "category": "Trees",
+        "height": 1.95,
+        "radius": 0.47,
+        "referenceCrop": [
+          134,
+          183,
+          40,
+          80
+        ],
+        "referenceLabel": "West corner · smaller conifer",
+        "description": "The same three-tier construction at a second fixed size. Its compact crown leaves the surrounding pavement open.",
+        "number": "04",
+        "subtitle": "1.95 units tall"
+      },
+      {
+        "id": "pot-standard",
+        "assetId": "pot",
+        "variantId": "standard",
+        "label": "Square pot · standard",
+        "category": "Containers",
+        "width": 0.56,
+        "depth": 0.56,
+        "height": 0.38,
+        "clusters": 1,
+        "referenceCrop": [
+          755,
+          946,
+          38,
+          46
+        ],
+        "referenceLabel": "Café frontage · square flower tub",
+        "description": "A small tapered square tub with a thick rim, recessed blue soil and one restrained flowering mound. A few pale blossoms echo the source.",
+        "number": "05",
+        "subtitle": "0.56 × 0.56 unit container"
+      },
+      {
+        "id": "pot-small",
+        "assetId": "pot",
+        "variantId": "small",
+        "label": "Square pot · small",
+        "category": "Containers",
+        "width": 0.43,
+        "depth": 0.43,
+        "height": 0.3,
+        "clusters": 1,
+        "referenceCrop": [
+          541,
+          915,
+          34,
+          34
+        ],
+        "referenceLabel": "Café lane · compact flower tub",
+        "description": "A compact fixed size of the same square pot, with a smaller mound and the same rim and flower treatment.",
+        "number": "06",
+        "subtitle": "0.43 × 0.43 unit container"
+      },
+      {
+        "id": "planter-standard",
+        "assetId": "low-planter",
+        "variantId": "standard",
+        "label": "Low planter · standard",
+        "category": "Containers",
+        "width": 1.65,
+        "depth": 0.51,
+        "height": 0.34,
+        "clusters": 3,
+        "referenceCrop": [
+          995,
+          606,
+          81,
+          70
+        ],
+        "referenceLabel": "Central parking · three flowering mounds",
+        "description": "The long low container beside the parking area: one continuous rim and three repetitions of the shared flowering mound.",
+        "number": "07",
+        "subtitle": "1.65 × 0.51 unit container"
+      },
+      {
+        "id": "planter-short",
+        "assetId": "low-planter",
+        "variantId": "short",
+        "label": "Low planter · short",
+        "category": "Containers",
+        "width": 1.08,
+        "depth": 0.51,
+        "height": 0.34,
+        "clusters": 2,
+        "referenceCrop": [
+          995,
+          606,
+          81,
+          70
+        ],
+        "referenceLabel": "Declared shorter variation · same planter system",
+        "description": "A declared shorter variation with two mounds. The wall thickness, depth and height stay the same as the reference planter.",
+        "number": "08",
+        "subtitle": "1.08 × 0.51 unit container"
+      }
+    ],
+    "sourceObjects": [
+      {
+        "id": "housing-capsule-01",
+        "assetId": "capsule-tree",
+        "variantId": "small",
+        "districtId": "housing",
+        "sourceBounds": [
+          90,
+          218,
+          35,
+          80
+        ],
+        "reference": [
+          108,
+          294
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-capsule-02",
+        "assetId": "capsule-tree",
+        "variantId": "standard",
+        "districtId": "housing",
+        "sourceBounds": [
+          478,
+          142,
+          38,
+          81
+        ],
+        "reference": [
+          498,
+          218
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-capsule-03",
+        "assetId": "capsule-tree",
+        "variantId": "standard",
+        "districtId": "housing",
+        "sourceBounds": [
+          613,
+          258,
+          39,
+          81
+        ],
+        "reference": [
+          632,
+          332
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-capsule-04",
+        "assetId": "capsule-tree",
+        "variantId": "standard",
+        "districtId": "housing",
+        "sourceBounds": [
+          472,
+          375,
+          42,
+          81
+        ],
+        "reference": [
+          493,
+          451
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-capsule-05",
+        "assetId": "capsule-tree",
+        "variantId": "small",
+        "districtId": "housing",
+        "sourceBounds": [
+          819,
+          303,
+          35,
+          79
+        ],
+        "reference": [
+          837,
+          378
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "office-capsule-01",
+        "assetId": "capsule-tree",
+        "variantId": "small",
+        "districtId": "offices",
+        "sourceBounds": [
+          852,
+          181,
+          35,
+          78
+        ],
+        "reference": [
+          870,
+          254
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "office-capsule-02",
+        "assetId": "capsule-tree",
+        "variantId": "small",
+        "districtId": "offices",
+        "sourceBounds": [
+          1343,
+          235,
+          39,
+          85
+        ],
+        "reference": [
+          1362,
+          315
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "metro-capsule-01",
+        "assetId": "capsule-tree",
+        "variantId": "standard",
+        "districtId": "metro",
+        "sourceBounds": [
+          1406,
+          538,
+          43,
+          89
+        ],
+        "reference": [
+          1427,
+          621
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-capsule-01",
+        "assetId": "capsule-tree",
+        "variantId": "standard",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          38,
+          406,
+          42,
+          87
+        ],
+        "reference": [
+          59,
+          487
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-capsule-02",
+        "assetId": "capsule-tree",
+        "variantId": "standard",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          60,
+          710,
+          45,
+          94
+        ],
+        "reference": [
+          82,
+          798
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-capsule-03",
+        "assetId": "capsule-tree",
+        "variantId": "standard",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1437,
+          753,
+          44,
+          96
+        ],
+        "reference": [
+          1459,
+          843
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-conifer-01",
+        "assetId": "conifer",
+        "variantId": "small",
+        "districtId": "housing",
+        "sourceBounds": [
+          134,
+          183,
+          40,
+          80
+        ],
+        "reference": [
+          154,
+          257
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-conifer-02",
+        "assetId": "conifer",
+        "variantId": "small",
+        "districtId": "housing",
+        "sourceBounds": [
+          285,
+          301,
+          40,
+          73
+        ],
+        "reference": [
+          306,
+          368
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-conifer-03",
+        "assetId": "conifer",
+        "variantId": "standard",
+        "districtId": "housing",
+        "sourceBounds": [
+          624,
+          321,
+          46,
+          80
+        ],
+        "reference": [
+          646,
+          393
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "housing-conifer-04",
+        "assetId": "conifer",
+        "variantId": "standard",
+        "districtId": "housing",
+        "sourceBounds": [
+          416,
+          416,
+          45,
+          80
+        ],
+        "reference": [
+          438,
+          490
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "office-conifer-01",
+        "assetId": "conifer",
+        "variantId": "small",
+        "districtId": "offices",
+        "sourceBounds": [
+          1379,
+          254,
+          41,
+          78
+        ],
+        "reference": [
+          1400,
+          325
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-conifer-01",
+        "assetId": "conifer",
+        "variantId": "standard",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          213,
+          543,
+          44,
+          83
+        ],
+        "reference": [
+          235,
+          620
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-conifer-02",
+        "assetId": "conifer",
+        "variantId": "standard",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          122,
+          730,
+          44,
+          81
+        ],
+        "reference": [
+          144,
+          804
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "perimeter-conifer-03",
+        "assetId": "conifer",
+        "variantId": "standard",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1219,
+          758,
+          53,
+          94
+        ],
+        "reference": [
+          1246,
+          844
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "cafe-pot-01",
+        "assetId": "pot",
+        "variantId": "small",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          541,
+          915,
+          34,
+          34
+        ],
+        "reference": [
+          557,
+          944
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "cafe-pot-02",
+        "assetId": "pot",
+        "variantId": "standard",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          755,
+          946,
+          38,
+          46
+        ],
+        "reference": [
+          772,
+          985
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "central-planter-01",
+        "assetId": "low-planter",
+        "variantId": "standard",
+        "districtId": "central",
+        "sourceBounds": [
+          995,
+          606,
+          81,
+          70
+        ],
+        "reference": [
+          1034,
+          658
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ],
+    "placementStatus": "unplaced",
+    "inferredVariants": [
+      "planter-short"
+    ]
+  },
+  "street": {
+    "revision": 1,
+    "masters": [
+      {
+        "id": "lamp",
+        "label": "Lamp",
+        "height": 2.35,
+        "detailBounds": [
+          [
+            -0.18,
+            1.97,
+            -0.18
+          ],
+          [
+            0.18,
+            2.36,
+            0.18
+          ]
+        ],
+        "subtitle": "Lantern head · stepped base",
+        "referenceCrop": [
+          658,
+          495,
+          26,
+          74
+        ],
+        "referenceLabel": "Central crossing · lantern-topped lamp",
+        "description": "A slim pole with a stepped foot, tapered glazed lantern and shallow pyramidal cap. One unchanged master for every lamp.",
+        "number": "01",
+        "assetId": "lamp",
+        "variantId": "standard",
+        "category": "Street furniture"
+      },
+      {
+        "id": "bollard",
+        "label": "Bollard",
+        "height": 0.78,
+        "detailBounds": [
+          [
+            -0.085,
+            0.59,
+            -0.085
+          ],
+          [
+            0.085,
+            0.79,
+            0.085
+          ]
+        ],
+        "subtitle": "Rounded cap · circular foot",
+        "referenceCrop": [
+          574,
+          613,
+          23,
+          37
+        ],
+        "referenceLabel": "Central pavement · rounded bollard",
+        "description": "A short slender post, rounded cap and compact circular base. The pale shaft and cobalt contour echo the small repeated pavement posts.",
+        "number": "02",
+        "assetId": "bollard",
+        "variantId": "standard",
+        "category": "Street furniture"
+      },
+      {
+        "id": "bench",
+        "label": "Bench",
+        "height": 0.46,
+        "detailBounds": [
+          [
+            0.4,
+            0,
+            -0.26
+          ],
+          [
+            0.74,
+            0.47,
+            0.26
+          ]
+        ],
+        "subtitle": "Five slats · open seat",
+        "referenceCrop": [
+          526,
+          369,
+          33,
+          31
+        ],
+        "referenceLabel": "Housing courtyard · low slatted bench",
+        "description": "A low backless bench with five real seat slats, two under-seat supports and four connected feet. The open construction follows the courtyard reference.",
+        "number": "03",
+        "assetId": "bench",
+        "variantId": "standard",
+        "category": "Street furniture"
+      },
+      {
+        "id": "bin",
+        "label": "Bin",
+        "height": 0.84,
+        "detailBounds": [
+          [
+            -0.255,
+            0.65,
+            -0.255
+          ],
+          [
+            0.255,
+            0.85,
+            0.255
+          ]
+        ],
+        "subtitle": "Inferred · recessed opening",
+        "referenceCrop": [
+          862,
+          728,
+          52,
+          77
+        ],
+        "referenceLabel": "Street context · bin shape inferred",
+        "inferred": true,
+        "description": "A simple cylindrical bin with a recessed top opening, thin rim and removable lid seam. This is an inferred kit component: the reference does not show a clearly identifiable bin.",
+        "number": "04",
+        "assetId": "bin",
+        "variantId": "standard",
+        "category": "Street furniture"
+      },
+      {
+        "id": "fence-panel",
+        "label": "Fence panel",
+        "height": 1.3775,
+        "detailBounds": [
+          [
+            0.49,
+            1.15,
+            -0.06
+          ],
+          [
+            0.84,
+            1.39,
+            0.06
+          ]
+        ],
+        "subtitle": "13 pickets · shared end anchors",
+        "referenceCrop": [
+          630,
+          411,
+          54,
+          62
+        ],
+        "referenceLabel": "Housing boundary · repeated metal panel",
+        "description": "A repeatable panel with thirteen pickets, top and bottom rails, and fixed end anchors. The fence assembly preview connects three copies to four gateposts.",
+        "number": "05",
+        "assetId": "fence-panel",
+        "variantId": "standard",
+        "category": "Street furniture"
+      },
+      {
+        "id": "gatepost",
+        "label": "Gatepost",
+        "height": 1.72,
+        "detailBounds": [
+          [
+            -0.2,
+            1.09,
+            -0.2
+          ],
+          [
+            0.2,
+            1.73,
+            0.2
+          ]
+        ],
+        "subtitle": "Square pier · inset plaque",
+        "referenceCrop": [
+          613,
+          416,
+          31,
+          63
+        ],
+        "referenceLabel": "Housing entrance · square pier",
+        "description": "A square pier with a thin cap, pale inset plaque and two pairs of panel attachment points. The same post closes every panel joint.",
+        "number": "06",
+        "assetId": "gatepost",
+        "variantId": "standard",
+        "category": "Street furniture"
+      }
+    ],
+    "sourceObjects": [
+      {
+        "id": "lamp-housing-01",
+        "assetId": "lamp",
+        "districtId": "housing",
+        "reference": [
+          65,
+          334
+        ],
+        "sourceBounds": [
+          56,
+          298,
+          18,
+          38
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-housing-02",
+        "assetId": "lamp",
+        "districtId": "housing",
+        "reference": [
+          383,
+          554
+        ],
+        "sourceBounds": [
+          374,
+          496,
+          18,
+          60
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-housing-03",
+        "assetId": "lamp",
+        "districtId": "housing",
+        "reference": [
+          581,
+          600
+        ],
+        "sourceBounds": [
+          572,
+          544,
+          18,
+          58
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-housing-04",
+        "assetId": "lamp",
+        "districtId": "housing",
+        "reference": [
+          670,
+          562
+        ],
+        "sourceBounds": [
+          661,
+          501,
+          18,
+          63
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-offices-01",
+        "assetId": "lamp",
+        "districtId": "offices",
+        "reference": [
+          918,
+          387
+        ],
+        "sourceBounds": [
+          909,
+          324,
+          18,
+          65
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-offices-02",
+        "assetId": "lamp",
+        "districtId": "offices",
+        "reference": [
+          1083,
+          386
+        ],
+        "sourceBounds": [
+          1074,
+          324,
+          18,
+          64
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-offices-03",
+        "assetId": "lamp",
+        "districtId": "offices",
+        "reference": [
+          1053,
+          476
+        ],
+        "sourceBounds": [
+          1044,
+          409,
+          18,
+          69
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-central-01",
+        "assetId": "lamp",
+        "districtId": "central",
+        "reference": [
+          801,
+          517
+        ],
+        "sourceBounds": [
+          792,
+          465,
+          18,
+          54
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-central-02",
+        "assetId": "lamp",
+        "districtId": "central",
+        "reference": [
+          1139,
+          703
+        ],
+        "sourceBounds": [
+          1130,
+          644,
+          18,
+          61
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-central-03",
+        "assetId": "lamp",
+        "districtId": "central",
+        "reference": [
+          889,
+          795
+        ],
+        "sourceBounds": [
+          880,
+          739,
+          18,
+          58
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-metro-01",
+        "assetId": "lamp",
+        "districtId": "metro",
+        "reference": [
+          1139,
+          579
+        ],
+        "sourceBounds": [
+          1130,
+          497,
+          18,
+          84
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-metro-02",
+        "assetId": "lamp",
+        "districtId": "metro",
+        "reference": [
+          1341,
+          578
+        ],
+        "sourceBounds": [
+          1332,
+          507,
+          18,
+          73
+        ],
+        "partiallyOccluded": true,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-metro-03",
+        "assetId": "lamp",
+        "districtId": "metro",
+        "reference": [
+          1271,
+          687
+        ],
+        "sourceBounds": [
+          1262,
+          617,
+          18,
+          72
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-metro-04",
+        "assetId": "lamp",
+        "districtId": "metro",
+        "reference": [
+          1364,
+          644
+        ],
+        "sourceBounds": [
+          1355,
+          578,
+          18,
+          68
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-perimeter-01",
+        "assetId": "lamp",
+        "districtId": "perimeter",
+        "reference": [
+          304,
+          631
+        ],
+        "sourceBounds": [
+          295,
+          569,
+          18,
+          64
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-perimeter-02",
+        "assetId": "lamp",
+        "districtId": "perimeter",
+        "reference": [
+          193,
+          701
+        ],
+        "sourceBounds": [
+          184,
+          635,
+          18,
+          68
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-perimeter-03",
+        "assetId": "lamp",
+        "districtId": "perimeter",
+        "reference": [
+          398,
+          716
+        ],
+        "sourceBounds": [
+          389,
+          655,
+          18,
+          63
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-perimeter-04",
+        "assetId": "lamp",
+        "districtId": "perimeter",
+        "reference": [
+          892,
+          905
+        ],
+        "sourceBounds": [
+          883,
+          848,
+          18,
+          59
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "lamp-perimeter-05",
+        "assetId": "lamp",
+        "districtId": "perimeter",
+        "reference": [
+          874,
+          995
+        ],
+        "sourceBounds": [
+          865,
+          929,
+          18,
+          68
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-01",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          39,
+          346
+        ],
+        "sourceBounds": [
+          33,
+          323,
+          12,
+          25
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-02",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          96,
+          383
+        ],
+        "sourceBounds": [
+          90,
+          358,
+          12,
+          27
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-03",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          149,
+          420
+        ],
+        "sourceBounds": [
+          143,
+          397,
+          12,
+          25
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-04",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          229,
+          420
+        ],
+        "sourceBounds": [
+          223,
+          389,
+          12,
+          33
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-05",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          207,
+          457
+        ],
+        "sourceBounds": [
+          201,
+          432,
+          12,
+          27
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-06",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          256,
+          430
+        ],
+        "sourceBounds": [
+          250,
+          407,
+          12,
+          25
+        ],
+        "partiallyOccluded": true,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-07",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          527,
+          328
+        ],
+        "sourceBounds": [
+          521,
+          302,
+          12,
+          28
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-08",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          92,
+          515
+        ],
+        "sourceBounds": [
+          86,
+          486,
+          12,
+          31
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-09",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          144,
+          515
+        ],
+        "sourceBounds": [
+          138,
+          482,
+          12,
+          35
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-10",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          481,
+          565
+        ],
+        "sourceBounds": [
+          475,
+          535,
+          12,
+          32
+        ],
+        "partiallyOccluded": true,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-11",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          513,
+          577
+        ],
+        "sourceBounds": [
+          507,
+          552,
+          12,
+          27
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-housing-12",
+        "assetId": "bollard",
+        "districtId": "housing",
+        "reference": [
+          608,
+          499
+        ],
+        "sourceBounds": [
+          602,
+          474,
+          12,
+          27
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-offices-01",
+        "assetId": "bollard",
+        "districtId": "offices",
+        "reference": [
+          906,
+          301
+        ],
+        "sourceBounds": [
+          900,
+          284,
+          12,
+          19
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-offices-02",
+        "assetId": "bollard",
+        "districtId": "offices",
+        "reference": [
+          1065,
+          401
+        ],
+        "sourceBounds": [
+          1059,
+          383,
+          12,
+          20
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-offices-03",
+        "assetId": "bollard",
+        "districtId": "offices",
+        "reference": [
+          1180,
+          459
+        ],
+        "sourceBounds": [
+          1174,
+          428,
+          12,
+          33
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-offices-04",
+        "assetId": "bollard",
+        "districtId": "offices",
+        "reference": [
+          860,
+          418
+        ],
+        "sourceBounds": [
+          854,
+          390,
+          12,
+          30
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-offices-05",
+        "assetId": "bollard",
+        "districtId": "offices",
+        "reference": [
+          899,
+          397
+        ],
+        "sourceBounds": [
+          893,
+          358,
+          12,
+          41
+        ],
+        "partiallyOccluded": true,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-01",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          567,
+          631
+        ],
+        "sourceBounds": [
+          561,
+          606,
+          12,
+          27
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-02",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          585,
+          645
+        ],
+        "sourceBounds": [
+          579,
+          618,
+          12,
+          29
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-03",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          648,
+          658
+        ],
+        "sourceBounds": [
+          642,
+          630,
+          12,
+          30
+        ],
+        "partiallyOccluded": true,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-04",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          729,
+          723
+        ],
+        "sourceBounds": [
+          723,
+          698,
+          12,
+          27
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-05",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          785,
+          748
+        ],
+        "sourceBounds": [
+          779,
+          721,
+          12,
+          29
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-06",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          805,
+          764
+        ],
+        "sourceBounds": [
+          799,
+          737,
+          12,
+          29
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-07",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          826,
+          777
+        ],
+        "sourceBounds": [
+          820,
+          748,
+          12,
+          31
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-08",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          940,
+          638
+        ],
+        "sourceBounds": [
+          934,
+          612,
+          12,
+          28
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-09",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          1004,
+          601
+        ],
+        "sourceBounds": [
+          998,
+          575,
+          12,
+          28
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-10",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          1080,
+          588
+        ],
+        "sourceBounds": [
+          1074,
+          561,
+          12,
+          29
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-11",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          1081,
+          681
+        ],
+        "sourceBounds": [
+          1075,
+          655,
+          12,
+          28
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-12",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          1014,
+          720
+        ],
+        "sourceBounds": [
+          1008,
+          695,
+          12,
+          27
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-central-13",
+        "assetId": "bollard",
+        "districtId": "central",
+        "reference": [
+          1033,
+          745
+        ],
+        "sourceBounds": [
+          1027,
+          721,
+          12,
+          26
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-perimeter-01",
+        "assetId": "bollard",
+        "districtId": "perimeter",
+        "reference": [
+          121,
+          832
+        ],
+        "sourceBounds": [
+          115,
+          803,
+          12,
+          31
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-perimeter-02",
+        "assetId": "bollard",
+        "districtId": "perimeter",
+        "reference": [
+          526,
+          978
+        ],
+        "sourceBounds": [
+          520,
+          944,
+          12,
+          36
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-perimeter-03",
+        "assetId": "bollard",
+        "districtId": "perimeter",
+        "reference": [
+          766,
+          998
+        ],
+        "sourceBounds": [
+          760,
+          964,
+          12,
+          36
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bollard-perimeter-04",
+        "assetId": "bollard",
+        "districtId": "perimeter",
+        "reference": [
+          1127,
+          945
+        ],
+        "sourceBounds": [
+          1121,
+          919,
+          12,
+          28
+        ],
+        "partiallyOccluded": false,
+        "sourceBoundsStatus": "provisional-review-box",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "bench-housing-01",
+        "assetId": "bench",
+        "districtId": "housing",
+        "reference": [
+          540,
+          395
+        ],
+        "sourceBounds": [
+          526,
+          369,
+          33,
+          31
+        ],
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "gatepost-housing-01",
+        "assetId": "gatepost",
+        "districtId": "housing",
+        "reference": [
+          531,
+          489
+        ],
+        "sourceBounds": [
+          520,
+          438,
+          24,
+          51
+        ],
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "gatepost-housing-02",
+        "assetId": "gatepost",
+        "districtId": "housing",
+        "reference": [
+          575,
+          481
+        ],
+        "sourceBounds": [
+          564,
+          431,
+          24,
+          50
+        ],
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "gatepost-housing-03",
+        "assetId": "gatepost",
+        "districtId": "housing",
+        "reference": [
+          586,
+          492
+        ],
+        "sourceBounds": [
+          575,
+          439,
+          24,
+          53
+        ],
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "gatepost-housing-04",
+        "assetId": "gatepost",
+        "districtId": "housing",
+        "reference": [
+          629,
+          474
+        ],
+        "sourceBounds": [
+          618,
+          421,
+          24,
+          53
+        ],
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "gatepost-housing-05",
+        "assetId": "gatepost",
+        "districtId": "housing",
+        "reference": [
+          692,
+          451
+        ],
+        "sourceBounds": [
+          681,
+          403,
+          24,
+          48
+        ],
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "fence-run-housing-01",
+        "assetId": "fence-panel",
+        "districtId": "housing",
+        "sourceBounds": [
+          539,
+          442,
+          33,
+          39
+        ],
+        "sourceKind": "continuous-run",
+        "repeatCount": null,
+        "repeatCountStatus": "Resolve whole-panel repetition during composition review",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "fence-run-housing-02",
+        "assetId": "fence-panel",
+        "districtId": "housing",
+        "sourceBounds": [
+          592,
+          433,
+          29,
+          52
+        ],
+        "sourceKind": "continuous-run",
+        "repeatCount": null,
+        "repeatCountStatus": "Resolve whole-panel repetition during composition review",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      },
+      {
+        "id": "fence-run-housing-03",
+        "assetId": "fence-panel",
+        "districtId": "housing",
+        "sourceBounds": [
+          637,
+          416,
+          49,
+          51
+        ],
+        "sourceKind": "continuous-run",
+        "repeatCount": null,
+        "repeatCountStatus": "Resolve whole-panel repetition during composition review",
+        "variantId": "standard",
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ],
+    "referenceNotes": {
+      "inferredMasters": [
+        "bin"
+      ],
+      "bin": "No unambiguous source bin is visible. The requested bin master is an inferred kit component, with no invented source instance.",
+      "bounds": "Small pole caps and occluded bases use provisional review boxes; verify these boundaries during composition review.",
+      "fence": "Three visible housing fence runs map to the same panel. Whole-panel repeat counts remain unassigned; no per-instance scaling.",
+      "excluded": "The metro canopy, stair rails and perimeter railing remain part of the separate metro checkpoint."
+    },
+    "placementStatus": "unplaced"
+  },
+  "metro": {
+    "base": {
+      "id": "metro-entrance",
+      "revision": 1,
+      "variantId": "standard",
+      "width": 3.4,
+      "length": 5.9,
+      "clearWidth": 2.94,
+      "upperStart": -2.8,
+      "stairStart": -1.5,
+      "steps": 8,
+      "rise": 0.14,
+      "tread": 0.3,
+      "lowerEnd": 2.8,
+      "depth": 1.12,
+      "curbHeight": 0.14,
+      "guardHeight": 1.05,
+      "canopyHeight": 2.24,
+      "canopyStart": -2.87,
+      "canopyEnd": -1.01,
+      "signCenter": [
+        -1.1,
+        2.98,
+        -1.67
+      ],
+      "signRadius": 0.37
+    },
+    "parts": [
+      {
+        "id": "structure",
+        "label": "Stairs & landings",
+        "subtitle": "Eight steps · two landings",
+        "description": "Eight repeated treads connect the covered upper landing to the lower landing. The ground anchor stays at the upper entrance; the well extends below it.",
+        "referenceCrop": [
+          1187,
+          554,
+          186,
+          101
+        ],
+        "number": "01"
+      },
+      {
+        "id": "guards",
+        "label": "Perimeter railing",
+        "subtitle": "Posts · pickets · open approach",
+        "description": "Shared vertical posts and pickets enclose the open well. The full-width approach under the canopy stays clear.",
+        "referenceCrop": [
+          1245,
+          498,
+          166,
+          142
+        ],
+        "number": "02"
+      },
+      {
+        "id": "handrails",
+        "label": "Stair handrails",
+        "subtitle": "Two continuous rails",
+        "description": "Two continuous rails follow the stair pitch, with short level returns at each landing. Supports connect to the stair side walls.",
+        "referenceCrop": [
+          1224,
+          555,
+          138,
+          86
+        ],
+        "number": "03"
+      },
+      {
+        "id": "canopy",
+        "label": "Canopy & glazing",
+        "subtitle": "Shared frame · clear panes",
+        "description": "Four slim columns support a shallow rectangular frame and six transparent roof panes. Side glazing leaves the entrance open.",
+        "referenceCrop": [
+          1151,
+          490,
+          127,
+          130
+        ],
+        "number": "04"
+      },
+      {
+        "id": "sign",
+        "label": "Metro sign",
+        "subtitle": "A geometric M on both faces",
+        "description": "A cobalt circular sign carries a geometric white M on both faces. Its mast shares the canopy corner.",
+        "referenceCrop": [
+          1240,
+          464,
+          43,
+          92
+        ],
+        "number": "05"
+      }
+    ],
+    "sourceObjects": [
+      {
+        "id": "metro-entrance-01",
+        "assetId": "metro-entrance",
+        "variantId": "standard",
+        "districtId": "metro",
+        "sourceBounds": [
+          1149,
+          464,
+          260,
+          196
+        ],
+        "reference": [
+          1279,
+          619
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced"
+      }
+    ],
+    "placementStatus": "unplaced",
+    "groundCutout": [
+      [
+        -2.8,
+        -1.47
+      ],
+      [
+        2.8,
+        1.47
+      ]
+    ],
+    "inference": "Stair depth, tread count and concealed structure are coherent interpretations of the single reference."
+  },
+  "ground": {
+    "base": {
+      "revision": 1,
+      "grade": 0,
+      "roadY": -0.12,
+      "baseY": -0.18,
+      "grid": 0.65,
+      "paintY": -0.118,
+      "roadWidth": 4.6,
+      "roadLength": 8,
+      "bayWidth": 1.48,
+      "bayDepth": 2.8,
+      "courtyardRadius": 2.3,
+      "metroHole": [
+        [
+          -2.8,
+          -1.47
+        ],
+        [
+          2.8,
+          1.47
+        ]
+      ]
+    },
+    "variants": [
+      {
+        "id": "road-straight",
+        "assetId": "road",
+        "variantId": "straight",
+        "label": "Straight road",
+        "subtitle": "Pale-blue surface",
+        "size": "8 × 4.6 units",
+        "crop": [
+          684,
+          439,
+          211,
+          114
+        ],
+        "description": "A quiet pale-blue road surface, with a shared width and connection anchors at both ends. Markings are separate reusable parts.",
+        "number": "01"
+      },
+      {
+        "id": "road-junction",
+        "assetId": "road",
+        "variantId": "junction",
+        "label": "Road junction",
+        "subtitle": "Four matching connections",
+        "size": "10 × 10 units",
+        "crop": [
+          894,
+          405,
+          248,
+          140
+        ],
+        "description": "One continuous four-way surface. Its arms meet the same straight-road width without overlapping asphalt planes.",
+        "number": "02"
+      },
+      {
+        "id": "pavement-straight",
+        "assetId": "pavement",
+        "variantId": "straight",
+        "label": "Tiled pavement",
+        "subtitle": "Shared grid · subtle seams",
+        "size": "8 × 2.2 units",
+        "crop": [
+          570,
+          497,
+          135,
+          75
+        ],
+        "description": "White paving uses a restrained square grid, a shallow raised edge and the same grade as the approved building and furniture anchors.",
+        "number": "03"
+      },
+      {
+        "id": "pavement-plaza",
+        "assetId": "pavement",
+        "variantId": "plaza",
+        "label": "Rounded plaza",
+        "subtitle": "Open paving · softened corners",
+        "size": "6 × 6 units",
+        "crop": [
+          837,
+          466,
+          281,
+          155
+        ],
+        "description": "A square plaza with rounded corners and the same paving system. Its open surface leaves space for the later furniture and people placements.",
+        "number": "04"
+      },
+      {
+        "id": "pavement-ramp",
+        "assetId": "pavement",
+        "variantId": "ramp",
+        "label": "Lowered crossing edge",
+        "subtitle": "Flush connection to the road",
+        "size": "8 × 2.2 units",
+        "crop": [
+          438,
+          561,
+          114,
+          68
+        ],
+        "description": "A shallow, flared section lowers the pavement to road height at a crossing. Its grid follows the real sloping surface. The concealed slope is an inferred connection detail.",
+        "number": "05"
+      },
+      {
+        "id": "kerb-standard",
+        "assetId": "kerb",
+        "variantId": "standard",
+        "label": "Kerb segment",
+        "subtitle": "Repeatable edge profile",
+        "size": ".8 × .12 units",
+        "crop": [
+          408,
+          560,
+          128,
+          53
+        ],
+        "description": "One short kerb with a lightly bevelled edge. End anchors allow repeated runs; the pavement pieces use the same height and pale edge treatment.",
+        "number": "06"
+      },
+      {
+        "id": "crossing-standard",
+        "assetId": "crossing",
+        "variantId": "standard",
+        "label": "Zebra crossing",
+        "subtitle": "Eight shared white bars",
+        "size": "2.42 × 3.8 units",
+        "crop": [
+          486,
+          669,
+          143,
+          76
+        ],
+        "description": "Eight equal white bars read clearly on the pale road. The set stays within the carriageway and aligns with the lowered pavement approach.",
+        "number": "07"
+      },
+      {
+        "id": "lane-marking-standard",
+        "assetId": "lane-marking",
+        "variantId": "standard",
+        "label": "Lane dash",
+        "subtitle": "One repeatable marking",
+        "size": ".65 × .055 units",
+        "crop": [
+          619,
+          720,
+          72,
+          40
+        ],
+        "description": "A short white dash repeats along the road center. The crossing fit keeps the centerline out of the pedestrian crossing.",
+        "number": "08"
+      },
+      {
+        "id": "parking-bay-standard",
+        "assetId": "parking-bay",
+        "variantId": "standard",
+        "label": "Parking bay",
+        "subtitle": "Open-ended white outline",
+        "size": "1.48 × 2.8 units",
+        "crop": [
+          886,
+          622,
+          246,
+          150
+        ],
+        "description": "One U-shaped bay marking repeats at a fixed pitch. The parking preview shows four bays, with clear entry edges and a shared back line.",
+        "number": "09"
+      },
+      {
+        "id": "courtyard-standard",
+        "assetId": "courtyard",
+        "variantId": "standard",
+        "label": "Circular courtyard",
+        "subtitle": "Pale inset · white rim",
+        "size": "4.6-unit diameter",
+        "crop": [
+          480,
+          334,
+          157,
+          81
+        ],
+        "description": "A low white rim surrounds a pale-blue circular inset, following the housing courtyard reference. Its use is left unspecified; there is no invented fountain or planting.",
+        "number": "10"
+      },
+      {
+        "id": "pavement-metro",
+        "assetId": "pavement",
+        "variantId": "metro",
+        "label": "Metro pavement",
+        "subtitle": "Real opening for the stairwell",
+        "size": "9.2 × 6.2 units",
+        "crop": [
+          1140,
+          480,
+          294,
+          228
+        ],
+        "description": "The paving is cut around the approved metro stairwell. Grid lines stop at the opening, while the upper landing joins the pavement at the same height.",
+        "number": "11"
+      }
+    ],
+    "sourceObjects": [
+      {
+        "id": "ground-road-west",
+        "assetId": "road",
+        "variantId": "straight",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          60,
+          375,
+          480,
+          314
+        ],
+        "reference": [
+          300,
+          532
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-road-central",
+        "assetId": "road",
+        "variantId": "straight",
+        "districtId": "central",
+        "sourceBounds": [
+          416,
+          390,
+          541,
+          234
+        ],
+        "reference": [
+          686.5,
+          507
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-road-east",
+        "assetId": "road",
+        "variantId": "straight",
+        "districtId": "offices",
+        "sourceBounds": [
+          1184,
+          350,
+          263,
+          154
+        ],
+        "reference": [
+          1315.5,
+          427
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-road-front",
+        "assetId": "road",
+        "variantId": "straight",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          462,
+          630,
+          526,
+          283
+        ],
+        "reference": [
+          725,
+          771.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-road-metro",
+        "assetId": "road",
+        "variantId": "straight",
+        "districtId": "metro",
+        "sourceBounds": [
+          994,
+          690,
+          221,
+          212
+        ],
+        "reference": [
+          1104.5,
+          796
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-junction-offices",
+        "assetId": "road",
+        "variantId": "junction",
+        "districtId": "offices",
+        "sourceBounds": [
+          902,
+          383,
+          310,
+          155
+        ],
+        "reference": [
+          1057,
+          460.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-junction-central",
+        "assetId": "road",
+        "variantId": "junction",
+        "districtId": "central",
+        "sourceBounds": [
+          411,
+          554,
+          207,
+          171
+        ],
+        "reference": [
+          514.5,
+          639.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-junction-southeast",
+        "assetId": "road",
+        "variantId": "junction",
+        "districtId": "metro",
+        "sourceBounds": [
+          880,
+          750,
+          281,
+          177
+        ],
+        "reference": [
+          1020.5,
+          838.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-paving-housing",
+        "assetId": "pavement",
+        "variantId": "plaza",
+        "districtId": "housing",
+        "sourceBounds": [
+          12,
+          292,
+          824,
+          316
+        ],
+        "reference": [
+          424,
+          450
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-paving-offices",
+        "assetId": "pavement",
+        "variantId": "plaza",
+        "districtId": "offices",
+        "sourceBounds": [
+          831,
+          243,
+          607,
+          221
+        ],
+        "reference": [
+          1134.5,
+          353.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-paving-central",
+        "assetId": "pavement",
+        "variantId": "plaza",
+        "districtId": "central",
+        "sourceBounds": [
+          527,
+          424,
+          633,
+          373
+        ],
+        "reference": [
+          843.5,
+          610.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-paving-storefronts",
+        "assetId": "pavement",
+        "variantId": "straight",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          162,
+          757,
+          694,
+          258
+        ],
+        "reference": [
+          509,
+          886
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-paving-west",
+        "assetId": "pavement",
+        "variantId": "plaza",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          12,
+          492,
+          430,
+          277
+        ],
+        "reference": [
+          227,
+          630.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-paving-southwest",
+        "assetId": "pavement",
+        "variantId": "plaza",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          10,
+          693,
+          186,
+          174
+        ],
+        "reference": [
+          103,
+          780
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-paving-southeast",
+        "assetId": "pavement",
+        "variantId": "plaza",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          1130,
+          721,
+          392,
+          245
+        ],
+        "reference": [
+          1326,
+          843.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-paving-metro",
+        "assetId": "pavement",
+        "variantId": "metro",
+        "districtId": "metro",
+        "sourceBounds": [
+          1139,
+          479,
+          376,
+          247
+        ],
+        "reference": [
+          1327,
+          602.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "surface-region"
+      },
+      {
+        "id": "ground-crossing-north",
+        "assetId": "crossing",
+        "variantId": "standard",
+        "districtId": "offices",
+        "sourceBounds": [
+          909,
+          401,
+          86,
+          49
+        ],
+        "reference": [
+          952,
+          425.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "feature"
+      },
+      {
+        "id": "ground-crossing-offices",
+        "assetId": "crossing",
+        "variantId": "standard",
+        "districtId": "offices",
+        "sourceBounds": [
+          1063,
+          455,
+          87,
+          51
+        ],
+        "reference": [
+          1106.5,
+          480.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "feature"
+      },
+      {
+        "id": "ground-crossing-west",
+        "assetId": "crossing",
+        "variantId": "standard",
+        "districtId": "central",
+        "sourceBounds": [
+          433,
+          573,
+          106,
+          55
+        ],
+        "reference": [
+          486,
+          600.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "feature"
+      },
+      {
+        "id": "ground-crossing-cafe",
+        "assetId": "crossing",
+        "variantId": "standard",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          487,
+          668,
+          139,
+          77
+        ],
+        "reference": [
+          556.5,
+          706.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "feature"
+      },
+      {
+        "id": "ground-crossing-south",
+        "assetId": "crossing",
+        "variantId": "standard",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          747,
+          792,
+          106,
+          54
+        ],
+        "reference": [
+          800,
+          819
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "feature"
+      },
+      {
+        "id": "ground-crossing-metro",
+        "assetId": "crossing",
+        "variantId": "standard",
+        "districtId": "metro",
+        "sourceBounds": [
+          1037,
+          752,
+          111,
+          69
+        ],
+        "reference": [
+          1092.5,
+          786.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "feature"
+      },
+      {
+        "id": "ground-parking-central",
+        "assetId": "parking-bay",
+        "variantId": "standard",
+        "districtId": "central",
+        "sourceBounds": [
+          868,
+          592,
+          282,
+          188
+        ],
+        "reference": [
+          1009,
+          686
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "parking-area"
+      },
+      {
+        "id": "ground-parking-southeast",
+        "assetId": "parking-bay",
+        "variantId": "standard",
+        "districtId": "metro",
+        "sourceBounds": [
+          981,
+          828,
+          228,
+          147
+        ],
+        "reference": [
+          1095,
+          901.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "parking-area"
+      },
+      {
+        "id": "ground-courtyard-housing",
+        "assetId": "courtyard",
+        "variantId": "standard",
+        "districtId": "housing",
+        "sourceBounds": [
+          480,
+          334,
+          157,
+          81
+        ],
+        "reference": [
+          558.5,
+          374.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "feature"
+      },
+      {
+        "id": "ground-lane-west",
+        "assetId": "lane-marking",
+        "variantId": "standard",
+        "districtId": "perimeter",
+        "sourceBounds": [
+          62,
+          383,
+          438,
+          287
+        ],
+        "reference": [
+          281,
+          526.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "marking-run"
+      },
+      {
+        "id": "ground-lane-central",
+        "assetId": "lane-marking",
+        "variantId": "standard",
+        "districtId": "central",
+        "sourceBounds": [
+          496,
+          432,
+          419,
+          164
+        ],
+        "reference": [
+          705.5,
+          514
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "marking-run"
+      },
+      {
+        "id": "ground-lane-front",
+        "assetId": "lane-marking",
+        "variantId": "standard",
+        "districtId": "cafe-lane",
+        "sourceBounds": [
+          606,
+          714,
+          299,
+          175
+        ],
+        "reference": [
+          755.5,
+          801.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "marking-run"
+      },
+      {
+        "id": "ground-lane-office",
+        "assetId": "lane-marking",
+        "variantId": "standard",
+        "districtId": "offices",
+        "sourceBounds": [
+          845,
+          279,
+          335,
+          244
+        ],
+        "reference": [
+          1012.5,
+          401
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "marking-run"
+      },
+      {
+        "id": "ground-lane-east",
+        "assetId": "lane-marking",
+        "variantId": "standard",
+        "districtId": "offices",
+        "sourceBounds": [
+          1184,
+          361,
+          231,
+          126
+        ],
+        "reference": [
+          1299.5,
+          424
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "marking-run"
+      },
+      {
+        "id": "ground-lane-metro",
+        "assetId": "lane-marking",
+        "variantId": "standard",
+        "districtId": "metro",
+        "sourceBounds": [
+          966,
+          702,
+          235,
+          191
+        ],
+        "reference": [
+          1083.5,
+          797.5
+        ],
+        "reviewStatus": "approved",
+        "placementStatus": "unplaced",
+        "scope": "marking-run"
+      }
+    ],
+    "referenceNotes": {
+      "boundaries": "Provisional review boxes around visible surface regions; source buildings and figures occlude much of the ground.",
+      "subdivision": "Grid seams, individual dashes and parking divisions are generated from shared modules. Final tile counts, polygons and placements follow the composition review.",
+      "inferred": [
+        "Lowered crossing slopes and below-grade slab thickness",
+        "Kerb cross-section and modular segmentation",
+        "Continuous geometry where road or paving is obscured"
+      ],
+      "courtyard": "Circular pale-blue inset with a white rim; function is unspecified in the source."
+    },
+    "placementStatus": "unplaced"
+  },
+  "scope": "All twelve component families approved. Source records remain isolated component-study records; final placed instances and layout dimensions are in neighborhood-manifest.json. Assembled composition awaits review; portfolio integration remains a later phase."
+}

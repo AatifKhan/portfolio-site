@@ -1,0 +1,15 @@
+import sharp from 'sharp';
+import {resolve} from 'node:path';
+import {mkdir} from 'node:fs/promises';
+const root=resolve(import.meta.dirname,'../..');
+const report=resolve(root,'reports/geomarketeer-review-2');
+await mkdir(report,{recursive:true});
+const reference=resolve(root,'assets/portfolio/geomarketeer/pune-approved-reference.png');
+const reconstruction=resolve(root,'assets/portfolio/geomarketeer/review-2/hero.webp');
+const panels=await Promise.all([reference,reconstruction].map(f=>sharp(f).resize(1000,750,{fit:'contain',background:'#efeada'}).flatten({background:'#efeada'}).png().toBuffer()));
+await sharp({create:{width:2000,height:750,channels:3,background:'#efeada'}}).composite(panels.map((input,i)=>({input,left:i*1000,top:0}))).png().toFile(resolve(report,'reference-comparison.png'));
+const browser=await sharp(resolve(report,'desktop.png')).resize(1000,750,{fit:'contain',background:'#faf8f3'}).png().toBuffer();
+await sharp({create:{width:2000,height:750,channels:3,background:'#faf8f3'}}).composite([{input:panels[0],left:0,top:0},{input:browser,left:1000,top:0}]).png().toFile(resolve(report,'browser-comparison.png'));
+const landmark=await sharp(reference).extract({left:750,top:305,width:295,height:300}).resize(600,600,{fit:'contain',background:'#efeada'}).png().toBuffer();
+const detail=await sharp(resolve(root,'assets/portfolio/geomarketeer/review-2/detail.webp')).resize(800,600,{fit:'contain',background:'#efeada'}).flatten({background:'#efeada'}).png().toBuffer();
+await sharp({create:{width:1400,height:600,channels:3,background:'#efeada'}}).composite([{input:landmark,left:0,top:0},{input:detail,left:600,top:0}]).png().toFile(resolve(report,'landmark-comparison.png'));

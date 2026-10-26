@@ -1,0 +1,11 @@
+{
+  "tests": "pass",
+  "districts": 8,
+  "checks": [
+    "Shared renderer preserves all district views, reference projection and overview framing",
+    "±15° clamp, 100–300% zoom, keyboard and reset",
+    "Touch opt-in, cancellation, reduced motion and phone dimensions",
+    "No idle render loop; hidden pause and page lifecycle",
+    "Context loss and eight saved exploration previews; one-time cleanup"
+  ]
+}

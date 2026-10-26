@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>A corner of Pune · GeoMarketeer</title>
+  <meta name="description" content="An interactive study of Camp, Pune. GeoMarketeer cityscape — full neighbourhood artwork review.">
+  <link rel="stylesheet" href="styles/cityscape-review.css?v=review2-c">
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three/three.module.js","three/addons/":"./assets/vendor/three/addons/"}}</script>
+  <script type="module" src="scripts/cityscape-review.js?v=review2-c"></script>
+</head>
+<body>
+  <header class="review-header"><a href="minimal_portfolio.html">Aatif Khan <span>/ GeoMarketeer</span></a><span>Cityscape study · Review 2</span></header>
+  <main>
+    <section class="intro" aria-labelledby="pageTitle">
+      <div><p class="eyebrow">CAMP, PUNE · AN ILLUSTRATIVE RECONSTRUCTION</p><h1 id="pageTitle">A place worth<br>looking closer at.</h1></div>
+      <p class="intro-note">Before the data, there’s a neighbourhood.<br>A first look at the world our story will live in.</p>
+    </section>
+    <section class="review-stage" aria-label="Interactive cityscape review">
+      <div class="scene-column">
+        <div class="scene-frame" id="sceneFrame">
+          <img id="cityPoster" src="assets/portfolio/geomarketeer/review-2/hero.webp" alt="A miniature Pune neighbourhood with Ohel David Synagogue, apartments, shops and two-way traffic." width="1800" height="1125">
+          <canvas id="reviewCanvas" tabindex="0" aria-label="Pune city model. Left and right arrow keys rotate; plus and minus zoom. R resets the view."></canvas>
+          <div class="scene-label" id="sceneLabel" hidden></div>
+          <span class="scene-stamp">CAMP, PUNE · ILLUSTRATIVE RECONSTRUCTION</span>
+          <span class="scene-status" id="sceneStatus" role="status">Preparing the city…</span>
+          <button class="explore-button" id="explore" type="button" aria-pressed="false">Explore city</button>
+        </div>
+        <div class="view-controls" role="group" aria-label="View controls">
+          <div class="rotation-controls"><button type="button" id="rotateLeft" aria-label="Rotate to left limit">−14°</button><button type="button" id="reset">Reset view</button><button type="button" id="rotateRight" aria-label="Rotate to right limit">+14°</button></div>
+          <div class="zoom-controls"><button type="button" id="zoomOut" aria-label="Zoom out">−</button><output id="zoomLevel" aria-label="Zoom level">100%</output><button type="button" id="zoomIn" aria-label="Zoom in">+</button></div>
+          <button type="button" id="traffic" aria-pressed="false">Pause traffic</button>
+        </div>
+        <p class="gesture-note">Drag gently to rotate. Scroll to move down the page.</p>
+      </div>
+      <aside class="story-column">
+        <div class="story-copy" aria-live="polite"><p class="eyebrow" id="viewIndex">01 / THE NEIGHBOURHOOD</p><h2 id="viewTitle">The corner<br>looks promising.</h2><p id="viewBody">A busy road. Homes around the corner. A café waiting for its first customer.</p><p class="story-question" id="viewQuestion">What would you want to know before signing the lease?</p></div>
+        <div class="places" role="group" aria-label="Look closer at a place">
+          <p class="eyebrow">LOOK CLOSER</p>
+          <button type="button" data-view="hero" aria-pressed="true"><span>01</span> The neighbourhood</button>
+          <button type="button" data-view="synagogue" aria-pressed="false"><span>02</span> Ohel David Synagogue</button>
+          <button type="button" data-view="cafe" aria-pressed="false"><span>03</span> The café frontage</button>
+          <button type="button" data-view="homes" aria-pressed="false"><span>04</span> The nearby homes</button>
+          <button type="button" data-view="alternative" aria-pressed="false"><span>05</span> The quieter storefront</button>
+        </div>
+        <p class="review-note">Review 2 · The full neighbourhood, with refined architecture, planting and both café candidates. The eight-beat data story follows after this artwork review. <a href="cityscape-review.html?view=still">View still images</a>.</p>
+      </aside>
+    </section>
+    <section class="comparison" aria-labelledby="comparisonTitle">
+      <div class="section-heading"><div><p class="eyebrow">THE VISUAL CHECKPOINT</p><h2 id="comparisonTitle">From illustration to a place.</h2></div><p>The reference sets the direction.<br>The model adds another angle.</p></div>
+      <div class="comparison-grid">
+        <figure><img src="assets/portfolio/geomarketeer/pune-approved-reference.png" alt="Approved full-neighbourhood visual reference." loading="lazy" width="1672" height="941"><figcaption><span>01 / APPROVED REFERENCE</span>Full neighbourhood · visual direction</figcaption></figure>
+        <figure><img src="assets/portfolio/geomarketeer/review-2/hero.webp" alt="Blender render of the refined neighbourhood." loading="lazy" width="1800" height="1125"><figcaption><span>02 / THE RECONSTRUCTION</span>Full neighbourhood · Blender render</figcaption></figure>
+      </div>
+      <div class="angle-grid">
+        <figure><img src="assets/portfolio/geomarketeer/review-2/left.webp" alt="The city at the left rotation limit." loading="lazy"><figcaption>Left limit · −14°</figcaption></figure>
+        <figure><img src="assets/portfolio/geomarketeer/review-2/detail.webp" alt="Close view of the synagogue and surrounding buildings." loading="lazy"><figcaption>Architectural detail</figcaption></figure>
+        <figure><img src="assets/portfolio/geomarketeer/review-2/right.webp" alt="The city at the right rotation limit." loading="lazy"><figcaption>Right limit · +14°</figcaption></figure>
+      </div>
+    </section>
+    <details class="review-details"><summary>Review notes &amp; live measurements</summary><div><p>This is an illustrative neighbourhood inspired by Camp. Building placement and café availability are not a verified map or property listing. The eight story beats and portfolio integration are the next review stage.</p><dl><dt>Model download</dt><dd id="assetBytes">—</dd><dt>Visible triangles</dt><dd id="triangles">—</dd><dt>Draw calls</dt><dd id="drawCalls">—</dd><dt>Frame interval, median / 95th percentile</dt><dd id="frameTime">Measuring…</dd><dt>Current view</dt><dd id="viewMetrics">—</dd><dt>Browser viewport</dt><dd id="viewportMetrics">—</dd></dl><p>Frame measurements describe this browser session, including any background-tab throttling. They are not a mobile-device benchmark.</p><p><a href="assets/portfolio/geomarketeer/review-2/pune-source.blend" download>Editable Blender source</a> · <a href="assets/portfolio/geomarketeer/review-2/pune-desktop.glb" download>Desktop model</a></p></div></details>
+  </main>
+  <footer>GEOMARKETEER <span>Location is more than an address.</span></footer>
+</body>
+</html>

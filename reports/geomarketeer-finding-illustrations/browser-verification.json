@@ -1,0 +1,115 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "columns": "327px",
+      "entry": "/",
+      "images": [
+        {
+          "height": 245,
+          "loaded": true,
+          "width": 327
+        },
+        {
+          "height": 245,
+          "loaded": true,
+          "width": 327
+        },
+        {
+          "height": 245,
+          "loaded": true,
+          "width": 327
+        },
+        {
+          "height": 245,
+          "loaded": true,
+          "width": 327
+        }
+      ],
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "columns": "257px",
+      "entry": "/",
+      "images": [
+        {
+          "height": 193,
+          "loaded": true,
+          "width": 257
+        },
+        {
+          "height": 193,
+          "loaded": true,
+          "width": 257
+        },
+        {
+          "height": 193,
+          "loaded": true,
+          "width": 257
+        },
+        {
+          "height": 193,
+          "loaded": true,
+          "width": 257
+        }
+      ],
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "columns": "257px",
+      "entry": "/minimal_portfolio.html",
+      "images": [
+        {
+          "height": 193,
+          "loaded": true,
+          "width": 257
+        },
+        {
+          "height": 193,
+          "loaded": true,
+          "width": 257
+        },
+        {
+          "height": 193,
+          "loaded": true,
+          "width": 257
+        },
+        {
+          "height": 193,
+          "loaded": true,
+          "width": 257
+        }
+      ],
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "columns": "327px",
+      "entry": "/minimal_portfolio.html",
+      "loaded": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "columns": "264px 264px",
+      "entry": "/minimal_portfolio.html",
+      "loaded": true,
+      "overflow": false,
+      "width": 1280
+    },
+    {
+      "columns": "264px 264px",
+      "entry": "/",
+      "loaded": true,
+      "overflow": false,
+      "width": 1280
+    }
+  ],
+  "readingModes": {
+    "quickHidesFull": true,
+    "fullShowsFull": true
+  },
+  "errors": []
+}

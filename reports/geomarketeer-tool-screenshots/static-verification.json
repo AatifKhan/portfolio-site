@@ -1,0 +1,18 @@
+[
+  {
+    "entry": "index.html",
+    "same_canonical": true,
+    "outside_case_unchanged": true,
+    "story_unchanged": true,
+    "one_screenshot_slot": true,
+    "no_old_diagram_placeholder": true
+  },
+  {
+    "entry": "minimal_portfolio.html",
+    "same_canonical": true,
+    "outside_case_unchanged": true,
+    "story_unchanged": true,
+    "one_screenshot_slot": true,
+    "no_old_diagram_placeholder": true
+  }
+]

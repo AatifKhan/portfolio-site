@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fcfbf8">
+    <title>Places, with perspective — GeoMarketeer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600&family=Fraunces:opsz,wght@9..144,400;9..144,450&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/geomarketeer-atlas-study.css">
+    <script type="module" src="scripts/geomarketeer-atlas-study.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#study">Skip to the neighborhood</a>
+    <header class="masthead">
+        <a class="wordmark" href="minimal_portfolio.html?project=geomarketeer" aria-label="GeoMarketeer portfolio case study">GeoMarketeer<span class="wordmark-dot" aria-hidden="true"></span></a>
+        <nav class="view-switch" aria-label="Illustration views">
+            <button type="button" data-view-button="atlas" aria-pressed="true">The neighborhood</button>
+            <button type="button" data-view-button="cafe" aria-pressed="false">The café</button>
+        </nav>
+        <span class="study-label">A study in place</span>
+    </header>
+
+    <main id="study" class="study" data-view="atlas" data-ready="false" data-transitioning="false" tabindex="-1">
+        <div class="introduction">
+            <div>
+                <p class="eyebrow">A little context. A closer look.</p>
+                <h1 id="studyTitle">Get to know the neighborhood.</h1>
+            </div>
+            <p class="intro-copy" id="introCopy">The streets, the spaces, the everyday places. <br>Choose the corner café to step a little closer.</p>
+        </div>
+
+        <section class="illustration-stage" tabindex="0" aria-label="Interactive illustration" aria-describedby="viewDescription cameraHelp">
+            <div class="art-panel atlas-panel" id="atlasPanel">
+                <svg id="atlasArt" viewBox="0 0 1100 800" role="group" aria-labelledby="atlasTitle atlasDescription">
+                    <title id="atlasTitle">The neighborhood, from above</title>
+                    <desc id="atlasDescription">A north-up illustrated atlas. Offices and a local shop lie north of the café. A pocket garden is to its west, and homes are across Linden Street to the east. Market Lane borders the café to the south. The amber café can be opened.</desc>
+                </svg>
+            </div>
+            <div class="art-panel cafe-panel" id="cafePanel" aria-hidden="true" inert>
+                <svg id="cafeArt" viewBox="0 0 1100 800" role="img" aria-labelledby="cafeTitle cafeDescription">
+                    <title id="cafeTitle">Corner Café, up close</title>
+                    <desc id="cafeDescription">An isometric vector illustration of the same two-storey corner café. Amber striped awnings shade the glass storefront. Inside are a coffee counter, espresso machine, shelves, and pendant lamps. Outside are café tables, seated guests, a menu board, planters, and the neighboring pocket garden. Market Lane runs along the south frontage and Linden Street along the east.</desc>
+                </svg>
+                <button type="button" class="mini-overview" data-show-atlas aria-label="Back to neighborhood overview">
+                    <span class="mini-caption">Your corner, in context</span>
+                    <svg id="miniAtlas" viewBox="90 30 920 730" aria-hidden="true" focusable="false"></svg>
+                    <span class="mini-return">Back to neighborhood</span>
+                </button>
+            </div>
+            <p class="art-loading" role="status">Drawing the neighborhood…</p>
+        </section>
+
+        <div class="camera-toolbar" role="group" aria-label="Illustration controls">
+            <div class="camera-group" role="group" aria-label="Zoom">
+                <button type="button" data-camera-action="zoom-out" aria-label="Zoom out by 10 percent">Zoom out</button>
+                <output id="cameraZoom" aria-label="Zoom level" aria-live="off">100%</output>
+                <button type="button" data-camera-action="zoom-in" aria-label="Zoom in by 10 percent">Zoom in</button>
+            </div>
+            <div class="camera-group" role="group" aria-label="Tilt the drawing">
+                <button type="button" data-camera-action="tilt-left" aria-label="Tilt the drawing left by 5 degrees">Tilt left</button>
+                <output id="cameraAngle" aria-label="Drawing angle" aria-live="off">0°</output>
+                <button type="button" data-camera-action="tilt-right" aria-label="Tilt the drawing right by 5 degrees">Tilt right</button>
+            </div>
+            <button type="button" class="camera-reset" data-camera-action="reset">Reset view</button>
+            <p id="cameraHelp">Zoom in to drag.<span class="keyboard-help"> Use + / − to zoom, [ / ] to tilt, arrows to move, and 0 to reset.</span></p>
+        </div>
+
+        <div class="view-caption">
+            <div class="caption-description">
+                <span class="view-number" id="viewNumber" aria-hidden="true">01</span>
+                <div>
+                    <h2 id="viewHeading">The bigger picture</h2>
+                    <p id="viewDescription">Offices, homes, a pocket garden. And a café on the corner.</p>
+                </div>
+            </div>
+            <button class="primary-action" id="viewAction" type="button" data-show-cafe>Explore Corner Café</button>
+            <button class="back-action" id="backAction" type="button" data-show-atlas hidden>Back to neighborhood</button>
+        </div>
+        <p id="viewStatus" class="sr-only" role="status" aria-live="polite"></p>
+    </main>
+
+    <footer class="study-footer">
+        <p><span class="key-dot" aria-hidden="true"></span>One neighborhood. Two perspectives.</p>
+        <a href="minimal_portfolio.html?project=geomarketeer">View the original city study</a>
+    </footer>
+    <noscript><p class="noscript-note">This interactive drawing needs JavaScript. <a href="minimal_portfolio.html?project=geomarketeer">Return to the case study.</a></p></noscript>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{
+  "checkpoint": "cafe-02",
+  "revision": 2,
+  "artisticApproval": "approved",
+  "browser": "Codex in-app browser",
+  "desktop": {
+    "width": 1440,
+    "height": 1000,
+    "scrollWidth": 1440,
+    "individualDrawCalls": 7,
+    "comparisonDrawCalls": 35,
+    "comparisonRenderedTrianglesIncludingLines": 105464
+  },
+  "phoneLayout": {
+    "width": 390,
+    "height": 844,
+    "scrollWidth": 390,
+    "boardColumns": 1,
+    "boardCanvasHeight": 1550,
+    "visibleControlMinimumHeight": 44,
+    "detailViewportTop": 229.5,
+    "detailViewportHeight": 385,
+    "physicalDeviceTested": false
+  },
+  "observedChecks": [
+    "all five variants render with their matching reference crops",
+    "chairs face their tables in exterior and corner interior seating",
+    "seating and storefront detail framing, including phone scroll and focus",
+    "main landmark has no inappropriate pressed state",
+    "clean contours at scene scale and 300 percent zoom",
+    "base and corner visible near both orbit limits; orbit controls stop at \u00b115 degrees",
+    "zoom stops at 300 percent; variant and detail changes reset the camera",
+    "same-scale comparison board has three desktop columns and one phone column",
+    "phone layouts have no horizontal overflow",
+    "touch opt-in changes touch-action to none",
+    "blue-awning unit has no furniture, cafe emblem, or service fixtures",
+    "refreshed revision-2 fallback is 675 by 480 and disables unavailable controls",
+    "Try 3D again restores rendering and preserves the selected variant",
+    "no captured browser warnings or errors"
+  ],
+  "captures": [
+    "desktop-review.jpg",
+    "variations-board.jpg",
+    "seating-detail.jpg",
+    "storefront-detail.jpg",
+    "scene-scale.jpg",
+    "orbit-left.jpg",
+    "orbit-right.jpg",
+    "corner-orbit-left.jpg",
+    "corner-orbit-right.jpg",
+    "mobile-variations.jpg",
+    "mobile-detail.jpg"
+  ],
+  "limits": [
+    "Physical-device touch and low-end GPU performance have not been measured.",
+    "All cafes remain unplaced."
+  ],
+  "approvalEvidence": "User: The caf\u00e9s look good now. Let\u2019s move on to the office buildings."
+}

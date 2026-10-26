@@ -1,0 +1,10 @@
+{
+  "revision": 2,
+  "hashes": {
+    "base": "c4584edff805128c8ec1f9eb8669e2cc4e3c781e053fa0c6c9a310f75c9ce1b5",
+    "upper-floor": "ab736e5791af9c51ffac05670f95c3796839e88bd11778e9e59b613ff2ac786d",
+    "compact": "10945bf7e33b2e249fd4da713d55ab96a22d9f8d943e22ab750654f4bca21b5f",
+    "blue-awning": "9103106d0fc68399b71fa65b82b37f970f3e508a7a29fc63be001499a3821db5",
+    "corner": "875682e3647a9f3e06c5ac818d83040d801677ba67dc172936dce355fa861f7c"
+  }
+}

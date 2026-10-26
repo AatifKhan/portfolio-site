@@ -1,0 +1,84 @@
+{
+  "status": "pass",
+  "pages": [
+    "/?project=geomarketeer",
+    "/minimal_portfolio.html?project=geomarketeer"
+  ],
+  "phoneChecks": [
+    {
+      "bodyFont": "15px",
+      "buttonHeights": [
+        44,
+        44
+      ],
+      "column": 327,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "bodyFont": "15px",
+      "buttonHeights": [
+        44,
+        44
+      ],
+      "column": 257,
+      "overflow": false,
+      "table": 257,
+      "width": 320
+    }
+  ],
+  "indexPhoneInitial": {
+    "column": 311,
+    "full": true,
+    "overflow": false,
+    "width": 390
+  },
+  "indexNarrowFinal": {
+    "chapters": 8,
+    "column": 257,
+    "overflow": false,
+    "width": 320
+  },
+  "quickScan": {
+    "button": "true",
+    "full": false,
+    "quick": true
+  },
+  "skipToResearch": {
+    "chapters": 8,
+    "focus": "geoResearchTitle",
+    "full": true,
+    "overflow": false,
+    "quick": true
+  },
+  "opensFullStoryFromWork": "true",
+  "images": [
+    {
+      "alt": true,
+      "loaded": true,
+      "naturalWidth": 2400,
+      "src": "assets/portfolio/geomarketeer/case-study/wireframes.webp"
+    },
+    {
+      "alt": true,
+      "loaded": true,
+      "naturalWidth": 2400,
+      "src": "assets/portfolio/geomarketeer/case-study/final-workspace.webp"
+    }
+  ],
+  "errors": [],
+  "warnings": "The minimal entrypoint retains its existing Tailwind CDN production advisory.",
+  "source": "art/geomarketeer/case-study/draft.html",
+  "sync": "node art/geomarketeer/case-study/sync.mjs",
+  "checks": [
+    "Eight chapters, seven image slots and three draft notes in both pages",
+    "15px body copy, 44px reading-mode buttons and no horizontal overflow at 390px/320px",
+    "Quick Scan/Full Story, keyboard activation, Skip introduction and Back to top",
+    "Existing opening story and unrelated portfolio content preserved",
+    "Source images load and have alternative text; both expose full-size links"
+  ],
+  "limits": [
+    "Missing research images, annotated comparisons and decision evidence remain intentionally marked placeholders.",
+    "Existing raster story opening is retained; the standalone 3D story remains separate."
+  ]
+}

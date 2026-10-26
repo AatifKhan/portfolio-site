@@ -1,0 +1,59 @@
+Generated with the built-in image_gen tool. Rough story/pacing concept only; no final illustrations or live code were changed.
+
+Use case: illustration-story.
+Create ONE ROUGH STORYBOARD SHEET that lets a designer evaluate how a five-click interactive story plays. This is deliberately a low-fidelity planning artifact. Use black/gray pen and pencil sketches on white paper, simple boxy buildings, tiny stick-figure pedestrians, camera arrows, and clear plain sans-serif lettering. Absolutely NO finished illustrations, photorealistic 3D, polished architectural renders, gradients, blue visual branding, styled UI cards, cinematic lighting, decorative details, elaborate typography, large cartoon character, floating software windows or marketing mockups.
+
+Canvas approximately 1600 x 2500 portrait, with FIVE CLEARLY NUMBERED ROWS stacked vertically. Each row has a simple thin rectangular sketch frame on the LEFT (roughly 58% of width), and a legible copy block plus brief camera/action note on the RIGHT (roughly 38%). Small arrows between rows indicate sequential progression. The frame number and "CLICK 1" through "CLICK 5" must be very clear. Keep generous margins and room for readable text. Five rows only; not six, not alternatives. Every caption must be fully visible and accurately spelled. Top heading: "ROUGH STORYBOARD — ONE CORNER, FIVE CLICKS". Below heading, small line: "Review the story, framing and transitions."
+
+The SAME SMALL NEIGHBORHOOD appears in all five panels, always recognizably continuous: one unoccupied corner storefront with striped awning in the foreground, a small office block behind-left, a residential block behind-right, two short intersecting streets, a few simple trees. Three principal buildings only. No large city or dense model. The storefront is a candidate for Sid's future café and remains unoccupied throughout: no barista, sales, queue of customers, dining patrons or implied business failure. Sid is mentioned in the copy; no need for a separate illustrated protagonist.
+
+The story is an illustrative scenario about why a busy location merits investigation. No fabricated numbers, actual demographic results, guaranteed demand, better-location verdicts, business failure, invented interviews or research claims. Preserve Sid's original human café hook, without detouring into GIS expertise or explaining specialist software.
+
+ROW 1 — CLICK 1 / THE IDEA:
+Sketch: a WIDE establishing view of the simple corner, viewed at a rough isometric angle. Street activity is visible, with one small circle marking the empty candidate storefront. Use a small drawn camera arrow showing a gentle move toward that unit. Plain in-sketch label: "Possible café".
+Exact headline on right:
+"Sid wanted a café of his own."
+Exact support:
+"He found a corner full of people."
+Action note under the copy, smaller:
+"Wide view. Establish the place and highlight the empty storefront."
+
+ROW 2 — CLICK 2 / THE ASSUMPTION:
+Sketch: move closer to the SAME corner, same orientation, now emphasizing about twelve pedestrians walking through the street. Other buildings are faint gray; storefront and crowd are stronger pen strokes. Pedestrians are passing by, NOT buying coffee. Short direction arrows show their movement.
+Exact headline:
+"This looked like the place."
+Exact support:
+"A busy street. Plenty of potential customers."
+Action note:
+"Move closer. Let the passing crowd make the location feel promising."
+
+ROW 3 — CLICK 3 / THE DOUBT:
+Sketch: hold EXACTLY the same crop as row 2. The crowd continues with light movement arrows. Add one small question mark above the candidate storefront and let surrounding context fade in emphasis. Do not show an empty failed café or remove the crowd. This is a pause in the assumption, not a claim of failure.
+Exact headline:
+"A busy street. A busy café. Right?"
+Exact support:
+"The crowd was visible. The demand was still a guess."
+Action note:
+"Hold the camera. Let 'Right?' land before revealing the second line."
+
+ROW 4 — CLICK 4 / THE CONTEXT:
+Sketch: pull back slightly to reveal the SAME office and homes around the selected unit. Three simple diagrammatic overlays appear TOGETHER over that same sketch: a thin boundary around homes/offices labeled "People"; a small plain tag labeled "Spending"; and one small marker at an existing off-to-the-side shop, labeled "Competition". No charts or numbers. No software panel, no multiple extra clicks, no full-dashboard cutaway.
+Exact headline:
+"What if he knew the neighborhood better?"
+Exact support:
+"Who’s nearby? What do they spend? Who already serves them?"
+Action note:
+"Pull back slightly. Reveal all three kinds of context in one click."
+
+ROW 5 — CLICK 5 / THE RESPONSE:
+Sketch: keep that same neighborhood and selected storefront in place, with the three context labels now neatly organized. A small heading inside the scene reads "GeoMarketeer". Add one understated sketch of a three-item layer legend: People / Spending / Competition. A small curved arrow suggests the scene can later be turned; no new screen or extra narrative step.
+Exact headline:
+"Meet GeoMarketeer."
+Exact support:
+"Understand a neighborhood before choosing where to open."
+Below, small role line:
+"My role: UX Research & Interaction Design"
+Action note:
+"The story ends here. The same scene remains available for optional exploration."
+
+Make the sketch-to-sketch changes easy to follow at a glance. This is a rough director's storyboard with purposeful changes of framing, attention and information. It should look like a thoughtful working sketch, not five polished slides or a finished illustration treatment. All main copy should be large and readable; action notes smaller but legible. No additional prose, grand claims, dramatic score, sixth frame, new map geography, or invented data.

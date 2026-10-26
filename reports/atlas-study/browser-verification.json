@@ -1,0 +1,22 @@
+{
+  "duplicateIds": [],
+  "fonts": "loaded",
+  "imagesAndCanvas": 0,
+  "mediaReduced": false,
+  "pageOverflow": false,
+  "places": [
+    "office",
+    "shop",
+    "home",
+    "homes",
+    "cafe"
+  ],
+  "primitiveCount": 1347,
+  "svgRoots": 3,
+  "transition": "0.5s, 0.5s",
+  "view": "atlas",
+  "viewport": [
+    1440,
+    1000
+  ]
+}

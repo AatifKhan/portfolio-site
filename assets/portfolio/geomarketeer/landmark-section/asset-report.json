@@ -1,0 +1,11 @@
+{
+  "bytes": 1762028,
+  "triangles": 57069,
+  "meshes": 83,
+  "primitives": 83,
+  "textures": 1,
+  "materials": 5,
+  "bakedMaterialUnlit": true,
+  "meshopt": true,
+  "ktx2": true
+}

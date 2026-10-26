@@ -1,0 +1,18 @@
+{
+  "unchanged": {
+    "index.html": "69094813bfa3cf19bd755df185c68227860e5f14adb7a67491e18096c351c75e",
+    "minimal_portfolio.html": "0e882f077459b9e76a43705c656a2f613145e5f68343f6dd783a73a4363d5d74",
+    "scripts/geomarketeer-kit/style.js": "b34146697fa5d9ee1da553cba4c4be31ebbca635b5cdd6b6fe48b1636f1c77a3",
+    "scripts/geomarketeer-kit/tower.js": "0709d66d10c148a475ee065ff4d4abf3399706900b79ed91a10cabb3623abb71",
+    "scripts/geomarketeer-kit/cafe.js": "3038d9b950a592c6d61fc36f576cec067bb82b5a887d3245c6ad79f29c1496b3",
+    "scripts/geomarketeer-kit/cafe-furniture.js": "1191ae222084b3e91231f450c4d3798f3660a06402de53a48f48d084a8c550d6",
+    "scripts/geomarketeer-kit/office.js": "c60e7d958e3d8e940a23be8a96024ee3c1e1716045ae8f96d10c29881d51238d",
+    "scripts/geomarketeer-kit/small-building.js": "61eb7350f8dcaa019c062d1f5dc207ba3a189f5ef718743c18352dbb0ff9c719",
+    "scripts/geomarketeer-kit/car.js": "ba701d0e9cbbce0ada189bea5d2e35ceb63cc9ee1b3aa51aa63f71d251ea23be",
+    "scripts/geomarketeer-kit/two-wheelers.js": "79bc45b312dc3de9c13fddcf439d6293c3b235e7e34655356b105c3aee14cf44",
+    "scripts/geomarketeer-kit/people.js": "95430059fe89ce1032ca939cfbc3d416be3db6f8cac5faa1ca40da49ff1154ad",
+    "scripts/geomarketeer-kit/planting.js": "8c6aea3234c684dbd9c190de76e07a0e8f29889fddfd8cae7ff181205f322fa3"
+  },
+  "approvedStreetGeometry": "art/geomarketeer/component-kit/approved-street-geometry.json",
+  "earlierApprovedGeometry": "Validated by verify-street.mjs"
+}

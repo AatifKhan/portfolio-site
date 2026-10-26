@@ -1,0 +1,26 @@
+// Source coordinates only. These are review records, not neighborhood placements.
+const source=[
+    ['housing-capsule-01','capsule-tree','small','housing',[90,218,35,80],[108,294]],
+    ['housing-capsule-02','capsule-tree','standard','housing',[478,142,38,81],[498,218]],
+    ['housing-capsule-03','capsule-tree','standard','housing',[613,258,39,81],[632,332]],
+    ['housing-capsule-04','capsule-tree','standard','housing',[472,375,42,81],[493,451]],
+    ['housing-capsule-05','capsule-tree','small','housing',[819,303,35,79],[837,378]],
+    ['office-capsule-01','capsule-tree','small','offices',[852,181,35,78],[870,254]],
+    ['office-capsule-02','capsule-tree','small','offices',[1343,235,39,85],[1362,315]],
+    ['metro-capsule-01','capsule-tree','standard','metro',[1406,538,43,89],[1427,621]],
+    ['perimeter-capsule-01','capsule-tree','standard','perimeter',[38,406,42,87],[59,487]],
+    ['perimeter-capsule-02','capsule-tree','standard','perimeter',[60,710,45,94],[82,798]],
+    ['perimeter-capsule-03','capsule-tree','standard','perimeter',[1437,753,44,96],[1459,843]],
+    ['housing-conifer-01','conifer','small','housing',[134,183,40,80],[154,257]],
+    ['housing-conifer-02','conifer','small','housing',[285,301,40,73],[306,368]],
+    ['housing-conifer-03','conifer','standard','housing',[624,321,46,80],[646,393]],
+    ['housing-conifer-04','conifer','standard','housing',[416,416,45,80],[438,490]],
+    ['office-conifer-01','conifer','small','offices',[1379,254,41,78],[1400,325]],
+    ['perimeter-conifer-01','conifer','standard','perimeter',[213,543,44,83],[235,620]],
+    ['perimeter-conifer-02','conifer','standard','perimeter',[122,730,44,81],[144,804]],
+    ['perimeter-conifer-03','conifer','standard','perimeter',[1219,758,53,94],[1246,844]],
+    ['cafe-pot-01','pot','small','cafe-lane',[541,915,34,34],[557,944]],
+    ['cafe-pot-02','pot','standard','cafe-lane',[755,946,38,46],[772,985]],
+    ['central-planter-01','low-planter','standard','central',[995,606,81,70],[1034,658]],
+];
+export const PLANTING_SOURCE_OBJECTS=Object.freeze(source.map(([id,assetId,variantId,districtId,sourceBounds,reference])=>Object.freeze({id,assetId,variantId,districtId,sourceBounds,reference,reviewStatus:'approved',placementStatus:'unplaced'})));

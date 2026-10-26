@@ -1,0 +1,98 @@
+{
+  "revision": 1,
+  "status": "approved",
+  "desktop": {
+    "angle": "reference",
+    "drawCalls": "46",
+    "height": 1100,
+    "mode": "variants",
+    "orbit": "0.00",
+    "scrollWidth": 1440,
+    "state": "ready",
+    "triangles": "71892",
+    "variant": "planter-standard",
+    "width": 1440,
+    "zoom": "1.00"
+  },
+  "phone": {
+    "grid": "178px 178px",
+    "mode": "variants",
+    "scrollWidth": 390,
+    "touchButtonVisible": true,
+    "width": 390
+  },
+  "touchOptIn": true,
+  "fallbacks": [
+    {
+      "angle": "reference",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/planting-capsule-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "capsule-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/planting-capsule-small-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "capsule-small"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/planting-conifer-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "conifer-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/planting-conifer-small-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "conifer-small"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/planting-pot-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "pot-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/planting-pot-small-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "pot-small"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/planting-planter-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "planter-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/planting-planter-short-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "planter-short"
+    }
+  ],
+  "retry": {
+    "state": "ready",
+    "variant": "planter-short"
+  },
+  "console": [],
+  "checks": [
+    "Eight-variation board, reference/side/rear views and reference \u00b115\u00b0 captured",
+    "Four master three-copy previews captured",
+    "Reference crop comparisons for all four masters captured",
+    "Scene-scale capsule and 300% pot close-up captured; keyboard reset returns to 100%",
+    "Phone board fits 390px without horizontal overflow; board selection opens a component",
+    "Explicit touch exploration toggles correctly",
+    "All eight still fallbacks load and reset to the saved reference angle; retry retains selected variant"
+  ],
+  "approvalEvidence": "User: \u201cThe trees and planting look good. Let\u2019s move on to street furniture.\u201d"
+}

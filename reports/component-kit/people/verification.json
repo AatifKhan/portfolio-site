@@ -1,0 +1,127 @@
+{
+  "checkpoint": "people-07",
+  "revision": 2,
+  "status": "approved",
+  "masters": 1,
+  "categories": 4,
+  "sourceFigures": 126,
+  "poseFits": [
+    {
+      "id": "standing",
+      "batches": 2,
+      "surfaceTriangles": 7448,
+      "limbBones": 8,
+      "support": null,
+      "bounds": {
+        "min": [
+          -0.0901038721203804,
+          -3.799796033376879e-10,
+          -0.2029999941587448
+        ],
+        "max": [
+          0.14300000667572021,
+          1.4630000591278076,
+          0.2029999941587448
+        ]
+      }
+    },
+    {
+      "id": "walking",
+      "batches": 2,
+      "surfaceTriangles": 7448,
+      "limbBones": 8,
+      "support": null,
+      "bounds": {
+        "min": [
+          -0.3050000071525574,
+          -3.799796033376879e-10,
+          -0.19599999487400055
+        ],
+        "max": [
+          0.39500001072883606,
+          1.4124280214309692,
+          0.19599999487400055
+        ]
+      }
+    },
+    {
+      "id": "seated",
+      "batches": 2,
+      "surfaceTriangles": 7448,
+      "limbBones": 8,
+      "support": "chair",
+      "bounds": {
+        "min": [
+          -0.09799999743700027,
+          -3.799796033376879e-10,
+          -0.27215516567230225
+        ],
+        "max": [
+          0.4350000023841858,
+          1.2153234481811523,
+          0.27215516567230225
+        ]
+      }
+    },
+    {
+      "id": "riding-scooter",
+      "batches": 2,
+      "surfaceTriangles": 7448,
+      "limbBones": 8,
+      "support": "scooter",
+      "bounds": {
+        "min": [
+          -0.4129999876022339,
+          0.2840000092983246,
+          -0.2759999930858612
+        ],
+        "max": [
+          0.19699999690055847,
+          1.3701955080032349,
+          0.2759999930858612
+        ]
+      }
+    },
+    {
+      "id": "riding-bicycle",
+      "batches": 2,
+      "surfaceTriangles": 7448,
+      "limbBones": 8,
+      "support": "bicycle",
+      "bounds": {
+        "min": [
+          -0.3529999852180481,
+          0.2574999928474426,
+          -0.23445340991020203
+        ],
+        "max": [
+          0.296999990940094,
+          1.4837872982025146,
+          0.23445340991020203
+        ]
+      }
+    }
+  ],
+  "neighborhoodPeopleInstances": 0,
+  "approvedFamiliesUnchanged": true,
+  "checks": [
+    "Standing and walking arm surfaces bend behind the shoulder–wrist chord; walking arms oppose the same-side legs",
+    "Fixed limb bone lengths in every pose; identical head dimensions and no instance scaling",
+    "Finite geometry, actual bounds, outward limb winding",
+    "Actual shoe soles meet ground, pedals or floorboard",
+    "Seat anchors meet the actual chair or vehicle saddle",
+    "Hands meet approved grip anchors",
+    "Triangle-edge checks: riding limbs clear vehicles outside the intended wrist/grip contact zone",
+    "Chair and vehicles remain separate review props",
+    "Repeated pose instances share compiled geometry and material references",
+    "Independent anchors and bounds; shared disposal occurs once",
+    "All previously approved geometry fingerprints unchanged",
+    "Real viewer fixture: all five pose fits, reference/side/rear cameras and both orbit limits",
+    "Equal projection scale across pose board; one-column phone board",
+    "Keyboard controls, 100–300 percent zoom, reset, context visibility",
+    "On-demand rendering, reduced motion, hidden-page pause",
+    "Touch opt-in and pointer cancellation",
+    "Pose-specific fallback with explicit reference camera and context",
+    "Stable source IDs with valid pose IDs, source bounds and rider links; no scene placements"
+  ]
+}

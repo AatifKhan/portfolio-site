@@ -1,0 +1,10 @@
+{
+  "revision": 2,
+  "hashes": {
+    "standing": "65a30e010e7e2b1e7b40516a87875a6bcea5479f40cedec84fbef391046c3acb",
+    "walking": "b640d60f4cdc33cd7dd64253b8b8d7a464cb64280ba829e1ea4d41c6792fdf63",
+    "seated": "fa7ad03b993f1f3453b1f2423e4b7ee3794e683e2f0bfcb4fe9646e7f88501da",
+    "riding-scooter": "bd84b34efc2cb5a9433381d0225de85089edd79164c7ab3c3130152c77eff0cb",
+    "riding-bicycle": "254c8daf5e2231686dbf360cdd2c075f2be22e10c96e6ea8d67682b180f5cd89"
+  }
+}

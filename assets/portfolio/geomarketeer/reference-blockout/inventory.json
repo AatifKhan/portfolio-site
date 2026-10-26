@@ -1,0 +1,3720 @@
+{
+  "source": "assets/portfolio/geomarketeer/pune-approved-reference.png",
+  "width": 1672,
+  "height": 941,
+  "islandOutline": [
+    [
+      255,
+      33
+    ],
+    [
+      1514,
+      70
+    ],
+    [
+      1640,
+      849
+    ],
+    [
+      1430,
+      909
+    ],
+    [
+      38,
+      797
+    ]
+  ],
+  "buildings": [
+    {
+      "id": "N01",
+      "label": "Stepped white residence",
+      "zone": "N",
+      "roofPixels": [
+        [
+          418,
+          56
+        ],
+        [
+          475,
+          62
+        ],
+        [
+          465,
+          97
+        ],
+        [
+          408,
+          91
+        ]
+      ],
+      "height": 2.485,
+      "storeysInferred": 3,
+      "form": "stepped",
+      "confidence": "medium",
+      "center": [
+        441.5,
+        76.5
+      ]
+    },
+    {
+      "id": "N02",
+      "label": "Rear tall apartment",
+      "zone": "N",
+      "roofPixels": [
+        [
+          549,
+          14
+        ],
+        [
+          604,
+          21
+        ],
+        [
+          612,
+          50
+        ],
+        [
+          557,
+          43
+        ]
+      ],
+      "height": 3.835,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        580.5,
+        32.0
+      ]
+    },
+    {
+      "id": "N03",
+      "label": "Rear blue-window residence",
+      "zone": "N",
+      "roofPixels": [
+        [
+          616,
+          29
+        ],
+        [
+          665,
+          33
+        ],
+        [
+          673,
+          60
+        ],
+        [
+          624,
+          56
+        ]
+      ],
+      "height": 3.129,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        644.5,
+        44.5
+      ]
+    },
+    {
+      "id": "N04",
+      "label": "Large roadside peach residence",
+      "zone": "N",
+      "roofPixels": [
+        [
+          527,
+          109
+        ],
+        [
+          594,
+          119
+        ],
+        [
+          568,
+          158
+        ],
+        [
+          501,
+          148
+        ]
+      ],
+      "height": 3.028,
+      "storeysInferred": 3,
+      "form": "stepped",
+      "confidence": "high",
+      "center": [
+        547.5,
+        133.5
+      ]
+    },
+    {
+      "id": "N05",
+      "label": "Small garden residence",
+      "zone": "N",
+      "roofPixels": [
+        [
+          658,
+          89
+        ],
+        [
+          695,
+          94
+        ],
+        [
+          701,
+          118
+        ],
+        [
+          664,
+          113
+        ]
+      ],
+      "height": 1.837,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        679.5,
+        103.5
+      ]
+    },
+    {
+      "id": "N06",
+      "label": "Lower garden residence",
+      "zone": "N",
+      "roofPixels": [
+        [
+          624,
+          120
+        ],
+        [
+          671,
+          128
+        ],
+        [
+          682,
+          153
+        ],
+        [
+          635,
+          145
+        ]
+      ],
+      "height": 2.138,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        653.0,
+        136.5
+      ]
+    },
+    {
+      "id": "N07",
+      "label": "Curved garden villa",
+      "zone": "N",
+      "roofPixels": [
+        [
+          716,
+          155
+        ],
+        [
+          738,
+          157
+        ],
+        [
+          732,
+          169
+        ],
+        [
+          733,
+          180
+        ],
+        [
+          751,
+          188
+        ],
+        [
+          785,
+          189
+        ],
+        [
+          798,
+          181
+        ],
+        [
+          815,
+          186
+        ],
+        [
+          824,
+          200
+        ],
+        [
+          820,
+          214
+        ],
+        [
+          804,
+          221
+        ],
+        [
+          785,
+          213
+        ],
+        [
+          753,
+          219
+        ],
+        [
+          730,
+          209
+        ],
+        [
+          715,
+          194
+        ],
+        [
+          707,
+          178
+        ]
+      ],
+      "height": 2.146,
+      "storeysInferred": 2,
+      "form": "curved",
+      "confidence": "high",
+      "center": [
+        762.875,
+        190.8125
+      ]
+    },
+    {
+      "id": "N08",
+      "label": "Tall northern tower",
+      "zone": "N",
+      "roofPixels": [
+        [
+          939,
+          8
+        ],
+        [
+          987,
+          14
+        ],
+        [
+          983,
+          52
+        ],
+        [
+          935,
+          46
+        ]
+      ],
+      "height": 4.837,
+      "storeysInferred": 5,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        961.0,
+        30.0
+      ]
+    },
+    {
+      "id": "N09",
+      "label": "Orange-roof west pavilion",
+      "zone": "N",
+      "roofPixels": [
+        [
+          935,
+          91
+        ],
+        [
+          971,
+          94
+        ],
+        [
+          963,
+          118
+        ],
+        [
+          927,
+          115
+        ]
+      ],
+      "height": 1.719,
+      "storeysInferred": 2,
+      "form": "hip",
+      "confidence": "high",
+      "center": [
+        949.0,
+        104.5
+      ]
+    },
+    {
+      "id": "N10",
+      "label": "Orange-roof east pavilion",
+      "zone": "N",
+      "roofPixels": [
+        [
+          978,
+          99
+        ],
+        [
+          1014,
+          102
+        ],
+        [
+          1008,
+          124
+        ],
+        [
+          972,
+          121
+        ]
+      ],
+      "height": 1.838,
+      "storeysInferred": 2,
+      "form": "hip",
+      "confidence": "high",
+      "center": [
+        993.0,
+        111.5
+      ]
+    },
+    {
+      "id": "N11",
+      "label": "Rear office tower",
+      "zone": "N",
+      "roofPixels": [
+        [
+          1258,
+          21
+        ],
+        [
+          1323,
+          26
+        ],
+        [
+          1317,
+          64
+        ],
+        [
+          1252,
+          59
+        ]
+      ],
+      "height": 4.073,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1287.5,
+        42.5
+      ]
+    },
+    {
+      "id": "N12",
+      "label": "Terracotta long roof",
+      "zone": "N",
+      "roofPixels": [
+        [
+          1374,
+          41
+        ],
+        [
+          1427,
+          49
+        ],
+        [
+          1406,
+          112
+        ],
+        [
+          1353,
+          104
+        ]
+      ],
+      "height": 2.958,
+      "storeysInferred": 3,
+      "form": "gable",
+      "confidence": "medium",
+      "center": [
+        1390.0,
+        76.5
+      ]
+    },
+    {
+      "id": "N13",
+      "label": "Rear right residence",
+      "zone": "N",
+      "roofPixels": [
+        [
+          1457,
+          68
+        ],
+        [
+          1504,
+          74
+        ],
+        [
+          1501,
+          101
+        ],
+        [
+          1454,
+          95
+        ]
+      ],
+      "height": 3.137,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1479.0,
+        84.5
+      ]
+    },
+    {
+      "id": "N14",
+      "label": "Rear far-right home",
+      "zone": "N",
+      "roofPixels": [
+        [
+          1505,
+          109
+        ],
+        [
+          1547,
+          114
+        ],
+        [
+          1542,
+          144
+        ],
+        [
+          1500,
+          139
+        ]
+      ],
+      "height": 2.136,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "low",
+      "center": [
+        1523.5,
+        126.5
+      ]
+    },
+    {
+      "id": "N15",
+      "label": "Office beside approach",
+      "zone": "N",
+      "roofPixels": [
+        [
+          1115,
+          111
+        ],
+        [
+          1185,
+          119
+        ],
+        [
+          1177,
+          158
+        ],
+        [
+          1107,
+          150
+        ]
+      ],
+      "height": 4.631,
+      "storeysInferred": 4,
+      "form": "stepped",
+      "confidence": "high",
+      "center": [
+        1146.0,
+        134.5
+      ]
+    },
+    {
+      "id": "N16",
+      "label": "Narrow office by junction",
+      "zone": "N",
+      "roofPixels": [
+        [
+          1095,
+          205
+        ],
+        [
+          1144,
+          210
+        ],
+        [
+          1125,
+          252
+        ],
+        [
+          1076,
+          247
+        ]
+      ],
+      "height": 4.721,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1110.0,
+        228.5
+      ]
+    },
+    {
+      "id": "W01",
+      "label": "Roadside yellow shop",
+      "zone": "W",
+      "roofPixels": [
+        [
+          208,
+          185
+        ],
+        [
+          272,
+          188
+        ],
+        [
+          269,
+          212
+        ],
+        [
+          205,
+          209
+        ]
+      ],
+      "height": 1.849,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        238.5,
+        198.5
+      ]
+    },
+    {
+      "id": "W02",
+      "label": "Small shop below yellow shop",
+      "zone": "W",
+      "roofPixels": [
+        [
+          197,
+          222
+        ],
+        [
+          255,
+          225
+        ],
+        [
+          249,
+          251
+        ],
+        [
+          191,
+          248
+        ]
+      ],
+      "height": 1.555,
+      "storeysInferred": 2,
+      "form": "stepped",
+      "confidence": "medium",
+      "center": [
+        223.0,
+        236.5
+      ]
+    },
+    {
+      "id": "W03",
+      "label": "West large residence",
+      "zone": "W",
+      "roofPixels": [
+        [
+          223,
+          303
+        ],
+        [
+          304,
+          299
+        ],
+        [
+          303,
+          326
+        ],
+        [
+          222,
+          330
+        ]
+      ],
+      "height": 3.729,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        263.0,
+        314.5
+      ]
+    },
+    {
+      "id": "W04",
+      "label": "Stepped white villa",
+      "zone": "W",
+      "roofPixels": [
+        [
+          339,
+          274
+        ],
+        [
+          381,
+          284
+        ],
+        [
+          361,
+          314
+        ],
+        [
+          319,
+          304
+        ]
+      ],
+      "height": 2.642,
+      "storeysInferred": 3,
+      "form": "stepped",
+      "confidence": "high",
+      "center": [
+        350.0,
+        294.0
+      ]
+    },
+    {
+      "id": "W05",
+      "label": "Mid-block tall home",
+      "zone": "W",
+      "roofPixels": [
+        [
+          481,
+          268
+        ],
+        [
+          523,
+          275
+        ],
+        [
+          510,
+          301
+        ],
+        [
+          468,
+          294
+        ]
+      ],
+      "height": 3.6,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        495.5,
+        284.5
+      ]
+    },
+    {
+      "id": "W06",
+      "label": "Orange-roof house",
+      "zone": "W",
+      "roofPixels": [
+        [
+          564,
+          297
+        ],
+        [
+          613,
+          305
+        ],
+        [
+          599,
+          332
+        ],
+        [
+          550,
+          324
+        ]
+      ],
+      "height": 2.045,
+      "storeysInferred": 2,
+      "form": "hip",
+      "confidence": "high",
+      "center": [
+        581.5,
+        314.5
+      ]
+    },
+    {
+      "id": "W07",
+      "label": "Large courtyard house",
+      "zone": "W",
+      "roofPixels": [
+        [
+          619,
+          294
+        ],
+        [
+          652,
+          303
+        ],
+        [
+          632,
+          340
+        ],
+        [
+          599,
+          331
+        ]
+      ],
+      "height": 4.331,
+      "storeysInferred": 4,
+      "form": "stepped",
+      "confidence": "high",
+      "center": [
+        625.5,
+        317.0
+      ]
+    },
+    {
+      "id": "W08",
+      "label": "Courtyard wing",
+      "zone": "W",
+      "roofPixels": [
+        [
+          651,
+          343
+        ],
+        [
+          690,
+          348
+        ],
+        [
+          673,
+          376
+        ],
+        [
+          634,
+          371
+        ]
+      ],
+      "height": 2.354,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        662.0,
+        359.5
+      ]
+    },
+    {
+      "id": "W09",
+      "label": "Long compound outbuilding",
+      "zone": "W",
+      "roofPixels": [
+        [
+          526,
+          380
+        ],
+        [
+          662,
+          384
+        ],
+        [
+          660,
+          404
+        ],
+        [
+          524,
+          400
+        ]
+      ],
+      "height": 1.15,
+      "storeysInferred": 1,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        593.0,
+        392.0
+      ]
+    },
+    {
+      "id": "W10",
+      "label": "Central orange bungalow",
+      "zone": "W",
+      "roofPixels": [
+        [
+          338,
+          363
+        ],
+        [
+          407,
+          367
+        ],
+        [
+          393,
+          400
+        ],
+        [
+          324,
+          396
+        ]
+      ],
+      "height": 1.632,
+      "storeysInferred": 1,
+      "form": "hip",
+      "confidence": "high",
+      "center": [
+        365.5,
+        381.5
+      ]
+    },
+    {
+      "id": "W11",
+      "label": "West narrow home",
+      "zone": "W",
+      "roofPixels": [
+        [
+          151,
+          371
+        ],
+        [
+          189,
+          375
+        ],
+        [
+          184,
+          408
+        ],
+        [
+          146,
+          404
+        ]
+      ],
+      "height": 2.42,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        167.5,
+        389.5
+      ]
+    },
+    {
+      "id": "W12",
+      "label": "Small compound gatehouse",
+      "zone": "W",
+      "roofPixels": [
+        [
+          201,
+          418
+        ],
+        [
+          222,
+          420
+        ],
+        [
+          219,
+          437
+        ],
+        [
+          198,
+          435
+        ]
+      ],
+      "height": 1.032,
+      "storeysInferred": 1,
+      "form": "flat",
+      "confidence": "low",
+      "center": [
+        210.0,
+        427.5
+      ]
+    },
+    {
+      "id": "W13",
+      "label": "Small garden bungalow",
+      "zone": "W",
+      "roofPixels": [
+        [
+          449,
+          403
+        ],
+        [
+          488,
+          408
+        ],
+        [
+          474,
+          432
+        ],
+        [
+          435,
+          427
+        ]
+      ],
+      "height": 1.455,
+      "storeysInferred": 1,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        461.5,
+        417.5
+      ]
+    },
+    {
+      "id": "W14",
+      "label": "West edge apartment",
+      "zone": "W",
+      "roofPixels": [
+        [
+          115,
+          488
+        ],
+        [
+          158,
+          490
+        ],
+        [
+          148,
+          527
+        ],
+        [
+          105,
+          525
+        ]
+      ],
+      "height": 3.239,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        131.5,
+        507.5
+      ]
+    },
+    {
+      "id": "W15",
+      "label": "Playground pavilion",
+      "zone": "W",
+      "roofPixels": [
+        [
+          247,
+          486
+        ],
+        [
+          282,
+          490
+        ],
+        [
+          272,
+          515
+        ],
+        [
+          237,
+          511
+        ]
+      ],
+      "height": 1.344,
+      "storeysInferred": 1,
+      "form": "hip",
+      "confidence": "high",
+      "center": [
+        259.5,
+        500.5
+      ]
+    },
+    {
+      "id": "W16",
+      "label": "Terrace row 1",
+      "zone": "W",
+      "roofPixels": [
+        [
+          440,
+          456
+        ],
+        [
+          477,
+          460
+        ],
+        [
+          470,
+          489
+        ],
+        [
+          433,
+          485
+        ]
+      ],
+      "height": 3.168,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        455.0,
+        472.5
+      ]
+    },
+    {
+      "id": "W17",
+      "label": "Terrace row 2",
+      "zone": "W",
+      "roofPixels": [
+        [
+          482,
+          462
+        ],
+        [
+          520,
+          466
+        ],
+        [
+          513,
+          495
+        ],
+        [
+          475,
+          491
+        ]
+      ],
+      "height": 3.17,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        497.5,
+        478.5
+      ]
+    },
+    {
+      "id": "W18",
+      "label": "Terrace row 3",
+      "zone": "W",
+      "roofPixels": [
+        [
+          524,
+          467
+        ],
+        [
+          562,
+          471
+        ],
+        [
+          555,
+          500
+        ],
+        [
+          517,
+          496
+        ]
+      ],
+      "height": 3.171,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        539.5,
+        483.5
+      ]
+    },
+    {
+      "id": "W19",
+      "label": "Terrace row 4",
+      "zone": "W",
+      "roofPixels": [
+        [
+          566,
+          472
+        ],
+        [
+          604,
+          476
+        ],
+        [
+          597,
+          505
+        ],
+        [
+          559,
+          501
+        ]
+      ],
+      "height": 3.172,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        581.5,
+        488.5
+      ]
+    },
+    {
+      "id": "W20",
+      "label": "Terrace row 5",
+      "zone": "W",
+      "roofPixels": [
+        [
+          609,
+          478
+        ],
+        [
+          648,
+          482
+        ],
+        [
+          641,
+          511
+        ],
+        [
+          602,
+          507
+        ]
+      ],
+      "height": 3.174,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        625.0,
+        494.5
+      ]
+    },
+    {
+      "id": "W21",
+      "label": "Rear terrace lower 1",
+      "zone": "W",
+      "roofPixels": [
+        [
+          469,
+          515
+        ],
+        [
+          510,
+          519
+        ],
+        [
+          503,
+          547
+        ],
+        [
+          462,
+          543
+        ]
+      ],
+      "height": 3.001,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        486.0,
+        531.0
+      ]
+    },
+    {
+      "id": "W22",
+      "label": "Rear terrace lower 2",
+      "zone": "W",
+      "roofPixels": [
+        [
+          516,
+          520
+        ],
+        [
+          556,
+          524
+        ],
+        [
+          549,
+          553
+        ],
+        [
+          509,
+          549
+        ]
+      ],
+      "height": 3.002,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        532.5,
+        536.5
+      ]
+    },
+    {
+      "id": "W23",
+      "label": "Rear terrace lower 3",
+      "zone": "W",
+      "roofPixels": [
+        [
+          562,
+          527
+        ],
+        [
+          601,
+          531
+        ],
+        [
+          594,
+          559
+        ],
+        [
+          555,
+          555
+        ]
+      ],
+      "height": 2.881,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        578.0,
+        543.0
+      ]
+    },
+    {
+      "id": "W24",
+      "label": "Blue corner building",
+      "zone": "W",
+      "roofPixels": [
+        [
+          639,
+          540
+        ],
+        [
+          682,
+          544
+        ],
+        [
+          667,
+          576
+        ],
+        [
+          624,
+          572
+        ]
+      ],
+      "height": 4.42,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        653.0,
+        558.0
+      ]
+    },
+    {
+      "id": "S01",
+      "label": "Southwest edge block",
+      "zone": "S",
+      "roofPixels": [
+        [
+          96,
+          653
+        ],
+        [
+          162,
+          659
+        ],
+        [
+          157,
+          702
+        ],
+        [
+          91,
+          696
+        ]
+      ],
+      "height": 4.099,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        126.5,
+        677.5
+      ]
+    },
+    {
+      "id": "S02",
+      "label": "Southwest long apartment",
+      "zone": "S",
+      "roofPixels": [
+        [
+          184,
+          645
+        ],
+        [
+          279,
+          651
+        ],
+        [
+          274,
+          687
+        ],
+        [
+          179,
+          681
+        ]
+      ],
+      "height": 3.784,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        229.0,
+        666.0
+      ]
+    },
+    {
+      "id": "S03",
+      "label": "West foreground residence",
+      "zone": "S",
+      "roofPixels": [
+        [
+          116,
+          739
+        ],
+        [
+          171,
+          742
+        ],
+        [
+          169,
+          775
+        ],
+        [
+          114,
+          772
+        ]
+      ],
+      "height": 2.692,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        142.5,
+        757.0
+      ]
+    },
+    {
+      "id": "S04",
+      "label": "Foreground peach home",
+      "zone": "S",
+      "roofPixels": [
+        [
+          226,
+          724
+        ],
+        [
+          274,
+          728
+        ],
+        [
+          272,
+          763
+        ],
+        [
+          224,
+          759
+        ]
+      ],
+      "height": 3.439,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        249.0,
+        743.5
+      ]
+    },
+    {
+      "id": "S05",
+      "label": "Foreground orange house",
+      "zone": "S",
+      "roofPixels": [
+        [
+          281,
+          753
+        ],
+        [
+          324,
+          758
+        ],
+        [
+          322,
+          782
+        ],
+        [
+          279,
+          777
+        ]
+      ],
+      "height": 1.88,
+      "storeysInferred": 2,
+      "form": "hip",
+      "confidence": "high",
+      "center": [
+        301.5,
+        767.5
+      ]
+    },
+    {
+      "id": "S06",
+      "label": "Foreground middle home",
+      "zone": "S",
+      "roofPixels": [
+        [
+          339,
+          741
+        ],
+        [
+          381,
+          745
+        ],
+        [
+          376,
+          773
+        ],
+        [
+          334,
+          769
+        ]
+      ],
+      "height": 3.256,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        357.5,
+        757.0
+      ]
+    },
+    {
+      "id": "S07",
+      "label": "South blue office",
+      "zone": "S",
+      "roofPixels": [
+        [
+          368,
+          662
+        ],
+        [
+          421,
+          671
+        ],
+        [
+          411,
+          706
+        ],
+        [
+          358,
+          697
+        ]
+      ],
+      "height": 4.35,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        389.5,
+        684.0
+      ]
+    },
+    {
+      "id": "S08",
+      "label": "South middle tall home",
+      "zone": "S",
+      "roofPixels": [
+        [
+          479,
+          674
+        ],
+        [
+          531,
+          680
+        ],
+        [
+          522,
+          715
+        ],
+        [
+          470,
+          709
+        ]
+      ],
+      "height": 3.981,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        500.5,
+        694.5
+      ]
+    },
+    {
+      "id": "S09",
+      "label": "Small south house",
+      "zone": "S",
+      "roofPixels": [
+        [
+          435,
+          741
+        ],
+        [
+          475,
+          745
+        ],
+        [
+          469,
+          777
+        ],
+        [
+          429,
+          773
+        ]
+      ],
+      "height": 2.756,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        452.0,
+        759.0
+      ]
+    },
+    {
+      "id": "S10",
+      "label": "Front central residence",
+      "zone": "S",
+      "roofPixels": [
+        [
+          508,
+          766
+        ],
+        [
+          553,
+          770
+        ],
+        [
+          546,
+          803
+        ],
+        [
+          501,
+          799
+        ]
+      ],
+      "height": 2.512,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        527.0,
+        784.5
+      ]
+    },
+    {
+      "id": "S11",
+      "label": "South side residence",
+      "zone": "S",
+      "roofPixels": [
+        [
+          602,
+          701
+        ],
+        [
+          647,
+          705
+        ],
+        [
+          641,
+          737
+        ],
+        [
+          596,
+          733
+        ]
+      ],
+      "height": 4.054,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        621.5,
+        719.0
+      ]
+    },
+    {
+      "id": "S12",
+      "label": "Southern street residence",
+      "zone": "S",
+      "roofPixels": [
+        [
+          639,
+          745
+        ],
+        [
+          682,
+          750
+        ],
+        [
+          674,
+          781
+        ],
+        [
+          631,
+          776
+        ]
+      ],
+      "height": 2.694,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        656.5,
+        763.0
+      ]
+    },
+    {
+      "id": "S13",
+      "label": "Quiet caf\u00e9",
+      "zone": "S",
+      "roofPixels": [
+        [
+          679,
+          602
+        ],
+        [
+          736,
+          598
+        ],
+        [
+          727,
+          623
+        ],
+        [
+          670,
+          627
+        ]
+      ],
+      "height": 1.604,
+      "storeysInferred": 1,
+      "form": "hip",
+      "confidence": "high",
+      "center": [
+        703.0,
+        612.5
+      ]
+    },
+    {
+      "id": "S14",
+      "label": "South-central west block",
+      "zone": "S",
+      "roofPixels": [
+        [
+          794,
+          634
+        ],
+        [
+          849,
+          639
+        ],
+        [
+          840,
+          674
+        ],
+        [
+          785,
+          669
+        ]
+      ],
+      "height": 4.399,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        817.0,
+        654.0
+      ]
+    },
+    {
+      "id": "S15",
+      "label": "South-central stepped apartment",
+      "zone": "S",
+      "roofPixels": [
+        [
+          855,
+          602
+        ],
+        [
+          920,
+          609
+        ],
+        [
+          912,
+          646
+        ],
+        [
+          847,
+          639
+        ]
+      ],
+      "height": 4.448,
+      "storeysInferred": 4,
+      "form": "stepped",
+      "confidence": "high",
+      "center": [
+        883.5,
+        624.0
+      ]
+    },
+    {
+      "id": "S16",
+      "label": "South-central east apartment",
+      "zone": "S",
+      "roofPixels": [
+        [
+          923,
+          618
+        ],
+        [
+          980,
+          623
+        ],
+        [
+          973,
+          657
+        ],
+        [
+          916,
+          652
+        ]
+      ],
+      "height": 4.021,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        948.0,
+        637.5
+      ]
+    },
+    {
+      "id": "S17",
+      "label": "South-central small home",
+      "zone": "S",
+      "roofPixels": [
+        [
+          995,
+          650
+        ],
+        [
+          1035,
+          655
+        ],
+        [
+          1028,
+          684
+        ],
+        [
+          988,
+          679
+        ]
+      ],
+      "height": 3.164,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1011.5,
+        667.0
+      ]
+    },
+    {
+      "id": "S18",
+      "label": "Southern back home",
+      "zone": "S",
+      "roofPixels": [
+        [
+          765,
+          719
+        ],
+        [
+          811,
+          724
+        ],
+        [
+          806,
+          756
+        ],
+        [
+          760,
+          751
+        ]
+      ],
+      "height": 3.374,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        785.5,
+        737.5
+      ]
+    },
+    {
+      "id": "S19",
+      "label": "Southern white residence",
+      "zone": "S",
+      "roofPixels": [
+        [
+          819,
+          735
+        ],
+        [
+          872,
+          741
+        ],
+        [
+          867,
+          773
+        ],
+        [
+          814,
+          767
+        ]
+      ],
+      "height": 3.568,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        843.0,
+        754.0
+      ]
+    },
+    {
+      "id": "S20",
+      "label": "Southern cream residence",
+      "zone": "S",
+      "roofPixels": [
+        [
+          883,
+          747
+        ],
+        [
+          928,
+          752
+        ],
+        [
+          923,
+          786
+        ],
+        [
+          878,
+          781
+        ]
+      ],
+      "height": 3.572,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        903.0,
+        766.5
+      ]
+    },
+    {
+      "id": "S21",
+      "label": "Southern peach residence",
+      "zone": "S",
+      "roofPixels": [
+        [
+          937,
+          767
+        ],
+        [
+          980,
+          772
+        ],
+        [
+          975,
+          800
+        ],
+        [
+          932,
+          795
+        ]
+      ],
+      "height": 2.826,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        956.0,
+        783.5
+      ]
+    },
+    {
+      "id": "S22",
+      "label": "Front north-south corner",
+      "zone": "S",
+      "roofPixels": [
+        [
+          987,
+          788
+        ],
+        [
+          1030,
+          792
+        ],
+        [
+          1025,
+          819
+        ],
+        [
+          982,
+          815
+        ]
+      ],
+      "height": 2.265,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1006.0,
+        803.5
+      ]
+    },
+    {
+      "id": "S23",
+      "label": "Orange garden bungalow",
+      "zone": "S",
+      "roofPixels": [
+        [
+          1052,
+          681
+        ],
+        [
+          1105,
+          688
+        ],
+        [
+          1097,
+          721
+        ],
+        [
+          1044,
+          714
+        ]
+      ],
+      "height": 1.992,
+      "storeysInferred": 2,
+      "form": "hip",
+      "confidence": "high",
+      "center": [
+        1074.5,
+        701.0
+      ]
+    },
+    {
+      "id": "E01",
+      "label": "East junction office",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1061,
+          447
+        ],
+        [
+          1114,
+          456
+        ],
+        [
+          1101,
+          489
+        ],
+        [
+          1048,
+          480
+        ]
+      ],
+      "height": 5.054,
+      "storeysInferred": 5,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1081.0,
+        468.0
+      ]
+    },
+    {
+      "id": "E02",
+      "label": "East junction apartment",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1132,
+          470
+        ],
+        [
+          1179,
+          478
+        ],
+        [
+          1168,
+          508
+        ],
+        [
+          1121,
+          500
+        ]
+      ],
+      "height": 4.271,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1150.0,
+        489.0
+      ]
+    },
+    {
+      "id": "E03",
+      "label": "East compound residence",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1195,
+          486
+        ],
+        [
+          1249,
+          493
+        ],
+        [
+          1237,
+          526
+        ],
+        [
+          1183,
+          519
+        ]
+      ],
+      "height": 4.033,
+      "storeysInferred": 4,
+      "form": "stepped",
+      "confidence": "high",
+      "center": [
+        1216.0,
+        506.0
+      ]
+    },
+    {
+      "id": "E04",
+      "label": "East paired block west",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1271,
+          524
+        ],
+        [
+          1313,
+          531
+        ],
+        [
+          1303,
+          565
+        ],
+        [
+          1261,
+          558
+        ]
+      ],
+      "height": 4.537,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1287.0,
+        544.5
+      ]
+    },
+    {
+      "id": "E05",
+      "label": "East paired block east",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1321,
+          533
+        ],
+        [
+          1364,
+          540
+        ],
+        [
+          1354,
+          572
+        ],
+        [
+          1311,
+          565
+        ]
+      ],
+      "height": 4.418,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1337.5,
+        552.5
+      ]
+    },
+    {
+      "id": "E06",
+      "label": "East lower compound",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1264,
+          596
+        ],
+        [
+          1306,
+          601
+        ],
+        [
+          1298,
+          631
+        ],
+        [
+          1256,
+          626
+        ]
+      ],
+      "height": 2.9,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1281.0,
+        613.5
+      ]
+    },
+    {
+      "id": "E07",
+      "label": "East road corner home",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1414,
+          567
+        ],
+        [
+          1465,
+          572
+        ],
+        [
+          1455,
+          605
+        ],
+        [
+          1404,
+          600
+        ]
+      ],
+      "height": 3.447,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1434.5,
+        586.0
+      ]
+    },
+    {
+      "id": "E08",
+      "label": "East edge long home",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1491,
+          592
+        ],
+        [
+          1550,
+          598
+        ],
+        [
+          1541,
+          633
+        ],
+        [
+          1482,
+          627
+        ]
+      ],
+      "height": 3.394,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1516.0,
+        612.5
+      ]
+    },
+    {
+      "id": "E09",
+      "label": "Southeast back residence",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1287,
+          689
+        ],
+        [
+          1333,
+          694
+        ],
+        [
+          1323,
+          723
+        ],
+        [
+          1277,
+          718
+        ]
+      ],
+      "height": 3.55,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1305.0,
+        706.0
+      ]
+    },
+    {
+      "id": "E10",
+      "label": "Southeast side home",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1356,
+          704
+        ],
+        [
+          1405,
+          710
+        ],
+        [
+          1397,
+          740
+        ],
+        [
+          1348,
+          734
+        ]
+      ],
+      "height": 3.868,
+      "storeysInferred": 4,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1376.5,
+        722.0
+      ]
+    },
+    {
+      "id": "E11",
+      "label": "Southeast edge residence",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1468,
+          722
+        ],
+        [
+          1514,
+          727
+        ],
+        [
+          1508,
+          758
+        ],
+        [
+          1462,
+          753
+        ]
+      ],
+      "height": 3.687,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1488.0,
+        740.0
+      ]
+    },
+    {
+      "id": "E12",
+      "label": "Southeast foreground home",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1276,
+          778
+        ],
+        [
+          1318,
+          782
+        ],
+        [
+          1310,
+          813
+        ],
+        [
+          1268,
+          809
+        ]
+      ],
+      "height": 3.081,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1293.0,
+        795.5
+      ]
+    },
+    {
+      "id": "E13",
+      "label": "Southeast foreground pair",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1340,
+          792
+        ],
+        [
+          1391,
+          797
+        ],
+        [
+          1383,
+          827
+        ],
+        [
+          1332,
+          822
+        ]
+      ],
+      "height": 3.211,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1361.5,
+        809.5
+      ]
+    },
+    {
+      "id": "E14",
+      "label": "Southeast corner residence",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1412,
+          807
+        ],
+        [
+          1456,
+          811
+        ],
+        [
+          1449,
+          838
+        ],
+        [
+          1405,
+          834
+        ]
+      ],
+      "height": 2.838,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1430.5,
+        822.5
+      ]
+    },
+    {
+      "id": "E15",
+      "label": "Far east boundary home",
+      "zone": "E",
+      "roofPixels": [
+        [
+          1561,
+          461
+        ],
+        [
+          1594,
+          466
+        ],
+        [
+          1586,
+          491
+        ],
+        [
+          1553,
+          486
+        ]
+      ],
+      "height": 2.194,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "low",
+      "center": [
+        1573.5,
+        476.0
+      ]
+    },
+    {
+      "id": "M01",
+      "label": "Mall west wing",
+      "zone": "M",
+      "roofPixels": [
+        [
+          1217,
+          164
+        ],
+        [
+          1306,
+          177
+        ],
+        [
+          1289,
+          246
+        ],
+        [
+          1200,
+          233
+        ]
+      ],
+      "height": 6.98,
+      "storeysInferred": 5,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1253.0,
+        205.0
+      ]
+    },
+    {
+      "id": "M02",
+      "label": "Mall central volume",
+      "zone": "M",
+      "roofPixels": [
+        [
+          1305,
+          187
+        ],
+        [
+          1413,
+          201
+        ],
+        [
+          1396,
+          277
+        ],
+        [
+          1288,
+          263
+        ]
+      ],
+      "height": 6.635,
+      "storeysInferred": 5,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1350.5,
+        232.0
+      ]
+    },
+    {
+      "id": "M03",
+      "label": "Mall east wing",
+      "zone": "M",
+      "roofPixels": [
+        [
+          1412,
+          202
+        ],
+        [
+          1523,
+          215
+        ],
+        [
+          1506,
+          297
+        ],
+        [
+          1395,
+          284
+        ]
+      ],
+      "height": 6.643,
+      "storeysInferred": 5,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1459.0,
+        249.5
+      ]
+    },
+    {
+      "id": "M04",
+      "label": "Mall rear service volume",
+      "zone": "M",
+      "roofPixels": [
+        [
+          1194,
+          96
+        ],
+        [
+          1288,
+          108
+        ],
+        [
+          1280,
+          140
+        ],
+        [
+          1186,
+          128
+        ]
+      ],
+      "height": 3.025,
+      "storeysInferred": 3,
+      "form": "flat",
+      "confidence": "medium",
+      "center": [
+        1237.0,
+        118.0
+      ]
+    },
+    {
+      "id": "M05",
+      "label": "Main-road caf\u00e9",
+      "zone": "M",
+      "roofPixels": [
+        [
+          1233,
+          355
+        ],
+        [
+          1327,
+          365
+        ],
+        [
+          1318,
+          392
+        ],
+        [
+          1224,
+          382
+        ]
+      ],
+      "height": 2.235,
+      "storeysInferred": 2,
+      "form": "flat",
+      "confidence": "high",
+      "center": [
+        1275.5,
+        373.5
+      ]
+    },
+    {
+      "id": "L01",
+      "label": "Synagogue nave",
+      "zone": "L",
+      "roofPixels": [
+        [
+          814,
+          378
+        ],
+        [
+          892,
+          396
+        ],
+        [
+          866,
+          440
+        ],
+        [
+          788,
+          422
+        ]
+      ],
+      "height": 2.908,
+      "storeysInferred": 2,
+      "form": "gable",
+      "confidence": "high",
+      "center": [
+        840.0,
+        409.0
+      ]
+    },
+    {
+      "id": "L02",
+      "label": "Synagogue clock tower",
+      "zone": "L",
+      "roofPixels": [
+        [
+          891,
+          354
+        ],
+        [
+          918,
+          358
+        ],
+        [
+          912,
+          376
+        ],
+        [
+          885,
+          372
+        ]
+      ],
+      "height": 5.675,
+      "storeysInferred": 5,
+      "form": "tower",
+      "confidence": "high",
+      "center": [
+        901.5,
+        365.0
+      ]
+    },
+    {
+      "id": "L03",
+      "label": "Synagogue entrance porch",
+      "zone": "L",
+      "roofPixels": [
+        [
+          831,
+          427
+        ],
+        [
+          853,
+          432
+        ],
+        [
+          846,
+          452
+        ],
+        [
+          824,
+          447
+        ]
+      ],
+      "height": 1.519,
+      "storeysInferred": 1,
+      "form": "gable",
+      "confidence": "medium",
+      "center": [
+        838.5,
+        439.5
+      ]
+    }
+  ],
+  "roads": [
+    {
+      "id": "R01",
+      "name": "Main road",
+      "confidence": "high",
+      "points": [
+        [
+          263,
+          34
+        ],
+        [
+          296,
+          34
+        ],
+        [
+          300,
+          99
+        ],
+        [
+          313,
+          140
+        ],
+        [
+          340,
+          169
+        ],
+        [
+          386,
+          192
+        ],
+        [
+          455,
+          216
+        ],
+        [
+          587,
+          251
+        ],
+        [
+          742,
+          292
+        ],
+        [
+          924,
+          341
+        ],
+        [
+          1090,
+          387
+        ],
+        [
+          1278,
+          441
+        ],
+        [
+          1440,
+          494
+        ],
+        [
+          1595,
+          546
+        ],
+        [
+          1605,
+          578
+        ],
+        [
+          1429,
+          522
+        ],
+        [
+          1268,
+          470
+        ],
+        [
+          1077,
+          415
+        ],
+        [
+          910,
+          370
+        ],
+        [
+          730,
+          320
+        ],
+        [
+          574,
+          280
+        ],
+        [
+          445,
+          244
+        ],
+        [
+          371,
+          219
+        ],
+        [
+          324,
+          194
+        ],
+        [
+          291,
+          156
+        ],
+        [
+          276,
+          111
+        ]
+      ]
+    },
+    {
+      "id": "R02",
+      "name": "Synagogue west street",
+      "confidence": "medium",
+      "points": [
+        [
+          715,
+          311
+        ],
+        [
+          739,
+          317
+        ],
+        [
+          727,
+          358
+        ],
+        [
+          728,
+          409
+        ],
+        [
+          741,
+          456
+        ],
+        [
+          762,
+          505
+        ],
+        [
+          791,
+          555
+        ],
+        [
+          783,
+          583
+        ],
+        [
+          763,
+          578
+        ],
+        [
+          766,
+          555
+        ],
+        [
+          740,
+          513
+        ],
+        [
+          717,
+          464
+        ],
+        [
+          705,
+          410
+        ],
+        [
+          704,
+          358
+        ]
+      ]
+    },
+    {
+      "id": "R03",
+      "name": "Synagogue east street",
+      "confidence": "high",
+      "points": [
+        [
+          978,
+          363
+        ],
+        [
+          1003,
+          370
+        ],
+        [
+          995,
+          417
+        ],
+        [
+          984,
+          466
+        ],
+        [
+          978,
+          517
+        ],
+        [
+          968,
+          559
+        ],
+        [
+          954,
+          587
+        ],
+        [
+          929,
+          580
+        ],
+        [
+          947,
+          554
+        ],
+        [
+          955,
+          511
+        ],
+        [
+          960,
+          463
+        ],
+        [
+          970,
+          413
+        ]
+      ]
+    },
+    {
+      "id": "R04",
+      "name": "North approach",
+      "confidence": "medium",
+      "points": [
+        [
+          1120,
+          44
+        ],
+        [
+          1135,
+          49
+        ],
+        [
+          1115,
+          117
+        ],
+        [
+          1090,
+          194
+        ],
+        [
+          1064,
+          273
+        ],
+        [
+          1037,
+          337
+        ],
+        [
+          1003,
+          370
+        ],
+        [
+          978,
+          363
+        ],
+        [
+          1017,
+          329
+        ],
+        [
+          1045,
+          267
+        ],
+        [
+          1069,
+          189
+        ],
+        [
+          1096,
+          109
+        ]
+      ]
+    },
+    {
+      "id": "R05",
+      "name": "West park street",
+      "confidence": "medium",
+      "points": [
+        [
+          92,
+          620
+        ],
+        [
+          186,
+          603
+        ],
+        [
+          285,
+          597
+        ],
+        [
+          384,
+          589
+        ],
+        [
+          493,
+          584
+        ],
+        [
+          606,
+          574
+        ],
+        [
+          763,
+          565
+        ],
+        [
+          763,
+          585
+        ],
+        [
+          607,
+          594
+        ],
+        [
+          494,
+          605
+        ],
+        [
+          386,
+          610
+        ],
+        [
+          285,
+          617
+        ],
+        [
+          188,
+          624
+        ],
+        [
+          89,
+          641
+        ]
+      ]
+    },
+    {
+      "id": "R06",
+      "name": "South central street",
+      "confidence": "medium",
+      "points": [
+        [
+          763,
+          580
+        ],
+        [
+          785,
+          583
+        ],
+        [
+          780,
+          627
+        ],
+        [
+          769,
+          679
+        ],
+        [
+          766,
+          730
+        ],
+        [
+          775,
+          789
+        ],
+        [
+          793,
+          847
+        ],
+        [
+          770,
+          845
+        ],
+        [
+          753,
+          792
+        ],
+        [
+          744,
+          732
+        ],
+        [
+          748,
+          677
+        ],
+        [
+          759,
+          625
+        ]
+      ]
+    },
+    {
+      "id": "R07",
+      "name": "Synagogue south link",
+      "confidence": "high",
+      "points": [
+        [
+          783,
+          565
+        ],
+        [
+          834,
+          557
+        ],
+        [
+          892,
+          557
+        ],
+        [
+          951,
+          567
+        ],
+        [
+          948,
+          586
+        ],
+        [
+          891,
+          577
+        ],
+        [
+          835,
+          577
+        ],
+        [
+          783,
+          586
+        ]
+      ]
+    },
+    {
+      "id": "R08",
+      "name": "East market street",
+      "confidence": "medium",
+      "points": [
+        [
+          967,
+          555
+        ],
+        [
+          1042,
+          570
+        ],
+        [
+          1106,
+          603
+        ],
+        [
+          1171,
+          630
+        ],
+        [
+          1236,
+          650
+        ],
+        [
+          1294,
+          658
+        ],
+        [
+          1350,
+          637
+        ],
+        [
+          1411,
+          620
+        ],
+        [
+          1476,
+          624
+        ],
+        [
+          1558,
+          644
+        ],
+        [
+          1564,
+          665
+        ],
+        [
+          1472,
+          645
+        ],
+        [
+          1412,
+          640
+        ],
+        [
+          1357,
+          658
+        ],
+        [
+          1296,
+          679
+        ],
+        [
+          1230,
+          672
+        ],
+        [
+          1161,
+          650
+        ],
+        [
+          1097,
+          623
+        ],
+        [
+          1036,
+          590
+        ],
+        [
+          961,
+          576
+        ]
+      ]
+    },
+    {
+      "id": "R09",
+      "name": "Eastern curved street",
+      "confidence": "high",
+      "points": [
+        [
+          1171,
+          630
+        ],
+        [
+          1195,
+          635
+        ],
+        [
+          1180,
+          681
+        ],
+        [
+          1194,
+          723
+        ],
+        [
+          1190,
+          774
+        ],
+        [
+          1160,
+          820
+        ],
+        [
+          1149,
+          873
+        ],
+        [
+          1124,
+          869
+        ],
+        [
+          1137,
+          812
+        ],
+        [
+          1169,
+          766
+        ],
+        [
+          1171,
+          728
+        ],
+        [
+          1158,
+          682
+        ]
+      ]
+    },
+    {
+      "id": "R10",
+      "name": "Far eastern street",
+      "confidence": "medium",
+      "points": [
+        [
+          1490,
+          524
+        ],
+        [
+          1512,
+          532
+        ],
+        [
+          1502,
+          573
+        ],
+        [
+          1538,
+          613
+        ],
+        [
+          1546,
+          665
+        ],
+        [
+          1531,
+          707
+        ],
+        [
+          1548,
+          751
+        ],
+        [
+          1551,
+          804
+        ],
+        [
+          1528,
+          859
+        ],
+        [
+          1507,
+          856
+        ],
+        [
+          1530,
+          798
+        ],
+        [
+          1526,
+          753
+        ],
+        [
+          1509,
+          709
+        ],
+        [
+          1523,
+          662
+        ],
+        [
+          1517,
+          621
+        ],
+        [
+          1480,
+          579
+        ]
+      ]
+    },
+    {
+      "id": "R11",
+      "name": "Western curved lane",
+      "confidence": "low",
+      "points": [
+        [
+          416,
+          240
+        ],
+        [
+          435,
+          245
+        ],
+        [
+          411,
+          276
+        ],
+        [
+          381,
+          289
+        ],
+        [
+          338,
+          296
+        ],
+        [
+          289,
+          307
+        ],
+        [
+          233,
+          321
+        ],
+        [
+          175,
+          340
+        ],
+        [
+          179,
+          323
+        ],
+        [
+          229,
+          305
+        ],
+        [
+          283,
+          291
+        ],
+        [
+          332,
+          279
+        ],
+        [
+          371,
+          274
+        ],
+        [
+          397,
+          263
+        ]
+      ]
+    },
+    {
+      "id": "R12",
+      "name": "Southwest interior lane",
+      "confidence": "low",
+      "points": [
+        [
+          381,
+          609
+        ],
+        [
+          401,
+          609
+        ],
+        [
+          396,
+          646
+        ],
+        [
+          428,
+          679
+        ],
+        [
+          448,
+          722
+        ],
+        [
+          453,
+          781
+        ],
+        [
+          434,
+          800
+        ],
+        [
+          418,
+          797
+        ],
+        [
+          433,
+          773
+        ],
+        [
+          429,
+          728
+        ],
+        [
+          411,
+          690
+        ],
+        [
+          377,
+          652
+        ]
+      ]
+    }
+  ],
+  "grounds": [
+    {
+      "id": "G01",
+      "name": "Synagogue compound",
+      "points": [
+        [
+          743,
+          378
+        ],
+        [
+          787,
+          353
+        ],
+        [
+          951,
+          393
+        ],
+        [
+          943,
+          530
+        ],
+        [
+          913,
+          560
+        ],
+        [
+          789,
+          553
+        ],
+        [
+          757,
+          481
+        ]
+      ]
+    },
+    {
+      "id": "G02",
+      "name": "Northern open ground",
+      "points": [
+        [
+          872,
+          191
+        ],
+        [
+          1018,
+          212
+        ],
+        [
+          988,
+          324
+        ],
+        [
+          849,
+          287
+        ]
+      ]
+    },
+    {
+      "id": "G03",
+      "name": "Western recreation ground",
+      "points": [
+        [
+          176,
+          521
+        ],
+        [
+          407,
+          545
+        ],
+        [
+          402,
+          586
+        ],
+        [
+          159,
+          608
+        ]
+      ]
+    },
+    {
+      "id": "G04",
+      "name": "Northern garden",
+      "points": [
+        [
+          746,
+          94
+        ],
+        [
+          892,
+          116
+        ],
+        [
+          863,
+          180
+        ],
+        [
+          802,
+          176
+        ],
+        [
+          738,
+          145
+        ]
+      ]
+    }
+  ],
+  "zones": [
+    [
+      "N",
+      "Northern homes and gardens"
+    ],
+    [
+      "W",
+      "Western compounds"
+    ],
+    [
+      "S",
+      "Southern residential blocks"
+    ],
+    [
+      "E",
+      "Eastern streets"
+    ],
+    [
+      "L",
+      "Synagogue and grounds"
+    ],
+    [
+      "M",
+      "Commercial block"
+    ]
+  ],
+  "perspective": {
+    "parameters": [
+      0.10948110024575607,
+      0.907549162451624,
+      221.2692469781139,
+      5899.255907527706,
+      807.0893084113765,
+      430.8978617913573
+    ],
+    "predictedCorners": [
+      [
+        234.35388134810114,
+        2.502589124835822
+      ],
+      [
+        1494.0904290531241,
+        106.10709292011353
+      ],
+      [
+        1453.136037590269,
+        914.1286025908598
+      ],
+      [
+        55.41965200863751,
+        786.2617153643694
+      ]
+    ],
+    "cornerErrorsPixels": [
+      36.82871550131593,
+      41.23242867489613,
+      23.69765389048711,
+      20.46350490551044
+    ],
+    "rmsCornerPixels": 31.767913422345014
+  },
+  "orthographic": {
+    "parameters": [
+      0.10824483571448962,
+      0.9076335842289209,
+      172.85130223283898,
+      4620.968158807431,
+      809.2500000000797,
+      452.2499999999989
+    ],
+    "predictedCorners": [
+      [
+        199.6919971050769,
+        -2.5903328207472214
+      ],
+      [
+        1528.55753319191,
+        111.20969925237284
+      ],
+      [
+        1418.8080028950826,
+        907.0903328207451
+      ],
+      [
+        89.94246680824938,
+        793.290300747625
+      ]
+    ],
+    "cornerErrorsPixels": [
+      65.76965086205323,
+      43.705389657393255,
+      11.353749509831665,
+      52.07477053880468
+    ],
+    "rmsCornerPixels": 47.635326739254445
+  },
+  "warning": "Camera fitting uses a rectangular hypothesis against four selected boundary landmarks, including the cut corner. The source is not a consistent rectangle. The five-point island outline is separately traced and back-projected. Fit error is NOT a fidelity score or independent validation. Roof geometry is back-projected from traced envelopes; hidden geometry and heights require review."
+}

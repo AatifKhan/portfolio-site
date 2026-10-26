@@ -1,0 +1,25 @@
+{
+  "checkpoint": "residential-tower-01",
+  "artisticApproval": "awaiting-user-review",
+  "browser": "Codex in-app browser",
+  "desktop": {"width":1440,"height":1000,"scrollWidth":1440,"masterDrawCalls":5,"repeatDrawCalls":25,"masterRenderedTrianglesIncludingLines":23500},
+  "phoneLayout": {"width":390,"height":844,"scrollWidth":390,"visibleControlMinimumHeight":44,"physicalDeviceTested":false},
+  "observedChecks": [
+    "master/reference visual comparison",
+    "five identical copies rendered",
+    "right orbit control disables at +15 degrees",
+    "keyboard orbit settles at -15 degrees",
+    "zoom settles at 300 percent and disables zoom-in",
+    "reset and three preview modes",
+    "touch opt-in toggles touch-action from pan-y to none",
+    "expanded inventory contains five markers and eleven families",
+    "forced still fallback loads saved 675 by 480 render",
+    "fallback disables unavailable controls",
+    "Try 3D again clears still parameter and restores live rendering",
+    "no captured browser warnings or errors at completion",
+    "temporary viewport override reset"
+  ],
+  "fixtureChecks": ["reduced-motion immediate updates","pointer cancellation","default touch scroll","hidden-page pause","resource cleanup"],
+  "evidence": ["tower-comparison.jpg","five-copies.jpg","orbit-left.jpg","orbit-right.jpg","mobile-review.jpg"],
+  "limitations": ["Visual fidelity awaits user approval.","No physical-device touch or low-end GPU performance measurement.","Only residential tower instances are modeled and individually mapped at this checkpoint."]
+}

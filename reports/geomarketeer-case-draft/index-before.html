@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aatif — Product Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Ms+Madi&display=swap">
+    <link rel="stylesheet" href="styles/city-illustration.css">
+    <link rel="stylesheet" href="styles/geomarketeer-story.css?v=story5-2">
+    <style>
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #fafafa;
+            background-image: radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.03), transparent 40%);
+            color: #1a1a1a;
+        }
+
+        :root {
+            --ease-fast: cubic-bezier(0.62, 0.61, 0.02, 1);
+            --content-max-width: 35rem;
+            --motion-fast: 220ms;
+            --motion-medium: 320ms;
+            --motion-slow: 420ms;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.02"/></svg>');
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .text-tiny {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+
+        .page {
+            transition: opacity var(--motion-slow) ease-out, filter var(--motion-slow) ease-out;
+        }
+
+        .page p:not(.text-center) {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .page-enter {
+            opacity: 0;
+            filter: blur(4px);
+        }
+
+        .page-enter-active {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .page-exit {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .page-exit-active {
+            opacity: 0;
+            filter: blur(4px);
+        }
+
+        .link-underline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .link-underline::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 250ms ease, left 250ms ease;
+        }
+
+        .link-underline:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .portrait-hover img {
+            transition: transform 400ms ease, filter 400ms ease;
+            filter: grayscale(100%) contrast(1.1);
+        }
+
+        .portrait-hover:hover img {
+            transform: scale(1.02);
+            filter: grayscale(0%) contrast(105%);
+        }
+
+        .book-note {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity var(--motion-medium) ease, max-height var(--motion-medium) ease;
+        }
+
+        .book-item:hover .book-note {
+            opacity: 1;
+            max-height: 200px;
+            margin-top: 0.5rem;
+        }
+
+        .work-case-link {
+            display: grid;
+            text-decoration: none;
+            color: inherit;
+            transition: transform var(--motion-fast) var(--ease-fast), opacity var(--motion-fast) ease;
+        }
+
+        .work-case-link:hover {
+            transform: translateY(-1px);
+        }
+
+        .work-entry {
+            transition: transform var(--motion-fast) var(--ease-fast), opacity var(--motion-fast) ease;
+        }
+
+        .work-entry:hover {
+            transform: translateY(-1px);
+        }
+
+        .work-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 0.7rem;
+            margin-top: 0.35rem;
+            color: #6b7280;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .work-proof {
+            margin-top: 0.45rem;
+            color: #374151;
+        }
+
+        .case-study-kpis {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        .case-proof-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.9rem;
+            background: rgba(255, 255, 255, 0.86);
+            padding: 0.85rem 0.9rem;
+            transition: transform var(--motion-fast) var(--ease-fast), border-color var(--motion-fast) ease, background-color var(--motion-fast) ease;
+        }
+
+        .case-proof-card:hover {
+            transform: translateY(-1px);
+            border-color: #d1d5db;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .case-story-section {
+            transition: transform var(--motion-medium) var(--ease-fast), opacity var(--motion-medium) ease;
+        }
+
+        .case-story-section:hover {
+            transform: translateY(-1px);
+        }
+
+        .case-toggle {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.65rem;
+            padding: 0.25rem;
+            background: rgba(255, 255, 255, 0.72);
+            overflow: hidden;
+        }
+
+        .case-toggle::before {
+            content: "";
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            width: calc((100% - 0.5rem) / 2);
+            height: calc(100% - 0.5rem);
+            background: #111827;
+            border-radius: 0.45rem;
+            transition: transform var(--motion-medium) var(--ease-fast);
+            will-change: transform;
+        }
+
+        .case-toggle[data-view="full"]::before {
+            transform: translateX(100%);
+        }
+
+        .case-toggle-btn {
+            position: relative;
+            z-index: 1;
+            border: 0;
+            background: transparent;
+            color: #6b7280;
+            font-size: 0.74rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.65rem;
+            border-radius: 0.45rem;
+            transition: color var(--motion-fast) ease;
+        }
+
+        .case-toggle-btn[aria-pressed="true"] {
+            color: #f9fafb;
+        }
+
+        .case-panel {
+            transition: opacity var(--motion-medium) ease-out, filter var(--motion-medium) ease-out, transform var(--motion-medium) var(--ease-fast);
+        }
+
+        .case-panel-enter {
+            opacity: 0;
+            filter: blur(4px);
+            transform: translateY(6px);
+        }
+
+        .case-panel-enter-active {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        .case-panel-exit {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+        }
+
+        .case-panel-exit-active {
+            opacity: 0;
+            filter: blur(4px);
+            transform: translateY(-4px);
+            pointer-events: none;
+        }
+
+        .quick-scan-reel {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 0.9rem;
+            align-items: start;
+        }
+
+        .quick-scan-track {
+            display: grid;
+            gap: 0.8rem;
+            height: 15.2rem;
+            overflow-y: hidden;
+            padding-right: 0.25rem;
+            scroll-snap-type: y mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            overscroll-behavior: contain;
+            touch-action: none;
+        }
+
+        .quick-scan-track::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        .quick-scan-card {
+            scroll-snap-align: start;
+            min-height: 14.4rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.9rem;
+            background: rgba(255, 255, 255, 0.92);
+            padding: 1.1rem 1rem;
+            opacity: 0.56;
+            filter: blur(1.3px);
+            transform: translateY(7px);
+            transition: opacity var(--motion-medium) ease-out, filter var(--motion-medium) ease-out, transform var(--motion-medium) var(--ease-fast), border-color var(--motion-fast) ease;
+        }
+
+        .quick-scan-card.is-active {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateY(0);
+            border-color: #d1d5db;
+        }
+
+        .quick-scan-proof {
+            margin-top: 0.7rem;
+            color: #6b7280;
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+        }
+
+        .quick-scan-progress {
+            display: flex;
+            flex-direction: column;
+            gap: 0.52rem;
+            padding-top: 0.3rem;
+        }
+
+        .quick-scan-step {
+            width: 0.2rem;
+            height: 1.25rem;
+            border: 0;
+            border-radius: 999px;
+            padding: 0;
+            background: #d1d5db;
+            opacity: 0.75;
+            transition: height var(--motion-fast) ease, background-color var(--motion-fast) ease, opacity var(--motion-fast) ease;
+            cursor: pointer;
+        }
+
+        .quick-scan-step.is-active {
+            height: 2rem;
+            background: #111827;
+            opacity: 1;
+        }
+
+        @media (max-width: 640px) {
+            .case-study-kpis {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .quick-scan-reel {
+                gap: 0.65rem;
+            }
+
+            .quick-scan-track {
+                height: 13.8rem;
+                gap: 0.7rem;
+            }
+
+            .quick-scan-card {
+                min-height: 12.9rem;
+            }
+
+            .quick-scan-step {
+                height: 1rem;
+            }
+
+            .quick-scan-step.is-active {
+                height: 1.55rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .page,
+            .nav-link,
+            .work-case-link,
+            .work-entry,
+            .quick-scan-card {
+                transition: none;
+                opacity: 1;
+                filter: blur(0);
+                transform: none;
+            }
+
+            .quick-scan-step,
+            .case-proof-card,
+            .case-story-section,
+            .book-note {
+                transition: none;
+            }
+        }
+
+        .intro-headline {
+            font-family: 'Fraunces', serif;
+            font-size: 1.18rem;
+            line-height: 1.34;
+            text-align: left;
+            max-width: none;
+            margin: 0;
+        }
+
+        .intro-hero {
+            display: grid;
+            grid-template-columns: 4.2rem minmax(0, 1fr);
+            gap: 0.95rem;
+            align-items: start;
+        }
+
+        .intro-image-cell {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .intro-avatar {
+            width: 4.2rem;
+            height: 7.1rem;
+            border-radius: 9999px;
+            overflow: hidden;
+            background: #e5e7eb;
+        }
+
+        .intro-headline-cell {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        @media (min-width: 768px) {
+            .intro-hero {
+                grid-template-columns: 6.1rem minmax(0, 1fr);
+                gap: 1.5rem;
+            }
+
+            .intro-avatar {
+                width: 6.1rem;
+                height: 10.2rem;
+            }
+
+            .intro-headline {
+                font-size: 1.80rem;
+                line-height: 1.40;
+                max-width: 28ch;
+            }
+        }
+
+        .signature-wrap {
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .signature-text {
+            display: inline-block;
+            font-family: 'Ms Madi', cursive;
+            font-size: 1.21rem;
+            color: #f54900;
+            clip-path: inset(0 100% 0 0);
+            opacity: 0;
+            filter: blur(2px);
+            will-change: clip-path, opacity, filter;
+        }
+
+        .signature-wrap::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 56%;
+            width: 0.38rem;
+            height: 0.38rem;
+            border-radius: 999px;
+            background: #1f2937;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .signature-wrap.in-view .signature-text {
+            animation: signature-write 1550ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+        }
+
+        .signature-wrap.in-view::after {
+            animation: signature-tip 1550ms linear forwards;
+        }
+
+        @keyframes signature-write {
+            0% {
+                clip-path: inset(0 100% 0 0);
+                opacity: 0;
+                filter: blur(2px);
+            }
+
+            12% {
+                opacity: 1;
+            }
+
+            100% {
+                clip-path: inset(0 0 0 0);
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+
+        @keyframes signature-tip {
+            0% {
+                left: 0%;
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 0.85;
+            }
+
+            90% {
+                opacity: 0.75;
+            }
+
+            100% {
+                left: 100%;
+                opacity: 0;
+            }
+        }
+
+        .signature-social-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding-top: 0.15rem;
+        }
+
+        .reach-out-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.62rem 0.95rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.7rem;
+            background: rgba(255, 255, 255, 0.72);
+            color: #111827;
+            text-decoration: none;
+            transition: transform 220ms var(--ease-fast), border-color 220ms ease, background-color 220ms ease;
+        }
+
+        .reach-out-button:hover {
+            transform: translateY(-1px);
+            border-color: #9ca3af;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .bio-stack {
+            display: grid;
+            gap: 1.15rem;
+        }
+
+        .bio-block + .bio-block {
+            border-top: 1px solid rgba(17, 24, 39, 0.08);
+            padding-top: 1.15rem;
+        }
+
+        .company-mark {
+            font: inherit;
+            color: #111827;
+            text-decoration: none;
+        }
+
+        .company-mark:hover {
+            color: #000000;
+        }
+
+        .conversation-note {
+            color: #4b5563;
+        }
+
+        .conversation-note strong {
+            display: block;
+            margin-bottom: 0.35rem;
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            color: #111827;
+            font-weight: 500;
+        }
+
+        .nav-fade {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.32) 40%, rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(16px) saturate(135%);
+            -webkit-backdrop-filter: blur(16px) saturate(135%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.72) 45%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.72) 45%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0;
+            transition: opacity 320ms var(--ease-fast);
+        }
+
+        body.nav-glass .nav-fade {
+            opacity: 1;
+        }
+
+        .top-nav-shell {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            padding-top: 4.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        body.nav-compact .top-nav-shell {
+            padding-top: 0;
+        }
+
+        .top-nav {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 0.3rem;
+            border-radius: 0;
+            border: 1px solid transparent;
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            box-shadow: none;
+        }
+
+        body.nav-glass .top-nav {
+            border-color: transparent;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.22) 100%);
+            backdrop-filter: blur(8px) saturate(125%);
+            -webkit-backdrop-filter: blur(8px) saturate(125%);
+        }
+
+        body.nav-compact .top-nav {
+            gap: 0.35rem;
+        }
+
+        .nav-link {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            border: 0;
+            background: transparent;
+            border-radius: 0.5rem;
+            padding: 0.45rem 0.7rem;
+            color: #6b7280;
+            cursor: pointer;
+        }
+
+        .nav-link:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+        }
+
+        .nav-link:hover {
+            color: #111827;
+        }
+
+        .nav-link-label {
+            color: inherit;
+        }
+
+        .nav-link.active,
+        .nav-link.active .nav-link-label {
+            color: #111827;
+        }
+
+        .content-shell {
+            width: min(100%, var(--content-max-width));
+            margin-inline: auto;
+        }
+
+        @media (max-width: 640px) {
+            .top-nav {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 0.15rem;
+            }
+
+            .nav-link {
+                justify-content: center;
+                padding: 0.45rem 0.2rem;
+            }
+
+            body.nav-compact .top-nav {
+                gap: 0.15rem;
+            }
+
+            .nav-link-label {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Reset anchor default styles (was handled by Tailwind preflight) */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* --- Utility classes (replacing Tailwind CDN) --- */
+
+        ::selection { background: #e5e7eb; }
+
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+        .fixed { position: fixed; }
+
+        .flex-col { flex-direction: column; }
+        .flex-wrap { flex-wrap: wrap; }
+        .flex-shrink-0 { flex-shrink: 0; }
+
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .items-baseline { align-items: baseline; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-start { justify-content: flex-start; }
+
+        .gap-1 { gap: 0.25rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-10 { gap: 2.5rem; }
+
+        .grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+        .col-span-3 { grid-column: span 3 / span 3; }
+        .col-span-9 { grid-column: span 9 / span 9; }
+
+        .top-0 { top: 0; }
+        .left-0 { left: 0; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+
+        .min-h-screen { min-height: 100vh; }
+        .w-screen { width: 100vw; }
+        .w-full { width: 100%; }
+        .h-full { height: 100%; }
+        .w-16 { width: 4rem; }
+        .h-16 { height: 4rem; }
+        .h-\[15vh\] { height: 15vh; }
+        .max-w-xl { max-width: 36rem; }
+        .max-w-2xl { max-width: 42rem; }
+
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .pt-2 { padding-top: 0.5rem; }
+        .pt-4 { padding-top: 1rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        .pt-8 { padding-top: 2rem; }
+        .pt-10 { padding-top: 2.5rem; }
+        .pt-48 { padding-top: 12rem; }
+        .pb-12 { padding-bottom: 3rem; }
+        .pb-24 { padding-bottom: 6rem; }
+        .pl-5 { padding-left: 1.25rem; }
+
+        .space-y-1 > * + * { margin-top: 0.25rem; }
+        .space-y-3 > * + * { margin-top: 0.75rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
+        .space-y-8 > * + * { margin-top: 2rem; }
+        .space-y-10 > * + * { margin-top: 2.5rem; }
+        .space-y-12 > * + * { margin-top: 3rem; }
+        .space-y-16 > * + * { margin-top: 4rem; }
+
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-center { text-align: center; }
+        .uppercase { text-transform: uppercase; }
+        .tracking-wide { letter-spacing: 0.025em; }
+        .tracking-widest { letter-spacing: 0.1em; }
+        .tracking-\[0\.16em\] { letter-spacing: 0.16em; }
+        .text-\[11px\] { font-size: 11px; }
+        .text-\[10px\] { font-size: 10px; }
+
+        .text-black { color: #000; }
+        .text-gray-200 { color: #e5e7eb; }
+        .text-gray-300 { color: #d1d5db; }
+        .text-gray-400 { color: #9ca3af; }
+        .text-gray-500 { color: #6b7280; }
+        .text-gray-600 { color: #4b5563; }
+        .text-gray-700 { color: #374151; }
+        .hover\:text-black:hover { color: #000; }
+
+        .pointer-events-none { pointer-events: none; }
+        .border { border-width: 1px; border-style: solid; }
+        .rounded-md { border-radius: 0.375rem; }
+        .object-cover { object-fit: cover; }
+        .list-disc { list-style-type: disc; }
+
+        /* Landing-page redesign: an original editorial research-notebook system. */
+        :root {
+            --paper: #faf9f5;
+            --ink: #141413;
+            --ink-soft: #3d3d3a;
+            --muted: #87867f;
+            --line: #d1cfc5;
+            --wash: #f5f4ed;
+            --lavender: #918bd6;
+            --sky: #6a9bcc;
+            --clay: #d97757;
+            --serif: 'Fraunces', Georgia, serif;
+            --sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+            --ease-out: cubic-bezier(.165, .84, .44, 1);
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+        }
+
+        body::before { display: none; }
+
+        .top-nav-shell { padding-top: 0; }
+        .top-nav {
+            justify-content: flex-end;
+            max-width: 1400px;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(20, 20, 19, 0.11);
+            border-radius: 0;
+            background: rgba(250, 249, 245, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        body.nav-glass .top-nav { background: rgba(250, 249, 245, 0.96); border-color: rgba(20, 20, 19, 0.11); }
+        .nav-link { color: var(--ink-soft); font-family: var(--sans); font-size: 13px; letter-spacing: 0.01em; }
+        .nav-link.active, .nav-link.active .nav-link-label, .nav-link:hover { color: var(--ink); }
+        .nav-fade { display: none; }
+
+        main { padding: 0 !important; }
+        #homePage.portfolio-landing { width: 100%; max-width: none; margin: 0; }
+
+        .landing-hero {
+            position: relative;
+            min-height: 720px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(380px, 0.72fr);
+            align-items: stretch;
+            overflow: hidden;
+            border-bottom: 1px solid var(--line);
+            background: var(--paper);
+        }
+        .landing-hero-art {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            animation: field-reveal 850ms var(--ease-out) both;
+        }
+        .landing-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background: linear-gradient(90deg, rgba(250,249,245,0.08) 0%, rgba(250,249,245,0) 42%, rgba(250,249,245,0.52) 61%, rgba(250,249,245,0.93) 100%);
+        }
+        .landing-mark {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: flex-start;
+            padding: 118px 40px 40px clamp(32px, 5vw, 72px);
+        }
+        .landing-mark a {
+            color: var(--ink);
+            font: 600 18px/1 var(--sans);
+            letter-spacing: -0.05em;
+            text-decoration: none;
+        }
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+            align-self: center;
+            max-width: 470px;
+            padding: 120px clamp(32px, 6vw, 104px) 80px 24px;
+            animation: copy-rise 800ms 100ms var(--ease-out) both;
+        }
+        .eyebrow, .section-kicker, .field-caption, .project-number, .project-meta {
+            font: 500 12px/1.4 var(--sans);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .eyebrow { margin: 0 0 22px; color: var(--muted); }
+        .hero-copy h1 {
+            margin: 0;
+            max-width: 14ch;
+            font: 400 clamp(42px, 5vw, 70px)/0.98 var(--serif);
+            letter-spacing: -0.045em;
+        }
+        .hero-copy p:not(.eyebrow) { max-width: 34ch; margin: 28px 0 0; color: var(--ink-soft); font: 400 18px/1.52 var(--serif); }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+        .button-dark, .button-light {
+            display: inline-flex;
+            align-items: center;
+            min-height: 36px;
+            padding: 8px 14px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            font: 500 13px/1 var(--sans);
+            text-decoration: none;
+            transition: transform 220ms var(--ease-out), background-color 220ms ease, border-color 220ms ease;
+        }
+        .button-dark { background: var(--ink); color: var(--paper); }
+        .button-light { background: rgba(245,244,237,.82); border-color: rgba(20,20,19,.09); color: var(--ink-soft); }
+        .button-dark:hover, .button-light:hover { transform: translateY(-2px); }
+        .hero-legend {
+            position: absolute;
+            right: clamp(32px, 6vw, 104px);
+            bottom: 36px;
+            z-index: 2;
+            display: flex;
+            gap: 18px;
+            color: var(--muted);
+            font: 500 11px/1 var(--sans);
+        }
+        .hero-legend span { display: inline-flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 8px; height: 8px; border-radius: 2px; background: var(--lavender); }
+        .legend-dot.sky { background: var(--sky); }
+        .legend-dot.clay { background: var(--clay); }
+
+        .landing-intro, .selected-work-landing, .studio-note {
+            width: min(100% - 64px, 1200px);
+            margin-inline: auto;
+        }
+        .landing-intro { display: grid; grid-template-columns: 0.86fr 1.14fr; gap: 64px; padding: 132px 0; }
+        .landing-intro h2, .work-intro h2, .studio-note h2 { margin: 18px 0 0; font: 400 clamp(32px, 4vw, 52px)/1.04 var(--serif); letter-spacing: -0.04em; }
+        .section-kicker { color: var(--muted); }
+        .landing-intro-copy { padding-top: 18px; max-width: 615px; }
+        .landing-intro-copy p { margin: 0; color: var(--ink-soft); font: 400 20px/1.52 var(--serif); }
+        .landing-intro-copy p + p { margin-top: 22px; font: 400 15px/1.62 var(--sans); color: var(--muted); }
+
+        .selected-work-landing { padding: 28px 0 140px; }
+        .work-intro { display: grid; grid-template-columns: .86fr 1.14fr; gap: 64px; padding-bottom: 48px; border-bottom: 1px solid var(--line); }
+        .work-intro p { align-self: end; max-width: 500px; margin: 0; color: var(--muted); font: 400 15px/1.58 var(--sans); }
+        .project-rail { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 64px; padding-top: 32px; }
+        .project-rail-note { position: sticky; top: 110px; align-self: start; color: var(--muted); font: 400 13px/1.52 var(--sans); }
+        .project-rail-note span { display: block; margin-top: 10px; color: var(--ink); font-family: var(--serif); font-size: 20px; line-height: 1.15; }
+        .project-list { display: grid; }
+        .project-card {
+            display: grid;
+            grid-template-columns: 64px minmax(0, 1fr) 130px 30px;
+            gap: 18px;
+            align-items: start;
+            padding: 30px 0 34px;
+            border-bottom: 1px solid var(--line);
+            color: inherit;
+            text-decoration: none;
+            transition: padding-left 260ms var(--ease-out), background-color 260ms ease;
+        }
+        .project-card:first-child { padding-top: 0; }
+        .project-card:hover { padding-left: 12px; background: rgba(245,244,237,.58); }
+        .project-number { color: var(--muted); padding-top: 7px; }
+        .project-card h3 { margin: 0; font: 400 clamp(26px, 3vw, 38px)/1.05 var(--serif); letter-spacing: -0.035em; }
+        .project-card p { max-width: 580px; margin: 12px 0 0; color: var(--ink-soft); font: 400 15px/1.55 var(--sans); }
+        .project-meta { padding-top: 10px; color: var(--muted); text-align: right; }
+        .project-arrow { padding-top: 4px; font-size: 24px; color: var(--ink); transition: transform 260ms var(--ease-out); }
+        .project-card:hover .project-arrow { transform: translateX(5px); }
+
+        .studio-section { padding: 0 0 132px; }
+        .studio-note { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; margin-bottom: 34px; }
+        .studio-note p { margin: 22px 0 0; max-width: 430px; color: var(--muted); font: 400 15px/1.58 var(--sans); }
+        .city-postcard-section { width: min(100% - 64px, 1200px); margin-inline: auto; }
+        .city-postcard-shell { width: 100%; }
+        .city-postcard-meta { padding: 0 0 14px; margin: 0; }
+        .city-postcard-kicker, .city-postcard-time { color: var(--muted); font-family: var(--sans); }
+        .city-postcard-title { color: var(--ink); font-family: var(--serif); font-size: 18px; }
+        .city-illustration-card { aspect-ratio: 16 / 8; box-shadow: none; }
+        .city-postcard-caption, .city-postcard-note { font-family: var(--sans); }
+        .city-postcard-caption { text-align: left; }
+        .city-postcard-note { margin-left: 0; }
+
+        .landing-contact { width: min(100% - 64px, 1200px); margin: 0 auto 100px; padding-top: 38px; border-top: 1px solid var(--line); display: flex; align-items: end; justify-content: space-between; gap: 32px; }
+        .landing-contact h2 { margin: 14px 0 0; font: 400 clamp(34px,4vw,56px)/1 var(--serif); letter-spacing: -0.045em; }
+        .landing-contact-links { display: flex; flex-wrap: wrap; gap: 20px; padding-bottom: 6px; color: var(--muted); font: 500 13px/1 var(--sans); }
+        .landing-contact-links a:hover { color: var(--ink); }
+
+        @keyframes field-reveal { from { opacity: 0; transform: scale(1.018); } to { opacity: 1; transform: scale(1); } }
+        @keyframes copy-rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 820px) {
+            .top-nav { justify-content: center; padding: 17px 16px; }
+            .landing-hero { min-height: 720px; grid-template-columns: 1fr; }
+            .landing-mark { padding: 94px 24px 24px; }
+            .hero-copy { align-self: end; max-width: 530px; padding: 56px 24px 92px; }
+            .landing-hero::after { background: linear-gradient(180deg, rgba(250,249,245,0) 12%, rgba(250,249,245,.76) 58%, rgba(250,249,245,.96) 100%); }
+            .hero-copy h1 { max-width: 12ch; }
+            .hero-legend { left: 24px; right: auto; bottom: 30px; gap: 12px; }
+            .landing-intro, .work-intro, .studio-note { grid-template-columns: 1fr; gap: 26px; }
+            .landing-intro, .selected-work-landing { padding-top: 80px; padding-bottom: 80px; }
+            .landing-intro, .selected-work-landing, .studio-note, .city-postcard-section, .landing-contact { width: min(100% - 40px, 1200px); }
+            .project-rail { grid-template-columns: 1fr; gap: 28px; }
+            .project-rail-note { position: static; }
+            .project-card { grid-template-columns: 44px minmax(0, 1fr); }
+            .project-meta { grid-column: 2; padding-top: 0; text-align: left; }
+            .project-arrow { display: none; }
+            .landing-contact { display: block; padding-top: 30px; }
+            .landing-contact-links { margin-top: 30px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .landing-hero-art, .hero-copy { animation: none; }
+            .project-card, .project-arrow, .button-dark, .button-light { transition: none; }
+        }
+    </style>
+    <link rel="stylesheet" href="styles/menu-motion.css">
+    <script src="scripts/menu-motion.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="fixed top-0 w-screen h-[15vh] nav-fade pointer-events-none z-10"></div>
+
+        <div class="top-nav-shell">
+            <nav id="primaryNav" class="top-nav text-tiny" aria-label="Primary">
+                <span class="nav-glide-indicator" aria-hidden="true"></span>
+                <button type="button" class="nav-link active" data-page="home" style="--item-index:0;"
+                    aria-current="page" onclick="showHome(event)"><span
+                        class="nav-link-label">home</span></button>
+                <button type="button" class="nav-link" data-page="work" style="--item-index:1;"
+                    onclick="showWork(event)"><span class="nav-link-label">work</span></button>
+                <button type="button" class="nav-link" data-page="writing" style="--item-index:2;"
+                    onclick="showWriting(event)"><span class="nav-link-label">writing</span></button>
+                <button type="button" class="nav-link" data-page="reading" style="--item-index:3;"
+                    onclick="showReading(event)"><span class="nav-link-label">reading</span></button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top" class="min-h-screen flex flex-col items-center pt-48 pb-24 px-6">
+        <noscript><p style="width:min(calc(100vw - 3rem),35rem);margin:6rem auto 2rem;font-size:.875rem;line-height:1.6;">Page navigation requires JavaScript. <a href="art/geomarketeer/story-opening/index.html" style="text-decoration:underline;text-underline-offset:.2em;">Read the GeoMarketeer introduction</a>.</p></noscript>
+
+        <!-- Home -->
+        <div id="homePage" class="page portfolio-landing">
+            <section class="landing-hero" aria-labelledby="landingTitle">
+                <img class="landing-hero-art" src="assets/portfolio/research-field.png" alt="Abstract hand-painted research field on warm graph paper, with lavender, blue, grey, and clay markers." />
+                <div class="landing-mark"><a href="#top" aria-label="Aatif, home">aatif.</a></div>
+                <div class="hero-copy">
+                    <p class="eyebrow">Product design · Pune, India</p>
+                    <h1 id="landingTitle">Making complicated things feel obvious.</h1>
+                    <p>I’m Aatif. I lead product design from the first ambiguous question through to the system teams can actually ship.</p>
+                    <div class="hero-actions">
+                        <a class="button-dark" href="#selectedWork">Explore selected work <span aria-hidden="true">→</span></a>
+                        <a class="button-light" href="#contactLinks">Start a conversation</a>
+                    </div>
+                </div>
+                <div class="hero-legend" aria-label="Portfolio themes">
+                    <span><i class="legend-dot" aria-hidden="true"></i> systems</span>
+                    <span><i class="legend-dot sky" aria-hidden="true"></i> clarity</span>
+                    <span><i class="legend-dot clay" aria-hidden="true"></i> outcomes</span>
+                </div>
+            </section>
+
+            <section class="landing-intro" aria-labelledby="approachTitle">
+                <div>
+                    <p class="section-kicker">01 / How I work</p>
+                    <h2 id="approachTitle">Design is a way to make the next decision clearer.</h2>
+                </div>
+                <div class="landing-intro-copy">
+                    <p>I connect the business, technical, and human parts of a problem—then turn that shared understanding into products that are easier to use and easier to evolve.</p>
+                    <p>Currently leading design at Zensar. Previously at LTI, GeoSpoc, and iAuro.</p>
+                </div>
+            </section>
+
+            <section id="selectedWork" class="selected-work-landing" aria-labelledby="selectedWorkTitle">
+                <div class="work-intro">
+                    <div>
+                        <p class="section-kicker">02 / Selected work</p>
+                        <h2 id="selectedWorkTitle">A few systems made more useful.</h2>
+                    </div>
+                    <p>Each project begins with a different tangle: too much complexity, unclear ownership, or an interface that asks people to work too hard.</p>
+                </div>
+                <div class="project-rail">
+                    <aside class="project-rail-note">The work is less about adding screens.<span>It’s about giving people a clearer way forward.</span></aside>
+                    <div class="project-list">
+                        <a href="#" onclick="showCaseStudy(event)" class="project-card" aria-label="Open GeoMarketeer case study">
+                            <span class="project-number">01 / 2017</span>
+                            <span>
+                                <h3>GeoMarketeer</h3>
+                                <p>Explored how complex location intelligence could help retail businesses make better decisions.</p>
+                            </span>
+                            <span class="project-meta">Location intelligence</span>
+                            <span class="project-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a href="#" onclick="showWork(event)" class="project-card" aria-label="View Design Systems Should Ship work">
+                            <span class="project-number">02 / 2023</span>
+                            <span>
+                                <h3>Design Systems Should Ship.</h3>
+                                <p>Operationalized component adoption so teams worked with fewer exceptions and clearer ownership.</p>
+                            </span>
+                            <span class="project-meta">Design operations</span>
+                            <span class="project-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a href="#" onclick="showWork(event)" class="project-card" aria-label="View Interfaces Should Listen work">
+                            <span class="project-number">03 / 2022</span>
+                            <span>
+                                <h3>Interfaces Should Listen.</h3>
+                                <p>Built clearer feedback loops through motion and sound so complex states were easier to read.</p>
+                            </span>
+                            <span class="project-meta">Product UX</span>
+                            <span class="project-arrow" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="studio-section" aria-labelledby="cityStudyTitle">
+                <div class="studio-note">
+                    <div>
+                        <p class="section-kicker">03 / Experiments</p>
+                        <h2 id="cityStudyTitle">A living study of a city.</h2>
+                    </div>
+                    <p>Outside product work, I use small interactive studies to explore the threshold between atmosphere and information.</p>
+                </div>
+                <section class="city-postcard-section">
+                    <div class="city-postcard-shell">
+                        <div class="city-postcard-meta text-tiny">
+                            <div>
+                                <p class="city-postcard-kicker">San Francisco / Light study</p>
+                                <p class="city-postcard-title">A city that changes with the time where it lives.</p>
+                            </div>
+                        </div>
+                        <div id="cityIllustration" class="city-illustration-card" data-phase="night">
+                            <div class="city-tone-layer" aria-hidden="true"></div>
+                            <img id="cityBaseImage" src="assets/city/sf-study-base.svg" alt="" class="city-base-layer" aria-hidden="true">
+                            <img id="citySceneImage" src="assets/city/sf-study-scene.svg" alt="Original San Francisco-inspired illustration with bridge, water, and hillside lights." class="city-scene-layer">
+                            <div class="city-burn-layer" aria-hidden="true"></div><div class="city-ambient-layer" aria-hidden="true"></div><div class="city-texture-layer" aria-hidden="true"></div>
+                            <canvas id="cityBloomCanvas" class="city-light-bloom" aria-hidden="true"></canvas><canvas id="cityLightCanvas" class="city-light-canvas" aria-hidden="true"></canvas>
+                            <div class="city-pointer-layer" aria-hidden="true"></div><div class="city-wash-layer" aria-hidden="true"></div><div class="city-darken-layer" aria-hidden="true"></div><div class="city-grain-layer" aria-hidden="true"></div><div class="city-vignette-layer" aria-hidden="true"></div>
+                            <img id="cityFrameImage" src="assets/city/sf-study-frame.svg" alt="" class="city-frame-image" aria-hidden="true"><div class="city-frame-layer" aria-hidden="true"></div>
+                        </div>
+                        <p id="cityTimeLabel" class="city-postcard-caption text-tiny text-gray-600">It is 10:33pm in San Francisco.</p>
+                        <p class="city-postcard-note text-tiny text-gray-600">An original layered illustration, graded and illuminated in real time.</p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="landing-contact" id="contactLinks" aria-labelledby="contactTitle">
+                <div><p class="section-kicker">04 / Contact</p><h2 id="contactTitle">Let’s make the next thing clearer.</h2></div>
+                <div class="landing-contact-links">
+                    <a href="#" class="link-underline">linkedin</a><a href="#" class="link-underline">instagram</a><a href="#contactLinks" class="link-underline">email</a><a href="#" class="link-underline">resume</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Reading -->
+        <div id="readingPage" class="page content-shell space-y-10 hidden">
+            <section class="space-y-4">
+                <h2 class="text-sm tracking-wide text-gray-500 uppercase">Reading</h2>
+                <p class="text-tiny text-gray-500">Books that shaped how I think.</p>
+
+                <div class="space-y-8">
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">Thinking in Systems</h3>
+                            <span class="text-xs text-gray-400">2024</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Donella H. Meadows</p>
+                        <div class="book-note text-tiny text-gray-600">
+                            Systems thinking changed how I approach product complexity — less features, more leverage
+                            points.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">Good Strategy / Bad Strategy
+                            </h3>
+                            <span class="text-xs text-gray-400">2023</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Richard Rumelt</p>
+                        <div class="book-note text-tiny text-gray-600">
+                            Strategy is diagnosis and focus — not ambition. This reframed how I think about roadmaps.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.25rem;">The Design of Everyday Things
+                            </h3>
+                            <span class="text-xs text-gray-400">2022</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Don Norman</p>
+                        <div class="book-note text-tiny text-gray-600">
+                            A reminder that clarity beats cleverness — always.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pt-8">
+                    <a href="#" onclick="showHome(event)"
+                        class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Work remains unchanged -->
+        <div id="workPage" class="page content-shell hidden">
+            <section class="space-y-6">
+                <h2 class="text-sm tracking-wide text-gray-500 uppercase">Selected Work</h2>
+                <p class="text-tiny text-gray-500 max-w-xl">
+                    A progression of product, systems, and platform work — focused on clarity, leverage, and long-term
+                    thinking.
+                </p>
+
+                <div class="relative space-y-8 pt-4">
+                    <!-- vertical line -->
+                    <div class="absolute left-[12%] top-0 bottom-0 w-px bg-gray-200"></div>
+
+                    <!-- Project 1 -->
+                    <a href="#" onclick="showCaseStudy(event)" class="work-case-link grid grid-cols-12 gap-3 items-start"
+                        aria-label="Open GeoMarketeer case study">
+                        <div class="col-span-3 text-sm text-gray-400">2017</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 class="link-underline"
+                                    style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">GeoMarketeer</h3>
+                                <div class="work-summary">
+                                    <span>location intelligence</span>
+                                    <span>ux research</span>
+                                    <span>interaction design</span>
+                                </div>
+                                <p class="text-tiny work-proof">Explored how accessible geographic insight could reduce guesswork for retail businesses.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <div class="work-entry grid grid-cols-12 gap-3 items-start">
+                        <div class="col-span-3 text-sm text-gray-400">2023</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Design
+                                    Systems Should Ship.</h3>
+                                <div class="work-summary">
+                                    <span>design ops</span>
+                                    <span>system governance</span>
+                                    <span>multi-team</span>
+                                </div>
+                                <p class="text-tiny work-proof">Operationalized component adoption so teams shipped with fewer exceptions and clearer ownership.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="work-entry grid grid-cols-12 gap-3 items-start">
+                        <div class="col-span-3 text-sm text-gray-400">2022</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Interfaces
+                                    Should Listen.</h3>
+                                <div class="work-summary">
+                                    <span>interaction systems</span>
+                                    <span>feedback design</span>
+                                    <span>product ux</span>
+                                </div>
+                                <p class="text-tiny work-proof">Built clearer feedback loops through motion and sound so complex states were easier to read.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="work-entry grid grid-cols-12 gap-3 items-start">
+                        <div class="col-span-3 text-sm text-gray-400">2021</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Strategy Is
+                                    a Design Tool.</h3>
+                                <div class="work-summary">
+                                    <span>product strategy</span>
+                                    <span>platform direction</span>
+                                    <span>stakeholder alignment</span>
+                                </div>
+                                <p class="text-tiny work-proof">Translated long-range platform bets into product decisions teams could actually execute.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="work-entry grid grid-cols-12 gap-3 items-start">
+                        <div class="col-span-3 text-sm text-gray-400">2020</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <div>
+                                <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Legacy Isn’t
+                                    an Excuse.</h3>
+                                <div class="work-summary">
+                                    <span>legacy modernization</span>
+                                    <span>workflow design</span>
+                                    <span>enterprise ux</span>
+                                </div>
+                                <p class="text-tiny work-proof">Reduced workflow fragmentation by replacing patchwork experiences with a coherent interaction model.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pt-10">
+                    <a href="#" onclick="showHome(event)"
+                        class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+                </div>
+            </section>
+        </div>
+
+        <div id="caseStudyPage" class="page content-shell space-y-10 hidden">
+            <section class="space-y-4">
+                <p class="text-xs uppercase tracking-[0.16em] text-gray-500">Case Study</p>
+                <h2 style="font-family:'Fraunces',serif;font-size:2rem;line-height:1.15;">GeoMarketeer</h2>
+                <p class="text-tiny text-gray-500">Designing for decisions, not data · GeoSpoc · 2017</p>
+            </section>
+
+            <section class="case-story-section space-y-4">
+                <div class="case-study-kpis">
+                    <div class="case-proof-card">
+                        <p class="text-[11px] uppercase tracking-[0.14em] text-gray-400">Role</p>
+                        <p class="text-tiny text-gray-700 mt-1">UX Research &amp; Interaction Design</p>
+                    </div>
+                    <div class="case-proof-card">
+                        <p class="text-[11px] uppercase tracking-[0.14em] text-gray-400">Scope</p>
+                        <p class="text-tiny text-gray-700 mt-1">6 businesses across 6 weeks</p>
+                    </div>
+                    <div class="case-proof-card">
+                        <p class="text-[11px] uppercase tracking-[0.14em] text-gray-400">Product</p>
+                        <p class="text-tiny text-gray-700 mt-1">Web-based GIS tool</p>
+                    </div>
+                    <div class="case-proof-card">
+                        <p class="text-[11px] uppercase tracking-[0.14em] text-gray-400">Duration</p>
+                        <p class="text-tiny text-gray-700 mt-1">6 months</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="geoStory" class="geo-story" data-beat="0" aria-labelledby="geoStoryTitle">
+                <figure class="geo-story-stage">
+                    <div class="geo-story-viewport" role="img" aria-label="Sid’s vacant unit in a busy café lane, within a neighborhood of homes, offices, and a metro station.">
+                        <div class="geo-story-plane">
+                            <img class="geo-story-master" src="assets/portfolio/geomarketeer/story-opening/master.png" alt="" draggable="false" width="1536" height="1024" decoding="async">
+                            <div class="geo-story-overlays" aria-hidden="true"></div>
+                        </div>
+                        <p class="geo-story-loading" role="status">Preparing the neighborhood…</p>
+                        <div class="geo-story-error" role="status" hidden><p>The illustration could not load. You can still follow Sid’s story below.</p><button type="button" data-geo-action="retry">Try again</button></div>
+                    </div>
+                    <figcaption class="geo-story-scenario">An illustrative scenario.</figcaption>
+                </figure>
+                <div class="geo-story-copy">
+                    <article class="geo-story-beat is-active" data-geo-beat="0">
+                        <p class="geo-story-step">01 / The idea</p>
+                        <h3 id="geoStoryTitle">Sid wanted a café of his own.</h3>
+                        <p class="geo-story-body">This busy café lane looked like a promising place.</p>
+                    </article>
+                    <article class="geo-story-beat" data-geo-beat="1">
+                        <p class="geo-story-step">02 / The assumption</p>
+                        <h3>The cafés next door were busy.</h3>
+                        <p class="geo-story-body">Surely there was room for one more?</p>
+                    </article>
+                    <article class="geo-story-beat" data-geo-beat="2">
+                        <p class="geo-story-step">03 / The doubt</p>
+                        <h3>But what was bringing people here?</h3>
+                        <p class="geo-story-body">The metro explained some of the crowd. It didn’t tell Sid who would buy.</p>
+                    </article>
+                    <article class="geo-story-beat" data-geo-beat="3">
+                        <p class="geo-story-step">04 / The context</p>
+                        <h3>He needed more than footfall.</h3>
+                        <p class="geo-story-body">Who lives and works nearby? What do they spend? What do the existing cafés already offer?</p>
+                    </article>
+                    <article class="geo-story-beat" data-geo-beat="4">
+                        <p class="geo-story-step">05 / The response</p>
+                        <h3>Same lane. A clearer picture.</h3>
+                        <p class="geo-story-body">GeoMarketeer helps businesses understand a neighborhood before choosing where to open.</p>
+                    </article>
+                </div>
+                <nav class="geo-story-nav" aria-label="Story navigation" hidden>
+                    <button type="button" data-geo-action="prev" disabled>Back</button>
+                    <span class="geo-story-count"><span class="geo-story-current">01</span><span aria-hidden="true"> / </span><span>05</span></span>
+                    <button type="button" data-geo-action="next">Next</button>
+                </nav>
+                <a class="geo-story-skip" href="#geoCaseResearch" data-geo-action="skip">Skip introduction</a>
+                <p class="geo-story-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            </section>
+
+            <section class="space-y-6">
+                <div class="case-toggle" data-view="quick" role="tablist" aria-label="Case study detail level">
+                    <button id="quickScanBtn" class="case-toggle-btn" aria-pressed="true" onclick="setCaseStudyView('quick')"
+                        type="button">Quick Scan</button>
+                    <button id="fullStoryBtn" class="case-toggle-btn" aria-pressed="false"
+                        onclick="setCaseStudyView('full')" type="button">Full Story</button>
+                </div>
+            </section>
+
+            <div id="caseStudyQuick" class="case-panel">
+                <div class="quick-scan-reel">
+                    <div id="quickScanTrack" class="quick-scan-track" aria-label="Quick scan cards" tabindex="0">
+                        <article class="quick-scan-card is-active" data-step="0">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">The bet</h3>
+                            <p class="text-tiny text-gray-700 mt-2">A busy café lane can look promising. Understanding the people, spending, and competition around it takes more than observation.</p>
+                            <p class="quick-scan-proof">Could businesses understand a neighbourhood before investing in it?</p>
+                        </article>
+
+                        <article class="quick-scan-card" data-step="1">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">The gap</h3>
+                            <p class="text-tiny text-gray-700 mt-2">Businesses were researching manually, while the GIS tools that held useful answers were often built for specialists.</p>
+                            <p class="quick-scan-proof">Useful data existed, but it was hard to access and act on.</p>
+                        </article>
+
+                        <article class="quick-scan-card" data-step="2">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">The question</h3>
+                            <p class="text-tiny text-gray-700 mt-2">How might we make geospatial intelligence accessible to retail businesses without requiring GIS expertise?</p>
+                            <p class="quick-scan-proof">The experience, not only the technology, needed redesigning.</p>
+                        </article>
+
+                        <article class="quick-scan-card" data-step="3">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">The approach</h3>
+                            <p class="text-tiny text-gray-700 mt-2">We shaped a web experience around data layers, map customisation, targeted queries, and shareable reports.</p>
+                            <p class="quick-scan-proof">Make complex information easier to understand and use.</p>
+                        </article>
+                    </div>
+
+                    <div class="quick-scan-progress" aria-label="Quick scan progress">
+                        <button class="quick-scan-step is-active" type="button" aria-label="Go to The bet"
+                            onclick="scrollQuickScanTo(0)"></button>
+                        <button class="quick-scan-step" type="button" aria-label="Go to The gap"
+                            onclick="scrollQuickScanTo(1)"></button>
+                        <button class="quick-scan-step" type="button" aria-label="Go to The question"
+                            onclick="scrollQuickScanTo(2)"></button>
+                        <button class="quick-scan-step" type="button" aria-label="Go to The approach"
+                            onclick="scrollQuickScanTo(3)"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="caseStudyFull" class="case-panel space-y-10 hidden">
+                <section class="case-story-section space-y-4">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.7rem;line-height:1.2;">Designing for decisions, not data.</h3>
+                    <p class="text-tiny text-gray-700">An exploration of how complex geospatial intelligence could become more approachable for everyday retail businesses.</p>
+                </section>
+
+                <section class="case-story-section space-y-3">
+                    <p class="text-tiny text-gray-700">Sid’s scenario introduces the question behind GeoMarketeer: how could businesses understand a neighborhood before investing in it? Our research explored the information they needed and the barriers to using it.</p>
+                </section>
+
+                <section id="geoCaseResearch" class="case-story-section space-y-3">
+                    <h3 tabindex="-1" style="font-family:'Fraunces',serif;font-size:1.35rem;">1. The expensive art of guessing</h3>
+                    <p class="text-tiny text-gray-700">Opening a retail store involves many decisions: what to sell, whom to serve, how much to charge, and where to open. Businesses often answer them through experience, observation, market research, and whatever information they can gather.</p>
+                    <p class="text-tiny text-gray-700">During research with six businesses over six weeks, we found that important location decisions were often made with incomplete information. Some teams spent considerable time studying demographics manually. Others struggled to understand the competitive landscape, estimate prices, or access location analysis at all.</p>
+                    <p class="text-tiny text-gray-700">These were not businesses that did not care about research. They lacked an accessible way to bring location intelligence into the decisions that mattered.</p>
+                </section>
+
+                <section class="case-story-section space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">2. The powerful tool nobody asked to learn</h3>
+                    <p class="text-tiny text-gray-700">Geographic Information Systems already made it possible to analyse places. An ordinary map tells you where things are; GIS can also describe the people, businesses, and characteristics around those places.</p>
+                    <p class="text-tiny text-gray-700">For a retailer, that could help answer useful questions about customers, neighbourhoods, and potential competition. Yet our evaluation of existing GIS tools found crowded toolbars, unfamiliar terminology, dense visualisations, and controls that assumed specialist knowledge.</p>
+                    <p class="text-tiny text-gray-700">The technology was powerful. The experience of using it was the barrier. Wanting to find a good location for a coffee shop should not first require learning a geographic analysis workstation.</p>
+                </section>
+
+                <section class="case-story-section space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">3. Reframing the problem</h3>
+                    <p class="text-tiny text-gray-700">The research suggested that two problems were reinforcing one another: businesses lacked access to useful location information, and the tools that could provide it were difficult to learn and operate.</p>
+                    <p class="text-tiny text-gray-700">Simply providing more data would not solve everything. We also needed to consider how people would access, understand, and act on that information.</p>
+                    <p class="text-tiny text-gray-700">Our design question became: How might we make geospatial intelligence accessible and understandable to retail businesses without requiring specialised GIS expertise?</p>
+                </section>
+
+                <section class="case-story-section space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">4. Making sense of complexity</h3>
+                    <p class="text-tiny text-gray-700">GeoMarketeer needed to work with extensive geographic data across India, including city extents, pin-code boundaries, locality boundaries, and other layers. Showing everything at once would create the same overwhelming experience we were trying to avoid.</p>
+                    <p class="text-tiny text-gray-700">We organised the experience around four useful jobs: switching between relevant data layers, customising maps, applying targeted queries, and exporting reports for offline use.</p>
+                    <ul class="text-tiny text-gray-700 list-disc pl-5 space-y-1">
+                        <li><strong>Data:</strong> make large-scale geographic information easier to explore.</li>
+                        <li><strong>Maps:</strong> support base maps, custom layers, and search without losing orientation.</li>
+                        <li><strong>Queries:</strong> help different businesses focus on what matters to them.</li>
+                        <li><strong>Reports:</strong> let people take their findings into the decisions that happen away from the screen.</li>
+                    </ul>
+                </section>
+
+                <section class="case-story-section space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">5. From exploration to experience</h3>
+                    <p class="text-tiny text-gray-700">I used research, sketches, wireframes, and early interface explorations to make the product feel less like a specialist workstation and more like a business decision tool.</p>
+                    <p class="text-tiny text-gray-700">The final direction brought the map to the centre of the experience. Users could select areas of interest, move through relevant layers, apply filters based on their own needs, and generate custom reports.</p>
+                    <p class="text-tiny text-gray-700">The aim was not to hide complexity. It was to reveal the right part of it at the right time, in language that made the information feel usable.</p>
+                </section>
+
+                <section class="case-story-section space-y-3">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">What I would explore next</h3>
+                    <p class="text-tiny text-gray-700">This draft focuses on the documented research and design work. The next iteration will add the detailed reasoning behind the selected navigation approach, the design decisions made during exploration, and any verified outcomes from the product after launch.</p>
+                </section>
+            </div>
+
+            <section class="pt-2">
+                <a href="#" onclick="showWork(event)"
+                    class="link-underline text-tiny text-gray-500 hover:text-black">← Back to Work</a>
+            </section>
+        </div>
+
+        <!-- Writing -->
+        <div id="writingPage" class="page content-shell space-y-10 hidden">
+            <section class="space-y-4">
+                <h2 class="text-sm tracking-wide text-gray-500 uppercase">Writing</h2>
+                <p class="text-tiny text-gray-500">Long-form essays and short notes on product, leadership, and craft.
+                </p>
+
+                <div class="space-y-10">
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">The Discipline of Taste</h3>
+                            <span class="text-xs text-gray-400">2024</span>
+                        </div>
+                        <div class="book-note text-tiny text-gray-600">
+                            A reflection on how taste is built — not inherited — through repetition, critique, and
+                            shipping imperfect work.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Leading Without Noise</h3>
+                            <span class="text-xs text-gray-400">2023</span>
+                        </div>
+                        <div class="book-note text-tiny text-gray-600">
+                            On removing friction inside teams, designing clarity into decisions, and why calm leadership
+                            scales better than charisma.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Iteration Is a Form of Respect
+                            </h3>
+                            <span class="text-xs text-gray-400">2022</span>
+                        </div>
+                        <div class="book-note text-tiny text-gray-600">
+                            Why refining ideas — instead of defending them — leads to better products and healthier
+                            creative cultures.
+                        </div>
+                    </div>
+
+                    <div class="book-item">
+                        <div class="flex justify-between items-baseline">
+                            <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Designing for Consequence</h3>
+                            <span class="text-xs text-gray-400">2021</span>
+                        </div>
+                        <div class="book-note text-tiny text-gray-600">
+                            A look at how small interface decisions compound into long-term behavioral impact.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pt-8">
+                    <a href="#" onclick="showHome(event)"
+                        class="link-underline text-tiny text-gray-500 hover:text-black">← Back</a>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="pb-12 text-center">
+        <div class="content-shell space-y-4">
+            <span class="text-[10px] text-gray-300 uppercase tracking-widest">© 2026 • Built with precision</span>
+        </div>
+    </footer>
+
+    <script src="scripts/city-illustration.js"></script>
+    <script type="module" src="scripts/geomarketeer-story.js?v=story5-2"></script>
+    <script>
+        const homePage = document.getElementById('homePage');
+        const workPage = document.getElementById('workPage');
+        const caseStudyPage = document.getElementById('caseStudyPage');
+        const readingPage = document.getElementById('readingPage');
+        const writingPage = document.getElementById('writingPage');
+        const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+        const craftSignature = document.getElementById('craftSignature');
+        const caseStudyQuick = document.getElementById('caseStudyQuick');
+        const caseStudyFull = document.getElementById('caseStudyFull');
+        const quickScanBtn = document.getElementById('quickScanBtn');
+        const fullStoryBtn = document.getElementById('fullStoryBtn');
+        const caseToggle = document.querySelector('.case-toggle');
+        const quickScanTrack = document.getElementById('quickScanTrack');
+        const quickScanCards = Array.from(document.querySelectorAll('.quick-scan-card'));
+        const quickScanSteps = Array.from(document.querySelectorAll('.quick-scan-step'));
+        let isCaseViewAnimating = false;
+        let caseViewRequest = 0;
+        let caseStudyView = 'quick';
+        let quickScanIndex = 0;
+        let quickScanLocked = false;
+        let quickScanTouchStartY = null;
+        const pageByKey = {
+            home: homePage,
+            work: workPage,
+            caseStudy: caseStudyPage,
+            writing: writingPage,
+            reading: readingPage
+        };
+
+        function setQuickScanActive(index) {
+            quickScanCards.forEach((card, i) => card.classList.toggle('is-active', i === index));
+            quickScanSteps.forEach((step, i) => step.classList.toggle('is-active', i === index));
+        }
+
+        function goToQuickScan(index, behavior = 'smooth') {
+            if (!quickScanTrack || !quickScanCards[index]) return;
+            const top = quickScanCards[index].offsetTop - quickScanTrack.offsetTop;
+            quickScanTrack.scrollTo({ top, behavior });
+            quickScanIndex = index;
+            setQuickScanActive(index);
+        }
+
+        function stepQuickScan(direction) {
+            if (!quickScanCards.length || quickScanLocked) return;
+            const nextIndex = Math.min(quickScanCards.length - 1, Math.max(0, quickScanIndex + direction));
+            if (nextIndex === quickScanIndex) return;
+
+            quickScanLocked = true;
+            goToQuickScan(nextIndex, 'smooth');
+
+            setTimeout(() => {
+                quickScanLocked = false;
+            }, 320);
+        }
+
+        function scrollQuickScanTo(index) {
+            if (!quickScanCards[index] || quickScanLocked || index === quickScanIndex) return;
+            quickScanLocked = true;
+            goToQuickScan(index, 'smooth');
+            setTimeout(() => {
+                quickScanLocked = false;
+            }, 320);
+        }
+
+        function initQuickScanReel() {
+            if (!quickScanTrack || !quickScanCards.length) return;
+            quickScanLocked = false;
+            goToQuickScan(0, 'auto');
+
+            if (quickScanTrack.dataset.reelBound === 'true') return;
+            quickScanTrack.dataset.reelBound = 'true';
+
+            quickScanTrack.addEventListener('wheel', (event) => {
+                if (Math.abs(event.deltaY) < 4) return;
+                event.preventDefault();
+                stepQuickScan(event.deltaY > 0 ? 1 : -1);
+            }, { passive: false });
+
+            quickScanTrack.addEventListener('touchstart', (event) => {
+                if (!event.touches.length) return;
+                quickScanTouchStartY = event.touches[0].clientY;
+            }, { passive: true });
+
+            quickScanTrack.addEventListener('touchend', (event) => {
+                if (quickScanTouchStartY === null || !event.changedTouches.length) return;
+                const deltaY = quickScanTouchStartY - event.changedTouches[0].clientY;
+                quickScanTouchStartY = null;
+                if (Math.abs(deltaY) < 26) return;
+                stepQuickScan(deltaY > 0 ? 1 : -1);
+            }, { passive: true });
+
+            quickScanTrack.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowDown' || event.key === 'PageDown') {
+                    event.preventDefault();
+                    stepQuickScan(1);
+                }
+                if (event.key === 'ArrowUp' || event.key === 'PageUp') {
+                    event.preventDefault();
+                    stepQuickScan(-1);
+                }
+            });
+        }
+
+        function getCurrentPage() {
+            if (!homePage.classList.contains('hidden')) return homePage;
+            if (!workPage.classList.contains('hidden')) return workPage;
+            if (!caseStudyPage.classList.contains('hidden')) return caseStudyPage;
+            if (!readingPage.classList.contains('hidden')) return readingPage;
+            if (!writingPage.classList.contains('hidden')) return writingPage;
+            return homePage;
+        }
+
+        function getCurrentPageKey() {
+            if (!homePage.classList.contains('hidden')) return 'home';
+            if (!workPage.classList.contains('hidden')) return 'work';
+            if (!caseStudyPage.classList.contains('hidden')) return 'work';
+            if (!readingPage.classList.contains('hidden')) return 'reading';
+            if (!writingPage.classList.contains('hidden')) return 'writing';
+            return 'home';
+        }
+
+        let isAnimating = false;
+        function transition(from, to) {
+            if (from === to || isAnimating) return;
+            isAnimating = true;
+
+            from.classList.add('page-exit', 'page-exit-active');
+
+            setTimeout(() => {
+                from.classList.add('hidden');
+                from.classList.remove('page-exit', 'page-exit-active');
+
+                to.classList.remove('hidden');
+                to.classList.add('page-enter');
+
+                requestAnimationFrame(() => to.classList.add('page-enter-active'));
+
+                setTimeout(() => {
+                    to.classList.remove('page-enter', 'page-enter-active');
+                    isAnimating = false;
+                }, 420);
+                compactNavOnScroll();
+            }, 420);
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function setActiveNav(pageKey) {
+            navLinks.forEach((link) => {
+                const isActive = link.dataset.page === pageKey;
+                link.classList.toggle('active', isActive);
+                if (isActive) {
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        function navigate(pageKey) {
+            if (isAnimating) return;
+            const nextPage = pageByKey[pageKey];
+            if (!nextPage) return;
+            setActiveNav(pageKey);
+            transition(getCurrentPage(), nextPage);
+        }
+
+        function compactNavOnScroll() {
+            const y = window.scrollY;
+            const shouldCompact = y > 24;
+            const shouldGlass = y > 8;
+            document.body.classList.toggle('nav-compact', shouldCompact);
+            document.body.classList.toggle('nav-glass', shouldGlass);
+        }
+
+        function showWork(e) {
+            e.preventDefault();
+            navigate('work');
+        }
+
+        function showReading(e) {
+            e.preventDefault();
+            navigate('reading');
+        }
+
+        function showWriting(e) {
+            e.preventDefault();
+            navigate('writing');
+        }
+
+        function showHome(e) {
+            e.preventDefault();
+            navigate('home');
+        }
+
+        function showCaseStudy(e) {
+            e.preventDefault();
+            navigate('caseStudy');
+            setCaseStudyView('quick', true);
+        }
+
+        function setCaseStudyView(view, immediate = false) {
+            if (!caseStudyQuick || !caseStudyFull || !quickScanBtn || !fullStoryBtn) return;
+            if (view !== 'quick' && view !== 'full') return;
+            if (isCaseViewAnimating && !immediate) return;
+            if (view === caseStudyView && !immediate) return;
+            const request = ++caseViewRequest;
+
+            const showQuick = view === 'quick';
+            quickScanBtn.setAttribute('aria-pressed', String(showQuick));
+            fullStoryBtn.setAttribute('aria-pressed', String(!showQuick));
+            if (caseToggle) caseToggle.dataset.view = view;
+
+            const nextPanel = showQuick ? caseStudyQuick : caseStudyFull;
+            const currentPanel = showQuick ? caseStudyFull : caseStudyQuick;
+
+            if (immediate) {
+                caseStudyQuick.classList.toggle('hidden', !showQuick);
+                caseStudyFull.classList.toggle('hidden', showQuick);
+                caseStudyQuick.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
+                caseStudyFull.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
+                if (showQuick && quickScanTrack) {
+                    quickScanLocked = false;
+                    goToQuickScan(0, 'auto');
+                }
+                caseStudyView = view;
+                isCaseViewAnimating = false;
+                return;
+            }
+
+            isCaseViewAnimating = true;
+
+            nextPanel.classList.remove('hidden');
+            nextPanel.classList.add('case-panel-enter');
+            currentPanel.classList.add('case-panel-exit');
+
+            requestAnimationFrame(() => {
+                if (request !== caseViewRequest) return;
+                nextPanel.classList.add('case-panel-enter-active');
+                currentPanel.classList.add('case-panel-exit-active');
+            });
+
+            setTimeout(() => {
+                if (request !== caseViewRequest) return;
+                currentPanel.classList.add('hidden');
+                currentPanel.classList.remove('case-panel-exit', 'case-panel-exit-active');
+                nextPanel.classList.remove('case-panel-enter', 'case-panel-enter-active');
+                caseStudyView = view;
+                isCaseViewAnimating = false;
+            }, 320);
+        }
+
+        if (craftSignature) {
+            const signatureObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('in-view');
+                        // Force a browser reflow to reliably restart the CSS animation
+                        void entry.target.offsetWidth;
+                        entry.target.classList.add('in-view');
+                    } else {
+                        entry.target.classList.remove('in-view');
+                    }
+                });
+            }, { threshold: 0.25, rootMargin: "0px 0px -10% 0px" });
+
+            signatureObserver.observe(craftSignature);
+        }
+
+        window.addEventListener('scroll', compactNavOnScroll, { passive: true });
+        setActiveNav(getCurrentPageKey());
+        compactNavOnScroll();
+        initQuickScanReel();
+        window.initializeCityIllustration?.();
+    </script>
+
+</body>
+
+</html>

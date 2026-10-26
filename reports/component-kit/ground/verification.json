@@ -1,0 +1,78 @@
+{
+  "checkpoint": "ground-11",
+  "revision": 1,
+  "status": "approved",
+  "masters": 7,
+  "variants": [
+    {
+      "id": "road-straight",
+      "surfaceTriangles": 12,
+      "batches": 3
+    },
+    {
+      "id": "road-junction",
+      "surfaceTriangles": 44,
+      "batches": 3
+    },
+    {
+      "id": "pavement-straight",
+      "surfaceTriangles": 94,
+      "batches": 3
+    },
+    {
+      "id": "pavement-plaza",
+      "surfaceTriangles": 292,
+      "batches": 3
+    },
+    {
+      "id": "pavement-ramp",
+      "surfaceTriangles": 120,
+      "batches": 2
+    },
+    {
+      "id": "kerb-standard",
+      "surfaceTriangles": 16,
+      "batches": 2
+    },
+    {
+      "id": "crossing-standard",
+      "surfaceTriangles": 16,
+      "batches": 1
+    },
+    {
+      "id": "lane-marking-standard",
+      "surfaceTriangles": 2,
+      "batches": 1
+    },
+    {
+      "id": "parking-bay-standard",
+      "surfaceTriangles": 6,
+      "batches": 1
+    },
+    {
+      "id": "courtyard-standard",
+      "surfaceTriangles": 1536,
+      "batches": 3
+    },
+    {
+      "id": "pavement-metro",
+      "surfaceTriangles": 280,
+      "batches": 4
+    }
+  ],
+  "sourceRegions": 31,
+  "neighborhoodGroundInstances": 0,
+  "checks": [
+    "Finite geometry and returned bounds match all eleven configurations",
+    "Road junction has open corners and compatible connection widths",
+    "Real flared crossing slopes meet road and pavement grades",
+    "Eight separated crossing bars; lane dashes do not overlap crossing",
+    "Open parking entries; approved cars contact road and clear the bay edges",
+    "Courtyard ring and inset meet without gaps",
+    "Actual metro cutout contains no slab or grid; lower landing remains exposed",
+    "Instances share buffers and materials; independent anchors and bounds; one-time disposal",
+    "Approved metro fingerprint unchanged and every source ID valid and unplaced",
+    "Actual viewer checks all components and fit scenes, four camera angles, ±15°, 100–300%, reset",
+    "Phone grid, touch opt-in, cancellation, reduced motion, demand rendering, hidden pause and per-component fallback"
+  ]
+}

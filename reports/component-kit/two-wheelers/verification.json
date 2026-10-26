@@ -1,0 +1,80 @@
+{
+  "checkpoint": "two-wheelers-06",
+  "revision": 1,
+  "status": "approved",
+  "masters": [
+    {
+      "id": "scooter",
+      "revision": 1,
+      "surfaceTriangles": 7242,
+      "geometryBatches": 4,
+      "wheelCount": 2,
+      "clearArchSamples": 30,
+      "openWheelSamples": 0,
+      "bounds": {
+        "min": [
+          -0.7480000257492065,
+          -2.38418573772492e-9,
+          -0.32899999618530273
+        ],
+        "max": [
+          0.7225472331047058,
+          1.0729999542236328,
+          0.32899999618530273
+        ]
+      }
+    },
+    {
+      "id": "bicycle",
+      "revision": 1,
+      "surfaceTriangles": 9496,
+      "geometryBatches": 3,
+      "wheelCount": 2,
+      "clearArchSamples": 0,
+      "openWheelSamples": 16,
+      "bounds": {
+        "min": [
+          -0.8100000023841858,
+          1.1175870645585562e-10,
+          -0.2540000081062317
+        ],
+        "max": [
+          0.8100000023841858,
+          0.9328322410583496,
+          0.24217036366462708
+        ]
+      }
+    }
+  ],
+  "sourceScooters": 10,
+  "sourceBicycles": 3,
+  "reviewCopiesPerMaster": 3,
+  "neighborhoodTwoWheelerInstances": 0,
+  "approvedFamiliesUnchanged": true,
+  "checks": [
+    "shared compiled geometry and materials for every copy",
+    "two byte-identical wheels per master with shared authoring buffers",
+    "actual tire and stand bounds meet grade",
+    "scooter rear arch and front mudguard clear actual tires",
+    "floorboard contacts actual lower leg-shield surface",
+    "fork geometry remains behind front shield",
+    "seat mount meets rear shell",
+    "open bicycle wheels have no hidden filled disks",
+    "frame, fork and stays reach the actual axles",
+    "bicycle cranks and pedals clear grade",
+    "finite buffers, bounds, local origins and placement anchors",
+    "authored/compiled triangle parity",
+    "independent bounds and anchors, idempotent shared disposal",
+    "review copies have physical clearance and no neighborhood positions",
+    "thirteen stable source IDs with configuration and unplaced status",
+    "all approved family geometry fingerprints unchanged, including hatchback",
+    "four equal-scale orthographic views per master, framing at both orbit limits",
+    "master switching preserves preview mode",
+    "three-copy and scene-scale previews",
+    "desktop and phone board layouts",
+    "keyboard controls, ±15 degree orbit, 100–300 percent zoom and reset",
+    "explicit touch opt-in and cancellation",
+    "idle rendering, hidden-page pause and reduced motion",
+    "eight master/angle-specific fallback paths"
+  ]
+}

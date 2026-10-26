@@ -1,0 +1,17 @@
+{
+  "updatedOn": "2026-10-25",
+  "status": "revised-review-sketch; user-corrected-site-in-front-row",
+  "supersedes": "locked-neighborhood-storyboard-v1: across-street candidate and opening frame",
+  "files": [
+    {
+      "name": "wide-composition.png",
+      "source": "/Users/aatif/.codex/generated_images/01a16e23-b756-7ed0-9787-1d75bb51e9b8/exec-466fa71e-a32f-46ef-92dd-23c2e2c9b80f.png",
+      "sha256": "6e6c088060027d05d568f70d8b3d70a9acb80dbc9d51e03a9bd7fabfc9d1db6b"
+    },
+    {
+      "name": "storyboard.png",
+      "source": "/Users/aatif/.codex/generated_images/01a16e23-b756-7ed0-9787-1d75bb51e9b8/exec-9951bb26-976a-41d9-adf2-a5cba8c44524.png",
+      "sha256": "90c05ad2f6918c8d70fdca410aed46f1a4858786a69ec43bea1dd26767bc5031"
+    }
+  ]
+}

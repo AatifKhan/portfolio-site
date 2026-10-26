@@ -1,0 +1,24 @@
+{
+  "createdOn": "2026-10-25",
+  "status": "style-options-awaiting-selection",
+  "options": [
+    {
+      "displayedOption": 1,
+      "name": "Crisp Vector Atlas",
+      "file": "01-crisp-vector-atlas.png",
+      "sha256": "eaac4cd6a3a935b2a72298dbd005f9cca056d475faf992c53fb1c35c0eed463b"
+    },
+    {
+      "displayedOption": 2,
+      "name": "Soft Matte Miniature",
+      "file": "02-soft-matte-miniature.png",
+      "sha256": "bc8797858c8923e4c07ff16527d713bbb252c5ece183c4b1abb09c6668b6ae96"
+    },
+    {
+      "displayedOption": 3,
+      "name": "Layered Blue Paper City",
+      "file": "03-layered-blue-paper-city.png",
+      "sha256": "fca535d348a944e9702825a2a4fa9497d2f86cbb674711a874122dc36032524a"
+    }
+  ]
+}

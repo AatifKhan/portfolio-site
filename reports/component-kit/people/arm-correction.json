@@ -1,0 +1,20 @@
+{
+  "revision": 2,
+  "changed": [
+    "standing",
+    "walking"
+  ],
+  "unchanged": [
+    "seated",
+    "riding-scooter",
+    "riding-bicycle"
+  ],
+  "checks": [
+    "Both elbow curves point behind the shoulder\u2013wrist line",
+    "Walking wrists retain their opposite-leg swing",
+    "All limb lengths and support contacts pass verify-people.mjs",
+    "Seated and both riding pose geometry hashes match revision 1"
+  ],
+  "status": "approved",
+  "approvalEvidence": "User: \u201cThe people look good now. Let\u2019s move on to trees and planting.\u201d"
+}

@@ -1,0 +1,105 @@
+{
+  "source_pdf": "/Users/aatif/Downloads/81da7c60-d602-40ea-a601-e2f0112dd092_Minimizing_retail_store_failures_(through_GIS)_(v2).pdf",
+  "reference": "https://toan.framer.website/pi",
+  "review_scope": "Read all 17 PDF pages and inspect three desktop reference sections for narrative and visual style. No implementation or accessibility compliance audit.",
+  "reuse": [
+    {
+      "pages": [
+        3,
+        4,
+        11
+      ],
+      "material": "Research with existing and new retailers; six businesses over six weeks; two businesses observed for about a month",
+      "purpose": "Show research scope and concrete business needs without causal failure claims"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        13
+      ],
+      "material": "GIS tool evaluation and existing-tool journey map",
+      "purpose": "Explain problems finding controls, applying/saving filters, selecting areas and exporting usable reports"
+    },
+    {
+      "pages": [
+        7,
+        8
+      ],
+      "material": "Feature grouping into Data, Maps, Query and Reports",
+      "purpose": "Show how research became an information architecture"
+    },
+    {
+      "pages": [
+        15,
+        16
+      ],
+      "material": "Eight navigation options, wireframes and final sidebar/panel design",
+      "purpose": "Explain the actual alternatives and chosen interaction model; selection rationale needs user input"
+    },
+    {
+      "pages": [
+        16,
+        17
+      ],
+      "material": "Final UI/onboarding and rejected direction",
+      "purpose": "Demonstrate visual design and iteration once rejection reasons are known"
+    }
+  ],
+  "avoid": [
+    {
+      "page": 8,
+      "reason": "Sketch appears to depict a note-taking/recording canvas, not GIS. Exclude unless relevance is confirmed."
+    },
+    {
+      "pages": [
+        4,
+        10,
+        12
+      ],
+      "reason": "Claims that missing location data caused retail failure are not demonstrated by the included evidence."
+    },
+    {
+      "page": 10,
+      "reason": "Testing, launch and impact are draft placeholders; no measured outcomes are supplied."
+    },
+    {
+      "page": 2,
+      "reason": "Development-timing note is ambiguous; confirm launch involvement before writing delivery claims."
+    },
+    {
+      "page": 3,
+      "reason": "User confirmed on 2026-10-26 that the bicycle-session research collage was a reference placeholder, not GeoMarketeer research. Do not present it as project evidence."
+    }
+  ],
+  "style_steps": [
+    {
+      "step": 1,
+      "description": "Opening",
+      "assessment": "Strong typographic hierarchy and concise project framing",
+      "capture": "01-reference-opening.jpg"
+    },
+    {
+      "step": 2,
+      "description": "Design foundation",
+      "assessment": "Clear chapter statement and explanation; our narrative can use shorter copy",
+      "capture": "02-reference-design-foundation.jpg"
+    },
+    {
+      "step": 3,
+      "description": "UI detail comparisons",
+      "assessment": "Strong pairing of visible change and short rationale",
+      "capture": "03-reference-ui-details.jpg"
+    }
+  ],
+  "proposed_story": [
+    "Sid introduction",
+    "Role and scope",
+    "What research revealed",
+    "Where GIS workflows broke down",
+    "Three design decisions with alternatives and evidence",
+    "Final product walkthrough",
+    "Verified outcomes and reflection"
+  ],
+  "next_question": "What led to choosing the final left-hand sidebar over top, floating and split-panel navigation options?"
+}

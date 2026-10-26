@@ -1,0 +1,150 @@
+{
+  "checkpoint": "small-buildings-04",
+  "revision": 1,
+  "status": "approved",
+  "variants": [
+    {
+      "id": "base",
+      "footprint": [
+        2.5,
+        2.5
+      ],
+      "wallHeight": 1.45,
+      "roof": "parapet",
+      "roofBox": false,
+      "annex": false,
+      "openings": 5,
+      "surfaceTrianglesIncludingGlass": 890,
+      "batches": 4
+    },
+    {
+      "id": "gatehouse",
+      "footprint": [
+        1.75,
+        1.6
+      ],
+      "wallHeight": 1.3,
+      "roof": "parapet",
+      "roofBox": false,
+      "annex": false,
+      "openings": 3,
+      "surfaceTrianglesIncludingGlass": 988,
+      "batches": 5
+    },
+    {
+      "id": "utility-hut",
+      "footprint": [
+        1.45,
+        1.4
+      ],
+      "wallHeight": 1,
+      "roof": "plain",
+      "roofBox": false,
+      "annex": false,
+      "openings": 2,
+      "surfaceTrianglesIncludingGlass": 330,
+      "batches": 4
+    },
+    {
+      "id": "stacked-home",
+      "footprint": [
+        1.8,
+        1.65
+      ],
+      "wallHeight": 1.6,
+      "roof": "plain",
+      "roofBox": false,
+      "annex": false,
+      "openings": 4,
+      "surfaceTrianglesIncludingGlass": 658,
+      "batches": 4
+    },
+    {
+      "id": "compact-store",
+      "footprint": [
+        1.85,
+        1.8
+      ],
+      "wallHeight": 1.25,
+      "roof": "parapet",
+      "roofBox": false,
+      "annex": false,
+      "openings": 1,
+      "surfaceTrianglesIncludingGlass": 252,
+      "batches": 4
+    },
+    {
+      "id": "frontage-unit",
+      "footprint": [
+        1.8,
+        1.7
+      ],
+      "wallHeight": 1.3,
+      "roof": "parapet",
+      "roofBox": false,
+      "annex": false,
+      "openings": 3,
+      "surfaceTrianglesIncludingGlass": 556,
+      "batches": 4
+    },
+    {
+      "id": "utility-block",
+      "footprint": [
+        3.65,
+        3.9
+      ],
+      "wallHeight": 1.65,
+      "roof": "parapet",
+      "roofBox": false,
+      "annex": false,
+      "openings": 5,
+      "surfaceTrianglesIncludingGlass": 820,
+      "batches": 4
+    },
+    {
+      "id": "home-annex",
+      "footprint": [
+        3.7,
+        3.4
+      ],
+      "wallHeight": 1.9,
+      "roof": "parapet",
+      "roofBox": true,
+      "annex": true,
+      "openings": 10,
+      "surfaceTrianglesIncludingGlass": 1552,
+      "batches": 4
+    }
+  ],
+  "sourceStructures": 9,
+  "sharedOpeningModuleTypes": 16,
+  "neighborhoodSmallBuildingInstances": 0,
+  "approvedFamiliesUnchanged": true,
+  "checks": [
+    "eight declared configurations, nine stable source IDs",
+    "finite surface and stroke buffers, correct bounds and ground contact",
+    "no overlapping openings or apertures outside walls",
+    "ray checks of actual wall apertures",
+    "identical geometry for each shared window/door module",
+    "home annex contact without footprint overlap; aligned internal portal; windows above annex roof",
+    "gatehouse uses approved café awning generator",
+    "separate transparent service glazing",
+    "authored/compiled triangle parity",
+    "shared geometry and materials per variant; independent bounds and anchors",
+    "shared-resource disposal once",
+    "inventory parity and no placements",
+    "approved tower, five cafés and three offices geometry fingerprints unchanged",
+    "reference crops and labels",
+    "doors/windows and roof detail framing",
+    "same-scale eight-view board",
+    "desktop, tablet and phone board breakpoints",
+    "detail and board selection focus and scroll",
+    "orbit limits and zoom caps",
+    "variant changes and reset",
+    "scene-scale preview",
+    "touch opt-in and pointer cancellation",
+    "idle scheduling and hidden-page pause",
+    "reduced-motion immediate update",
+    "per-variant still fallback"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "slots": [
+    "field-research",
+    "existing-tool-journey",
+    "feature-grouping",
+    "navigation-options",
+    "workflow-comparisons",
+    "interface-details",
+    "product-walkthrough"
+  ],
+  "unchanged_other_slots": true,
+  "entries": [
+    {
+      "name": "index.html",
+      "matches_canonical": true,
+      "outside_case_unchanged": true,
+      "story_unchanged": true,
+      "original_images_unchanged": true,
+      "one_research_slot": true
+    },
+    {
+      "name": "minimal_portfolio.html",
+      "matches_canonical": true,
+      "outside_case_unchanged": true,
+      "story_unchanged": true,
+      "original_images_unchanged": true,
+      "one_research_slot": true
+    }
+  ]
+}

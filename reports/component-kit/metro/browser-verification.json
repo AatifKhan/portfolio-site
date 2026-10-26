@@ -1,0 +1,55 @@
+{
+  "revision": 1,
+  "status": "approved",
+  "desktop": {
+    "angle": "reference",
+    "drawCalls": "57",
+    "focus": "whole",
+    "height": 1100,
+    "mode": "single",
+    "orbit": "0.00",
+    "scrollWidth": 1440,
+    "state": "ready",
+    "triangles": "9850",
+    "variant": "structure",
+    "width": 1440,
+    "zoom": "1.00"
+  },
+  "phone": {
+    "partsGrid": "175.5px 175.5px",
+    "scrollWidth": 390,
+    "touchVisible": true,
+    "width": 390
+  },
+  "touchOptIn": true,
+  "fallback": {
+    "angle": "reference",
+    "loaded": true,
+    "mode": "single",
+    "src": "assets/portfolio/geomarketeer/component-kit/metro-entrance-still.jpg?v=1",
+    "state": "fallback"
+  },
+  "browserWarningsAndErrors": [],
+  "captures": [
+    "reference-comparison.jpg",
+    "components-board.jpg",
+    "single-left15.jpg",
+    "single-right15.jpg",
+    "cutaway-reference.jpg",
+    "cutaway-left15.jpg",
+    "cutaway-right15.jpg",
+    "front-view.jpg",
+    "side-view.jpg",
+    "rear-view.jpg",
+    "stairs-detail.jpg",
+    "canopy-detail.jpg",
+    "sign-detail.jpg",
+    "zoom-300.jpg",
+    "scene-scale.jpg",
+    "phone-reference.jpg",
+    "phone-components.jpg",
+    "phone-fallback.jpg"
+  ],
+  "checks": "UI tested in desktop browser at desktop and phone dimensions; physical-device touch and low-end GPU performance not measured.",
+  "approvalEvidence": "User accepted ground/courtyard as the next checkpoint: \u201cGo ahead then.\u201d"
+}

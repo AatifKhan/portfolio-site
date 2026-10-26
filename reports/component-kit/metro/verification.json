@@ -1,0 +1,36 @@
+{
+  "checkpoint": "metro-10",
+  "revision": 1,
+  "status": "approved",
+  "masters": 1,
+  "assemblies": 5,
+  "surfaceTriangles": 4286,
+  "batches": 55,
+  "sourceRecords": 1,
+  "neighborhoodMetroInstances": 0,
+  "bounds": {
+    "min": [
+      -2.950000047683716,
+      -1.2599999904632568,
+      -1.8025000095367432
+    ],
+    "max": [
+      2.990000009536743,
+      3.3499999046325684,
+      1.8025000095367432
+    ]
+  },
+  "checks": [
+    "Eight equal real treads, connected slabs and two landings",
+    "Stair rail supports contact actual treads and landings",
+    "Unobstructed upper approach and grounded canopy columns",
+    "Six transparent roof panes and six side panes; geometric M on both faces",
+    "Finite geometry, precise below-grade bounds and grade cutout anchors",
+    "Hierarchy preserves every named assembly for isolated and cutaway review",
+    "Instances share resources; visibility, bounds and anchors independent; disposal once",
+    "Street approval fingerprint unchanged; no metro neighborhood placement",
+    "Actual viewer fixture: reference/front/side/rear, ±15°, 100–300%, reset",
+    "Shared-scale parts board and phone board; detail camera centering",
+    "Touch opt-in and cancellation, reduced motion, hidden pause, demand rendering and fallback"
+  ]
+}

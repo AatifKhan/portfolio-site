@@ -1,0 +1,99 @@
+{
+  "revision": 1,
+  "status": "approved",
+  "desktop": {
+    "angle": "reference",
+    "drawCalls": "34",
+    "focus": "whole",
+    "height": 1100,
+    "mode": "variants",
+    "orbit": "0.00",
+    "scrollWidth": 1440,
+    "state": "ready",
+    "triangles": "10536",
+    "variant": "lamp",
+    "width": 1440,
+    "zoom": "1.00"
+  },
+  "phone": {
+    "grid": "178px 178px",
+    "scrollWidth": 390,
+    "touchButtonVisible": true,
+    "width": 390
+  },
+  "touchOptIn": true,
+  "fallbacks": [
+    {
+      "angle": "reference",
+      "focus": "whole",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/street-lamp-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "lamp"
+    },
+    {
+      "angle": "reference",
+      "focus": "whole",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/street-bollard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "bollard"
+    },
+    {
+      "angle": "reference",
+      "focus": "whole",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/street-bench-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "bench"
+    },
+    {
+      "angle": "reference",
+      "focus": "whole",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/street-bin-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "bin"
+    },
+    {
+      "angle": "reference",
+      "focus": "whole",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/street-fence-panel-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "fence-panel"
+    },
+    {
+      "angle": "reference",
+      "focus": "whole",
+      "loaded": true,
+      "src": "assets/portfolio/geomarketeer/component-kit/street-gatepost-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "gatepost"
+    }
+  ],
+  "retry": {
+    "angle": "rear",
+    "drawCalls": "5",
+    "focus": "detail",
+    "mode": "single",
+    "orbit": "0.00",
+    "state": "ready",
+    "triangles": "588",
+    "variant": "gatepost",
+    "zoom": "1.00"
+  },
+  "console": [],
+  "checks": [
+    "Six masters and their reference comparisons captured",
+    "Reference, front, side and true rear views; reference \u00b115\u00b0",
+    "Six three-copy previews and an anchor-connected fence assembly",
+    "Fence assembly at both orbit limits",
+    "Detail close-ups for all six masters; 100\u2013300% keyboard zoom and reset",
+    "Scene-scale lamp comparison",
+    "390px phone board, selected component detail and fence assembly fit without horizontal overflow",
+    "Touch exploration opt-in toggles correctly",
+    "All six fallback images load, using whole-component reference framing; retry retains selection"
+  ],
+  "approvalEvidence": "User requested the next component: \u201cGo ahead with the metro entrance mnow\u201d."
+}

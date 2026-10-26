@@ -1,0 +1,133 @@
+{
+  "checkpoint": "street-09",
+  "revision": 1,
+  "status": "approved",
+  "masters": [
+    {
+      "id": "lamp",
+      "batches": 6,
+      "triangles": 1668,
+      "bounds": {
+        "min": [
+          -0.15299999713897705,
+          0,
+          -0.15299999713897705
+        ],
+        "max": [
+          0.15299999713897705,
+          2.3499999046325684,
+          0.15299999713897705
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": "bollard",
+      "batches": 2,
+      "triangles": 2464,
+      "bounds": {
+        "min": [
+          -0.0820000022649765,
+          0,
+          -0.0820000022649765
+        ],
+        "max": [
+          0.0820000022649765,
+          0.7799999713897705,
+          0.0820000022649765
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": "bench",
+      "batches": 5,
+      "triangles": 660,
+      "bounds": {
+        "min": [
+          -0.7300000190734863,
+          -4.3213366218708416e-10,
+          -0.2524000108242035
+        ],
+        "max": [
+          0.7300000190734863,
+          0.46000000834465027,
+          0.2524000108242035
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": "bin",
+      "batches": 6,
+      "triangles": 2688,
+      "bounds": {
+        "min": [
+          -0.24899999797344208,
+          0,
+          -0.24899999797344208
+        ],
+        "max": [
+          0.24899999797344208,
+          0.8399999737739563,
+          0.24899999797344208
+        ]
+      },
+      "inferred": true
+    },
+    {
+      "id": "fence-panel",
+      "batches": 3,
+      "triangles": 204,
+      "bounds": {
+        "min": [
+          -0.824999988079071,
+          0.21250000596046448,
+          -0.02500000037252903
+        ],
+        "max": [
+          0.824999988079071,
+          1.377500057220459,
+          0.02500000037252903
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": "gatepost",
+      "batches": 5,
+      "triangles": 84,
+      "bounds": {
+        "min": [
+          -0.19499999284744263,
+          7.1525572131747595e-9,
+          -0.19499999284744263
+        ],
+        "max": [
+          0.19499999284744263,
+          1.7200000286102295,
+          0.19499999284744263
+        ]
+      },
+      "inferred": false
+    }
+  ],
+  "sourceRecords": 62,
+  "neighborhoodStreetInstances": 0,
+  "approvedFamiliesUnchanged": true,
+  "checks": [
+    "Finite geometry, actual bounds and outward organic winding",
+    "Grounded props; mounted panel retains bottom clearance",
+    "Five real bench slats with open gaps, connected supports and four grounded feet",
+    "Real recessed bin opening with solid lid surrounding the cavity",
+    "Four transparent lantern panes, diffuser and connected pole",
+    "Thirteen fence pickets with clear spaces; rail ends meet attachment anchors",
+    "Three repeated panels and four posts align at both upper and lower anchors",
+    "Copies share buffers and materials; independent bounds and anchors; one-time disposal",
+    "Every approved geometry fingerprint unchanged, including planting revision 1",
+    "Real viewer fixture covers all six components, copies and fence assembly",
+    "Reference/front/side/rear angles, ±15° limits, shared comparison scale and phone board",
+    "Detail close-ups, 100–300% keyboard zoom, reset, touch opt-in and cancellation, reduced motion, on-demand lifecycle",
+    "Component-specific fallback, valid source IDs and unplaced status; bin inference explicit"
+  ]
+}

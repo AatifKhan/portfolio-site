@@ -1,0 +1,12 @@
+{
+  "index.html": {
+    "beforeCase": "0e52f8c436fb78593d376da21e232dcc3380f0862095c525061a062b33ad0f1f",
+    "afterCase": "37c718cda7833d4eb0c3c8567b0e15646218c3b7778d97f5b9d14ddc947a284b",
+    "story": "9b2a2ac4b0a82a78200b2c92388979f1ab41c325a991b83fa1ef0a1290ac4193"
+  },
+  "minimal_portfolio.html": {
+    "beforeCase": "49075a3c28b8f539a778b5dc4cb3f662b7eb10d116bd3af23f372178cec64da9",
+    "afterCase": "98bad34bdccad054c8696543f08015d474db88bdcfdcf3defa12a647e20b0710",
+    "story": "9b2a2ac4b0a82a78200b2c92388979f1ab41c325a991b83fa1ef0a1290ac4193"
+  }
+}

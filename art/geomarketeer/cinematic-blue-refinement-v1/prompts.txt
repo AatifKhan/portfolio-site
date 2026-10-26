@@ -1,0 +1,35 @@
+Refined blue architectural miniature — visual study
+Created: 2026-10-25
+Method: built-in image generation; this is an AI-generated visual-development image, not a rendered 3D scene or video.
+Final asset: preview.png
+
+ART DIRECTION PROMPT
+
+Use case: style-transfer.
+Asset type: one exceptionally refined cinematic architectural-miniature still, a visual-development frame for a design portfolio narrative. Landscape 16:9, full bleed, high detail.
+
+Input image 1 is the selected composition and subject reference: the sculptural cafe-street miniature with a vacant blue-awning unit between operating cafes. Input image 2 is ONLY a blue-palette and neighbourhood reference, not the desired flat line-art style or aerial viewpoint.
+
+Primary request: refine image 1 into a restrained, timeless blue-and-porcelain architectural model photographed by a meticulous architectural photographer. It should look carefully designed, precisely constructed, and beautifully lit. Make a clear substantive shift toward a predominantly BLUE colour world: porcelain white, pale mineral blue, dusty periwinkle, and a small amount of deep ultramarine. Remove the broad golden-orange cast. Allow only a very faint warm ivory glow in occupied cafe interiors, not saturated amber. Do not use luminous electric blue outlines.
+
+Preserve these narrative invariants: the central narrow TWO-STOREY vacant shop sits WITHIN the same row between two operating cafes. Its ground-floor interior is unfitted and empty, with no cafe tables, stock or customers. Its solid blue fabric awning remains its identifying feature. A tiny understated model figure stands outside, considering the unit. The adjacent cafes contain a small number of clearly separated seated miniature figures and neatly arranged furniture. The candidate is not across the street, not open for business, not abandoned or damaged.
+
+Art direction and refinement:
+- Keep the slightly angled street-level view and the central vacant storefront as the crisp visual focus. Compose deliberately with clear architectural verticals, coherent perspective, orderly window proportions and realistic door/furniture scale.
+- Reduce visual noise: fewer planters and carefully placed finely crafted model trees; remove the oversized foreground car and distracting blurred orange furniture; no streetlamp blocking the subject. Keep a restrained softly defocused foreground edge for depth, without huge bokeh circles.
+- Architecture in smooth porcelain plaster and finely painted pale-blue model surfaces, with tiny precise bevels, restrained material variation, beautifully joined window frames and thin mullions. Faint believable surface grain only; no crunchy texture, no glossy plastic, no grime.
+- Awnings in matte deep-blue and restrained blue/ivory stripe fabric with coherent tension, crisp edges, elegant regular folds. Furniture should be simple classic slender cafe chairs and round tables, each with correct consistent structure. Avoid ornate decorative detailing.
+- A limited number of expertly sculpted matte miniature human figures in quiet blue or off-white, simple natural poses and restrained facial detail; intentionally architectural model figures, never pseudo-photoreal faces. Keep bodies and limbs clean and separate.
+- Background residential blocks remain recognisable and softly recede; buildings must have deliberate repeated structural logic. No diffuse fantasy skyline or random roof shapes.
+- Lighting: large soft directional daylight, neutral-to-cool white balance, elegant defined contact shadows, subtle pale-blue ambient shading, natural glass reflections. Highlights retain detail. No sunset flare, orange bloom, excessive mist, heavy vignette, HDR sheen or cinematic colour-grading cliches.
+- Camera: refined architectural editorial composition, moderate depth of field. Whole candidate facade and neighbouring context readable. Distinguishable background forms. Frame feels serene, grounded, confident, expensive through precision and restraint.
+- Remove the faint signature-like mark in the original upper-right corner completely. No text, symbols, signage, watermarks, labels, diagram overlays, UI, black bars or decorative frame.
+
+A single coherent finished scene, not a comparison sheet. This image should make the viewer immediately see the empty opportunity between busy cafes, while the overall blue miniature aesthetic feels exceptionally polished and enduring.
+
+LOCAL CLEANUP PROMPT
+
+Use case: precise-object-edit.
+Edit the supplied image with ONE tiny correction. In the extreme upper-right corner, around x=1590–1645 and y=25–75 in this 1672-by-941 image, a faint grey signature/logo-like scribble is visible over the blurred foliage. ERASE that mark completely and replace it with the natural softly defocused blue-grey foliage that surrounds it. This corner must have absolutely no letters, symbols, strokes, logo, signature or watermark.
+Keep the entire rest of the image unchanged: composition, crop, dimensions, blue-and-ivory palette, all architecture, all awnings, furniture, figures, lighting, material detail, and depth of field. Do not redesign or add anything. A faithful minimal local cleanup only. Output the full image.
+

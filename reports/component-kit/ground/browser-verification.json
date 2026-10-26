@@ -1,0 +1,135 @@
+{
+  "revision": 1,
+  "status": "awaiting-user-review",
+  "desktop": {
+    "angle": "reference",
+    "drawCalls": "6",
+    "focus": "whole",
+    "height": 1100,
+    "mode": "single",
+    "orbit": "0.00",
+    "scrollWidth": 1440,
+    "state": "ready",
+    "triangles": "4564",
+    "variant": "courtyard-standard",
+    "width": 1440,
+    "zoom": "1.00"
+  },
+  "board": {
+    "angle": "reference",
+    "drawCalls": "50",
+    "focus": "whole",
+    "mode": "variants",
+    "orbit": "0.00",
+    "state": "ready",
+    "triangles": "7324",
+    "variant": "road-straight",
+    "zoom": "1.00"
+  },
+  "phone": {
+    "grid": "178px 178px",
+    "scrollWidth": 390,
+    "touchVisible": true,
+    "width": 390
+  },
+  "touchOptIn": true,
+  "fallbacks": [
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-road-straight-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "road-straight"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-road-junction-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "road-junction"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-pavement-straight-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "pavement-straight"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-pavement-plaza-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "pavement-plaza"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-pavement-ramp-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "pavement-ramp"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-kerb-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "kerb-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-crossing-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "crossing-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-lane-marking-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "lane-marking-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-parking-bay-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "parking-bay-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-courtyard-standard-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "courtyard-standard"
+    },
+    {
+      "angle": "reference",
+      "loaded": true,
+      "mode": "single",
+      "src": "assets/portfolio/geomarketeer/component-kit/ground-pavement-metro-still.jpg?v=1",
+      "state": "fallback",
+      "variant": "pavement-metro"
+    }
+  ],
+  "browserWarningsAndErrors": [],
+  "checks": [
+    "All eleven component stills load and report the correct component",
+    "Crossing, parking and metro fit previews at reference and both orbit limits",
+    "Rim, ramp, kerb and metro edge close-ups; 300% zoom; plan, low and rear views",
+    "Phone board, crossing and metro layouts; no horizontal overflow; touch opt-in control",
+    "Fallback recovery returns to the live 3D viewer"
+  ],
+  "limitations": "Physical-device touch and low-end GPU performance not measured."
+}

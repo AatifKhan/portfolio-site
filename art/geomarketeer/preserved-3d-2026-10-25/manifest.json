@@ -1,0 +1,70 @@
+{
+  "preservedOn": "2026-10-25",
+  "purpose": "Future 3D phase; procedural sources and original portfolio context",
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "a8f936a1d66c654f8f30020dbc1cec188a6442ed741562606a78056adede3dce"
+    },
+    {
+      "file": "minimal_portfolio.html",
+      "sha256": "5f81f1a44ac6519c8f10b9430fe9c4d839b19f8873d0053cea6e3fdbfcfc8be6"
+    },
+    {
+      "file": "package.json",
+      "sha256": "54a01e56c630defa693f000b2d1b48653f83e25d0d90538ea78a97301d408364"
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "38acc3779d7d015e537119d54617fbcdf167847bef2f048f0963974a1c3e6045"
+    },
+    {
+      "file": "geomarketeer-neighborhood-study.html",
+      "sha256": "59ab4ae3d9ae93719be9ba7b5c4595a3c896fe7c9f93bdb7dc414ac712b93186"
+    },
+    {
+      "file": "scripts/geomarketeer-block-viewer.js",
+      "sha256": "5ad551f2dd6727d682de58096820ca0d246697bd2d84095f9f73c9863d9f8de6"
+    },
+    {
+      "file": "scripts/geomarketeer-block-model.js",
+      "sha256": "170fe2c4ba896cc002e75c4048a51d2f3e9e0e06e389e7e580577ebf4fe56536"
+    },
+    {
+      "file": "scripts/geomarketeer-neighborhood-viewer.js",
+      "sha256": "1164838edf037ee5d382ba50ebf141e705d508be39f62887e5e085458d1e6c8e"
+    },
+    {
+      "file": "scripts/geomarketeer-neighborhood-model.js",
+      "sha256": "00931e1ab2c8fd5be747a64c1a71e1bf37ea336ad1e16a1042dd31c290c2d20c"
+    },
+    {
+      "file": "scripts/geomarketeer-neighborhood-details.js",
+      "sha256": "f6a45a279517032be60c20e6a75de5783b3bb03523e09255f782526969170c47"
+    },
+    {
+      "file": "scripts/geomarketeer-city.js",
+      "sha256": "65e9b51311378a3036f312a501e63557a61ad95053457d890a8ee729bfbf3443"
+    },
+    {
+      "file": "styles/geomarketeer-block.css",
+      "sha256": "a4f58cb488eec9b6d3335d148fae4e7474a3af8c941d81aa55c868cdd525b1e9"
+    },
+    {
+      "file": "styles/geomarketeer-explorer.css",
+      "sha256": "ba00c94b7e984887f942a52378491854e69c7483caedaedafb7295323392717c"
+    },
+    {
+      "file": "styles/geomarketeer-neighborhood-study.css",
+      "sha256": "8562937478bc6c1acf921ae69e8c8fe2de98446dc4fde8ba91bcd1ca83509265"
+    },
+    {
+      "file": "styles/geomarketeer-city.css",
+      "sha256": "5a6cfcc351e753b98ebb6047107efd6555d51f10a4b66d5443bf5a634804ab13"
+    },
+    {
+      "file": "assets/portfolio/geomarketeer/cafe-corner/cafe-corner-approved-v2.png",
+      "sha256": "a9bbe79c52aad98f838a2ae89dbd9c2522ac38a09e8befd789384215b3f7ad4d"
+    }
+  ]
+}

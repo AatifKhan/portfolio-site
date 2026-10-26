@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Corner Café — approved neighborhood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:opsz,wght@9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/geomarketeer-neighborhood-study.css">
+    <script type="module" src="scripts/geomarketeer-neighborhood-viewer.js"></script>
+</head>
+<body>
+    <header>
+        <div><p class="eyebrow">GeoMarketeer / approved neighborhood</p><h1>Our corner, in three dimensions.</h1></div>
+        <a href="minimal_portfolio.html?project=geomarketeer">Back to the case study</a>
+    </header>
+    <main id="neighborhoodStudy" data-state="loading">
+        <div class="comparison" id="comparison">
+            <figure class="reference-panel" id="referencePanel" hidden>
+                <figcaption>Approved image</figcaption>
+                <img src="assets/portfolio/geomarketeer/cafe-corner/cafe-corner-approved-v2.png" alt="The approved blue-and-lavender Corner Café neighborhood illustration, with five buildings, capsule trees, conifers, and small cars.">
+            </figure>
+            <figure class="live-panel">
+                <figcaption id="liveCaption">Live 3D recreation</figcaption>
+                <div id="neighborhoodViewport" class="viewport" tabindex="0" role="group" aria-label="Interactive neighborhood. Drag horizontally or use left and right arrows to turn up to fifteen degrees. Use plus and minus to zoom, and zero to restore the approved view.">
+                    <p id="sceneLoading" class="scene-message" role="status">Building the neighborhood…</p>
+                    <div id="sceneError" class="scene-message" role="alert" hidden><p>The 3D view could not start.</p><button type="button" data-action="reload">Try again</button></div>
+                </div>
+            </figure>
+        </div>
+        <div class="controls" role="group" aria-label="Neighborhood view controls">
+            <div class="control-group"><button type="button" data-action="left">Turn left</button><output id="orbitOutput" aria-label="Orbit angle">0°</output><button type="button" data-action="right">Turn right</button></div>
+            <div class="control-group"><button type="button" data-action="out">Zoom out</button><output id="zoomOutput" aria-label="Zoom level">100%</output><button type="button" data-action="in">Zoom in</button></div>
+            <button type="button" data-action="reset">Approved view</button>
+            <label><input id="compareToggle" type="checkbox"> Compare with reference</label>
+        </div>
+        <p class="note">Drag to turn · Limited orbit ±15° · Zoom 80–120% · The approved view restores the reference camera. · <a href="reports/approved-neighborhood/detail-pass/reference-map.html">Inspect the detail map</a></p>
+        <p id="sceneStatus" class="sr-only" role="status" aria-live="polite"></p>
+    </main>
+</body>
+</html>

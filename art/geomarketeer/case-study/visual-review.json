@@ -1,0 +1,23 @@
+{
+  "slot": "field-research",
+  "status": "layout-approved-awaiting-original-photo",
+  "anchor": "geoFieldResearchFigure",
+  "source": "art/geomarketeer/case-study/draft.html",
+  "purpose": "Show the research scope before introducing the four findings.",
+  "layout": "One clearly labelled photo placeholder, with a schematic conversation sketch and two research-scope callouts.",
+  "scope": [
+    "Six businesses over six weeks",
+    "Two businesses observed more closely for about a month"
+  ],
+  "missing_asset": "An original GeoMarketeer research-session photograph; confirm its context before captioning.",
+  "excluded_source": "The PDF page 3 bicycle-session collage was a reference placeholder, as confirmed by the user.",
+  "other_visual_slots": "Remaining slots unchanged; continue one at a time.",
+  "following_visual": {
+    "slot": "existing-tool-journey",
+    "anchor": "geoExistingToolsFigure",
+    "status": "awaiting-tool-screenshots",
+    "direction": "Use screenshots of the existing GIS tools evaluated in the project. A labelled screenshot placeholder is integrated into both portfolio entrypoints.",
+    "caption": "Tool name, version or year, and a short callout explaining what to notice.",
+    "illustrations": "The six-step watercolor concept remains a separate study and is not used in the case study."
+  }
+}

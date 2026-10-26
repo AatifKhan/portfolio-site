@@ -1,0 +1,13 @@
+{
+  "index.html": "69094813bfa3cf19bd755df185c68227860e5f14adb7a67491e18096c351c75e",
+  "minimal_portfolio.html": "0e882f077459b9e76a43705c656a2f613145e5f68343f6dd783a73a4363d5d74",
+  "scripts/geomarketeer-story.js": "c62405dd73c4d683bbb1b98c83bc3c812614167bd630febbfbeeb7363288ad93",
+  "scripts/geomarketeer-story-data.js": "193c02e3b93453921cdff453520d3980c0bab696fb389889e81e1d1a53a8ad63",
+  "styles/geomarketeer-story.css": "688826f12ae0169e41f6e64bbb4f474ed88eb588bb206128b61e99d844a850f2",
+  "scripts/geomarketeer-kit/neighborhood-model.js": "dcb01cdaae409fba7fde186d168bdea3c45bb3249bb0a799dc1a770454f948be",
+  "scripts/geomarketeer-kit/neighborhood-manifest.js": "befec064c874de65637e0ab8b17d5b72c74873e31ead4175788f6b8d1ef020e5",
+  "scripts/geomarketeer-kit/neighborhood-ground.js": "85c7a7c9c3474594ddd4db0379079f004edb26f3d7ea5f075e0edb5d757f4a84",
+  "scripts/geomarketeer-kit/neighborhood-fit.js": "980f838459fcbd99b56ed8438048c1b3c25a15c70a816ab843468d6a0d0fe170",
+  "scripts/geomarketeer-kit/library.js": "d760498856f2f1ca0441abe27b9da030bcaabc18479082d1cf3f731aec37e64f",
+  "art/geomarketeer/component-kit/neighborhood-manifest.json": "07c195ad2a89bfa8d8fcf3033deb962b0f0e7cb67e5e7eee0f6e91841136334d"
+}

@@ -1,0 +1,24 @@
+{
+  "createdOn": "2026-10-25",
+  "status": "fresh-styles-awaiting-selection",
+  "options": [
+    {
+      "displayedOption": 1,
+      "name": "Sunlit Architectural Miniature",
+      "file": "01-sunlit-architectural-miniature.png",
+      "sha256": "ade0a28f83f9452438e2b2d2d24d3b7cb96fc888e57033edc1eebca10e044318"
+    },
+    {
+      "displayedOption": 2,
+      "name": "Painted Everyday City",
+      "file": "02-painted-everyday-city.png",
+      "sha256": "bd42019c7e84a45b69f9b99ef958cd4d0c73d1de2f46162992c0e3975084b66b"
+    },
+    {
+      "displayedOption": 3,
+      "name": "Bold Urban Screenprint",
+      "file": "03-bold-urban-screenprint.png",
+      "sha256": "d6b2134ccaf4493bde2dc7c8075caf5faf5edb105caa9ddf8814f0d65c6e26bb"
+    }
+  ]
+}

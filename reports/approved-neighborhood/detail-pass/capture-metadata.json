@@ -1,0 +1,82 @@
+{
+  "source": {
+    "width": 1448,
+    "height": 1086,
+    "path": "assets/portfolio/geomarketeer/cafe-corner/cafe-corner-approved-v2.png"
+  },
+  "before": {
+    "viewport": [
+      1500,
+      1286
+    ],
+    "artCrop": {
+      "x": 26,
+      "y": 96,
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "after": {
+    "viewport": [
+      1500,
+      1286
+    ],
+    "canvas": {
+      "x": 24,
+      "y": 96.09375,
+      "width": 1452,
+      "height": 1086
+    },
+    "artCrop": {
+      "x": 26,
+      "y": 96,
+      "width": 1448,
+      "height": 1086
+    },
+    "camera": {
+      "orbit": 0,
+      "zoom": 1
+    }
+  },
+  "desktop": [
+    1440,
+    1000
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "comparisonRegions": {
+    "park": [
+      20,
+      320,
+      540,
+      390
+    ],
+    "cafe": [
+      395,
+      450,
+      600,
+      500
+    ],
+    "office": [
+      235,
+      20,
+      365,
+      555
+    ],
+    "east": [
+      820,
+      160,
+      620,
+      580
+    ]
+  },
+  "comparisonOrder": [
+    "reference",
+    "before",
+    "updated"
+  ],
+  "normalization": "identical pixel crops, no recoloring; JPEG browser captures retained, source PNG retained",
+  "rejectedCapture": "An intermediate capture at the wrong live viewport scale was rejected and replaced after reading the actual DOM dimensions."
+}

@@ -1,0 +1,111 @@
+{
+  "checkpoint": "two-wheelers-06",
+  "revision": 1,
+  "artisticApproval": "approved",
+  "desktop": {
+    "width": 1440,
+    "height": 1100,
+    "horizontalOverflow": false,
+    "metrics": [
+      {
+        "angle": "reference",
+        "drawCalls": "20",
+        "master": "scooter",
+        "mode": "angles",
+        "orbit": "0.00",
+        "state": "ready",
+        "triangles": "50240",
+        "zoom": "1.00"
+      },
+      {
+        "angle": "reference",
+        "drawCalls": "16",
+        "master": "bicycle",
+        "mode": "angles",
+        "orbit": "0.00",
+        "state": "ready",
+        "triangles": "53136",
+        "zoom": "1.00"
+      }
+    ]
+  },
+  "phone": {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": false,
+    "minimumVisibleButtonHeight": 44,
+    "angleBoardColumns": 1,
+    "boardSelectionFocusesViewport": true,
+    "touchExplorationToggle": true
+  },
+  "fallbacks": [
+    {
+      "overflow": false,
+      "state": {
+        "angle": "rear",
+        "master": "scooter",
+        "mode": "single",
+        "state": "fallback"
+      },
+      "still": {
+        "complete": true,
+        "src": "assets/portfolio/geomarketeer/component-kit/scooter-rear-still.jpg?v=1",
+        "width": 675
+      }
+    },
+    {
+      "retryState": {
+        "angle": "rear",
+        "drawCalls": "5",
+        "master": "scooter",
+        "mode": "single",
+        "orbit": "0.00",
+        "state": "ready",
+        "triangles": "12560",
+        "zoom": "1.00"
+      }
+    },
+    {
+      "overflow": false,
+      "state": {
+        "angle": "rear",
+        "master": "bicycle",
+        "mode": "single",
+        "state": "fallback"
+      },
+      "still": {
+        "complete": true,
+        "src": "assets/portfolio/geomarketeer/component-kit/bicycle-rear-still.jpg?v=1",
+        "width": 675
+      }
+    },
+    {
+      "retryState": {
+        "angle": "rear",
+        "drawCalls": "4",
+        "master": "bicycle",
+        "mode": "single",
+        "orbit": "0.00",
+        "state": "ready",
+        "triangles": "13284",
+        "zoom": "1.00"
+      }
+    }
+  ],
+  "console": [],
+  "visualChecks": [
+    "Four angle views inspected for each master",
+    "Both three-quarter views inspected at -15 and +15 degrees",
+    "Three identical copies inspected per master",
+    "Scooter fork/shield intersection corrected and inspected at 300 percent",
+    "Bicycle frame, wheels, drive and pedals inspected at 300 percent",
+    "Scene-scale previews captured for both masters",
+    "Phone board, single and copy modes inspected",
+    "Both saved fallback images loaded; retry retained selected master and angle"
+  ],
+  "limitations": [
+    "Physical-device touch and low-end GPU performance were not measured",
+    "Riders are deferred to the people family; neither master is placed in the neighborhood"
+  ],
+  "approvalEvidence": "User: The scooters and bicycles look good. Let\u2019s move on to people."
+}

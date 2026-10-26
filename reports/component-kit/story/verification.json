@@ -1,0 +1,20 @@
+{
+  "tests": "pass",
+  "storyRevision": 1,
+  "beats": 5,
+  "unchangedFiles": 11,
+  "checks": [
+    "Original titles and body copy are the sole copy source",
+    "Opening frames exclude actual landmark triangles; candidate stays fully visible in every beat",
+    "First metro reveal includes candidate, crossings and parking; final scene fits and holds its camera",
+    "First render uses opening pose; fixed 30° pitch and approved orbit offsets",
+    "850ms transitions, rapid reversals, resize and stable active beat",
+    "One model and renderer across Story/Explore; exploration input locked during story",
+    "Next/Back, Skip, Replay, final action, focus and mode resume",
+    "Reduced-motion instant changes, hidden pause, BFCache lifecycle and no idle rendering",
+    "WebGL failure/context loss retain copy and beat; still navigation and recovery work",
+    "One canvas after recovery; renderer disposal is idempotent",
+    "Portfolio, raster story, approved model and placement files unchanged",
+    "Five 560×315 shot images and exported cameras/copy match the script-free five-frame reader"
+  ]
+}

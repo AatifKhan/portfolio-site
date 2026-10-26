@@ -1,0 +1,98 @@
+{
+  "reference": {
+    "width": 1448,
+    "height": 1086,
+    "unit": 32,
+    "originX": 724,
+    "originY": 654,
+    "pitch": 0.6154797086703873,
+    "yaw": 0.7853981633974483,
+    "image": "assets/portfolio/geomarketeer/cafe-corner/cafe-corner-approved-v2.png",
+    "sha256": "a9bbe79c52aad98f838a2ae89dbd9c2522ac38a09e8befd789384215b3f7ad4d"
+  },
+  "buildings": [
+    {
+      "id": "offices",
+      "name": "Office block",
+      "roof": [
+        429,
+        45
+      ],
+      "w": 5.7,
+      "d": 6.6,
+      "h": 9.85
+    },
+    {
+      "id": "shop",
+      "name": "Local shop",
+      "roof": [
+        714,
+        146
+      ],
+      "w": 3.3,
+      "d": 3.6,
+      "h": 2.8
+    },
+    {
+      "id": "home",
+      "name": "Terrace home",
+      "roof": [
+        1011,
+        230
+      ],
+      "w": 3.4,
+      "d": 3.3,
+      "h": 5.1
+    },
+    {
+      "id": "apartments",
+      "name": "Apartments",
+      "roof": [
+        1200,
+        343
+      ],
+      "w": 4.5,
+      "d": 4.7,
+      "h": 5.4
+    },
+    {
+      "id": "cafe",
+      "name": "Corner Café",
+      "roof": [
+        707,
+        463
+      ],
+      "w": 5.3,
+      "d": 5,
+      "h": 6.2
+    }
+  ],
+  "camera": {
+    "projection": "orthographic",
+    "orbitDegrees": [
+      -15,
+      15
+    ],
+    "zoom": [
+      0.8,
+      1.2
+    ],
+    "reset": {
+      "orbit": 0,
+      "zoom": 1
+    }
+  },
+  "style": {
+    "background": "white",
+    "outlines": "cobalt",
+    "fills": "directional pale blue architectural washes, blue glazing, white crowns and blue-green foliage",
+    "geometry": "authored meshes and line batches",
+    "textures": 0,
+    "contours": "primary 2.25px, detail 1.35px, hairline 0.6px and secondary profile 0.8px at reference scale; projected-size fading"
+  },
+  "milestone": "five-building live recreation for visual review; fine-detail likeness is not pixel-identical",
+  "detailMap": "scripts/geomarketeer-neighborhood-details.js",
+  "inventory": "reports/approved-neighborhood/detail-pass/reference-detail-inventory.json",
+  "revision": "blue-fill-and-soft-planting-refinement-2026-10-25",
+  "paintReview": "reports/approved-neighborhood/fill-pass/review.md"
+}

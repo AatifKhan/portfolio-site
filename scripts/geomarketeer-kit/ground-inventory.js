@@ -1,0 +1,37 @@
+// IDs refer to visible surface regions and marking runs, not invented final tiles.
+// Final polygon boundaries and subdivision are deferred to composition approval.
+const records=[
+ ['road-west','road','straight','perimeter',[60,375,480,314]],
+ ['road-central','road','straight','central',[416,390,541,234]],
+ ['road-east','road','straight','offices',[1184,350,263,154]],
+ ['road-front','road','straight','cafe-lane',[462,630,526,283]],
+ ['road-metro','road','straight','metro',[994,690,221,212]],
+ ['junction-offices','road','junction','offices',[902,383,310,155]],
+ ['junction-central','road','junction','central',[411,554,207,171]],
+ ['junction-southeast','road','junction','metro',[880,750,281,177]],
+ ['paving-housing','pavement','plaza','housing',[12,292,824,316]],
+ ['paving-offices','pavement','plaza','offices',[831,243,607,221]],
+ ['paving-central','pavement','plaza','central',[527,424,633,373]],
+ ['paving-storefronts','pavement','straight','cafe-lane',[162,757,694,258]],
+ ['paving-west','pavement','plaza','perimeter',[12,492,430,277]],
+ ['paving-southwest','pavement','plaza','perimeter',[10,693,186,174]],
+ ['paving-southeast','pavement','plaza','perimeter',[1130,721,392,245]],
+ ['paving-metro','pavement','metro','metro',[1139,479,376,247]],
+ ['crossing-north','crossing','standard','offices',[909,401,86,49]],
+ ['crossing-offices','crossing','standard','offices',[1063,455,87,51]],
+ ['crossing-west','crossing','standard','central',[433,573,106,55]],
+ ['crossing-cafe','crossing','standard','cafe-lane',[487,668,139,77]],
+ ['crossing-south','crossing','standard','cafe-lane',[747,792,106,54]],
+ ['crossing-metro','crossing','standard','metro',[1037,752,111,69]],
+ ['parking-central','parking-bay','standard','central',[868,592,282,188]],
+ ['parking-southeast','parking-bay','standard','metro',[981,828,228,147]],
+ ['courtyard-housing','courtyard','standard','housing',[480,334,157,81]],
+ ['lane-west','lane-marking','standard','perimeter',[62,383,438,287]],
+ ['lane-central','lane-marking','standard','central',[496,432,419,164]],
+ ['lane-front','lane-marking','standard','cafe-lane',[606,714,299,175]],
+ ['lane-office','lane-marking','standard','offices',[845,279,335,244]],
+ ['lane-east','lane-marking','standard','offices',[1184,361,231,126]],
+ ['lane-metro','lane-marking','standard','metro',[966,702,235,191]],
+];
+export const GROUND_SOURCE_OBJECTS=Object.freeze(records.map(([id,assetId,variantId,districtId,sourceBounds])=>Object.freeze({id:'ground-'+id,assetId,variantId,districtId,sourceBounds,reference:[sourceBounds[0]+sourceBounds[2]/2,sourceBounds[1]+sourceBounds[3]/2],reviewStatus:'approved',placementStatus:'unplaced',scope:['pavement','road'].includes(assetId)?'surface-region':assetId==='lane-marking'?'marking-run':assetId==='parking-bay'?'parking-area':'feature'})));
+export const GROUND_REFERENCE_NOTES=Object.freeze({boundaries:'Provisional review boxes around visible surface regions; source buildings and figures occlude much of the ground.',subdivision:'Grid seams, individual dashes and parking divisions are generated from shared modules. Final tile counts, polygons and placements follow the composition review.',inferred:['Lowered crossing slopes and below-grade slab thickness','Kerb cross-section and modular segmentation','Continuous geometry where road or paving is obscured'],courtyard:'Circular pale-blue inset with a white rim; function is unspecified in the source.'});

@@ -1,0 +1,21 @@
+{
+  "story": {
+    "beat": "1",
+    "ready": "ready",
+    "title": "The cafés next door were busy."
+  },
+  "quickScan": true,
+  "phone": {
+    "overflow": false,
+    "placeholder": true,
+    "width": 390
+  },
+  "indexErrors": [],
+  "secondEntrypoint": {
+    "caseVisible": true,
+    "latestPlaceholder": true,
+    "storyImageLoaded": true,
+    "url": "https://aatifkhan.github.io/portfolio-site/minimal_portfolio.html?project=geomarketeer#caseStudyPage"
+  },
+  "secondEntrypointErrors": []
+}

@@ -1,0 +1,78 @@
+Built-in image_gen. Revised rough storyboard: the original corner grows into an expanded neighborhood at clicks 3–4. Categories are schematic; no real location data or numerical findings are depicted. Previous storyboard remains intact. No final artwork or live code changed.
+
+Use case: precise-object-edit / illustration-story.
+Revise the attached rough storyboard into ONE expanded-map STORYBOARD SHEET, preserving its low-fidelity black/gray pen-and-pencil working-sketch aesthetic and five numbered rows. This is story planning, not finished artwork. No polished 3D rendering, no final illustration, no UI design presentation, no giant protagonist, no specialist-GIS detour.
+
+MAIN REQUIRED CHANGE: In rows 4 and 5 the illustrated ground area must be DRAMATICALLY LARGER than the original corner: approximately three times the geographic coverage and 12 representative buildings instead of 3. This must be visibly obvious in the sketches, not merely mentioned in captions. The original empty candidate storefront remains the persistent central anchor; its same two street directions and two original neighboring buildings remain identifiable. New streets and distinct surrounding localities are revealed outside the original view, rather than replacing the map. Do not make all five rows the same three buildings with different text.
+
+Canvas: one large readable portrait sheet approximately 1700 x 2800. Top title:
+"REVISED STORYBOARD — FROM CORNER TO NEIGHBORHOOD"
+Smaller subtitle:
+"One continuous scene · Five clicks · Map expands at the turning point"
+Five horizontal numbered rows, left roughly 64% a framed sketch, right roughly 33% clear exact story copy and a smaller action note. Simple arrows connect rows. Rows 4 and 5 may be slightly taller to show the larger map. Maintain full margins, fully legible text, no cut-off captions or frames. Plain sans-serif typography like a working story treatment; no decorative serif headlines. Mostly monochrome; a single restrained muted-blue line may identify the candidate storefront and selected area. Other annotations grayscale. No colored heatmaps.
+
+THE MAP AND ITS EXPANSION:
+Initial original corner has exactly THREE main buildings: an empty small corner storefront with a striped awning in front, one office behind-left, one apartment building behind-right; two short intersecting streets, a crossing, a few trees, small passing pedestrians and a car. The potential café remains empty in all five frames; never show a thriving café, sales, seated patrons or failure.
+Expanded map, visible in rows 4 and 5, retains that entire original corner at its center, and adds THREE geographically distinct surrounding clusters connected by extensions of the same streets:
+- northwest / left-rear: a residential locality with FOUR simple additional houses/apartment blocks, a small open garden and walking paths, labeled "Homes";
+- northeast / right-rear: TWO additional office/workplace buildings with an approach street and bus-stop symbol, labeled "Workplaces";
+- southeast / right-front: a short local high street with THREE small shops, including two modest café markers, labeled "High street".
+Thus about 12 total buildings in the expanded view. Keep enough gaps and trees to distinguish the three clusters. Buildings are simple sketch volumes, not detailed city models. A dotted small rectangle or bracket marked "Original view" identifies the original corner within the expanded map; this is essential to understanding the expansion.
+Use one larger dashed study-area boundary around these localities. Area-level data categories attach to that shared boundary, not arbitrarily to a single house. No fake percentages, population totals, incomes, ages, spending values, maps of real neighborhoods, or implied recommendations.
+
+ROW 1 — CLICK 1 / THE IDEA:
+Sketch the original 3-building corner, wide enough to establish the location; relatively quiet street, candidate storefront marked by a small circle and label "Possible café". Small stick people only, no separate character portrait.
+Exact headline:
+"Sid wanted a café of his own."
+Exact supporting copy:
+"First, he needed a place for it."
+Smaller action note:
+"Establish the corner. Mark the empty storefront."
+
+ROW 2 — CLICK 2 / THE ASSUMPTION:
+Move closer to the SAME corner, same orientation. Emphasize a passing cluster of pedestrians with small movement arrows. Office/homes are still recognizable in the background. No new buildings yet.
+Exact headline:
+"This corner caught his eye."
+Exact supporting copy:
+"Plenty of people. It looked promising."
+Action note:
+"Move closer. Let the passing crowd make the site feel convincing."
+
+ROW 3 — CLICK 3 / THE DOUBT:
+First hold the row-2 framing, then indicate the START of a camera pullback with two outward arrows and faint ghost outlines at the frame edges. The original candidate café remains the central visual anchor; the crowd continues walking. One restrained question mark above the storefront. Hint that there is a larger neighborhood beyond the original view, without yet displaying data. Do not depict a failed business or a magically vanished crowd.
+Exact headline:
+"A busy street. A busy café. Right?"
+Exact supporting copy:
+"The crowd was visible. The demand was still a guess."
+Action note:
+"Pause on 'Right?'. Begin pulling back while keeping the café anchored."
+
+ROW 4 — CLICK 4 / THE EXPANSION:
+Now FULLY reveal the enlarged 12-building map with the three distinct surrounding clusters described above. Same original café visibly at its center; a dotted 'Original view' footprint makes the new coverage unmistakable. Streets visibly extend to the homes, workplaces and high street. The illustration must show more land and buildings than rows 1–3, not just zoom into the same block.
+Around the larger shared boundary add THREE compact readable annotation boxes:
+"PEOPLE
+Residents · Workers · Age groups"
+"SPENDING
+Household income · Spending patterns"
+"COMPETITION
+Existing cafés · Nearby alternatives"
+Leader lines connect these area-level summaries to the shared study area. Café markers connect to the existing café locations. Avoid turning a single residence into a 'Spending' building. Data categories are schematic questions to investigate, no actual numerical findings.
+Exact headline:
+"The corner was only part of the picture."
+Exact supporting copy:
+"Who lives and works nearby? What do they spend? Where do they already go?"
+Action note:
+"Reveal the wider neighborhood and all three context summaries in one click."
+
+ROW 5 — CLICK 5 / THE RESPONSE:
+Keep the SAME enlarged map, same geography and camera as row 4. Remove excess annotation lines and organize the data categories into one small plain legend: "People / Spending / Competition". Label the map "GeoMarketeer". Keep the original candidate café strongly identifiable at the center and the wider study-area boundary visible. A tiny secondary control sketch labeled "Morning / Evening" suggests an additional time-based investigation. A small curved camera arrow at the edge suggests optional exploration. Do not make a new screen, shrink back to the original three-building corner, add a sixth story step, or invent an automatically chosen winning site.
+Exact headline:
+"Same corner. A clearer picture."
+Exact supporting copy:
+"GeoMarketeer helps businesses understand a neighborhood before choosing where to open."
+Small role line:
+"My role: UX Research & Interaction Design"
+Action note:
+"End the story. Keep the expanded map available for optional exploration."
+
+Keep this a clear rough narrative storyboard, with visible changes of scale and attention. The visual expansion is as important as the new data. No detailed dashboard, specialist software panels, fake findings, corporate marketing polish, dramatic success claims, photographic surfaces, final blue architectural beauty renders, or extra story beats.

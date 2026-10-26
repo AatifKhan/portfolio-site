@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GeoMarketeer — preserved 3D café block</title>
+    <meta name="description" content="The preserved interactive GeoMarketeer café block, kept separately while the case-study introduction uses the approved illustration.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/geomarketeer-explorer.css">
+    <link rel="stylesheet" href="styles/geomarketeer-block.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #fff; color: #202739; font-family: 'DM Sans', sans-serif; }
+        .preserved-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; max-width: 86rem; margin: 2rem auto 0; padding: 0 1.5rem; }
+        .preserved-header p { margin: 0; color: #637193; font-size: .8rem; }
+        .preserved-header a { color: #466bd9; font-size: .8rem; text-underline-offset: .2em; }
+        main { padding: 0 1.5rem 2rem; }
+        #geoExplorer { left: auto; transform: none; width: min(100%, 86rem); margin: 2rem auto; }
+        #geoExplorer .geo-map-viewport { min-height: 28rem; height: min(65vh, 44rem); }
+        button, input { font: inherit; }
+        @media (max-width: 700px) { .preserved-header { align-items: start; flex-direction: column; } #geoExplorer .geo-map-viewport { min-height: 22rem; } }
+    </style>
+    <script type="module" src="scripts/geomarketeer-block-viewer.js"></script>
+</head>
+<body>
+    <header class="preserved-header"><p>GeoMarketeer / Preserved 3D study</p><a href="minimal_portfolio.html?project=geomarketeer">Back to the case study</a></header>
+    <main>
+<section id="geoExplorer" class="geo-map geo-block" data-labels="false" aria-labelledby="geoExplorerTitle">
+    <header class="geo-map-heading">
+        <div><p class="geo-map-eyebrow">GeoMarketeer / Café block study</p><h3 id="geoExplorerTitle">A corner, brought to life.</h3></div>
+        <p>Explore the café and the streets around it. Turn the block, choose a place, or move closer to the everyday details.</p>
+    </header>
+    <div class="geo-map-stage">
+        <div class="geo-map-viewport" tabindex="0" role="group" aria-label="Interactive three-dimensional café block. Drag to pan, use brackets to turn, arrows to move, and plus or minus to zoom." data-manipulating="false">
+            <div class="geo-map-render-target"></div>
+            <div class="geo-map-labels">
+                <button type="button" class="geo-map-place" data-map-place="cafe" aria-pressed="false" aria-controls="geoMapInspector"><span>Corner café</span></button>
+                <button type="button" class="geo-map-place" data-map-place="offices" aria-pressed="false" aria-controls="geoMapInspector"><span>Office block</span></button>
+                <button type="button" class="geo-map-place" data-map-place="garden" aria-pressed="false" aria-controls="geoMapInspector"><span>Pocket garden</span></button>
+                <button type="button" class="geo-map-place" data-map-place="crossing" aria-pressed="false" aria-controls="geoMapInspector"><span>Street life</span></button>
+            </div>
+            <p class="geo-map-loading" role="status">Preparing the café block…</p>
+            <div class="geo-map-error" role="alert" hidden><p>The scene could not start in this browser.</p><button type="button" data-map-action="retry">Try again</button></div>
+        </div>
+        <aside id="geoMapInspector" class="geo-map-inspector" aria-labelledby="geoMapPlaceTitle" hidden>
+            <p class="geo-map-inspector-kind"></p>
+            <div class="geo-map-inspector-top"><h4 id="geoMapPlaceTitle"></h4><button type="button" class="geo-map-close" data-map-action="close" aria-label="Close place details">Close</button></div>
+            <p class="geo-map-inspector-body"></p>
+            <button type="button" class="geo-map-interior" data-map-action="interior" aria-pressed="false" hidden>Look inside</button>
+        </aside>
+    </div>
+    <div class="geo-map-places" role="group" aria-label="Choose a place to explore">
+        <button type="button" data-map-place="all" aria-pressed="true">Café block</button>
+        <button type="button" data-map-place="cafe" aria-pressed="false" aria-controls="geoMapInspector">Corner café</button>
+        <button type="button" data-map-place="offices" aria-pressed="false" aria-controls="geoMapInspector">Office block</button>
+        <button type="button" data-map-place="garden" aria-pressed="false" aria-controls="geoMapInspector">Pocket garden</button>
+        <button type="button" data-map-place="crossing" aria-pressed="false" aria-controls="geoMapInspector">Street life</button>
+    </div>
+    <div class="geo-map-toolbar">
+        <div class="geo-map-options">
+            <label><input type="checkbox" data-map-labels>Place labels</label>
+            <label><input type="checkbox" data-map-traffic checked>Street life</label>
+            <button type="button" class="geo-map-touch-toggle" data-map-action="move" aria-pressed="false">Move map</button>
+        </div>
+        <div class="geo-map-actions" role="group" aria-label="Scene controls">
+            <button type="button" data-map-action="turn-left" aria-label="Turn the block left">Turn left</button>
+            <button type="button" data-map-action="turn-right" aria-label="Turn the block right">Turn right</button>
+            <button type="button" data-map-action="zoom-out" aria-label="Zoom out">Zoom out</button>
+            <output class="geo-map-zoom" aria-label="Zoom level">100%</output>
+            <button type="button" data-map-action="zoom-in" aria-label="Zoom in">Zoom in</button>
+            <button type="button" data-map-action="reset">Reset</button>
+            <button type="button" data-map-action="fullscreen" aria-pressed="false">Fullscreen</button>
+        </div>
+    </div>
+    <p class="geo-map-note">Drag to pan · Turn to see another side · Ctrl + scroll to zoom · On touch screens, turn on Move map to pan and pinch.</p>
+    <p class="geo-map-status" role="status" aria-live="polite"></p>
+</section>
+    </main>
+</body>
+</html>

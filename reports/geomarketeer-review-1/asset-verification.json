@@ -1,0 +1,16 @@
+{
+  "desktop": {
+    "bytes": 7113736,
+    "triangles": 219954,
+    "drawCalls": 47,
+    "anchors": 5,
+    "textures": 2
+  },
+  "mobile": {
+    "bytes": 3554404,
+    "triangles": 139704,
+    "drawCalls": 47,
+    "anchors": 5,
+    "textures": 2
+  }
+}
