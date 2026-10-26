@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/geomarketeer-story.css?v=story5-2">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Ms+Madi&display=swap');
     </style>
@@ -371,7 +372,6 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            transition: padding 300ms var(--ease-fast);
         }
 
         body.nav-compact .top-nav-shell {
@@ -392,14 +392,6 @@
             backdrop-filter: none;
             -webkit-backdrop-filter: none;
             box-shadow: none;
-            opacity: 0;
-            transform: translateY(-10px) scale(0.97);
-            transition: gap 300ms var(--ease-fast), transform 700ms var(--ease-fast), opacity 700ms var(--ease-fast), background-color 320ms var(--ease-fast), border-color 320ms var(--ease-fast), backdrop-filter 320ms var(--ease-fast), -webkit-backdrop-filter 320ms var(--ease-fast);
-        }
-
-        body.nav-ready .top-nav {
-            opacity: 1;
-            transform: translateY(0) scale(1);
         }
 
         body.nav-glass .top-nav {
@@ -424,15 +416,6 @@
             padding: 0.45rem 0.7rem;
             color: #6b7280;
             cursor: pointer;
-            opacity: 0;
-            transform: translateY(6px);
-            transition: color 450ms var(--ease-fast), transform 450ms var(--ease-fast), opacity 450ms var(--ease-fast);
-        }
-
-        body.nav-ready .nav-link {
-            opacity: 1;
-            transform: translateY(0);
-            transition-delay: calc(100ms + var(--item-index, 0) * 70ms);
         }
 
         .nav-link:focus-visible {
@@ -451,11 +434,6 @@
         .nav-link.active,
         .nav-link.active .nav-link-label {
             color: #111827;
-        }
-
-        .nav-link.active .nav-link-label::after {
-            width: 100%;
-            left: 0;
         }
 
         .content-shell {
@@ -484,6 +462,9 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="styles/menu-motion.css">
+    <script src="scripts/menu-motion.js" defer></script>
+    <link rel="stylesheet" href="styles/geomarketeer-case-study.css?v=draft1">
 </head>
 
 <body class="selection:bg-gray-200">
@@ -493,20 +474,22 @@
 
         <div class="top-nav-shell">
             <nav id="primaryNav" class="top-nav text-tiny" aria-label="Primary">
+                <span class="nav-glide-indicator" aria-hidden="true"></span>
                 <button type="button" class="nav-link active" data-page="home" style="--item-index:0;"
                     aria-current="page" onclick="showHome(event)"><span
-                        class="nav-link-label link-underline">home</span></button>
+                        class="nav-link-label">home</span></button>
                 <button type="button" class="nav-link" data-page="work" style="--item-index:1;"
-                    onclick="showWork(event)"><span class="nav-link-label link-underline">work</span></button>
+                    onclick="showWork(event)"><span class="nav-link-label">work</span></button>
                 <button type="button" class="nav-link" data-page="writing" style="--item-index:2;"
-                    onclick="showWriting(event)"><span class="nav-link-label link-underline">writing</span></button>
+                    onclick="showWriting(event)"><span class="nav-link-label">writing</span></button>
                 <button type="button" class="nav-link" data-page="reading" style="--item-index:3;"
-                    onclick="showReading(event)"><span class="nav-link-label link-underline">reading</span></button>
+                    onclick="showReading(event)"><span class="nav-link-label">reading</span></button>
             </nav>
         </div>
     </header>
 
     <main class="min-h-screen flex flex-col items-center pt-48 pb-24 px-6">
+        <noscript><p style="width:min(calc(100vw - 3rem),35rem);margin:6rem auto 2rem;font-size:.875rem;line-height:1.6;">Page navigation requires JavaScript. <a href="art/geomarketeer/story-opening/index.html" style="text-decoration:underline;text-underline-offset:.2em;">Read the GeoMarketeer introduction</a>.</p></noscript>
 
         <!-- Home -->
         <div id="homePage" class="page content-shell space-y-16">
@@ -618,18 +601,16 @@
                     <div class="absolute left-[12%] top-0 bottom-0 w-px bg-gray-200"></div>
 
                     <!-- Project 1 -->
-                    <a href="#" onclick="showCaseStudy(event)" class="work-case-link grid grid-cols-12 gap-3 items-start"
+                    <a href="#" onclick="showDashboardStudy(event)" class="work-case-link grid grid-cols-12 gap-3 items-start"
                         aria-label="Open Dashboards Are Boring case study">
                         <div class="col-span-3 text-sm text-gray-400">2024</div>
                         <div class="col-span-9 flex gap-4 items-start">
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
-                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
+                            <img src="assets/portfolio/live-source/work-2024.jpg"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Dashboards Are Boring thumbnail">
                             <div>
                                 <h3 class="link-underline"
-                                    style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Dashboards
-                                    Are Boring.</h3>
-                                <p class="text-tiny text-gray-600 mt-1">Reimagining enterprise analytics into living,
-                                    decision-making tools.</p>
+                                    style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Dashboards Are Boring.</h3>
+                                <p class="text-tiny text-gray-600 mt-1">When a design system drifts, teams slow down. Here’s how we fixed both.</p>
                             </div>
                         </div>
                     </a>
@@ -638,7 +619,7 @@
                     <div class="grid grid-cols-12 gap-3 items-start">
                         <div class="col-span-3 text-sm text-gray-400">2023</div>
                         <div class="col-span-9 flex gap-4 items-start">
-                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80"
+                            <img src="assets/portfolio/live-source/work-2023.avif"
                                 class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
                             <div>
                                 <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Design
@@ -653,7 +634,7 @@
                     <div class="grid grid-cols-12 gap-3 items-start">
                         <div class="col-span-3 text-sm text-gray-400">2022</div>
                         <div class="col-span-9 flex gap-4 items-start">
-                            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80"
+                            <img src="assets/portfolio/live-source/work-2022.avif"
                                 class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
                             <div>
                                 <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Interfaces
@@ -668,7 +649,7 @@
                     <div class="grid grid-cols-12 gap-3 items-start">
                         <div class="col-span-3 text-sm text-gray-400">2021</div>
                         <div class="col-span-9 flex gap-4 items-start">
-                            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=600&q=80"
+                            <img src="assets/portfolio/live-source/work-2021.avif"
                                 class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
                             <div>
                                 <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Strategy Is
@@ -683,7 +664,7 @@
                     <div class="grid grid-cols-12 gap-3 items-start">
                         <div class="col-span-3 text-sm text-gray-400">2020</div>
                         <div class="col-span-9 flex gap-4 items-start">
-                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
+                            <img src="assets/portfolio/live-source/work-2020.avif"
                                 class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="Project Thumbnail">
                             <div>
                                 <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">Legacy Isn’t
@@ -694,6 +675,21 @@
                         </div>
                     </div>
 
+                    <!-- Project 6 -->
+                    <a href="#" onclick="showCaseStudy(event)" class="work-case-link grid grid-cols-12 gap-3 items-start"
+                        aria-label="Open GeoMarketeer case study">
+                        <div class="col-span-3 text-sm text-gray-400">2017</div>
+                        <div class="col-span-9 flex gap-4 items-start">
+                            <img src="assets/portfolio/live-source/work-2017.avif"
+                                class="w-16 h-16 object-cover rounded-md flex-shrink-0" alt="GeoMarketeer thumbnail">
+                            <div>
+                                <h3 class="link-underline"
+                                    style="font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.3;">GeoMarketeer</h3>
+                                <p class="text-tiny text-gray-600 mt-1">Making complex location intelligence more useful for retail decisions.</p>
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
 
                 <div class="pt-10">
@@ -703,7 +699,7 @@
             </section>
         </div>
 
-        <div id="caseStudyPage" class="page content-shell space-y-10 hidden">
+        <div id="dashboardStudyPage" class="page content-shell space-y-10 hidden">
             <section class="space-y-4">
                 <p class="text-xs uppercase tracking-[0.16em] text-gray-500">Case Study</p>
                 <h2 style="font-family:'Fraunces',serif;font-size:2rem;line-height:1.15;">Dashboards Are Boring.</h2>
@@ -711,122 +707,359 @@
             </section>
 
             <section class="space-y-6">
-                <div class="case-toggle" data-view="quick" role="tablist" aria-label="Case study detail level">
-                    <button id="quickScanBtn" class="case-toggle-btn" aria-pressed="true" onclick="setCaseStudyView('quick')"
-                        type="button">Quick Scan</button>
-                    <button id="fullStoryBtn" class="case-toggle-btn" aria-pressed="false"
-                        onclick="setCaseStudyView('full')" type="button">Full Story</button>
+                <div id="dashboardCaseToggle" class="case-toggle" data-view="quick" role="tablist" aria-label="Case study detail level">
+                    <button id="dashboardQuickBtn" class="case-toggle-btn" aria-pressed="true" onclick="setDashboardView('quick')" type="button">Quick Scan</button>
+                    <button id="dashboardFullBtn" class="case-toggle-btn" aria-pressed="false" onclick="setDashboardView('full')" type="button">Full Story</button>
                 </div>
             </section>
 
-            <div id="caseStudyQuick" class="case-panel space-y-6">
+            <div id="dashboardStudyQuick" class="case-panel space-y-6">
                 <section class="space-y-2">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Situation</h3>
-                    <p class="text-tiny text-gray-700">A multi-squad enterprise platform had gradually drifted from the
-                        organisation’s design system, creating inconsistent UI patterns and increasing delivery friction.
-                    </p>
+                    <p class="text-tiny text-gray-700">A multi-squad enterprise platform had gradually drifted from the organisation’s design system, creating inconsistent UI patterns and increasing delivery friction.</p>
                 </section>
-
                 <section class="space-y-2">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Tension</h3>
-                    <p class="text-tiny text-gray-700">Teams were improvising UI variants because the design system
-                        lacked patterns for complex workflows. Over time, the system became a reference rather than a
-                        contract.</p>
+                    <p class="text-tiny text-gray-700">Teams were improvising UI variants because the design system lacked patterns for complex workflows. Over time, the system became a reference rather than a contract.</p>
                 </section>
-
                 <section class="space-y-2">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Intervention</h3>
-                    <p class="text-tiny text-gray-700">I audited the product interface, extended missing system
-                        patterns, and introduced design-system compliance into the Definition of Ready for engineering
-                        stories.</p>
+                    <p class="text-tiny text-gray-700">I audited the product interface, extended missing system patterns, and introduced design-system compliance into the Definition of Ready for engineering stories.</p>
                 </section>
-
                 <section class="space-y-2">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Outcome</h3>
-                    <p class="text-tiny text-gray-700">The platform regained visual and interaction consistency while
-                        the design system evolved into an operational standard used across squads.</p>
+                    <p class="text-tiny text-gray-700">The platform regained visual and interaction consistency while the design system evolved into an operational standard used across squads.</p>
                 </section>
             </div>
 
-            <div id="caseStudyFull" class="case-panel space-y-10 hidden">
+            <div id="dashboardStudyFull" class="case-panel space-y-10 hidden">
                 <section class="space-y-4">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.7rem;line-height:1.2;">Turning a Design System From Reference to Contract</h3>
                 </section>
-
                 <section class="space-y-3">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">1. Situation</h3>
                     <p class="text-tiny text-gray-700">PDM is a multi-year internal enterprise platform used for managing compliance and commit workflows. Over time, as multiple product squads shipped features independently, the interface began drifting away from the organisation’s established design system.</p>
-                    <p class="text-tiny text-gray-700">What initially appeared as small tactical deviations had accumulated into systemic inconsistency across the product. Components had diverged, styling overrides had multiplied, and teams had begun creating variations outside the system to meet immediate delivery needs.</p>
-                    <p class="text-tiny text-gray-700">This wasn’t just a visual issue. In a platform used for compliance workflows, inconsistent patterns increased cognitive load and raised the risk of user error. At the same time, engineering teams were encountering increasing friction during development as UI inconsistencies created rework and slowed delivery.</p>
+                    <p class="text-tiny text-gray-700">What initially appeared as small tactical deviations had accumulated into systemic inconsistency. Components had diverged, styling overrides had multiplied, and teams had begun creating variations outside the system to meet immediate delivery needs.</p>
+                    <p class="text-tiny text-gray-700">This wasn’t just a visual issue. In a platform used for compliance workflows, inconsistent patterns increased cognitive load and the risk of user error. Engineering teams also encountered increasing friction as UI inconsistencies created rework and slowed delivery.</p>
                     <p class="text-tiny text-gray-700">I was brought in as Lead UX/UI Designer to help realign the product with the design system while maintaining delivery across multiple active squads.</p>
                 </section>
-
                 <section class="space-y-3">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">2. Tension</h3>
                     <p class="text-tiny text-gray-700">The deeper challenge quickly became clear: the problem wasn’t simply interface inconsistency.</p>
-                    <p class="text-tiny text-gray-700">The organisation already had a mature design system with established tokens and component libraries. Yet the product had evolved outside those guardrails. New UI variants were being created ad-hoc, stories entered development without clear component references, and engineers frequently relied on CSS overrides to meet sprint deadlines.</p>
+                    <p class="text-tiny text-gray-700">The organisation already had a mature design system with established tokens and component libraries. Yet the product had evolved outside those guardrails. New UI variants were created ad hoc, stories entered development without clear component references, and engineers relied on CSS overrides to meet sprint deadlines.</p>
                     <p class="text-tiny text-gray-700">Over time, the design system had quietly shifted from a shared contract into a loose reference library.</p>
-                    <p class="text-tiny text-gray-700">To understand the scale of the drift, I conducted a structured audit of the product interface. Across more than seventy screens, the audit revealed a growing pattern of divergence and uncovered several missing patterns required for CPDM’s complex workflows.</p>
-                    <p class="text-tiny text-gray-700">The issue was not that teams were ignoring the system - the system simply wasn’t equipped to support the product’s evolving needs.</p>
+                    <p class="text-tiny text-gray-700">A structured audit across more than seventy screens revealed a growing pattern of divergence and several missing patterns required for complex workflows.</p>
+                    <p class="text-tiny text-gray-700">The issue was not that teams were ignoring the system—the system simply wasn’t equipped to support the product’s evolving needs.</p>
                 </section>
-
                 <section class="space-y-3">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">3. Insight</h3>
-                    <p class="text-tiny text-gray-700">The audit reframed the problem.</p>
                     <p class="text-tiny text-gray-700">Rather than enforcing strict compliance with the existing system, the opportunity was to restore alignment between the product and the system that was meant to support it.</p>
-                    <p class="text-tiny text-gray-700">Three principles shaped the direction of the work:</p>
+                    <p class="text-tiny text-gray-700">Three principles shaped the work:</p>
                     <ul class="text-tiny text-gray-700 list-disc pl-5 space-y-1">
-                        <li>Design system first - reuse or extend existing components before creating bespoke patterns</li>
-                        <li>Token discipline - ensure all spacing, colour, typography, and interaction states mapped to system tokens</li>
-                        <li>Shared delivery contracts - align design and engineering around clear component usage during grooming and development</li>
+                        <li>Design system first—reuse or extend existing components before creating bespoke patterns</li>
+                        <li>Token discipline—map spacing, colour, typography, and interaction states to system tokens</li>
+                        <li>Shared delivery contracts—align design and engineering around component usage before development</li>
                     </ul>
-                    <p class="text-tiny text-gray-700">The goal was not only to improve the UI but to reintroduce design system governance into the delivery pipeline itself.</p>
+                    <p class="text-tiny text-gray-700">The goal was not only to improve the UI, but to reintroduce design-system governance into the delivery pipeline itself.</p>
                 </section>
-
                 <section class="space-y-3">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">4. Decision</h3>
-                    <p class="text-tiny text-gray-700">The turning point came with a structural shift in how stories entered development.</p>
-                    <p class="text-tiny text-gray-700">Working with product managers, engineering leads, and the design system guild, we introduced design system compliance directly into the Definition of Ready (DoR) for product stories.</p>
-                    <p class="text-tiny text-gray-700">Every story entering development now required explicit references to approved components and tokens. This ensured that design decisions were clarified before implementation rather than interpreted during development.</p>
-                    <p class="text-tiny text-gray-700">At the same time, the design system itself was extended to support CPDM’s more complex workflows. Several new component patterns were introduced and aligned with existing system principles, including interaction models for multi-stage progress tracking and dense data workflows.</p>
-                    <p class="text-tiny text-gray-700">This approach reframed the design system from a passive reference into an active part of the delivery process.</p>
+                    <p class="text-tiny text-gray-700">Working with product managers, engineering leads, and the design-system guild, we introduced design-system compliance directly into the Definition of Ready for product stories.</p>
+                    <p class="text-tiny text-gray-700">Every story entering development now required explicit references to approved components and tokens. Decisions were clarified before implementation rather than interpreted during development.</p>
+                    <p class="text-tiny text-gray-700">At the same time, the design system was extended to support complex workflows, including multi-stage progress tracking and dense data interactions.</p>
+                    <p class="text-tiny text-gray-700">This reframed the design system from a passive reference into an active part of delivery.</p>
                 </section>
-
                 <section class="space-y-3">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">5. Execution</h3>
                     <p class="text-tiny text-gray-700">The redesign and system alignment were delivered incrementally across multiple releases while product squads continued shipping features.</p>
-                    <p class="text-tiny text-gray-700">Rather than rebuilding the interface wholesale, the focus was on stabilising the most critical workflows and ensuring that new work followed system principles.</p>
                     <p class="text-tiny text-gray-700">Key improvements included:</p>
                     <ul class="text-tiny text-gray-700 list-disc pl-5 space-y-1">
-                        <li>Consistent form and validation patterns that improved error clarity and recovery</li>
-                        <li>Data-dense table interactions that enabled inline editing and reduced reliance on modal workflows</li>
-                        <li>Unified navigation and filtering patterns that improved wayfinding across complex compliance tasks</li>
+                        <li>Consistent form and validation patterns with clearer error recovery</li>
+                        <li>Data-dense table interactions with inline editing and fewer modal workflows</li>
+                        <li>Unified navigation and filtering across complex compliance tasks</li>
                     </ul>
-                    <p class="text-tiny text-gray-700">To support cross-team alignment, we established recurring collaboration rituals between design, engineering, and the design system guild. These included early design-development pairing during implementation and structured reviews for new patterns entering the system.</p>
-                    <p class="text-tiny text-gray-700">By aligning both the interface and the delivery practices around the design system, teams were able to move forward without reintroducing fragmentation.</p>
+                    <p class="text-tiny text-gray-700">Recurring design-development pairing and structured reviews for new patterns helped teams move forward without reintroducing fragmentation.</p>
                 </section>
-
                 <section class="space-y-3">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">6. Outcome</h3>
-                    <p class="text-tiny text-gray-700">The immediate result was a more coherent interface across several high-traffic workflows within the CPDM platform.</p>
-                    <p class="text-tiny text-gray-700">More importantly, the work improved the reliability of the delivery pipeline itself.</p>
-                    <p class="text-tiny text-gray-700">Product stories moved through grooming and development with fewer ambiguities, front-end rework decreased as teams adopted token-based components, and the reliance on CSS overrides was significantly reduced.</p>
-                    <p class="text-tiny text-gray-700">The components introduced for CPDM were later adopted by other internal products, extending the reach of the design system beyond its original scope.</p>
-                    <p class="text-tiny text-gray-700">What had previously functioned as a reference library began operating as a shared operational standard across product squads.</p>
+                    <p class="text-tiny text-gray-700">The platform regained a coherent interface across high-traffic workflows and a more reliable delivery pipeline.</p>
+                    <p class="text-tiny text-gray-700">Stories moved through grooming and development with fewer ambiguities, front-end rework decreased, and reliance on CSS overrides was significantly reduced.</p>
+                    <p class="text-tiny text-gray-700">Components introduced for the platform were later adopted by other internal products. What had functioned as a reference library began operating as a shared standard across squads.</p>
                 </section>
-
                 <section class="space-y-3">
                     <h3 style="font-family:'Fraunces',serif;font-size:1.35rem;">Reflection</h3>
-                    <p class="text-tiny text-gray-700">In hindsight, I would have introduced lightweight telemetry earlier to better quantify usability improvements in the platform’s core workflows.</p>
-                    <p class="text-tiny text-gray-700">I would also formalise a design-system onboarding playbook for new teams, including token usage guidance and example implementation patterns.</p>
-                    <p class="text-tiny text-gray-700">The most important outcome of the work was not simply a cleaner interface. It was the restoration of a shared contract between design and engineering - one that allowed multiple squads to move faster without sacrificing system coherence.</p>
+                    <p class="text-tiny text-gray-700">I would introduce lightweight telemetry earlier to better quantify usability improvements and formalise a design-system onboarding playbook for new teams.</p>
+                    <p class="text-tiny text-gray-700">The most important outcome was not simply a cleaner interface. It was the restoration of a shared contract between design and engineering.</p>
                 </section>
             </div>
 
             <section class="pt-2">
-                <a href="#" onclick="showWork(event)"
-                    class="link-underline text-tiny text-gray-500 hover:text-black">← Back to Work</a>
+                <a href="#" onclick="showWork(event)" class="link-underline text-tiny text-gray-500 hover:text-black">← Back to Work</a>
             </section>
+        </div>
+
+        <div id="caseStudyPage" class="page content-shell geo-case hidden">
+            <header class="geo-case-hero">
+                <p class="geo-case-eyebrow">GeoMarketeer <span>Case study · Draft 02</span></p>
+                <h1>A promising location.<br>A lot of unanswered questions.</h1>
+                <p class="geo-case-deck">Helping retail businesses investigate a place before investing in it.</p>
+                <dl class="geo-case-meta">
+                    <div><dt>Company</dt><dd>GeoSpoc</dd></div>
+                    <div><dt>Timeline</dt><dd>May–October 2017</dd></div>
+                    <div class="geo-case-role"><dt>My role</dt><dd>UX Researcher &amp; UX/UI Designer</dd></div>
+                </dl>
+                <p class="geo-case-ownership">I contributed to research as part of a broader team and owned the end-to-end UX/UI design, from navigation explorations and wireframes through to the final interface.</p>
+            </header>
+
+            <section id="geoStory" class="geo-story" data-beat="0" aria-labelledby="geoStoryTitle">
+                <figure class="geo-story-stage">
+                    <div class="geo-story-viewport" role="img" aria-label="Sid’s vacant unit in a busy café lane, within a neighborhood of homes, offices, and a metro station.">
+                        <div class="geo-story-plane">
+                            <img class="geo-story-master" src="assets/portfolio/geomarketeer/story-opening/master.png" alt="" draggable="false" width="1536" height="1024" decoding="async">
+                            <div class="geo-story-overlays" aria-hidden="true"></div>
+                        </div>
+                        <p class="geo-story-loading" role="status">Preparing the neighborhood…</p>
+                        <div class="geo-story-error" role="status" hidden><p>The illustration could not load. You can still follow Sid’s story below.</p><button type="button" data-geo-action="retry">Try again</button></div>
+                    </div>
+                    <figcaption class="geo-story-scenario">An illustrative scenario.</figcaption>
+                </figure>
+                <div class="geo-story-copy">
+                    <article class="geo-story-beat is-active" data-geo-beat="0">
+                        <p class="geo-story-step">01 / The idea</p>
+                        <h3 id="geoStoryTitle">Sid wanted a café of his own.</h3>
+                        <p class="geo-story-body">This busy café lane looked like a promising place.</p>
+                    </article>
+                    <article class="geo-story-beat" data-geo-beat="1">
+                        <p class="geo-story-step">02 / The assumption</p>
+                        <h3>The cafés next door were busy.</h3>
+                        <p class="geo-story-body">Surely there was room for one more?</p>
+                    </article>
+                    <article class="geo-story-beat" data-geo-beat="2">
+                        <p class="geo-story-step">03 / The doubt</p>
+                        <h3>But what was bringing people here?</h3>
+                        <p class="geo-story-body">The metro explained some of the crowd. It didn’t tell Sid who would buy.</p>
+                    </article>
+                    <article class="geo-story-beat" data-geo-beat="3">
+                        <p class="geo-story-step">04 / The context</p>
+                        <h3>He needed more than footfall.</h3>
+                        <p class="geo-story-body">Who lives and works nearby? What do they spend? What do the existing cafés already offer?</p>
+                    </article>
+                    <article class="geo-story-beat" data-geo-beat="4">
+                        <p class="geo-story-step">05 / The response</p>
+                        <h3>Same lane. A clearer picture.</h3>
+                        <p class="geo-story-body">GeoMarketeer helps businesses understand a neighborhood before choosing where to open.</p>
+                    </article>
+                </div>
+                <nav class="geo-story-nav" aria-label="Story navigation" hidden>
+                    <button type="button" data-geo-action="prev" disabled>Back</button>
+                    <span class="geo-story-count"><span class="geo-story-current">01</span><span aria-hidden="true"> / </span><span>05</span></span>
+                    <button type="button" data-geo-action="next">Next</button>
+                </nav>
+                <a class="geo-story-skip" href="#geoCaseResearch" data-geo-action="skip">Skip introduction</a>
+                <p class="geo-story-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            </section>
+
+            <div class="geo-case-reading-controls">
+                <div id="geoCaseToggle" class="case-toggle" data-view="full" role="group" aria-label="Case study detail level">
+                    <button id="quickScanBtn" class="case-toggle-btn" aria-pressed="false" aria-controls="caseStudyQuick" onclick="setCaseStudyView('quick')" type="button">Quick Scan</button>
+                    <button id="fullStoryBtn" class="case-toggle-btn" aria-pressed="true" aria-controls="caseStudyFull" onclick="setCaseStudyView('full')" type="button">Full Story</button>
+                </div>
+            </div>
+
+            <div id="caseStudyQuick" class="case-panel geo-case-summary hidden">
+                <section><h2>The problem</h2><p>Business owners and local franchise operators needed to investigate retail locations. They were gathering information manually, while existing GIS tools offered workflows that often assumed specialist knowledge.</p></section>
+                <section><h2>The research</h2><p>Research with six businesses over six weeks revealed difficulties understanding demographics, competition and pricing. The team also observed two businesses more closely for about a month.</p></section>
+                <section><h2>My contribution</h2><p>I contributed to the broader research effort and owned the end-to-end UX/UI. I explored several navigation arrangements and developed the feature structure, wireframes, final interface designs and onboarding.</p></section>
+                <section><h2>The design direction</h2><p>Datasets, Filters, Basemaps and Reports shared a consistent left navigation. Drawing on Google Maps as a reference, detailed controls appeared progressively beside the map, giving owners room to investigate without covering the location.</p></section>
+                <section><h2>Launch and continued feedback</h2><p>GeoMarketeer launched and was used by local business and franchise operators in Pune to investigate retail locations and produce analysis. We continued gathering their feedback on usability and how information could be presented more usefully.</p></section>
+            </div>
+
+            <div id="caseStudyFull" class="case-panel geo-case-article">
+                <section id="geoCaseResearch" class="geo-case-chapter" aria-labelledby="geoResearchTitle">
+                    <header class="geo-case-chapter-heading"><p class="geo-case-kicker">01 / Understanding the problem</p><h2 id="geoResearchTitle" tabindex="-1">Before designing the map,<br>we went outside.</h2></header>
+                    <p>Choosing a store location comes with several questions disguised as one.</p>
+                    <p>Who spends time here? What do they buy? What might they pay? Who already serves them?</p>
+                    <p>“Where should we open?” turns out to have quite a large extended family.</p>
+                    <p>Working with the broader research team, I helped investigate how existing and new retail businesses approached these decisions. Existing businesses could describe the realities of entering a market. New businesses helped us understand the uncertainty before that commitment.</p>
+                    <p>Business owners and local franchise operators were the primary users. Researchers and GIS specialists observed their use of the tool, while the owners’ needs and feedback guided the experience.</p>
+                    <p>Over six weeks, we spoke with six businesses, including sports brands, cafés and restaurants. We also observed two businesses more closely for about a month.</p>
+                    <figure id="geoFieldResearchFigure" class="geo-case-figure geo-case-research-draft" data-image-slot="field-research" data-visual-status="layout-draft">
+                        <div class="geo-case-research-board">
+                            <div class="geo-case-research-board-heading"><span>Visual 01 / Field research</span><span>Layout draft</span></div>
+                            <div class="geo-case-research-photo">
+                                <svg class="geo-case-research-sketch" viewBox="0 0 400 180" fill="none" aria-hidden="true" focusable="false">
+                                    <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M45 161h310" opacity=".25"/>
+                                        <path d="M161 37h77v35h-26l-12 12V72h-39Z" fill="#fff"/>
+                                        <path d="M176 49h46m-46 11h29" opacity=".4"/>
+                                        <circle cx="104" cy="52" r="13" fill="#fff"/>
+                                        <path d="M91 74q13-8 26 0l13 28 29 5-3 8-39-6-10-20m-16-15-8 45 32 3 9 36h-12l-13-25H79l6-42" fill="#e9eef6"/>
+                                        <path d="M73 90v43h30m-30 0-5 26m31-26 5 26"/>
+                                        <circle cx="296" cy="52" r="13" fill="#fff"/>
+                                        <path d="M309 74q-13-8-26 0l-13 28-29 5 3 8 39-6 10-20m16-15 8 45-32 3-9 36h12l13-25h20l-6-42" fill="#e9eef6"/>
+                                        <path d="M327 90v43h-30m30 0 5 26m-31-26-5 26"/>
+                                        <path d="M137 115h126v7H137Zm17 7-5 37m97-37 5 37" fill="#fff"/>
+                                        <path d="m175 98 31-2 17 15-34 1Z" fill="#fff"/>
+                                        <path d="m184 101 16-1m-11 6 18-1" opacity=".5"/>
+                                        <path d="M228 94h11v13h-11Zm11 2h4v7h-4" fill="#fff"/>
+                                    </g>
+                                </svg>
+                                <span class="geo-case-research-photo-label">Photo placeholder</span>
+                                <strong>A conversation with a business owner</strong>
+                                <span class="geo-case-research-photo-note">Replace this sketch with an original GeoMarketeer research photograph.</span>
+                            </div>
+                            <dl class="geo-case-research-scope">
+                                <div><dt>6 businesses</dt><dd>Conversations over six weeks</dd></div>
+                                <div><dt>2 businesses</dt><dd>Closer observation for about a month</dd></div>
+                            </dl>
+                        </div>
+                        <figcaption>Planned visual: the research in context, paired with its scope. The sketch indicates the intended subject; an original project photograph is still to be added.</figcaption>
+                    </figure>
+                    <p>Four difficulties kept appearing.</p>
+                    <dl class="geo-case-findings geo-case-findings-illustrated">
+                        <div>
+                            <dt><img class="geo-case-finding-art" src="assets/portfolio/geomarketeer/case-study/manual-research.webp" width="960" height="720" loading="lazy" decoding="async" alt=""><span>Understanding the area took time.</span></dt>
+                            <dd>Businesses were conducting demographic research manually.</dd>
+                        </div>
+                        <div>
+                            <dt><img class="geo-case-finding-art" src="assets/portfolio/geomarketeer/case-study/competition.webp" width="960" height="720" loading="lazy" decoding="async" alt=""><span>Competition was difficult to assess.</span></dt>
+                            <dd>Established brands and customer loyalty complicated decisions about entering a market.</dd>
+                        </div>
+                        <div>
+                            <dt><img class="geo-case-finding-art" src="assets/portfolio/geomarketeer/case-study/pricing-context.webp" width="960" height="720" loading="lazy" decoding="async" alt=""><span>Pricing lacked sufficient context.</span></dt>
+                            <dd>Businesses didn’t always have enough information to judge what customers might be willing to spend.</dd>
+                        </div>
+                        <div>
+                            <dt><img class="geo-case-finding-art" src="assets/portfolio/geomarketeer/case-study/location-data.webp" width="960" height="720" loading="lazy" decoding="async" alt=""><span>Location analysis was hard to access.</span></dt>
+                            <dd>Useful geographic information wasn’t readily available in a form they could use.</dd>
+                        </div>
+                    </dl>
+                    <p>The businesses were already doing research. Much of the work involved gathering scattered information and trying to assemble a useful picture.</p>
+                </section>
+
+                <section id="geoCaseTools" class="geo-case-chapter" aria-labelledby="geoToolsTitle">
+                    <header class="geo-case-chapter-heading"><p class="geo-case-kicker">02 / Examining the tools</p><h2 id="geoToolsTitle">The information existed.<br>Finding the right button was another adventure.</h2></header>
+                    <p>Geographic Information Systems—GIS—offered ways to investigate these questions.</p>
+                    <p>A map shows where things are. GIS adds information about those places, allowing someone to explore boundaries, businesses and other characteristics of an area.</p>
+                    <p>That was useful territory for GeoMarketeer.</p>
+                    <p>But our evaluation of existing tools revealed another problem: accessing the information could require considerable effort and specialist knowledge.</p>
+                    <p>We looked at the steps involved in investigating a location—from finding the right view to taking the findings away.</p>
+                    <figure id="geoExistingToolsFigure" class="geo-case-figure" data-image-slot="existing-tool-journey" data-visual-status="awaiting-tool-screenshots">
+                        <div class="geo-case-image-slot geo-case-screenshot-slot">
+                            <span class="geo-case-slot-label">Screenshots to add · 02</span>
+                            <strong>Existing GIS tools</strong>
+                            <span>Add screenshots of the tools evaluated, showing the map, toolbars and task controls.</span>
+                        </div>
+                        <figcaption>Caption to add: tool name, version or year, and one short callout explaining what to notice in each screenshot.</figcaption>
+                    </figure>
+                    <dl class="geo-case-findings">
+                        <div><dt>Finding controls</dt><dd>Changing the base map was difficult to discover.</dd></div>
+                        <div><dt>Working with information</dt><dd>Applying filters was unintuitive, and users couldn’t always save the filters they had configured.</dd></div>
+                        <div><dt>Defining the area</dt><dd>Area-selection options didn’t always support the investigation someone wanted to conduct.</dd></div>
+                        <div><dt>Taking the findings away</dt><dd>Reports could be overwhelming, while proprietary formats made them difficult to use outside the GIS application.</dd></div>
+                    </dl>
+                    <p>Someone researching a potential store location had acquired an unexpected side project: learning GIS.</p>
+                    <p>Our challenge became:</p>
+                    <blockquote>How could retail businesses investigate a location without first becoming experts in the tool?</blockquote>
+                </section>
+
+                <section id="geoCaseStructure" class="geo-case-chapter" aria-labelledby="geoStructureTitle">
+                    <header class="geo-case-chapter-heading"><p class="geo-case-kicker">03 / Turning research into structure</p><h2 id="geoStructureTitle">Four jobs.<br>A lot of geography.</h2></header>
+                    <p>The research generated a substantial feature list.</p>
+                    <p>We needed to account for geographic boundaries, datasets, map types, search, custom filters and reporting. Across India, the underlying information included city extents, pin-code boundaries, localities and other geographic layers.</p>
+                    <p>The temptation was obvious: put everything within reach.</p>
+                    <p>The problem was equally obvious: everything would then be within reach.</p>
+                    <p>We grouped the requirements into four areas:</p>
+                    <table class="geo-case-table"><caption class="geo-case-sr-only">Four groups of product requirements</caption><thead><tr><th scope="col">Area</th><th scope="col">What someone needed to do</th></tr></thead><tbody>
+                        <tr><th scope="row">Data</th><td>Choose the information relevant to their investigation.</td></tr>
+                        <tr><th scope="row">Maps</th><td>Find a place and choose how to view it.</td></tr>
+                        <tr><th scope="row">Queries</th><td>Narrow the information around their requirements.</td></tr>
+                        <tr><th scope="row">Reports</th><td>Take the findings away for further use.</td></tr>
+                    </tbody></table>
+                    <p>This grouping connected the research to three design responses:</p>
+                    <ul class="geo-case-list">
+                        <li><strong>Gathering information manually:</strong> bring location information and relevant datasets into one map-based workspace.</li>
+                        <li><strong>Working through complex controls:</strong> reveal task-specific options and filters progressively.</li>
+                        <li><strong>Taking findings away:</strong> make downloadable reports part of the core workflow.</li>
+                    </ul>
+                    <p>That last need came directly from the research: owners wanted reports they could download. The work needed to remain useful after someone closed the browser.</p>
+                    <figure class="geo-case-figure" data-image-slot="feature-grouping"><div class="geo-case-image-slot"><span class="geo-case-slot-label">Image to add · 03</span><strong>From findings to four groups</strong><span>The original feature-grouping photograph.</span></div><figcaption>Connect the groups to the corresponding controls in the final interface.</figcaption></figure>
+                </section>
+
+                <section id="geoCaseNavigation" class="geo-case-chapter" aria-labelledby="geoNavigationTitle">
+                    <header class="geo-case-chapter-heading"><p class="geo-case-kicker">04 / Exploring the navigation</p><h2 id="geoNavigationTitle">The map had company.<br>Quite a lot of it.</h2></header>
+                    <p>Our early designs drew from conventional GIS interfaces. Actions sat across toolbars, navigation menus and dialogs over the map. A left sidebar was already part of that arrangement.</p>
+                    <p>We tested these early layouts with business owners and continued gathering feedback as the designs developed. I owned the UX/UI iterations within that broader research effort.</p>
+                    <p>I explored several navigation arrangements, including top and floating toolbars, side panels and split layouts. The sketches helped me consider where the main tasks would live, how much room their controls needed, and how much geographic context remained visible.</p>
+                    <figure class="geo-case-figure" data-image-slot="navigation-options"><div class="geo-case-image-slot geo-case-image-slot-tall"><span class="geo-case-slot-label">Comparison to add · 04</span><strong>Navigation explorations</strong><span>Selected sketches showing different arrangements of the map and its controls.</span></div><figcaption>Compare space for controls, room for the map and where detailed options appear.</figcaption></figure>
+                    <p>The final structure brought <strong>Datasets, Filters, Basemaps and Reports</strong> into a consistent left navigation. Selecting an activity revealed its detailed controls alongside the map.</p>
+                    <p>This let us accommodate additional options and filters progressively: the opening view could stay focused, with more detail available as owners continued their investigation.</p>
+                    <p>Google Maps informed the relationship between the map and its supporting panel. The trade-off was deliberate: some horizontal map space went to the controls, giving owners room to work with information while keeping the location in view.</p>
+                    <figure class="geo-case-figure geo-case-source-image"><a class="geo-case-image-link" href="assets/portfolio/geomarketeer/case-study/wireframes.webp" target="_blank" rel="noopener" aria-label="Open the navigation wireframes at full size"><img src="assets/portfolio/geomarketeer/case-study/wireframes.webp" width="2400" height="437" loading="lazy" decoding="async" alt="Three wireframes showing persistent left navigation, a map and an adjacent dataset panel."></a><figcaption>Wireframes showing the persistent navigation and adjacent task panel. <span>Open image for a closer look.</span></figcaption></figure>
+                    <div id="geoCaseDirection" class="geo-case-comparisons" role="group" aria-labelledby="geoDirectionTitle">
+                        <h3 id="geoDirectionTitle" class="geo-case-subheading">Two changes to the workflow</h3>
+                        <p class="geo-case-comparison-intro">Reading the early and final screens together shows two changes. The concerns below describe the design analysis of those layouts.</p>
+                        <div class="geo-case-decision">
+                            <h4>A consistent home for the main activities</h4>
+                            <dl>
+                                <div><dt>Early layout</dt><dd>Import, analysis, export and map configuration were distributed across toolbars and navigation.</dd></div>
+                                <div><dt>Design concern</dt><dd>Owners had to understand this arrangement to locate the next relevant activity.</dd></div>
+                                <div><dt>Design response</dt><dd>Group Datasets, Filters, Basemaps and Reports in one clearly labelled navigation, with relevant details beside it.</dd></div>
+                            </dl>
+                        </div>
+                        <div class="geo-case-decision">
+                            <h4>Keep the location in view while working</h4>
+                            <dl>
+                                <div><dt>Early layout</dt><dd>Several configuration screens opened in dialogs over the map.</dd></div>
+                                <div><dt>Design concern</dt><dd>Those dialogs covered part of the geographic context while the owner worked with settings.</dd></div>
+                                <div><dt>Design response</dt><dd>Reveal detailed controls in an adjacent panel so the map and current task remain visible together.</dd></div>
+                            </dl>
+                        </div>
+                        <figure class="geo-case-figure" data-image-slot="workflow-comparisons"><div class="geo-case-image-slot geo-case-image-slot-tall"><span class="geo-case-slot-label">Comparisons to add · 05</span><strong>From scattered controls to a shared workspace</strong><span>Two annotated comparisons: the main navigation and the placement of detailed controls.</span></div><figcaption>Use earlier and final screens to illustrate these layout changes. Label each example’s task and context.</figcaption></figure>
+                    </div>
+                </section>
+
+                <section id="geoCaseInterface" class="geo-case-chapter" aria-labelledby="geoInterfaceTitle">
+                    <header class="geo-case-chapter-heading"><p class="geo-case-kicker">05 / Refining the experience</p><h2 id="geoInterfaceTitle">A home for the tools.<br>Room to investigate.</h2></header>
+                    <p>The final interface carried the navigation structure through to the details of the workspace.</p>
+                    <dl class="geo-case-findings">
+                        <div><dt>The main tasks stayed together.</dt><dd>Datasets, Filters, Basemaps and Reports occupied a consistent location in the left sidebar.</dd></div>
+                        <div><dt>Detailed controls appeared beside the map.</dt><dd>Opening the dataset panel added working space without replacing the geographic view.</dd></div>
+                        <div><dt>Supporting functions had their own place.</dt><dd>Help, settings and account controls sat below the main workflow.</dd></div>
+                        <div><dt>Onboarding introduced the workspace.</dt><dd>The introductory screens highlighted the main tools and explained what each could do.</dd></div>
+                    </dl>
+                    <p>These details helped express the structure of the product: what was available, where it lived and how to begin.</p>
+                    <figure class="geo-case-figure geo-case-source-image"><a class="geo-case-image-link" href="assets/portfolio/geomarketeer/case-study/final-workspace.webp" target="_blank" rel="noopener" aria-label="Open the final map workspace at full size"><img src="assets/portfolio/geomarketeer/case-study/final-workspace.webp" width="2400" height="646" loading="lazy" decoding="async" alt="Final GeoMarketeer interface showing the map with persistent navigation, followed by the same workspace with the dataset panel open."></a><figcaption>The map stays visible as the dataset panel opens. <span>Open image for a closer look.</span></figcaption></figure>
+                    <figure class="geo-case-figure" data-image-slot="interface-details"><div class="geo-case-image-slot"><span class="geo-case-slot-label">Details to add · 06</span><strong>The small decisions</strong><span>Hierarchy, labels, selected states and task panels.</span></div><figcaption>Two or three annotated close-ups. Each image should make one point.</figcaption></figure>
+                </section>
+
+                <section id="geoCaseWalkthrough" class="geo-case-chapter" aria-labelledby="geoWalkthroughTitle">
+                    <header class="geo-case-chapter-heading"><p class="geo-case-kicker">06 / Bringing the experience together</p><h2 id="geoWalkthroughTitle">From “this place looks promising” to a more useful question.</h2></header>
+                    <p>Return to someone like Sid.</p>
+                    <p>The starting point is a location. The next step is deciding what to investigate about it.</p>
+                    <p>The experience was designed to support that progression:</p>
+                    <ol class="geo-case-steps">
+                        <li><h3>Find an area.</h3><p>Locate the place under consideration.</p></li>
+                        <li><h3>Choose relevant information.</h3><p>Select the datasets and layers that help describe it.</p></li>
+                        <li><h3>Narrow the investigation.</h3><p>Apply filters based on the business’s requirements.</p></li>
+                        <li><h3>Take the findings away.</h3><p>Generate a report for use beyond the application.</p></li>
+                    </ol>
+                    <p>A map became the workspace for investigating a business question.</p>
+                    <figure class="geo-case-figure" data-image-slot="product-walkthrough"><div class="geo-case-image-slot"><span class="geo-case-slot-label">Walkthrough to add · 07</span><strong>One investigation, step by step</strong><span>A short sequence using the actual product screens.</span></div><figcaption>Distinguish completed designs from any reconstruction created for this case study.</figcaption></figure>
+                </section>
+
+                <section id="geoCaseOutcome" class="geo-case-chapter" aria-labelledby="geoOutcomeTitle">
+                    <header class="geo-case-chapter-heading"><p class="geo-case-kicker">07 / Launch and continued feedback</p><h2 id="geoOutcomeTitle">The conversation continued<br>after launch.</h2></header>
+                    <p>GeoMarketeer launched as a product. Local business and franchise operators in Pune used it to investigate retail locations and produce analysis.</p>
+                    <p>Among them were local operators associated with Starbucks, Nike and Manyavar.</p>
+                    <p>We continued gathering their feedback on what needed improvement and how information could be presented more usefully. Their experience of using the product kept informing discussions about usability and the interface.</p>
+                    <p>My contribution spanned the end-to-end UX/UI, supported by the broader research team: feature structure, several navigation arrangements, wireframes, final interface designs and onboarding.</p>
+                    <p>The work brought a broad set of geographic capabilities into everyday actions: finding an activity, choosing information, adjusting an investigation and taking the findings away.</p>
+                    <p class="geo-case-history">GeoSpoc was later <a href="https://blog.olacabs.com/ola-acquires-geospoc/" target="_blank" rel="noopener">acquired by Ola</a>. GeoMarketeer was subsequently shelved.</p>
+                </section>
+            </div>
+
+            <footer class="geo-case-footer"><a href="#" onclick="showWork(event)" class="link-underline">← Back to Work</a><a href="#caseStudyPage">Back to top ↑</a></footer>
         </div>
 
         <!-- Writing -->
@@ -902,6 +1135,7 @@
     <script>
         const homePage = document.getElementById('homePage');
         const workPage = document.getElementById('workPage');
+        const dashboardStudyPage = document.getElementById('dashboardStudyPage');
         const caseStudyPage = document.getElementById('caseStudyPage');
         const readingPage = document.getElementById('readingPage');
         const writingPage = document.getElementById('writingPage');
@@ -913,9 +1147,17 @@
         const caseStudyFull = document.getElementById('caseStudyFull');
         const quickScanBtn = document.getElementById('quickScanBtn');
         const fullStoryBtn = document.getElementById('fullStoryBtn');
-        const caseToggle = document.querySelector('.case-toggle');
+        const caseToggle = document.getElementById('geoCaseToggle');
+        const dashboardStudyQuick = document.getElementById('dashboardStudyQuick');
+        const dashboardStudyFull = document.getElementById('dashboardStudyFull');
+        const dashboardQuickBtn = document.getElementById('dashboardQuickBtn');
+        const dashboardFullBtn = document.getElementById('dashboardFullBtn');
+        const dashboardCaseToggle = document.getElementById('dashboardCaseToggle');
         let isCaseViewAnimating = false;
-        let caseStudyView = 'quick';
+        let caseViewRequest = 0;
+        let caseStudyView = 'full';
+        let isDashboardViewAnimating = false;
+        let dashboardView = 'quick';
         const pageByKey = {
             home: homePage,
             work: workPage,
@@ -953,6 +1195,7 @@
         function getCurrentPage() {
             if (!homePage.classList.contains('hidden')) return homePage;
             if (!workPage.classList.contains('hidden')) return workPage;
+            if (!dashboardStudyPage.classList.contains('hidden')) return dashboardStudyPage;
             if (!caseStudyPage.classList.contains('hidden')) return caseStudyPage;
             if (!readingPage.classList.contains('hidden')) return readingPage;
             if (!writingPage.classList.contains('hidden')) return writingPage;
@@ -962,6 +1205,7 @@
         function getCurrentPageKey() {
             if (!homePage.classList.contains('hidden')) return 'home';
             if (!workPage.classList.contains('hidden')) return 'work';
+            if (!dashboardStudyPage.classList.contains('hidden')) return 'work';
             if (!caseStudyPage.classList.contains('hidden')) return 'work';
             if (!readingPage.classList.contains('hidden')) return 'reading';
             if (!writingPage.classList.contains('hidden')) return 'writing';
@@ -1046,7 +1290,57 @@
         function showCaseStudy(e) {
             e.preventDefault();
             navigate('caseStudy');
-            setCaseStudyView('quick', true);
+            setCaseStudyView('full', true);
+        }
+
+        function showDashboardStudy(e) {
+            e.preventDefault();
+            if (isAnimating) return;
+            setActiveNav('work');
+            transition(getCurrentPage(), dashboardStudyPage);
+            setDashboardView('quick', true);
+        }
+
+        function setDashboardView(view, immediate = false) {
+            if (!dashboardStudyQuick || !dashboardStudyFull || !dashboardQuickBtn || !dashboardFullBtn) return;
+            if (view !== 'quick' && view !== 'full') return;
+            if (isDashboardViewAnimating && !immediate) return;
+            if (view === dashboardView && !immediate) return;
+
+            const showQuick = view === 'quick';
+            dashboardQuickBtn.setAttribute('aria-pressed', String(showQuick));
+            dashboardFullBtn.setAttribute('aria-pressed', String(!showQuick));
+            if (dashboardCaseToggle) dashboardCaseToggle.dataset.view = view;
+
+            const nextPanel = showQuick ? dashboardStudyQuick : dashboardStudyFull;
+            const currentPanel = showQuick ? dashboardStudyFull : dashboardStudyQuick;
+
+            if (immediate) {
+                dashboardStudyQuick.classList.toggle('hidden', !showQuick);
+                dashboardStudyFull.classList.toggle('hidden', showQuick);
+                dashboardStudyQuick.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
+                dashboardStudyFull.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
+                dashboardView = view;
+                return;
+            }
+
+            isDashboardViewAnimating = true;
+            nextPanel.classList.remove('hidden');
+            nextPanel.classList.add('case-panel-enter');
+            currentPanel.classList.add('case-panel-exit');
+
+            requestAnimationFrame(() => {
+                nextPanel.classList.add('case-panel-enter-active');
+                currentPanel.classList.add('case-panel-exit-active');
+            });
+
+            setTimeout(() => {
+                currentPanel.classList.add('hidden');
+                currentPanel.classList.remove('case-panel-exit', 'case-panel-exit-active');
+                nextPanel.classList.remove('case-panel-enter', 'case-panel-enter-active');
+                dashboardView = view;
+                isDashboardViewAnimating = false;
+            }, 320);
         }
 
         function setCaseStudyView(view, immediate = false) {
@@ -1054,6 +1348,7 @@
             if (view !== 'quick' && view !== 'full') return;
             if (isCaseViewAnimating && !immediate) return;
             if (view === caseStudyView && !immediate) return;
+            const request = ++caseViewRequest;
 
             const showQuick = view === 'quick';
             quickScanBtn.setAttribute('aria-pressed', String(showQuick));
@@ -1069,6 +1364,7 @@
                 caseStudyQuick.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
                 caseStudyFull.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
                 caseStudyView = view;
+                isCaseViewAnimating = false;
                 return;
             }
 
@@ -1079,11 +1375,13 @@
             currentPanel.classList.add('case-panel-exit');
 
             requestAnimationFrame(() => {
+                if (request !== caseViewRequest) return;
                 nextPanel.classList.add('case-panel-enter-active');
                 currentPanel.classList.add('case-panel-exit-active');
             });
 
             setTimeout(() => {
+                if (request !== caseViewRequest) return;
                 currentPanel.classList.add('hidden');
                 currentPanel.classList.remove('case-panel-exit', 'case-panel-exit-active');
                 nextPanel.classList.remove('case-panel-enter', 'case-panel-enter-active');
@@ -1119,10 +1417,8 @@
         if (document.fonts && document.fonts.ready) {
             document.fonts.ready.then(() => fitIntroHeadlineToAvatar());
         }
-        requestAnimationFrame(() => {
-            document.body.classList.add('nav-ready');
-        });
     </script>
+    <script type="module" src="scripts/geomarketeer-story.js?v=story5-2"></script>
 
 </body>
 

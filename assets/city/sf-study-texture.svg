@@ -1,0 +1,21 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="noise" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" seed="9" result="field"/>
+      <feColorMatrix in="field" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.18 0"/>
+    </filter>
+    <radialGradient id="coolTint" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(804 408) rotate(149) scale(544 318)">
+      <stop stop-color="#7A9BC0" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#7A9BC0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="700" filter="url(#noise)"/>
+  <rect width="1200" height="700" fill="url(#coolTint)"/>
+  <g opacity="0.18">
+    <path d="M60 124C162 104 254 100 342 112" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M834 82C924 68 1002 72 1090 90" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M148 530C246 514 344 514 432 526" stroke="#C8D8E6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M720 574C808 560 892 560 982 574" stroke="#D7E2EB" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

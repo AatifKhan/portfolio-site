@@ -1,0 +1,82 @@
+{
+  "source": "assets/portfolio/geomarketeer/story-opening/master.png",
+  "sourceWidth": 1536,
+  "sourceHeight": 1024,
+  "sourceSha256": "b4b661999da279f55969a831e60de3394b242b09d5d293068e27dae08a25855e",
+  "displayWidth": 560,
+  "displayHeight": 315,
+  "exportScale": 2,
+  "note": "The five exports use the live story camera data and registered overlay markup. They are 2× presentation renders of one unchanged 1536×1024 image, not newly detailed or independently generated artwork.",
+  "files": [
+    {
+      "beat": 1,
+      "id": "idea",
+      "filename": "frame-01.png",
+      "width": 1120,
+      "height": 630,
+      "bytes": 910873,
+      "sha256": "f733cc3b100033629801977db02d8fdf67be9d8d6062151da3f53ce9a8fa0eb5",
+      "camera": {
+        "cx": 0.324,
+        "cy": 0.862,
+        "zoom": 2.35
+      }
+    },
+    {
+      "beat": 2,
+      "id": "assumption",
+      "filename": "frame-02.png",
+      "width": 1120,
+      "height": 630,
+      "bytes": 1029200,
+      "sha256": "e89de46011ed945b4031097988f347f8b711b74afa30042090aa09c3a96754fe",
+      "camera": {
+        "cx": 0.327,
+        "cy": 0.845,
+        "zoom": 2.85
+      }
+    },
+    {
+      "beat": 3,
+      "id": "doubt",
+      "filename": "frame-03.png",
+      "width": 1120,
+      "height": 630,
+      "bytes": 1028274,
+      "sha256": "101875355a18217466076368bc644de012f9a9ff4b1e79e2b5968e228d3988ed",
+      "camera": {
+        "cx": 0.535,
+        "cy": 0.76,
+        "zoom": 1.36
+      }
+    },
+    {
+      "beat": 4,
+      "id": "context",
+      "filename": "frame-04.png",
+      "width": 1120,
+      "height": 630,
+      "bytes": 1014657,
+      "sha256": "2fc98568e5904f3d7a1ff949cd208e2aa978cb09f431e1d1710bf1bec728ad2f",
+      "camera": {
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 0.98
+      }
+    },
+    {
+      "beat": 5,
+      "id": "response",
+      "filename": "frame-05.png",
+      "width": 1120,
+      "height": 630,
+      "bytes": 1018689,
+      "sha256": "9d9e1e7c9e6ec2a95b0bccfb906071f4e7148aecc8b97f0d930e1ab825146ca2",
+      "camera": {
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 0.98
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+:root {
+    --nav-glide-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+.top-nav-shell {
+    transition: padding-top 450ms var(--nav-glide-ease);
+}
+
+.top-nav {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: transform 650ms var(--nav-glide-ease),
+        opacity 650ms var(--nav-glide-ease),
+        gap 450ms var(--nav-glide-ease),
+        background-color 450ms var(--nav-glide-ease),
+        border-color 450ms var(--nav-glide-ease),
+        backdrop-filter 450ms var(--nav-glide-ease),
+        -webkit-backdrop-filter 450ms var(--nav-glide-ease);
+}
+
+body.nav-ready .top-nav {
+    opacity: 1;
+    transform: none;
+}
+
+.nav-fade {
+    transition: opacity 450ms var(--nav-glide-ease);
+}
+
+.nav-link {
+    opacity: 1;
+    transform: none;
+    transition: color 200ms var(--nav-glide-ease);
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+    box-shadow: none;
+}
+
+.nav-link-label {
+    display: inline-block;
+    translate: var(--nav-magnetic-x, 0px) var(--nav-magnetic-y, 0px);
+    transition: translate 200ms var(--nav-glide-ease);
+}
+
+body.nav-entering.nav-ready .nav-link-label {
+    animation: nav-label-reveal 650ms var(--nav-glide-ease) both;
+    animation-delay: calc(var(--item-index, 0) * 35ms);
+}
+
+.nav-glide-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 1px;
+    background: var(--ink, #111827);
+    pointer-events: none;
+    opacity: 0;
+    transform-origin: left top;
+    transition: transform 500ms var(--nav-glide-ease), opacity 200ms ease;
+}
+
+.nav-glide-indicator.is-visible {
+    opacity: 1;
+}
+
+@keyframes nav-label-reveal {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .top-nav-shell,
+    .top-nav,
+    .nav-fade,
+    .nav-link,
+    .nav-link-label,
+    .nav-glide-indicator {
+        transition: none;
+    }
+
+    .top-nav,
+    body.nav-ready .top-nav {
+        opacity: 1;
+        transform: none;
+    }
+
+    .nav-link-label,
+    body.nav-entering.nav-ready .nav-link-label {
+        animation: none;
+        transform: none;
+        translate: none;
+    }
+}

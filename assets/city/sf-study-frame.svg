@@ -1,0 +1,39 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="rightFog" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(924 324) rotate(180) scale(360 200)">
+      <stop stop-color="#F8F3ED" stop-opacity="0.84"/>
+      <stop offset="0.44" stop-color="#F8F3ED" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F8F3ED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="leftFog" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(220 306) rotate(18) scale(260 140)">
+      <stop stop-color="#FFF5E4" stop-opacity="0.42"/>
+      <stop offset="0.5" stop-color="#FFF5E4" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFF5E4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="topWash" x1="600" y1="0" x2="600" y2="194" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#FFFDF8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bottomMist" x1="600" y1="520" x2="600" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF1F0" stop-opacity="0"/>
+      <stop offset="0.56" stop-color="#EEF1F0" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#122131" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="blur18" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="194" fill="url(#topWash)"/>
+  <rect y="520" width="1200" height="180" fill="url(#bottomMist)"/>
+  <ellipse cx="924" cy="324" rx="360" ry="200" fill="url(#rightFog)"/>
+  <ellipse cx="220" cy="306" rx="260" ry="140" fill="url(#leftFog)"/>
+
+  <g opacity="0.42" filter="url(#blur18)">
+    <path d="M-20 476C118 456 278 468 404 490C510 510 612 532 726 530C852 528 958 494 1054 470C1126 452 1188 448 1224 454V564C1180 552 1134 548 1070 552C966 560 864 584 738 590C630 596 550 580 442 560C300 534 154 524 -20 544V476Z" fill="#F6F2EB"/>
+  </g>
+
+  <g opacity="0.18" filter="url(#blur18)">
+    <path d="M-16 94C120 76 250 88 390 104C522 120 676 134 820 120C968 106 1082 68 1218 44V136C1086 168 952 192 806 194C642 196 500 176 346 154C216 136 114 130 -16 150V94Z" fill="#FFFFFF"/>
+  </g>
+</svg>
