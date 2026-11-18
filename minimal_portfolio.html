@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Minimalist</title>
+    <script>
+        const portfolioQuery = new URLSearchParams(location.search);
+        const isMeadowCase = portfolioQuery.get('project') === 'geomarketeer' && portfolioQuery.get('view') === 'meadow';
+        if (isMeadowCase) {
+            document.documentElement.dataset.portfolioView = 'meadow-case';
+            document.title = 'GeoMarketeer | Aatif Khan';
+            const themeColor = document.createElement('meta');
+            themeColor.name = 'theme-color';
+            themeColor.content = '#ffffff';
+            document.head.append(themeColor);
+        }
+    </script>
+    <script src="meadow/theme.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -464,12 +477,13 @@
     </style>
     <link rel="stylesheet" href="styles/menu-motion.css">
     <script src="scripts/menu-motion.js" defer></script>
-    <link rel="stylesheet" href="styles/geomarketeer-case-study.css?v=draft1">
+    <link rel="stylesheet" href="styles/geomarketeer-case-study.css?v=meadow3">
+    <link rel="stylesheet" href="meadow/appearance.css">
 </head>
 
 <body class="selection:bg-gray-200">
 
-    <header>
+    <header class="portfolio-nav">
         <div class="fixed top-0 w-screen h-[15vh] nav-fade pointer-events-none z-10"></div>
 
         <div class="top-nav-shell">
@@ -488,7 +502,29 @@
         </div>
     </header>
 
-    <main class="min-h-screen flex flex-col items-center pt-48 pb-24 px-6">
+    <header class="geo-case-meadow-header geo-case-meadow-only">
+        <div class="geo-case-meadow-bar">
+            <a class="geo-case-meadow-back" href="meadow/#work">
+                <svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true"><path d="M15 10H5m4-4-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back to Highlighted Work
+            </a>
+            <div class="geo-case-meadow-actions">
+                <span>Aatif Khan</span>
+                <div class="appearance" data-appearance hidden>
+                    <button class="button appearance-toggle" type="button" data-appearance-toggle aria-label="Appearance" aria-expanded="false" aria-controls="appearance-options">
+                        <span class="appearance-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="appearance-options" id="appearance-options" data-appearance-options role="group" aria-label="Appearance" hidden>
+                        <button type="button" data-theme-option="light" aria-pressed="true">Light</button>
+                        <button type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+                        <button type="button" data-theme-option="system" aria-pressed="false">System</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="portfolio-main min-h-screen flex flex-col items-center pt-48 pb-24 px-6">
         <noscript><p style="width:min(calc(100vw - 3rem),35rem);margin:6rem auto 2rem;font-size:.875rem;line-height:1.6;">Page navigation requires JavaScript. <a href="art/geomarketeer/story-opening/index.html" style="text-decoration:underline;text-underline-offset:.2em;">Read the GeoMarketeer introduction</a>.</p></noscript>
 
         <!-- Home -->
@@ -800,16 +836,47 @@
 
         <div id="caseStudyPage" class="page content-shell geo-case hidden">
             <header class="geo-case-hero">
-                <p class="geo-case-eyebrow">GeoMarketeer <span>Case study · Draft 02</span></p>
-                <h1>A promising location.<br>A lot of unanswered questions.</h1>
+                <p class="geo-case-eyebrow">GeoMarketeer <span class="geo-case-draft-only">Case study · Draft 02</span><span class="geo-case-meadow-only">Case study</span></p>
+                <h1><span class="geo-case-draft-only">A promising location.<br>A lot of unanswered questions.</span><span class="geo-case-meadow-only">Where should we open?</span></h1>
                 <p class="geo-case-deck">Helping retail businesses investigate a place before investing in it.</p>
-                <dl class="geo-case-meta">
-                    <div><dt>Company</dt><dd>GeoSpoc</dd></div>
-                    <div><dt>Timeline</dt><dd>May–October 2017</dd></div>
-                    <div class="geo-case-role"><dt>My role</dt><dd>UX Researcher &amp; UX/UI Designer</dd></div>
-                </dl>
-                <p class="geo-case-ownership">I contributed to research as part of a broader team and owned the end-to-end UX/UI design, from navigation explorations and wireframes through to the final interface.</p>
+                <div class="geo-case-project-context">
+                    <dl class="geo-case-meta">
+                        <div><dt>Company</dt><dd>GeoSpoc</dd></div>
+                        <div><dt>Timeline</dt><dd>May–October 2017</dd></div>
+                        <div class="geo-case-role"><dt>My role</dt><dd>UX Researcher &amp; UX/UI Designer</dd></div>
+                    </dl>
+                    <p class="geo-case-ownership">I contributed to research as part of a broader team and owned the end-to-end UX/UI design, from navigation explorations and wireframes through to the final interface.</p>
+                </div>
             </header>
+
+            <section id="geoCaseBrief" class="geo-case-brief geo-case-meadow-only" aria-labelledby="geoCaseBriefTitle">
+                <h2 id="geoCaseBriefTitle">Keep the location in view.</h2>
+                <p>I led UX/UI for a retail site selection tool. Dataset controls sit beside the map, keeping the location visible during analysis.</p>
+                <fieldset class="geo-case-workspace">
+                    <legend class="geo-case-sr-only">Compare the original map workspace</legend>
+                    <input class="geo-case-sr-only" type="radio" name="geoWorkspace" id="geoWorkspaceMap" checked>
+                    <input class="geo-case-sr-only" type="radio" name="geoWorkspace" id="geoWorkspaceDatasets">
+                    <div class="geo-case-workspace-options">
+                        <label for="geoWorkspaceMap">Map only</label>
+                        <label for="geoWorkspaceDatasets">Datasets open</label>
+                    </div>
+                    <div class="geo-case-workspace-views">
+                        <figure class="geo-case-workspace-map">
+                            <div class="geo-case-workspace-crop">
+                                <img src="assets/portfolio/geomarketeer/case-study/final-workspace.webp" width="2400" height="646" loading="lazy" decoding="async" alt="The original Pune map with the persistent left navigation and the dataset panel closed.">
+                            </div>
+                            <figcaption>The default map view keeps Datasets, Filters, Basemaps and Reports in the left navigation.</figcaption>
+                        </figure>
+                        <figure class="geo-case-workspace-datasets">
+                            <div class="geo-case-workspace-crop">
+                                <img src="assets/portfolio/geomarketeer/case-study/final-workspace.webp" width="2400" height="646" loading="lazy" decoding="async" alt="The same Pune map with the Datasets panel open beside the left navigation. The location remains visible.">
+                            </div>
+                            <figcaption>Opening Datasets reveals its controls beside the map, with the same location still visible.</figcaption>
+                        </figure>
+                    </div>
+                </fieldset>
+                <a class="geo-case-workspace-original" href="assets/portfolio/geomarketeer/case-study/final-workspace.webp">View both screenshots at full size</a>
+            </section>
 
             <section id="geoStory" class="geo-story" data-beat="0" aria-labelledby="geoStoryTitle">
                 <figure class="geo-story-stage">
@@ -885,8 +952,8 @@
                     <p>Over six weeks, we spoke with six businesses, including sports brands, cafés and restaurants. We also observed two businesses more closely for about a month.</p>
                     <figure id="geoFieldResearchFigure" class="geo-case-figure geo-case-research-draft" data-image-slot="field-research" data-visual-status="layout-draft">
                         <div class="geo-case-research-board">
-                            <div class="geo-case-research-board-heading"><span>Visual 01 / Field research</span><span>Layout draft</span></div>
-                            <div class="geo-case-research-photo">
+                            <div class="geo-case-research-board-heading geo-case-draft-only"><span>Visual 01 / Field research</span><span>Layout draft</span></div>
+                            <div class="geo-case-research-photo geo-case-draft-only">
                                 <svg class="geo-case-research-sketch" viewBox="0 0 400 180" fill="none" aria-hidden="true" focusable="false">
                                     <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M45 161h310" opacity=".25"/>
@@ -913,7 +980,7 @@
                                 <div><dt>2 businesses</dt><dd>Closer observation for about a month</dd></div>
                             </dl>
                         </div>
-                        <figcaption>Planned visual: the research in context, paired with its scope. The sketch indicates the intended subject; an original project photograph is still to be added.</figcaption>
+                        <figcaption class="geo-case-draft-only">Planned visual: the research in context, paired with its scope. The sketch indicates the intended subject; an original project photograph is still to be added.</figcaption>
                     </figure>
                     <p>Four difficulties kept appearing.</p>
                     <dl class="geo-case-findings geo-case-findings-illustrated">
@@ -944,7 +1011,7 @@
                     <p>That was useful territory for GeoMarketeer.</p>
                     <p>But our evaluation of existing tools revealed another problem: accessing the information could require considerable effort and specialist knowledge.</p>
                     <p>We looked at the steps involved in investigating a location—from finding the right view to taking the findings away.</p>
-                    <figure id="geoExistingToolsFigure" class="geo-case-figure" data-image-slot="existing-tool-journey" data-visual-status="awaiting-tool-screenshots">
+                    <figure id="geoExistingToolsFigure" class="geo-case-figure geo-case-draft-only" data-image-slot="existing-tool-journey" data-visual-status="awaiting-tool-screenshots">
                         <div class="geo-case-image-slot geo-case-screenshot-slot">
                             <span class="geo-case-slot-label">Screenshots to add · 02</span>
                             <strong>Existing GIS tools</strong>
@@ -970,12 +1037,20 @@
                     <p>The temptation was obvious: put everything within reach.</p>
                     <p>The problem was equally obvious: everything would then be within reach.</p>
                     <p>We grouped the requirements into four areas:</p>
-                    <table class="geo-case-table"><caption class="geo-case-sr-only">Four groups of product requirements</caption><thead><tr><th scope="col">Area</th><th scope="col">What someone needed to do</th></tr></thead><tbody>
-                        <tr><th scope="row">Data</th><td>Choose the information relevant to their investigation.</td></tr>
-                        <tr><th scope="row">Maps</th><td>Find a place and choose how to view it.</td></tr>
-                        <tr><th scope="row">Queries</th><td>Narrow the information around their requirements.</td></tr>
-                        <tr><th scope="row">Reports</th><td>Take the findings away for further use.</td></tr>
-                    </tbody></table>
+                    <figure id="geoFeatureGroupingFigure" class="geo-case-figure geo-case-feature-grouping" data-image-slot="feature-grouping" data-visual-status="approved" aria-label="From findings to four groups">
+                        <p class="geo-case-feature-label">The team’s feature-grouping board</p>
+                        <a class="geo-case-image-link" href="assets/portfolio/geomarketeer/case-study/feature-grouping.webp" target="_blank" rel="noopener" aria-label="Open the original GeoMarketeer feature-grouping board at full size">
+                            <img src="assets/portfolio/geomarketeer/case-study/feature-grouping-preview.webp" width="1600" height="720" loading="lazy" decoding="async" alt="Original GeoMarketeer photograph: yellow sticky notes grouped under Data, Maps, Query and Reports.">
+                        </a>
+                        <p class="geo-case-feature-divider" id="geoFeatureGroupingSummary">The structure, at a glance</p>
+                        <dl class="geo-case-feature-groups" aria-labelledby="geoFeatureGroupingSummary">
+                            <div><dt>Data</dt><dd><span>Choose relevant information.</span><span class="geo-case-feature-examples">Datasets · geographic layers</span></dd></div>
+                            <div><dt>Maps</dt><dd><span>Find and frame a place.</span><span class="geo-case-feature-examples">Search · basemaps · boundaries</span></dd></div>
+                            <div><dt>Query</dt><dd><span>Narrow the investigation.</span><span class="geo-case-feature-examples">Filters · custom queries</span></dd></div>
+                            <div><dt>Reports</dt><dd><span>Take the findings away.</span><span class="geo-case-feature-examples">Area reports · downloads</span></dd></div>
+                        </dl>
+                        <figcaption>Original project work, paired with a simplified summary for this case study. The summary is not a verbatim transcription of the notes.<span>Open the board for a closer look.</span></figcaption>
+                    </figure>
                     <p>This grouping connected the research to three design responses:</p>
                     <ul class="geo-case-list">
                         <li><strong>Gathering information manually:</strong> bring location information and relevant datasets into one map-based workspace.</li>
@@ -983,7 +1058,6 @@
                         <li><strong>Taking findings away:</strong> make downloadable reports part of the core workflow.</li>
                     </ul>
                     <p>That last need came directly from the research: owners wanted reports they could download. The work needed to remain useful after someone closed the browser.</p>
-                    <figure class="geo-case-figure" data-image-slot="feature-grouping"><div class="geo-case-image-slot"><span class="geo-case-slot-label">Image to add · 03</span><strong>From findings to four groups</strong><span>The original feature-grouping photograph.</span></div><figcaption>Connect the groups to the corresponding controls in the final interface.</figcaption></figure>
                 </section>
 
                 <section id="geoCaseNavigation" class="geo-case-chapter" aria-labelledby="geoNavigationTitle">
@@ -991,7 +1065,23 @@
                     <p>Our early designs drew from conventional GIS interfaces. Actions sat across toolbars, navigation menus and dialogs over the map. A left sidebar was already part of that arrangement.</p>
                     <p>We tested these early layouts with business owners and continued gathering feedback as the designs developed. I owned the UX/UI iterations within that broader research effort.</p>
                     <p>I explored several navigation arrangements, including top and floating toolbars, side panels and split layouts. The sketches helped me consider where the main tasks would live, how much room their controls needed, and how much geographic context remained visible.</p>
-                    <figure class="geo-case-figure" data-image-slot="navigation-options"><div class="geo-case-image-slot geo-case-image-slot-tall"><span class="geo-case-slot-label">Comparison to add · 04</span><strong>Navigation explorations</strong><span>Selected sketches showing different arrangements of the map and its controls.</span></div><figcaption>Compare space for controls, room for the map and where detailed options appear.</figcaption></figure>
+                    <figure id="geoNavigationExplorationsFigure" class="geo-case-figure geo-case-navigation-explorations" data-image-slot="navigation-options" data-visual-status="approved" aria-labelledby="geoNavigationExplorationsTitle">
+                        <figcaption class="geo-case-navigation-heading"><h3 id="geoNavigationExplorationsTitle">Where should the tools live?</h3><p>Selected sketches · Layout trade-offs</p></figcaption>
+                        <section class="geo-case-navigation-row" aria-labelledby="geoNavigationTopTitle">
+                            <div class="geo-case-navigation-crop geo-case-navigation-top"><img src="assets/portfolio/geomarketeer/case-study/navigation-explorations.jpg" width="1556" height="2200" loading="lazy" decoding="async" alt="Original top-toolbar sketch: a horizontal band of controls above the map."></div>
+                            <div class="geo-case-navigation-notes"><h4 id="geoNavigationTopTitle">Top toolbar</h4><p class="geo-case-navigation-observation">Preserves the map’s width.</p><p class="geo-case-navigation-tradeoff">A deeper toolbar leaves less vertical space for the map.</p></div>
+                        </section>
+                        <section class="geo-case-navigation-row" aria-labelledby="geoNavigationFloatingTitle">
+                            <div class="geo-case-navigation-crop geo-case-navigation-floating"><img src="assets/portfolio/geomarketeer/case-study/navigation-explorations.jpg" width="1556" height="2200" loading="lazy" decoding="async" alt="Original floating-toolbar sketch: a small vertical tool panel over the right side of the map."></div>
+                            <div class="geo-case-navigation-notes"><h4 id="geoNavigationFloatingTitle">Floating toolbar</h4><p class="geo-case-navigation-observation">Keeps tools within the map.</p><p class="geo-case-navigation-tradeoff">The panel occupies part of the geographic view.</p></div>
+                        </section>
+                        <section class="geo-case-navigation-row" aria-labelledby="geoNavigationSidebarTitle">
+                            <div class="geo-case-navigation-crop geo-case-navigation-sidebar"><img src="assets/portfolio/geomarketeer/case-study/navigation-explorations.jpg" width="1556" height="2200" loading="lazy" decoding="async" alt="Original left-sidebar sketch: a labelled panel alongside the map."></div>
+                            <div class="geo-case-navigation-notes"><span class="geo-case-navigation-choice">Direction carried forward</span><h4 id="geoNavigationSidebarTitle">Left sidebar</h4><p class="geo-case-navigation-observation">Room for labels and detailed filters.</p><p class="geo-case-navigation-tradeoff">Some map width goes to the panel.</p></div>
+                        </section>
+                        <p class="geo-case-navigation-direction">A consistent left navigation, with detailed controls revealed beside the map.</p>
+                        <details class="geo-case-navigation-source"><summary>See the complete exploration sheet</summary><a class="geo-case-image-link" href="assets/portfolio/geomarketeer/case-study/navigation-explorations.jpg" target="_blank" rel="noopener" aria-label="Open the complete navigation exploration sheet at full size"><img src="assets/portfolio/geomarketeer/case-study/navigation-explorations.jpg" width="1556" height="2200" loading="lazy" decoding="async" alt="Complete original sheet of handwritten navigation explorations, including narrow navigation, floating tools, a left panel, bottom and top toolbars, tools on both sides, a short menu and a split layout."></a><p>Open the sheet for a closer look.</p></details>
+                    </figure>
                     <p>The final structure brought <strong>Datasets, Filters, Basemaps and Reports</strong> into a consistent left navigation. Selecting an activity revealed its detailed controls alongside the map.</p>
                     <p>This let us accommodate additional options and filters progressively: the opening view could stay focused, with more detail available as owners continued their investigation.</p>
                     <p>Google Maps informed the relationship between the map and its supporting panel. The trade-off was deliberate: some horizontal map space went to the controls, giving owners room to work with information while keeping the location in view.</p>
@@ -1015,7 +1105,7 @@
                                 <div><dt>Design response</dt><dd>Reveal detailed controls in an adjacent panel so the map and current task remain visible together.</dd></div>
                             </dl>
                         </div>
-                        <figure class="geo-case-figure" data-image-slot="workflow-comparisons"><div class="geo-case-image-slot geo-case-image-slot-tall"><span class="geo-case-slot-label">Comparisons to add · 05</span><strong>From scattered controls to a shared workspace</strong><span>Two annotated comparisons: the main navigation and the placement of detailed controls.</span></div><figcaption>Use earlier and final screens to illustrate these layout changes. Label each example’s task and context.</figcaption></figure>
+                        <figure class="geo-case-figure geo-case-draft-only" data-image-slot="workflow-comparisons"><div class="geo-case-image-slot geo-case-image-slot-tall"><span class="geo-case-slot-label">Comparisons to add · 05</span><strong>From scattered controls to a shared workspace</strong><span>Two annotated comparisons: the main navigation and the placement of detailed controls.</span></div><figcaption>Use earlier and final screens to illustrate these layout changes. Label each example’s task and context.</figcaption></figure>
                     </div>
                 </section>
 
@@ -1030,7 +1120,7 @@
                     </dl>
                     <p>These details helped express the structure of the product: what was available, where it lived and how to begin.</p>
                     <figure class="geo-case-figure geo-case-source-image"><a class="geo-case-image-link" href="assets/portfolio/geomarketeer/case-study/final-workspace.webp" target="_blank" rel="noopener" aria-label="Open the final map workspace at full size"><img src="assets/portfolio/geomarketeer/case-study/final-workspace.webp" width="2400" height="646" loading="lazy" decoding="async" alt="Final GeoMarketeer interface showing the map with persistent navigation, followed by the same workspace with the dataset panel open."></a><figcaption>The map stays visible as the dataset panel opens. <span>Open image for a closer look.</span></figcaption></figure>
-                    <figure class="geo-case-figure" data-image-slot="interface-details"><div class="geo-case-image-slot"><span class="geo-case-slot-label">Details to add · 06</span><strong>The small decisions</strong><span>Hierarchy, labels, selected states and task panels.</span></div><figcaption>Two or three annotated close-ups. Each image should make one point.</figcaption></figure>
+                    <figure class="geo-case-figure geo-case-draft-only" data-image-slot="interface-details"><div class="geo-case-image-slot"><span class="geo-case-slot-label">Details to add · 06</span><strong>The small decisions</strong><span>Hierarchy, labels, selected states and task panels.</span></div><figcaption>Two or three annotated close-ups. Each image should make one point.</figcaption></figure>
                 </section>
 
                 <section id="geoCaseWalkthrough" class="geo-case-chapter" aria-labelledby="geoWalkthroughTitle">
@@ -1045,7 +1135,7 @@
                         <li><h3>Take the findings away.</h3><p>Generate a report for use beyond the application.</p></li>
                     </ol>
                     <p>A map became the workspace for investigating a business question.</p>
-                    <figure class="geo-case-figure" data-image-slot="product-walkthrough"><div class="geo-case-image-slot"><span class="geo-case-slot-label">Walkthrough to add · 07</span><strong>One investigation, step by step</strong><span>A short sequence using the actual product screens.</span></div><figcaption>Distinguish completed designs from any reconstruction created for this case study.</figcaption></figure>
+                    <figure class="geo-case-figure geo-case-draft-only" data-image-slot="product-walkthrough"><div class="geo-case-image-slot"><span class="geo-case-slot-label">Walkthrough to add · 07</span><strong>One investigation, step by step</strong><span>A short sequence using the actual product screens.</span></div><figcaption>Distinguish completed designs from any reconstruction created for this case study.</figcaption></figure>
                 </section>
 
                 <section id="geoCaseOutcome" class="geo-case-chapter" aria-labelledby="geoOutcomeTitle">
@@ -1059,7 +1149,11 @@
                 </section>
             </div>
 
-            <footer class="geo-case-footer"><a href="#" onclick="showWork(event)" class="link-underline">← Back to Work</a><a href="#caseStudyPage">Back to top ↑</a></footer>
+            <footer class="geo-case-footer">
+                <a href="#" onclick="showWork(event)" class="link-underline geo-case-draft-only">← Back to Work</a>
+                <a href="meadow/#work" class="geo-case-meadow-only">← Back to Highlighted Work</a>
+                <a href="#caseStudyPage">Back to top ↑</a>
+            </footer>
         </div>
 
         <!-- Writing -->
@@ -1358,7 +1452,7 @@
             const nextPanel = showQuick ? caseStudyQuick : caseStudyFull;
             const currentPanel = showQuick ? caseStudyFull : caseStudyQuick;
 
-            if (immediate) {
+            if (immediate || isMeadowCase || matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 caseStudyQuick.classList.toggle('hidden', !showQuick);
                 caseStudyFull.classList.toggle('hidden', showQuick);
                 caseStudyQuick.classList.remove('case-panel-enter', 'case-panel-enter-active', 'case-panel-exit', 'case-panel-exit-active');
@@ -1390,6 +1484,19 @@
             }, 320);
         }
 
+        if (isMeadowCase) {
+            const hero = caseStudyPage.querySelector('.geo-case-hero');
+            const brief = document.getElementById('geoCaseBrief');
+            hero.after(caseToggle.closest('.geo-case-reading-controls'));
+            brief.after(hero.querySelector('.geo-case-project-context'));
+            caseStudyFull.prepend(document.getElementById('geoStory'));
+            const researchCaption = document.querySelector('#geoFieldResearchFigure figcaption');
+            researchCaption.textContent = 'Field research with local retail businesses in Pune.';
+            researchCaption.classList.remove('geo-case-draft-only');
+            caseStudyPage.querySelectorAll('.geo-case-draft-only').forEach((element) => element.remove());
+            setCaseStudyView('quick', true);
+        }
+
         if (craftSignature) {
             const signatureObserver = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -1418,7 +1525,7 @@
             document.fonts.ready.then(() => fitIntroHeadlineToAvatar());
         }
     </script>
-    <script type="module" src="scripts/geomarketeer-story.js?v=story5-2"></script>
+    <script type="module" src="scripts/geomarketeer-story.js?v=story5-3"></script>
 
 </body>
 

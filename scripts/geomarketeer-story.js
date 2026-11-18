@@ -7,7 +7,7 @@ function openCaseStudyRoute() {
         page.classList.toggle('hidden', page.id !== 'caseStudyPage');
     });
     window.setActiveNav?.('work');
-    window.setCaseStudyView?.('full', true);
+    if (document.documentElement.dataset.portfolioView !== 'meadow-case') window.setCaseStudyView?.('full', true);
 }
 
 function initGeoStory() {

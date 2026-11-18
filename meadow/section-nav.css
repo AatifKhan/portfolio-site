@@ -1,0 +1,51 @@
+.section-nav { display: none; }
+
+@media (max-width: 767px) {
+    :root[data-section-nav] { --nav-height: 112px; }
+
+    [data-section-nav] .masthead {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: 44px 44px;
+        align-content: center;
+        gap: 8px;
+    }
+
+    .section-nav:not([hidden]) {
+        position: relative;
+        display: block;
+        grid-column: 1 / -1;
+        justify-self: start;
+        max-inline-size: 100%;
+        pointer-events: auto;
+    }
+
+    .section-nav::after {
+        position: absolute;
+        inset: calc(50% - 5px) 16px auto auto;
+        inline-size: 7px;
+        block-size: 7px;
+        border: solid var(--accent);
+        border-width: 0 1.5px 1.5px 0;
+        transform: rotate(45deg);
+        pointer-events: none;
+        content: '';
+    }
+
+    .section-select {
+        appearance: none;
+        display: block;
+        min-inline-size: 136px;
+        min-block-size: 44px;
+        padding-inline: 14px 37px;
+        border: 1px solid var(--edge);
+        border-radius: 12px;
+        background: var(--surface);
+        color: var(--ink);
+        box-shadow: var(--shadow-card);
+        cursor: pointer;
+        font: 600 0.875rem/1.4 var(--font);
+    }
+
+    .section-select:hover { background: var(--surface-hover); }
+}

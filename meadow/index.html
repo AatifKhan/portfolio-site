@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en" data-portfolio-view="meadow">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aatif Khan designs and builds thoughtful internet products. Explore his career, selected work, and experiments.">
+    <meta name="theme-color" content="#ffffff">
+    <script src="theme.js"></script>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aatif Khan — Product design portfolio">
+    <meta property="og:description" content="Selected work, career, and experiments by Aatif Khan, product designer and design lead.">
+    <meta property="og:url" content="https://aatifkhan.github.io/portfolio-site/meadow/">
+    <meta property="og:image" content="https://aatifkhan.github.io/portfolio-site/meadow/assets/share.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Aatif Khan’s portfolio, showing his portrait and the GeoMarketeer project.">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Aatif Khan — Product design portfolio</title>
+    <link rel="canonical" href="https://aatifkhan.github.io/portfolio-site/meadow/">
+    <link rel="preload" href="assets/fonts/geist-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css?v=17">
+    <link rel="stylesheet" href="appearance.css">
+    <link rel="stylesheet" href="section-nav.css">
+    <script type="module" src="columns.js?v=13"></script>
+    <script src="dot-grid.js?v=3" defer></script>
+    <script type="module">
+        if (new URLSearchParams(location.search).get('background') === 'contour') {
+            import('./contour.js').catch(() => {
+                // The existing dot grid remains available if the study fails to load.
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="stage">
+        <div class="ambient-grid" aria-hidden="true">
+            <canvas class="ambient-grid-canvas" hidden></canvas>
+            <canvas class="contour-canvas" hidden></canvas>
+        </div>
+        <header class="masthead">
+            <nav class="section-nav" aria-label="Portfolio sections" hidden>
+                <label class="sr-only" for="portfolio-section">Portfolio section</label>
+                <select class="section-select" id="portfolio-section" aria-controls="portfolio">
+                    <option value="#about">About</option>
+                    <option value="#experience">Career</option>
+                    <option value="#work">Work</option>
+                    <option value="#experiments">Projects</option>
+                    <option value="#writing">Ideas</option>
+                </select>
+            </nav>
+            <h1><a class="wordmark" href="#about" data-column-link>Aatif Khan</a></h1>
+            <div class="column-controls" role="group" aria-label="Portfolio controls" hidden>
+                <div class="appearance" data-appearance hidden>
+                    <button class="button appearance-toggle" type="button" data-appearance-toggle aria-label="Appearance" aria-expanded="false" aria-controls="appearance-options">
+                        <span class="appearance-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="appearance-options" id="appearance-options" data-appearance-options role="group" aria-label="Appearance" hidden>
+                        <button type="button" data-theme-option="light" aria-pressed="true">Light</button>
+                        <button type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+                        <button type="button" data-theme-option="system" aria-pressed="false">System</button>
+                    </div>
+                </div>
+                <button class="button sound-toggle" type="button" data-sound-toggle aria-label="Sound" aria-pressed="false" hidden>Sound <span data-sound-state aria-hidden="true">Off</span></button>
+                <button class="column-button" type="button" data-step="-1" aria-label="Previous column" aria-controls="portfolio" aria-disabled="true">
+                    <span class="arrow arrow--previous" aria-hidden="true"></span>
+                </button>
+                <button class="column-button" type="button" data-step="1" aria-label="Next column" aria-controls="portfolio">
+                    <span class="arrow" aria-hidden="true"></span>
+                </button>
+            </div>
+        </header>
+
+        <main class="rail" id="portfolio" aria-label="Portfolio columns" tabindex="0">
+            <section class="panel" id="about" aria-labelledby="about-title" tabindex="-1">
+                <header class="panel-heading"><h2 id="about-title">About me</h2></header>
+                <div class="panel-scroll profile" role="region" aria-labelledby="about-title" tabindex="0">
+                    <header class="profile-intro">
+                        <div class="portrait"><img src="assets/aatif-portrait.webp" width="1254" height="1254" alt="Aatif Khan" fetchpriority="high"></div>
+                        <div class="profile-statement">
+                            <h3>I’m Aatif. I design and build thoughtful internet products.</h3>
+                            <p class="profile-support">For teams, companies, and ideas that deserve to exist.</p>
+                        </div>
+                    </header>
+                    <a class="button featured-link" href="#work" data-jump-work>View highlighted work <span class="arrow" aria-hidden="true"></span></a>
+                    <p class="profile-bio">I lead design at Zensar after roles at LTI, GeoSpoc, and iAuro. I’m based in Pune with my wife and our son, and I’m drawn to work that brings craft and utility together.</p>
+                    <div class="contact-actions">
+                        <a class="button icon-link" href="https://github.com/AatifKhan/portfolio-site" aria-label="View the portfolio repository"><span class="external-arrow" aria-hidden="true"></span></a>
+                        <button class="button copy-link" type="button" data-copy-link="https://aatifkhan.github.io/portfolio-site/meadow/" hidden>Copy link</button>
+                        <span class="sr-only" role="status"></span>
+                    </div>
+                    <dl class="profile-facts">
+                        <div><dt>Role</dt><dd>Product designer and design lead.</dd></div>
+                        <div><dt>Focus</dt><dd>Product design, design systems, and platforms.</dd></div>
+                        <div><dt>Systems</dt><dd>Components, tokens, and the way teams use them to ship.</dd></div>
+                        <div><dt>Research</dt><dd>Learning how people work before deciding what their tools should do.</dd></div>
+                        <div><dt>Current</dt><dd>Leading design at Zensar.</dd></div>
+                        <div><dt>Location</dt><dd>Pune, India.</dd></div>
+                    </dl>
+                </div>
+            </section>
+
+            <section class="panel" id="experience" aria-labelledby="experience-title" tabindex="-1">
+                <header class="panel-heading"><h2 id="experience-title">Career journey</h2></header>
+                <div class="panel-scroll experience" role="region" aria-labelledby="experience-title" tabindex="0">
+                    <div class="timeline">
+                        <ol class="timeline-years" aria-hidden="true">
+                            <li><span>2027</span></li><li><span>2026</span></li><li><span>2025</span></li><li><span>2024</span></li><li><span>2023</span></li><li><span>2022</span></li><li><span>2021</span></li><li><span>2020</span></li><li><span>2019</span></li><li><span>2018</span></li><li><span>2017</span></li><li><span>2016</span></li><li><span>2015</span></li><li><span>2014</span></li><li><span>2013</span></li>
+                        </ol>
+                        <div class="timeline-education">
+                            <a href="#career-psychology" style="--start: 6; --months: 25;" aria-label="MA in Psychology, Indira Gandhi National Open University, July 2024 to July 2026">MA Psychology</a>
+                        </div>
+                        <ol class="timeline-work" aria-label="Employment history">
+                            <li class="timeline-card" style="--start: 2; --months: 69; --track: 1;">
+                                <a href="#career-zensar-lead"><span class="company-mark" aria-hidden="true">Z</span><span><strong>User Experience Lead</strong><span class="timeline-employer">Zensar Technologies</span><span class="timeline-date">Mar 2021 to <span class="text-current">Present</span></span></span></a>
+                            </li>
+                            <li class="timeline-card" style="--start: 68; --months: 37; --track: 2;">
+                                <a href="#career-zensar-senior"><span class="company-mark" aria-hidden="true">Z</span><span><strong>Senior User Experience Designer</strong><span class="timeline-employer">Zensar Technologies</span><span class="timeline-date">May 2018 to May 2021</span></span></a>
+                            </li>
+                            <li class="timeline-card timeline-short" style="--start: 104; --months: 6; --track: 1;">
+                                <a href="#career-pitchworx" aria-label="Senior Experience Designer at PitchWorx, December 2017 to May 2018"><strong>PitchWorx</strong></a>
+                            </li>
+                            <li class="timeline-card" style="--start: 109; --months: 25; --track: 2;">
+                                <a href="#career-geospoc"><span class="company-mark" aria-hidden="true">G</span><span><strong>UX/UI Designer</strong><span class="timeline-employer">GeoSpoc</span><span class="timeline-date">Dec 2015 to Dec 2017</span></span></a>
+                            </li>
+                            <li class="timeline-card timeline-short" style="--start: 149; --months: 5; --track: 1;">
+                                <a href="#career-iauro" aria-label="UX/UI Designer and Developer at iauro systems, April to August 2014"><strong>iauro systems</strong></a>
+                            </li>
+                            <li class="timeline-card" style="--start: 145; --months: 24; --track: 2;">
+                                <a href="#career-freelance"><span class="company-mark" aria-hidden="true">F</span><span><strong>UX Consultant</strong><span class="timeline-employer">Freelance</span><span class="timeline-date">2013 to 2014</span></span></a>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="career-details">
+                        <h3>Experience</h3>
+                        <article class="career-entry">
+                            <header><h4>Zensar Technologies</h4><p class="career-meta">Full-time</p></header>
+                            <div class="career-role" id="career-zensar-lead" tabindex="-1">
+                                <h5>User Experience Lead</h5>
+                                <p class="career-meta"><time datetime="2021-03">Mar 2021</time> to <span class="text-current">Present</span></p>
+                                <p>Pune District, Maharashtra, India</p>
+                            </div>
+                            <div class="career-role" id="career-zensar-senior" tabindex="-1">
+                                <h5>Senior User Experience Designer</h5>
+                                <p class="career-meta"><time datetime="2018-05">May 2018</time> to <time datetime="2021-05">May 2021</time></p>
+                                <p>Pune, Maharashtra, India</p>
+                            </div>
+                        </article>
+                        <article class="career-entry" id="career-pitchworx" tabindex="-1">
+                            <header>
+                                <h4>PitchWorx</h4>
+                                <h5>Senior Experience Designer</h5>
+                                <p class="career-meta"><time datetime="2017-12">Dec 2017</time> to <time datetime="2018-05">May 2018</time></p>
+                                <p>Pune Area, India</p>
+                            </header>
+                            <ul>
+                                <li>Handled market research, brand management, and the customer visit experience.</li>
+                                <li>Worked with the CFO and PR teams to design and run the company website in support of short- and long-term goals.</li>
+                            </ul>
+                        </article>
+                        <article class="career-entry" id="career-geospoc" tabindex="-1">
+                            <header>
+                                <h4>GeoSpoc</h4>
+                                <h5>UX/UI Designer</h5>
+                                <p class="career-meta"><time datetime="2015-12">Dec 2015</time> to <time datetime="2017-12">Dec 2017</time></p>
+                                <p>Pune Area, India</p>
+                            </header>
+                            <ul>
+                                <li>Designed end-to-end experiences for several in-house products.</li>
+                                <li>Documented use cases and UI elements to keep the platform consistent.</li>
+                                <li>As the startup’s solo designer, created its graphics and communication assets. Ola later acquired GeoSpoc.</li>
+                            </ul>
+                            <a href="../minimal_portfolio.html?project=geomarketeer&amp;view=meadow">Read the GeoMarketeer case study</a>
+                        </article>
+                        <article class="career-entry" id="career-iauro" tabindex="-1">
+                            <header>
+                                <h4>iauro systems Pvt Ltd</h4>
+                                <h5>UX/UI Designer &amp; Developer</h5>
+                                <p class="career-meta"><time datetime="2014-04">Apr 2014</time> to <time datetime="2014-08">Aug 2014</time></p>
+                            </header>
+                        </article>
+                        <article class="career-entry" id="career-freelance" tabindex="-1">
+                            <header>
+                                <h4>Freelance</h4>
+                                <h5>UX Consultant</h5>
+                                <p class="career-meta"><time datetime="2013">2013</time> to <time datetime="2014">2014</time></p>
+                            </header>
+                            <ul>
+                                <li>Researched users’ needs, goals, and behaviors, then created wireframes and prototypes to test design concepts.</li>
+                                <li>Designed interfaces that were easy to use and consistent with the brand, and used usability testing to find areas for improvement.</li>
+                                <li>Worked with designers, developers, and stakeholders to meet business goals and user needs.</li>
+                            </ul>
+                        </article>
+                        <article class="career-entry">
+                            <header><h4>LTI · Larsen &amp; Toubro Infotech</h4><p class="career-meta">Additional experience</p></header>
+                        </article>
+
+                        <h3><span class="text-education">Education</span></h3>
+                        <article class="career-entry" id="career-psychology" tabindex="-1">
+                            <header>
+                                <h4>Indira Gandhi National Open University</h4>
+                                <h5>MA in Psychology</h5>
+                                <p class="career-meta"><time datetime="2024-07">Jul 2024</time> to <time datetime="2026-07">Jul 2026</time> · <span class="text-education">Completed</span></p>
+                            </header>
+                            <p>Studied human behavior, personality, emotions, mental health, psychological assessment, and research methods. Took part in seminars, group discussions, presentations, research assignments, and peer learning.</p>
+                            <p>Through an internship, developed practical skills in client interaction, rapport building, behavioral observation, and case documentation, with an emphasis on empathy and sensitivity.</p>
+                        </article>
+                        <a class="career-related" href="#experiments" data-column-link>View side projects &amp; explorations</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel" id="work" aria-labelledby="work-title" tabindex="-1">
+                <header class="panel-heading"><h2 id="work-title">Highlighted work</h2></header>
+                <div class="panel-scroll project-list" role="region" aria-labelledby="work-title" tabindex="0">
+                    <details class="project">
+                        <summary class="project-card project-card--featured">
+                            <span class="geo-cover"><img src="../assets/portfolio/geomarketeer/case-study/final-workspace.webp" width="2400" height="646" alt=""></span>
+                            <span class="project-heading"><span class="project-title">GeoMarketeer</span><span class="project-kind">GeoSpoc</span></span>
+                            <span class="project-deck">Site selection for retail businesses</span>
+                        </summary>
+                        <div class="project-detail">
+                            <p>Helping retail businesses investigate a place before investing in it.</p>
+                            <dl class="project-meta">
+                                <div><dt>Company</dt><dd>GeoSpoc</dd></div>
+                                <div><dt>Timeline</dt><dd>May to October 2017</dd></div>
+                                <div><dt>Contribution</dt><dd>UX research and interface design</dd></div>
+                            </dl>
+                            <div class="design-decision">
+                                <h3>Keeping the map in view</h3>
+                                <p>We carried forward a left sidebar because it had room for clear labels and detailed filters. The dataset panel opened beside the map, so people could choose what to investigate and still see the place they were working with.</p>
+                            </div>
+                            <a class="button case-link" href="../minimal_portfolio.html?project=geomarketeer&amp;view=meadow" aria-label="Read the GeoMarketeer case study">Read case study <span class="arrow" aria-hidden="true"></span></a>
+                            <h3 class="gallery-heading">From wireframes to workspace</h3>
+                            <div class="project-gallery">
+                                <figure><a href="../assets/portfolio/geomarketeer/case-study/wireframes.webp"><img src="../assets/portfolio/geomarketeer/case-study/wireframes.webp" width="2400" height="437" alt="Three wireframes exploring persistent navigation and a panel alongside the map" loading="lazy"></a><figcaption>Early wireframes for the navigation and dataset panel</figcaption></figure>
+                                <figure><a href="../assets/portfolio/geomarketeer/case-study/final-workspace.webp"><img src="../assets/portfolio/geomarketeer/case-study/final-workspace.webp" width="2400" height="646" alt="The final GeoMarketeer interface with the dataset panel closed and open next to the map" loading="lazy"></a><figcaption>The final workspace keeps the map visible in both states</figcaption></figure>
+                                <figure><a href="../assets/portfolio/geomarketeer/case-study/feature-grouping.webp"><img src="../assets/portfolio/geomarketeer/case-study/feature-grouping-preview.webp" width="1600" height="720" alt="A board of sticky notes grouped by product feature" loading="lazy"></a><figcaption>Early feature grouping</figcaption></figure>
+                                <figure><a href="../assets/portfolio/geomarketeer/story-opening/frame-01.png"><img src="../assets/portfolio/geomarketeer/story-opening/frame-01.png" width="1120" height="630" alt="Illustration of the café lane that opens the case study" loading="lazy"></a><figcaption>The neighborhood at the center of the story</figcaption></figure>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="project">
+                        <summary class="project-card">
+                            <span class="project-heading"><span class="project-title">Dashboards Are Boring.</span><span class="project-kind">Case study</span></span>
+                            <span class="project-deck">How a design system became part of delivery.</span>
+                            <span class="dashboard-preview" aria-hidden="true">
+                                <span class="dashboard-preview-label">Definition of Ready</span>
+                                <span class="dashboard-preview-line">Approved component references</span>
+                                <span class="dashboard-preview-line">Design tokens specified</span>
+                            </span>
+                        </summary>
+                        <div class="project-detail">
+                            <p>Restoring consistency across an enterprise analytics platform.</p>
+                            <dl class="project-meta">
+                                <div><dt>Context</dt><dd>Enterprise analytics</dd></div>
+                                <div><dt>Year</dt><dd>2024</dd></div>
+                                <div><dt>Contribution</dt><dd>Interface and design-system alignment</dd></div>
+                            </dl>
+                            <dl class="project-summary">
+                                <div><dt>Situation</dt><dd>Different squads had developed their own patterns for complex workflows, increasing design and delivery friction.</dd></div>
+                                <div><dt>Intervention</dt><dd>I audited more than 70 screens and extended the system for dense data tables and multi-stage workflows. With product and engineering leads, I made component and token references part of the Definition of Ready for each story.</dd></div>
+                                <div><dt>Outcome</dt><dd>Teams relied less on one-off CSS overrides. Components introduced for the platform were later adopted by other internal products.</dd></div>
+                            </dl>
+                            <figure class="dashboard-artifact">
+                                <figcaption><strong>Definition of Ready</strong><span>Checklist reconstructed from the case study</span></figcaption>
+                                <dl>
+                                    <div><dt>Approved component references</dt><dd>Identify the approved components the story uses.</dd></div>
+                                    <div><dt>Design tokens specified</dt><dd>Reference the relevant spacing, color, typography, and interaction tokens.</dd></div>
+                                </dl>
+                            </figure>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <section class="panel" id="experiments" aria-labelledby="experiments-title" tabindex="-1">
+                <header class="panel-heading"><h2 id="experiments-title">Side projects</h2></header>
+                <div class="panel-scroll experiment-list" role="region" aria-labelledby="experiments-title" tabindex="0">
+                    <article class="experiment">
+                        <a class="experiment-link" href="../geomarketeer-layout-explainer.html">
+                            <img src="../assets/portfolio/geomarketeer/case-study/wireframes.webp" width="2400" height="437" alt="" loading="lazy">
+                            <div><h3>Finding room for the map</h3><p>Six interactive layout studies for GeoMarketeer.</p><small>Layout study</small></div>
+                        </a>
+                    </article>
+                    <article class="experiment">
+                        <a class="experiment-link" href="../geomarketeer-neighborhood-study.html">
+                            <img src="../assets/portfolio/geomarketeer/cafe-corner/cafe-corner-approved-v2.png" alt="" loading="lazy">
+                            <div><h3>A corner of Pune in 3D</h3><p>Explore the café, shops, and streets from the GeoMarketeer story.</p><small>Neighborhood study</small></div>
+                        </a>
+                    </article>
+                    <article class="experiment">
+                        <a class="experiment-link" href="../geomarketeer-atlas-study.html">
+                            <img src="../assets/portfolio/geomarketeer/component-kit/neighborhood-overview-still.jpg" alt="" loading="lazy">
+                            <div><h3>GeoMarketeer atlas</h3><p>A browser for the building blocks behind the city illustration.</p><small>Illustration toolkit</small></div>
+                        </a>
+                    </article>
+                    <article class="experiment">
+                        <a class="experiment-link" href="../cityscape-review.html">
+                            <img src="../assets/portfolio/geomarketeer/review-2/hero.webp" alt="" loading="lazy">
+                            <div><h3>Camp, Pune</h3><p>An illustrated reconstruction of a neighborhood, from its landmarks to its street traffic.</p><small>Cityscape</small></div>
+                        </a>
+                    </article>
+                    <article class="experiment">
+                        <a class="experiment-link" href="../geomarketeer-kit-neighborhood.html">
+                            <img src="../assets/portfolio/geomarketeer/reference-blockout/grey-orthographic.png" alt="" loading="lazy">
+                            <div><h3>Assembling a neighborhood</h3><p>Exploring how one component kit comes together at the scale of a city block.</p><small>Component library</small></div>
+                        </a>
+                    </article>
+                    <article class="experiment">
+                        <a class="experiment-link" href="../geomarketeer-street-component-study.html">
+                            <img src="../assets/portfolio/geomarketeer/component-kit/street-lamp-still.jpg" alt="" loading="lazy">
+                            <div><h3>Details along the street</h3><p>A reusable set of lamps, benches, bollards, and other street furniture.</p><small>3D asset study</small></div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel" id="writing" aria-labelledby="notes-title" tabindex="-1">
+                <header class="panel-heading"><h2 id="notes-title">Ideas I’m exploring</h2></header>
+                <div class="panel-scroll" role="region" aria-labelledby="notes-title" tabindex="0">
+                    <figure class="idea"><a href="../cityscape-blueprint.html"><img src="../assets/portfolio/geomarketeer/reference-blockout/grey-perspective.png" alt="A 3D blockout of an urban neighborhood" loading="lazy"></a><figcaption>How much of a place can a simple city model explain?</figcaption></figure>
+                    <figure class="idea"><img src="../portfolio-design-study/studies/reading-focused.png" alt="A typography-led design for reading a case study" loading="lazy"><figcaption>What changes when a case study is designed around reading?</figcaption></figure>
+                    <figure class="idea"><img src="../vector-steering-polished/qa/rebuild/desktop-preview.jpg" alt="A writing tool with radial controls" loading="lazy"><figcaption>A writing tool that treats motion and sound as part of the interface.</figcaption></figure>
+                    <figure class="idea"><img src="../portfolio-design-study/studies/field-notes.png" alt="A field-notes layout for presenting product design work" loading="lazy"><figcaption>How could a portfolio make room for sketches and work in progress?</figcaption></figure>
+                    <h3 class="collection-heading">Design notes</h3>
+                    <ul class="notes-list">
+                        <li><div class="entry-heading"><h4>Design Systems Should Ship.</h4><time datetime="2023">2023</time></div><p>Making components and design-system governance part of delivery.</p></li>
+                        <li><div class="entry-heading"><h4>Interfaces Should Listen.</h4><time datetime="2022">2022</time></div><p>Designing audio and motion systems to improve perception and feedback.</p></li>
+                        <li><div class="entry-heading"><h4>Strategy Is a Design Tool.</h4><time datetime="2021">2021</time></div><p>Aligning product direction with long-term platform thinking.</p></li>
+                        <li><div class="entry-heading"><h4>Legacy Isn’t an Excuse.</h4><time datetime="2020">2020</time></div><p>Turning dated workflows into cohesive digital experiences.</p></li>
+                    </ul>
+                    <h3 class="collection-heading">Writing</h3>
+                    <ul class="notes-list">
+                        <li><div class="entry-heading"><h4>The Discipline of Taste</h4><time datetime="2024">2024</time></div><p>How taste grows through repetition, critique, and shipping imperfect work.</p></li>
+                        <li><div class="entry-heading"><h4>Leading Without Noise</h4><time datetime="2023">2023</time></div><p>On removing friction inside teams and designing clarity into decisions.</p></li>
+                        <li><div class="entry-heading"><h4>Iteration Is a Form of Respect</h4><time datetime="2022">2022</time></div><p>Taking the time to revisit an idea can build trust and a better product.</p></li>
+                        <li><div class="entry-heading"><h4>Designing for Consequence</h4><time datetime="2021">2021</time></div><p>How small interface decisions add up to lasting changes in behavior.</p></li>
+                    </ul>
+                    <h3 class="collection-heading" id="reading" tabindex="-1">Reading</h3>
+                    <ul class="notes-list reading-list">
+                        <li><h4>Thinking in Systems</h4><p class="book-author">Donella H. Meadows</p><p>Systems thinking changed how I approach product complexity and where I look for leverage.</p></li>
+                        <li><h4>Good Strategy / Bad Strategy</h4><p class="book-author">Richard Rumelt</p><p>The emphasis on diagnosis and focus reframed how I think about roadmaps.</p></li>
+                        <li><h4>The Design of Everyday Things</h4><p class="book-author">Don Norman</p><p>A reminder to make the next step clear when designing an interaction.</p></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <dialog class="project-sheet" aria-labelledby="project-sheet-title">
+        <button class="sheet-grip" type="button" aria-label="Close drawer"></button>
+        <div class="sheet-scroll" tabindex="0" role="region" aria-labelledby="project-sheet-title">
+            <h2 id="project-sheet-title" tabindex="-1" aria-live="polite"></h2>
+            <div class="sheet-content"></div>
+        </div>
+        <footer class="sheet-actions" aria-label="Project navigation">
+            <button type="button" data-project-step="-1" aria-label="Previous project"><span class="arrow arrow--previous" aria-hidden="true"></span></button>
+            <button class="sheet-close" type="button" autofocus>Close project</button>
+            <button type="button" data-project-step="1" aria-label="Next project"><span class="arrow" aria-hidden="true"></span></button>
+            <button class="sound-toggle sheet-sound" type="button" data-sound-toggle aria-label="Sound" aria-pressed="false" hidden>Sound <span data-sound-state aria-hidden="true">Off</span></button>
+        </footer>
+    </dialog>
+    <dialog class="image-viewer" aria-label="Project image viewer">
+        <button class="button image-previous" type="button" aria-label="Previous image"><span class="arrow arrow--previous" aria-hidden="true"></span></button>
+        <figure class="image-viewer-content"><img alt=""><figcaption></figcaption></figure>
+        <button class="button image-next" type="button" aria-label="Next image"><span class="arrow" aria-hidden="true"></span></button>
+        <button class="button image-close" type="button" aria-label="Close image viewer" autofocus><span class="close-icon" aria-hidden="true"></span></button>
+        <button class="button sound-toggle image-sound" type="button" data-sound-toggle aria-label="Sound" aria-pressed="false" hidden>Sound <span data-sound-state aria-hidden="true">Off</span></button>
+    </dialog>
+</body>
+</html>
